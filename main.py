@@ -16,6 +16,7 @@ from telegram.ext import (
 )
 
 import crawl_shopeefood
+from repository import KeyValRepository
 
 # Enable logging
 logging.basicConfig(
@@ -65,6 +66,22 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     print("Poll created " + str(message.message_id) + " " + str(update.effective_chat.id))
 
 
+def get_data_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
+    repo = context.user_data['user_id']
+    if not repo:
+        repo = KeyValRepository(user_id)
+        context.user_data['user_id'] = repo
+    return repo
+
+
+def get_data_bot(context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
+    repo = context.bot_data['bot']
+    if not repo:
+        repo = KeyValRepository('bot')
+        context.bot_data['bot'] = repo
+    return repo
+
+
 async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Summarize a users poll vote"""
     answer = update.poll_answer
@@ -90,6 +107,9 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         f"{update.effective_user.mention_html()} chọn {answer_string}!",
         parse_mode=ParseMode.HTML,
     )
+
+    get_data_user(update.effective_user.id, context)
+
     answered_poll["answers"] += 1
     # Close poll after three participants voted
     # if answered_poll["answers"] == 3:
@@ -141,6 +161,25 @@ async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     await message.reply_text(msg)
 
 
+async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    message = update.effective_message.reply_to_message
+    if message is None or message.poll is None:
+        await update.message.reply_text(f'{update.effective_user.mention_html()} Trả cho poll nào thế?',
+                                        parse_mode=ParseMode.HTML)
+        return
+
+
+#     TODO: Add bill handler
+
+
+async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    pass
+
+
+async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    pass
+
+
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Display a help message"""
     await update.message.reply_text("Use /poll shopeefood_url to create a poll.")
@@ -157,6 +196,9 @@ def main() -> None:
     application.add_handler(CommandHandler("close", close_poll_handler))
     application.add_handler(CommandHandler("info", info_poll_handler))
     application.add_handler(CommandHandler("help", help_handler))
+    application.add_handler(CommandHandler("bill", bill_handler))
+    application.add_handler(CommandHandler("checkbill", checkbill_handler))
+    application.add_handler(CommandHandler("paid", paid_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
 
