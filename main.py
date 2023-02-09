@@ -1,5 +1,6 @@
 import logging
 
+import yaml
 from telegram import (
     ReplyKeyboardRemove,
     Update,
@@ -112,13 +113,32 @@ async def receive_poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Close the poll reply to the command
     message = update.effective_message.reply_to_message
+    if message.poll.is_closed:
+        return
+
     print("Close poll " + str(message.chat.id) + " " + str(message.message_id))
     await context.bot.stop_poll(message.chat.id, message.message_id)
 
-    await message.reply_text("Poll closed by " + update.effective_user.first_name)
-    # Get results of the poll
-    poll = message.poll
+    await message.reply_text("Poll closed by " + update.effective_user.mention_html(), parse_mode=ParseMode.HTML)
 
+    # Get results of the poll
+    msg = "Poll results:\n"
+    for option in message.poll.options:
+        if option.voter_count > 0:
+            msg += f"{option.text}: {option.voter_count}\n"
+    await message.reply_text(msg)
+
+
+async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    # Info poll reply to the command
+    message = update.effective_message.reply_to_message
+    print("Info poll " + str(message.chat.id) + " " + str(message.message_id))
+
+    msg = "Poll results:\n"
+    for option in message.poll.options:
+        if option.voter_count > 0:
+            msg += f"{option.text}: {option.voter_count}\n"
+    await message.reply_text(msg)
 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -128,13 +148,14 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 def main() -> None:
     """Run bot."""
-    bot_token = "6173598005:AAE-ZNRagE3n6M3PHu4YRV690CC5gKrfoAs"
+    bot_token = yaml.load(open('./config/config.yml'), Loader=yaml.FullLoader)['telegram']['token']
 
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(bot_token).build()
     application.add_handler(CommandHandler("start", help_handler))
     application.add_handler(CommandHandler("poll", poll))
     application.add_handler(CommandHandler("close", close_poll_handler))
+    application.add_handler(CommandHandler("info", info_poll_handler))
     application.add_handler(CommandHandler("help", help_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))

@@ -121,6 +121,9 @@ def process(full_url):
     items = []
     for menu_info in menu_infos:
         for dish in menu_info['dishes']:
+            if not dish['is_available']:
+                continue
+
             items.append({
                 'name': dish['name'],
                 'price': dish['price']['text'],
