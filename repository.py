@@ -16,3 +16,16 @@ class KeyValRepository:
 
     def set(self, key, value):
         self.data[key] = value
+
+    def get_and_set(self, key, value):
+        old_value = self.get(key)
+        self.set(key, value)
+        return old_value
+
+    def compute_if_absent(self, key, func):
+        if key not in self.data:
+            self.data[key] = func()
+        return self.data[key]
+
+    def delete(self, key):
+        del self.data[key]

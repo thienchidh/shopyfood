@@ -37,7 +37,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     for item in items:
         limit_question -= 1
-        if limit_question == 0:
+        if limit_question == -1:
             break
 
         questions.append(item['name'] + ' ' + item['price'])
@@ -66,17 +66,17 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     print("Poll created " + str(message.message_id) + " " + str(update.effective_chat.id))
 
 
-def get_data_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
+def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
     repo = context.user_data['user_id']
-    if not repo:
+    if not repo or repo is not KeyValRepository:
         repo = KeyValRepository(user_id)
         context.user_data['user_id'] = repo
     return repo
 
 
-def get_data_bot(context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
+def get_repo_bot(context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
     repo = context.bot_data['bot']
-    if not repo:
+    if not repo or repo is not KeyValRepository:
         repo = KeyValRepository('bot')
         context.bot_data['bot'] = repo
     return repo
@@ -108,7 +108,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         parse_mode=ParseMode.HTML,
     )
 
-    get_data_user(update.effective_user.id, context)
+    user_repo = get_repo_user(update.effective_user.id, context)
 
     answered_poll["answers"] += 1
     # Close poll after three participants voted
