@@ -1,3 +1,4 @@
+import json
 import logging
 
 import yaml
@@ -32,45 +33,65 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     title = obj[0]
     items = obj[1]
 
-    questions = []
-    limit_question = 10
+    # Split items into 10 items per poll
+    limit_items_per_poll = 10
+    items_split = [items[i:i + limit_items_per_poll] for i in range(0, len(items), limit_items_per_poll)]
+    print(json.dumps(items_split))
 
-    for item in items:
-        limit_question -= 1
-        if limit_question == -1:
-            break
+    # Ensure last poll has at least 2 items and at most 10 items
+    if len(items_split[-1]) < 2:
+        items_split[-1].append(items_split[-2].pop())
 
-        questions.append(item['name'] + ' ' + item['price'])
+    print(json.dumps(items_split))
 
-    if len(questions) < 2:
-        await update.message.reply_text('Không có đủ món ăn để tạo poll')
-        return
+    # Create poll for each item
+    current_page = 0
+    for items in items_split:
+        current_page += 1
+        questions = []
+        limit_question = limit_items_per_poll
 
-    message = await context.bot.send_poll(
-        update.effective_chat.id,
-        title,
-        questions,
-        is_anonymous=False,
-        allows_multiple_answers=False,
-    )
-    # Save some info about the poll the bot_data for later use in receive_poll_answer
-    payload = {
-        message.poll.id: {
-            "questions": questions,
-            "message_id": message.message_id,
-            "chat_id": update.effective_chat.id,
-            "answers": 0,
+        for item in items:
+            limit_question -= 1
+            if limit_question == -1:
+                break
+
+            questions.append(item['name'] + ' ' + item['price'])
+
+        if len(questions) < 2:
+            await update.message.reply_text('Không có đủ món ăn để tạo poll')
+            return
+
+        # add page to poll title if there are more than 1 page
+        pool_title = title
+        if len(items_split) > 1:
+            pool_title += ' - P' + str(current_page)
+
+        message = await context.bot.send_poll(
+            update.effective_chat.id,
+            pool_title,
+            questions,
+            is_anonymous=False,
+            allows_multiple_answers=False,
+        )
+        # Save some info about the poll the bot_data for later use in receive_poll_answer
+        payload = {
+            message.poll.id: {
+                "questions": questions,
+                "message_id": message.message_id,
+                "chat_id": update.effective_chat.id,
+                "answers": 0,
+            }
         }
-    }
-    context.bot_data.update(payload)
-    print("Poll created " + str(message.message_id) + " " + str(update.effective_chat.id))
+        context.bot_data.update(payload)
+        print("Poll created " + str(message.message_id) + " " + str(update.effective_chat.id))
 
 
 def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
-    repo = context.user_data['user_id']
+    repo = context.user_data[user_id]
     if not repo or repo is not KeyValRepository:
         repo = KeyValRepository(user_id)
-        context.user_data['user_id'] = repo
+        context.user_data[user_id] = repo
     return repo
 
 

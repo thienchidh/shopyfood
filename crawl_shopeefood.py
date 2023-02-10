@@ -1,3 +1,5 @@
+import json
+
 import requests
 
 headers = {
@@ -123,6 +125,8 @@ def process(full_url):
         for dish in menu_info['dishes']:
             if not dish['is_available']:
                 continue
+
+            print(json.dumps(dish))
 
             items.append({
                 'name': dish['name'],
