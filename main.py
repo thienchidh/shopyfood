@@ -102,7 +102,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     if answer_string == "":
         return
 
-    await context.bot.send_message(
+    await update.message.reply_text(
         answered_poll["chat_id"],
         f"{update.effective_user.mention_html()} chọn {answer_string}!",
         parse_mode=ParseMode.HTML,
