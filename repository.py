@@ -35,7 +35,7 @@ class KeyValRepository:
 
     def compute_if_absent(self, key, func):
         if key not in self.data:
-            self.data[key] = func()
+            self.data[key] = func(key)
         return self.data[key]
 
     def delete(self, key):

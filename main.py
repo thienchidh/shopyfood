@@ -62,8 +62,10 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info(json.dumps(items_split))
 
     repo = get_repo_bot(context)
-    poll_owner_id = update.effective_user.id
+    poll_owner_id = f'{update.effective_user.id}'
+
     parent_poll_id = None
+    parent_poll_ids = dict()
     poll_group_ids = []
 
     # Create poll for each item
@@ -88,11 +90,38 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             is_anonymous=False,
             allows_multiple_answers=True,
         )
-        poll_id = message.message_id
-        poll_group_ids.append((poll_id, parent_poll_id))
-        parent_poll_id = poll_id
+        poll_id = f'{message.message_id}'
+        poll_group_ids.append(poll_id)
 
-        logger.info("Poll created " + str(poll_id) + " " + str(poll_owner_id))
+        if parent_poll_id is None:
+            parent_poll_id = poll_id
+        parent_poll_ids[poll_id] = parent_poll_id
+        logger.info("Poll created {0} {1}".format(poll_id, poll_owner_id))
+
+        # Save some info about the poll the bot_data for later use in receive_poll_answer
+        payload = {
+            message.poll.id: {
+                "questions": questions,
+                "message_id": message.message_id,
+                "chat_id": update.effective_chat.id,
+                "answers": 0,
+            }
+        }
+        context.bot_data.update(payload)
+
+    all_parent_poll_ids = repo.compute_if_absent('parent_poll_ids', lambda k: dict())
+    map = all_parent_poll_ids.get(poll_owner_id, dict())
+    map.update(parent_poll_ids)
+
+    all_parent_poll_ids[poll_owner_id] = map
+
+    all_poll_group_ids = repo.compute_if_absent('poll_group_ids', lambda k: dict())
+    map = all_poll_group_ids.get(poll_owner_id, dict())
+    map[parent_poll_id] = poll_group_ids
+
+    all_poll_group_ids[poll_owner_id] = map
+
+    repo.save()
 
     await send_random_quote(context, update)
 
@@ -133,7 +162,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     answer_string = ""
     for question_id in selected_options:
         if question_id != selected_options[-1]:
-            answer_string += questions[question_id] + " and "
+            answer_string += questions[question_id] + " + "
         else:
             answer_string += questions[question_id]
 
@@ -171,13 +200,30 @@ async def receive_poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Close the poll reply to the command
     message = update.effective_message.reply_to_message
-    if message.poll.is_closed:
+    if not message or message.poll is None:
+        logger.info("Poll not found")
         return
 
-    logger.info("Close poll " + str(message.chat.id) + " " + str(message.message_id))
-    await context.bot.stop_poll(message.chat.id, message.message_id)
+    poll_owner_id = f'{message.chat.id}'
+    poll_id = f'{message.message_id}'
 
-    await message.reply_text("Poll closed by " + update.effective_user.mention_html(), parse_mode=ParseMode.HTML)
+    logger.info("Info poll " + poll_owner_id + " " + poll_id)
+
+    repo = get_repo_bot(context)
+    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id)
+    poll_group_ids = repo.get('poll_group_ids').get(poll_owner_id)
+
+    parent_id = parent_poll_ids.get(poll_id)
+    list_poll_ids = poll_group_ids.get(parent_id)
+
+    for poll_id in list_poll_ids:
+        await context.bot.stop_poll(poll_owner_id, poll_id)
+        logger.info("Close poll " + poll_owner_id + " " + poll_id)
+
+    await message.reply_text(
+        f"{len(list_poll_ids)} Poll closed by {update.effective_user.mention_html()}",
+        parse_mode=ParseMode.HTML
+    )
 
     # Get results of the poll
     msg = "Kết quả poll:\n"
@@ -208,6 +254,30 @@ async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 #     TODO: Add bill handler
+
+
+async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    # Delete poll reply to the command
+    message = update.effective_message.reply_to_message
+    if not message or message.poll is None:
+        logger.info("Poll not found")
+        return
+
+    poll_owner_id = f'{message.chat.id}'
+    poll_id = f'{message.message_id}'
+
+    logger.info("Info poll " + poll_owner_id + " " + poll_id)
+
+    repo = get_repo_bot(context)
+    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id)
+    poll_group_ids = repo.get('poll_group_ids').get(poll_owner_id)
+
+    parent_id = parent_poll_ids.get(poll_id)
+    list_poll_ids = poll_group_ids.get(parent_id)
+
+    for poll_id in list_poll_ids:
+        await context.bot.delete_message(poll_owner_id, poll_id)
+        logger.info("Delete poll " + poll_owner_id + " " + poll_id)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -245,6 +315,7 @@ def main() -> None:
     application.add_handler(CommandHandler("bill", bill_handler))
     application.add_handler(CommandHandler("checkbill", checkbill_handler))
     application.add_handler(CommandHandler("paid", paid_handler))
+    application.add_handler(CommandHandler("delete", delete_poll_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
 
