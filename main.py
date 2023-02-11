@@ -16,6 +16,7 @@ from telegram.ext import (
     filters,
 )
 
+import crawl_grabfood
 import crawl_shopeefood
 from repository import KeyValRepository
 
@@ -25,11 +26,27 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+strategies = [
+    crawl_shopeefood,
+    crawl_grabfood,
+]
+
+
+def attempt_crawl(url):
+    for strategy in strategies:
+        if strategy.is_support_url(url):
+            return strategy.process(url)
+    return None
+
 
 async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
     url = text.split(' ')[1]
-    obj = crawl_shopeefood.process(url)
+    obj = attempt_crawl(url)
+    if obj is None:
+        await update.message.reply_text('Not support url')
+        return
+
     title = obj[0]
     items = obj[1]
 
@@ -203,7 +220,15 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Display a help message"""
-    await update.message.reply_text("Use /poll shopeefood_url to create a poll.")
+    await update.message.reply_text(
+        "Use /poll url to create a poll, supported sites are: shopeefood, grabfood\n"
+        "Use /close to close the poll.\n"
+        "Use /info to get info of the poll.\n"
+        "Use /bill to create a bill for the poll.\n"
+        "Use /checkbill to check the bill of the poll.\n"
+        "Use /paid to mark the bill as paid.\n"
+        "Use /help to get this message.\n"
+    )
 
 
 def main() -> None:

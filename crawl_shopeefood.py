@@ -2,6 +2,8 @@ import json
 
 import requests
 
+from util import get_url_with_no_params, safe_get
+
 headers = {
     'authority': 'gappapi.deliverynow.vn',
     'accept': 'application/json, text/plain, */*',
@@ -67,10 +69,6 @@ def get_api_delivery_dishes(request_id):
     return None
 
 
-def get_url_with_no_params(url):
-    return url.split('?')[0]
-
-
 def get_url_with_no_base(url):
     return url.replace('https://shopeefood.vn/', '')
 
@@ -91,20 +89,6 @@ def get_content_response(body):
         return None
 
     return reply
-
-
-def safe_get(dict, keys, default=None):
-    if dict is None:
-        return default
-
-    for key in keys:
-        if key not in dict:
-            return default
-        dict = dict[key]
-        if dict is None:
-            return default
-
-    return dict
 
 
 def process(full_url):
