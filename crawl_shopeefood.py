@@ -117,4 +117,4 @@ def process(full_url):
                 'price': dish['price']['text'],
             })
 
-    return title, items
+    return "[Now] " + title, items

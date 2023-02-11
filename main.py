@@ -32,7 +32,7 @@ strategies = [
 ]
 
 
-def attempt_crawl(url):
+def attempt_process(url):
     for strategy in strategies:
         if strategy.is_support_url(url):
             return strategy.process(url)
@@ -42,9 +42,9 @@ def attempt_crawl(url):
 async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
     url = text.split(' ')[1]
-    obj = attempt_crawl(url)
+    obj = attempt_process(url)
     if obj is None:
-        await update.message.reply_text('Not support url')
+        await update.message.reply_text('Không hỗ trợ địa chỉ này')
         return
 
     title = obj[0]
@@ -53,27 +53,24 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Split items into 10 items per poll
     limit_items_per_poll = 10
     items_split = [items[i:i + limit_items_per_poll] for i in range(0, len(items), limit_items_per_poll)]
-    print(json.dumps(items_split))
+    logger.info(json.dumps(items_split))
 
     # Ensure last poll has at least 2 items and at most 10 items
     if len(items_split[-1]) < 2:
         items_split[-1].append(items_split[-2].pop())
 
-    print(json.dumps(items_split))
+    logger.info(json.dumps(items_split))
+
+    repo = get_repo_bot(context)
+    poll_owner_id = update.effective_user.id
+    parent_poll_id = None
+    poll_group_ids = []
 
     # Create poll for each item
     current_page = 0
     for items in items_split:
         current_page += 1
-        questions = []
-        limit_question = limit_items_per_poll
-
-        for item in items:
-            limit_question -= 1
-            if limit_question == -1:
-                break
-
-            questions.append(item['name'] + ' ' + item['price'])
+        questions = [item['name'] + ' ' + item['price'] for item in items[:limit_items_per_poll]]
 
         if len(questions) < 2:
             await update.message.reply_text('Không có đủ món ăn để tạo poll')
@@ -85,27 +82,30 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             pool_title += ' - P' + str(current_page)
 
         message = await context.bot.send_poll(
-            update.effective_chat.id,
+            poll_owner_id,
             pool_title,
             questions,
             is_anonymous=False,
-            allows_multiple_answers=False,
+            allows_multiple_answers=True,
         )
-        # Save some info about the poll the bot_data for later use in receive_poll_answer
-        payload = {
-            message.poll.id: {
-                "questions": questions,
-                "message_id": message.message_id,
-                "chat_id": update.effective_chat.id,
-                "answers": 0,
-            }
-        }
-        context.bot_data.update(payload)
-        print("Poll created " + str(message.message_id) + " " + str(update.effective_chat.id))
+        poll_id = message.message_id
+        poll_group_ids.append((poll_id, parent_poll_id))
+        parent_poll_id = poll_id
+
+        logger.info("Poll created " + str(poll_id) + " " + str(poll_owner_id))
+
+    await send_random_quote(context, update)
+
+
+async def send_random_quote(context, update):
+    await context.bot.sendDice(update.effective_chat.id, emoji='🎲')
+    # send random a quote
+    # TODO
+    pass
 
 
 def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
-    repo = context.user_data[user_id]
+    repo = context.user_data.get(user_id)
     if not repo or repo is not KeyValRepository:
         repo = KeyValRepository(user_id)
         context.user_data[user_id] = repo
@@ -113,7 +113,7 @@ def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValReposito
 
 
 def get_repo_bot(context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
-    repo = context.bot_data['bot']
+    repo = context.bot_data.get('bot')
     if not repo or repo is not KeyValRepository:
         repo = KeyValRepository('bot')
         context.bot_data['bot'] = repo
@@ -174,13 +174,13 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
     if message.poll.is_closed:
         return
 
-    print("Close poll " + str(message.chat.id) + " " + str(message.message_id))
+    logger.info("Close poll " + str(message.chat.id) + " " + str(message.message_id))
     await context.bot.stop_poll(message.chat.id, message.message_id)
 
     await message.reply_text("Poll closed by " + update.effective_user.mention_html(), parse_mode=ParseMode.HTML)
 
     # Get results of the poll
-    msg = "Poll results:\n"
+    msg = "Kết quả poll:\n"
     for option in message.poll.options:
         if option.voter_count > 0:
             msg += f"{option.text}: {option.voter_count}\n"
@@ -190,9 +190,9 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
 async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Info poll reply to the command
     message = update.effective_message.reply_to_message
-    print("Info poll " + str(message.chat.id) + " " + str(message.message_id))
+    logger.info("Info poll " + str(message.chat.id) + " " + str(message.message_id))
 
-    msg = "Poll results:\n"
+    msg = "Kết quả poll:\n"
     for option in message.poll.options:
         if option.voter_count > 0:
             msg += f"{option.text}: {option.voter_count}\n"
@@ -221,13 +221,13 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Display a help message"""
     await update.message.reply_text(
-        "Use /poll url to create a poll, supported sites are: shopeefood, grabfood\n"
-        "Use /close to close the poll.\n"
-        "Use /info to get info of the poll.\n"
-        "Use /bill to create a bill for the poll.\n"
-        "Use /checkbill to check the bill of the poll.\n"
-        "Use /paid to mark the bill as paid.\n"
-        "Use /help to get this message.\n"
+        "/poll url để tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood\n"
+        "/close để đóng bình chọn.\n"
+        "/info để lấy thông tin của bình chọn.\n"
+        "/bill để tạo một hóa đơn cho bình chọn.\n"
+        "/checkbill để kiểm tra hóa đơn của bình chọn.\n"
+        "/paid để đánh dấu hóa đơn đã thanh toán.\n"
+        "/help để lấy tin nhắn này.\n"
     )
 
 

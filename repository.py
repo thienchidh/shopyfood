@@ -1,15 +1,26 @@
+import json
+import os
+
+
 class KeyValRepository:
-    def __init__(self, user_id):
-        self.user_id = user_id
+    def __init__(self, key):
+        self.key = key
         self.data = dict()
 
         self.load()
 
     def load(self):
-        pass
+        file_path = os.path.join("data", f"{self.key}.json")
+        try:
+            with open(file_path, "r") as f:
+                self.data = json.load(f)
+        except Exception as e:
+            print(e)
 
     def save(self):
-        pass
+        file_path = os.path.join("data", f"{self.key}.json")
+        with open(file_path, "w") as f:
+            json.dump(self.data, f, indent=4)
 
     def get(self, key, default=None):
         return self.data.get(key, default)
