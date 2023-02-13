@@ -62,7 +62,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info(json.dumps(items_split))
 
     repo = get_repo_bot(context)
-    poll_owner_id = f'{update.effective_user.id}'
+    poll_owner_id = f'{update.effective_chat.id}'
 
     parent_poll_id = None
     parent_poll_ids = dict()
@@ -96,7 +96,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if parent_poll_id is None:
             parent_poll_id = poll_id
         parent_poll_ids[poll_id] = parent_poll_id
-        logger.info("Poll created {0} {1}".format(poll_id, poll_owner_id))
+        logger.info("Poll created {0} {1} {2}".format(poll_id, poll_owner_id, message.poll.id))
 
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
@@ -210,8 +210,8 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
     logger.info("Info poll " + poll_owner_id + " " + poll_id)
 
     repo = get_repo_bot(context)
-    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id)
-    poll_group_ids = repo.get('poll_group_ids').get(poll_owner_id)
+    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
+    poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
 
     parent_id = parent_poll_ids.get(poll_id)
     list_poll_ids = poll_group_ids.get(parent_id)
