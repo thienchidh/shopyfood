@@ -19,6 +19,7 @@ from telegram.ext import (
 
 import crawl_grabfood
 import crawl_shopeefood
+import quote_storate
 from repository import KeyValRepository
 
 # Enable logging
@@ -69,6 +70,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     parent_poll_ids = dict()
     poll_group_ids = []
     poll_data = dict()
+    poll_ids = []
 
     # Create poll for each item
     current_page = 0
@@ -92,13 +94,14 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             is_anonymous=False,
             allows_multiple_answers=True,
         )
-        poll_id = f'{message.message_id}'
-        poll_group_ids.append(poll_id)
+        msg_poll_id = f'{message.message_id}'
+        poll_group_ids.append(msg_poll_id)
+        poll_ids.append(message.poll.id)
 
         if parent_poll_id is None:
-            parent_poll_id = poll_id
-        parent_poll_ids[poll_id] = parent_poll_id
-        logger.info("Poll created {0} {1} {2}".format(poll_id, poll_owner_id, message.poll.id))
+            parent_poll_id = msg_poll_id
+        parent_poll_ids[msg_poll_id] = parent_poll_id
+        logger.info("Poll created {0} {1} {2}".format(msg_poll_id, poll_owner_id, message.poll.id))
 
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
@@ -106,7 +109,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 "questions": questions,
                 "message_id": message.message_id,
                 "chat_id": update.effective_chat.id,
-                "answers": dict(),
+                "answers": dict(),  # {user_id: [answer_index]}
             }
         }
         poll_data.update(payload)
@@ -134,6 +137,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 async def send_random_quote(context, update):
+    await update.message.reply_text(quote_storate.get_random_quote())
     # await context.bot.sendDice(update.effective_chat.id, emoji='🎲')
     # send random a quote
     # TODO
@@ -161,12 +165,9 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     repo = get_repo_bot(context)
     all_poll_data = repo.get('poll_data', dict())
     answer = update.poll_answer
-    answered_poll = context.bot_data.get(answer.poll_id) or all_poll_data.get(answer.poll_id)
-    try:
-        questions = answered_poll["questions"]
-    # this means this poll answer update is from an old poll, we can't do our answering then
-    except KeyError:
-        return
+    answered_poll = all_poll_data.get(answer.poll_id)
+    questions = answered_poll["questions"]
+    answers = answered_poll["answers"]
     selected_options = answer.option_ids
     answer_string = ""
     for question_id in selected_options:
@@ -175,17 +176,21 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         else:
             answer_string += questions[question_id]
 
+    effective_user = update.effective_user
+    effective_user_id = f'{effective_user.id}'
+    answers[effective_user_id] = selected_options
+    repo.save()
     if answer_string == "":
         await context.bot.send_message(
             answered_poll["chat_id"],
-            f"{update.effective_user.mention_html()} không chọn nữa!",
+            f"{effective_user.mention_html()} không chọn nữa!",
             parse_mode=ParseMode.HTML,
         )
         return
 
     await context.bot.send_message(
         answered_poll["chat_id"],
-        f"{update.effective_user.mention_html()} chọn {answer_string}!",
+        f"{effective_user.mention_html()} chọn {answer_string}!",
         parse_mode=ParseMode.HTML,
     )
 
