@@ -1,3 +1,4 @@
+import asyncio
 import json
 import logging
 
@@ -127,7 +128,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 async def send_random_quote(context, update):
-    await context.bot.sendDice(update.effective_chat.id, emoji='🎲')
+    # await context.bot.sendDice(update.effective_chat.id, emoji='🎲')
     # send random a quote
     # TODO
     pass
@@ -186,6 +187,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
 async def receive_poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """On receiving polls, reply to it by a closed poll copying the received poll"""
     actual_poll = update.effective_message.poll
+    logger.info('receive_poll', actual_poll.id)
     # Only need to set the question and options, since all other parameters don't matter for
     # a closed poll
     await update.effective_message.reply_poll(
@@ -195,6 +197,13 @@ async def receive_poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         is_closed=True,
         reply_markup=ReplyKeyboardRemove(),
     )
+
+
+async def stop_polls(context, list_poll_ids, poll_owner_id):
+    tasks = [context.bot.stop_poll(poll_owner_id, poll_id) for poll_id in list_poll_ids]
+    await asyncio.gather(*tasks)
+    for poll_id in list_poll_ids:
+        logger.info("Close poll {} {}".format(poll_owner_id, poll_id))
 
 
 async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -216,9 +225,7 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
     parent_id = parent_poll_ids.get(poll_id)
     list_poll_ids = poll_group_ids.get(parent_id)
 
-    for poll_id in list_poll_ids:
-        await context.bot.stop_poll(poll_owner_id, poll_id)
-        logger.info("Close poll " + poll_owner_id + " " + poll_id)
+    await stop_polls(context, list_poll_ids, poll_owner_id)
 
     await message.reply_text(
         f"{len(list_poll_ids)} Poll closed by {update.effective_user.mention_html()}",
