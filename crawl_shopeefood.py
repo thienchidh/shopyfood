@@ -99,7 +99,13 @@ def process(full_url):
     if delivery_id is None:
         return None
 
-    title = safe_get(get_content_response(get_api_detail(str(delivery_id))), ['delivery_detail', 'name'])
+    response = get_content_response(get_api_detail(str(delivery_id)))
+    print('response', json.dumps(response))
+    alert_msg = safe_get(response, ['delivery_detail', 'delivery', 'delivery_alert', 'message', 'message'])
+    if alert_msg is not None:
+        return alert_msg
+
+    title = safe_get(response, ['delivery_detail', 'name'])
 
     dishes = get_content_response(get_api_delivery_dishes(str(delivery_id)))
     menu_infos = safe_get(dishes, ['menu_infos'], [])

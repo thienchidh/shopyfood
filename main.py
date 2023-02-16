@@ -45,6 +45,11 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
     url = text.split(' ')[1]
     obj = attempt_process(url)
+    # check obj is string
+    if isinstance(obj, str):
+        await update.message.reply_text(obj)
+        return
+
     if obj is None:
         await update.message.reply_text('Không hỗ trợ địa chỉ này')
         return
@@ -302,6 +307,11 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
     await delete_polls(context, list_poll_ids, poll_owner_id)
 
 
+async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    for i in range(0, 10):
+        await context.bot.sendDice(update.effective_chat.id)
+
+
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     pass
 
@@ -339,6 +349,7 @@ def main() -> None:
     application.add_handler(CommandHandler("checkbill", checkbill_handler))
     application.add_handler(CommandHandler("paid", paid_handler))
     application.add_handler(CommandHandler("delete", delete_poll_handler))
+    application.add_handler(CommandHandler("dice", game_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
 
