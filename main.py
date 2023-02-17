@@ -308,7 +308,9 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 
 async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    for i in range(0, 10):
+    limit = int(update.effective_message.text.split(' ')[1])
+    limit = max(1, min(limit, 10))
+    for i in range(0, limit):
         await context.bot.sendDice(update.effective_chat.id)
 
 
