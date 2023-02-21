@@ -14,8 +14,7 @@ from telegram.ext import (
     ContextTypes,
     MessageHandler,
     PollAnswerHandler,
-    filters, Updater,
-)
+    filters, )
 
 import crawl_grabfood
 import crawl_shopeefood
@@ -342,18 +341,6 @@ def main() -> None:
     """Run bot."""
     bot_token = yaml.load(open('./config/config.yml'), Loader=yaml.FullLoader)['telegram']['token']
 
-    # Define the commands that your bot will support
-    commands = [
-        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
-        BotCommand("close", "Đóng bình chọn"),
-        BotCommand("info", "Lấy thông tin của bình chọn"),
-        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
-        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
-        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
-        BotCommand("delete", "Xóa bình chọn"),
-        BotCommand("help", "Lấy tin nhắn này"),
-    ]
-
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(bot_token).build()
     application.add_handler(CommandHandler("start", help_handler))
@@ -368,6 +355,20 @@ def main() -> None:
     application.add_handler(CommandHandler("dice", game_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
+
+    # Define the commands that your bot will support
+    commands = [
+        BotCommand("start", "Bắt đầu bot"),
+        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
+        BotCommand("close", "Đóng bình chọn"),
+        BotCommand("info", "Lấy thông tin của bình chọn"),
+        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
+        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
+        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
+        BotCommand("delete", "Xóa bình chọn"),
+        BotCommand("dice", "Chơi game xúc xắc"),
+        BotCommand("help", "Lấy tin nhắn này"),
+    ]
     application.bot.set_my_commands(commands)
 
     # Run the bot until the user presses Ctrl-C
