@@ -319,6 +319,7 @@ async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
     pass
 
 
