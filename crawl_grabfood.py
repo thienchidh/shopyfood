@@ -54,6 +54,9 @@ def process(url):
     values = util.get_values_by_key(json_data, '@type', lambda v: v == 'MenuItem')
 
     for value in values:
+        if not value['available']:
+            continue
+
         item = {
             'name': util.safe_get(value, ['name']),
             'price': util.safe_get(value, ['offers', 'price'])
