@@ -1,6 +1,10 @@
 import asyncio
 import json
 import logging
+from re import L
+import re
+from tabulate import tabulate
+
 
 import yaml
 from telegram import (
@@ -170,6 +174,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     repo = get_repo_bot(context)
     all_poll_data = repo.get('poll_data', dict())
     answer = update.poll_answer
+    logger.info(f"receive_poll_answer answers {update.poll_answer}")
     answered_poll = all_poll_data.get(answer.poll_id)
     questions = answered_poll["questions"]
     answers = answered_poll["answers"]
@@ -316,11 +321,123 @@ async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     print("Khai code 2")
+    repo = get_repo_bot(context);
+    # parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
+    # poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
+
+    # logger.info(f"parent_poll_ids: {parent_poll_ids}")
+    # logger.info(f"poll_group_ids: {poll_group_ids}")
+    logger.info(update.effective_user.full_name)
+    # await update.effective_message.reply_text(f"repo : {json.dumps(repo)}")
+    await update.effective_message.reply_text(f"update.effective_user.full_name : {update.effective_user.full_name}")
+     
     pass
 
 
+
+def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
+    repo = get_repo_bot(context)
+    all_poll_data = repo.get("poll_data", dict())
+    for poll_id in all_poll_data:
+        poll_data = all_poll_data[poll_id]
+        #logger.info(f'value {poll_data.get("message_id", None)}')
+        #logger.info(f'value of message_id {message_id}')
+        #logger.info(f'type of poll_data message id {type(poll_data.get("message_id", None))}')
+        #logger.info(f'type of message_id {type(message_id)}')
+        #logger.info(f'type of ep kieu id {type(str(poll_data.get("message_id", None)))}')
+        if ("message_id" in poll_data and str(poll_data["message_id"]) == message_id):
+            #logger.info(f"foundedget_poll_data_by_message_id {poll_data} message_id {message_id}")
+            return poll_data
+    return {}
+
+
+
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
+    message = update.effective_message.reply_to_message
+    if not message or message.poll is None:
+        logger.info("checkbill_hander Poll not found");
+        return
+
+    poll_owner_id = f'{message.chat.id}'
+    message_id = f'{message.message_id}'   
+
+    logger.info("Info poll " + poll_owner_id + " " + message_id)
+    poll_data = get_poll_data_by_message_id(context, message_id)
+    repo = get_repo_bot(context)
+    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
+    poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
+
+    # list of dictionaries representing table rows
+    # list of dictionaries representing table rows
+    headers = ["STT", "Name", "Dish", "Price"]
+    table_data = [
+        headers,
+        # {"STT": 1, "Name": "John", "Dish": "Pizza", "Price": 10.99},
+        # [1, "John", "Pizza", 10.99],
+        # [1, "John", "Pizza", 10.99]
+    ]
+    parent_id = parent_poll_ids.get(message_id)
+    # List all poll that have common parent
+    list_poll_ids = poll_group_ids.get(parent_id)
+    # tong hop data tung poll
+
+    logger.info(f"list_poll_ids {list_poll_ids}")
+    index = 0
+    subtotal_int = 0
+    for message_id in list_poll_ids:
+        poll_data = get_poll_data_by_message_id(context, message_id)
+        logger.info(f"poll_data {poll_data}")
+        if ("answers" in poll_data):
+            for key in poll_data["answers"]:
+                if ("questions" in poll_data):
+                    list_answer_of_this_user = poll_data["answers"].get(key)
+                    logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
+                    for i in list_answer_of_this_user:
+                        string_answer = poll_data["questions"][i]
+                        match = re.match(r'^(.*?)(\d{1,3}(,\d{3})*)\s*(.*?)$', string_answer)
+                        if match:
+                            index += 1
+                            part1 = match.group(1)
+                            price_str = part2 = match.group(2) # price
+                            price_int = int(price_str.replace(",", ""))
+                            part3 = match.group(4)
+                            row = [index, f"{key}", part1, part2 + part3]
+                            table_data.append(row)
+                            subtotal_int += price_int;
+
+                    pass
+
+
+
+   
+    
+
+    # list of column headers
+    subtotal_str = '{:,.0f}'.format(subtotal_int) + "\u0111"
+
+    # calculate the subtotal
+    # subtotal = sum(row["Price"] for row in table_data)
+    subtotal_row = ["-", "-", f"-", "-"]
+    table_data.append(subtotal_row)
+    # add a row for the subtotal
+    subtotal_row = ["", "", f"Subtotal {subtotal_str}", ""]
+    table_data.append(subtotal_row)
+    subtotal_row = ["", "", f"AppFee {100}", ""]
+    table_data.append(subtotal_row)
+    subtotal_row = ["", "", f"Discount1 {100}", ""]
+    table_data.append(subtotal_row)
+    subtotal_row = ["", "", f"Discount2 {100}", ""]
+    table_data.append(subtotal_row)
+    # print the table using the tabulate library
+    # string = tabulate(table_data, headers="firstrow", showindex=True)
+    # print(string)
+
+    table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
+    
+    # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
+
+
+    await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
     pass
 
 
