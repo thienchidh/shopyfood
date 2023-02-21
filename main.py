@@ -315,7 +315,7 @@ async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    print("Khai code")
+    print("Khai code 2")
     pass
 
 
