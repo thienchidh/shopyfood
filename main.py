@@ -346,6 +346,21 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/help để lấy tin nhắn này.\n"
     )
 
+    # Define the commands that your bot will support
+    commands = [
+        BotCommand("start", "Bắt đầu bot"),
+        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
+        BotCommand("close", "Đóng bình chọn"),
+        BotCommand("info", "Lấy thông tin của bình chọn"),
+        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
+        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
+        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
+        BotCommand("delete", "Xóa bình chọn"),
+        BotCommand("dice", "Chơi game xúc xắc"),
+        BotCommand("help", "Lấy tin nhắn này"),
+    ]
+    await context.bot.set_my_commands(commands)
+
 
 def main() -> None:
     """Run bot."""
@@ -365,21 +380,6 @@ def main() -> None:
     application.add_handler(CommandHandler("dice", game_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
-
-    # Define the commands that your bot will support
-    commands = [
-        BotCommand("start", "Bắt đầu bot"),
-        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
-        BotCommand("close", "Đóng bình chọn"),
-        BotCommand("info", "Lấy thông tin của bình chọn"),
-        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
-        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
-        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
-        BotCommand("delete", "Xóa bình chọn"),
-        BotCommand("dice", "Chơi game xúc xắc"),
-        BotCommand("help", "Lấy tin nhắn này"),
-    ]
-    application.bot.set_my_commands(commands)
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
