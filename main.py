@@ -1,11 +1,12 @@
 import asyncio
 import json
 import logging
+import random
 
 import yaml
 from telegram import (
     ReplyKeyboardRemove,
-    Update, BotCommand,
+    Update, BotCommand, Poll,
 )
 from telegram.constants import ParseMode
 from telegram.ext import (
@@ -308,9 +309,18 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     limit = int(update.effective_message.text.split(' ')[1])
-    limit = max(1, min(limit, 10))
+    limit = max(1, min(limit, 100))
     for i in range(0, limit):
-        await context.bot.sendDice(update.effective_chat.id)
+        options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        randint = random.randint(0, len(options) - 1)
+        await update.effective_message.reply_poll(
+            question="Đoán số từ 1 đến 10",
+            options=options,
+            is_anonymous=False,
+            type=Poll.QUIZ,
+            correct_option_id=randint,
+            explanation="Đáp án đúng là {}".format(options[randint]),
+        )
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
