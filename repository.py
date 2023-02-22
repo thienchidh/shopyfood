@@ -27,10 +27,12 @@ class KeyValRepository:
 
     def set(self, key, value):
         self.data[key] = value
+        self.save()
 
     def get_and_set(self, key, value):
         old_value = self.get(key)
         self.set(key, value)
+        self.save()
         return old_value
 
     def compute_if_absent(self, key, func):

@@ -11,6 +11,8 @@ from telegram import (
     ReplyKeyboardRemove,
     Update,
 )
+from telegram.error import TelegramError
+
 from telegram.constants import ParseMode
 from telegram.ext import (
     Application,
@@ -442,7 +444,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Display a help message"""
     await update.message.reply_text(
         "/poll url để tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood\n"
         "/close để đóng bình chọn.\n"
@@ -454,6 +455,44 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/help để lấy tin nhắn này.\n"
     )
 
+
+async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    chat_id = update.effective_chat.id
+    full_name = update.effective_user.full_name
+    user_name = update.effective_message.from_user.username
+    repo_user = get_repo_user(chat_id, context)
+    list_user_name = repo_user.get("user_name", [])
+    list_user_name.append(user_name)
+    repo_user.set("user_name", list_user_name)
+    repo_user.save()
+    """Display a help message"""
+    await update.message.reply_text(
+        f'Id {chat_id} user_name = {user_name}')
+
+async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    chat_id = update.effective_chat.id
+    user_id = update.effective_message.id
+    bot = context.bot
+    try:
+        bot_get_me_str = await bot.getMe()
+        await update.message.reply_text(bot_get_me_str)
+        # get all member ids in the group
+        # members = bot.getChatMemberCount(chat_id)
+        # members = await bot.getChatMember(chat_id)
+        # members_0 = members[0]
+        # members_0_str = json.dumps(members_0)
+        # await update.message.reply_text(members_0_str)
+        # member_ids = [member.user.id for member in bot.getChatMember(chat_id)]
+
+        # loop through all members and get their info
+        # for member_id in member_ids:
+        #     member = bot.get_chat_member(chat_id, member_id)
+        #     update.message.reply_text(f'{member.user.first_name} {member.user.last_name} ({member.user.username})')
+            # add any other info you want to retrieve for each member
+
+    except TelegramError as e:
+        # logger.error(f"Error getting member info: {e}")
+        await update.message.reply_text("Error getting member info")
 
 def main() -> None:
     """Run bot."""
@@ -471,6 +510,8 @@ def main() -> None:
     application.add_handler(CommandHandler("paid", paid_handler))
     application.add_handler(CommandHandler("delete", delete_poll_handler))
     application.add_handler(CommandHandler("dice", game_handler))
+    application.add_handler(CommandHandler("checkin", checkin_handler))
+    application.add_handler(CommandHandler("test", test_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
 
