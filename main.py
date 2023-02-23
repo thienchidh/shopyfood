@@ -1,9 +1,11 @@
 import asyncio
 import json
 import logging
+
 from re import L
 import re
 from tabulate import tabulate
+import random
 
 
 import yaml
@@ -20,8 +22,7 @@ from telegram.ext import (
     ContextTypes,
     MessageHandler,
     PollAnswerHandler,
-    filters,
-)
+    filters, )
 
 import crawl_grabfood
 import crawl_shopeefood
@@ -316,9 +317,18 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     limit = int(update.effective_message.text.split(' ')[1])
-    limit = max(1, min(limit, 10))
+    limit = max(1, min(limit, 100))
     for i in range(0, limit):
-        await context.bot.sendDice(update.effective_chat.id)
+        options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        randint = random.randint(0, len(options) - 1)
+        await update.effective_message.reply_poll(
+            question="Đoán số từ 1 đến 10",
+            options=options,
+            is_anonymous=False,
+            type=Poll.QUIZ,
+            correct_option_id=randint,
+            explanation="Đáp án đúng là {}".format(options[randint]),
+        )
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -454,6 +464,21 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/delete để xóa bình chọn.\n"
         "/help để lấy tin nhắn này.\n"
     )
+
+    # Define the commands that your bot will support
+    commands = [
+        BotCommand("start", "Bắt đầu bot"),
+        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
+        BotCommand("close", "Đóng bình chọn"),
+        BotCommand("info", "Lấy thông tin của bình chọn"),
+        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
+        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
+        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
+        BotCommand("delete", "Xóa bình chọn"),
+        BotCommand("dice", "Chơi game xúc xắc"),
+        BotCommand("help", "Lấy tin nhắn này"),
+    ]
+    await context.bot.set_my_commands(commands)
 
 
 async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
