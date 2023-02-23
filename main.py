@@ -1,21 +1,17 @@
 import asyncio
 import json
 import logging
-
-from re import L
-import re
-from tabulate import tabulate
 import random
-
+import re
 
 import yaml
+from tabulate import tabulate
 from telegram import (
     ReplyKeyboardRemove,
     Update, BotCommand, Poll,
 )
-from telegram.error import TelegramError
-
 from telegram.constants import ParseMode
+from telegram.error import TelegramError
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -353,28 +349,26 @@ async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     pass
 
 
-
 def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
     repo = get_repo_bot(context)
     all_poll_data = repo.get("poll_data", dict())
     for poll_id in all_poll_data:
         poll_data = all_poll_data[poll_id]
-        #logger.info(f'value {poll_data.get("message_id", None)}')
-        #logger.info(f'value of message_id {message_id}')
-        #logger.info(f'type of poll_data message id {type(poll_data.get("message_id", None))}')
-        #logger.info(f'type of message_id {type(message_id)}')
-        #logger.info(f'type of ep kieu id {type(str(poll_data.get("message_id", None)))}')
+        # logger.info(f'value {poll_data.get("message_id", None)}')
+        # logger.info(f'value of message_id {message_id}')
+        # logger.info(f'type of poll_data message id {type(poll_data.get("message_id", None))}')
+        # logger.info(f'type of message_id {type(message_id)}')
+        # logger.info(f'type of ep kieu id {type(str(poll_data.get("message_id", None)))}')
         if ("message_id" in poll_data and str(poll_data["message_id"]) == message_id):
-            #logger.info(f"foundedget_poll_data_by_message_id {poll_data} message_id {message_id}")
+            # logger.info(f"foundedget_poll_data_by_message_id {poll_data} message_id {message_id}")
             return poll_data
     return {}
-
 
 
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message.reply_to_message
     if not message or message.poll is None:
-        logger.info("checkbill_hander Poll not found");
+        logger.info("checkbill_hander Poll not found")
         return
 
     poll_owner_id = f'{message.chat.id}'
@@ -417,7 +411,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                         if match:
                             index += 1
                             part1 = match.group(1)
-                            price_str = part2 = match.group(2) # price
+                            price_str = part2 = match.group(2)  # price
                             price_int = int(price_str.replace(",", ""))
                             part3 = match.group(4)
                             row = [index, f"{key}", part1, part2 + part3]
@@ -450,7 +444,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
     # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
 
-
     await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
     pass
 
@@ -468,6 +461,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/dice để tạo một số ngẫu nhiên.\n"
         "/quiz để tạo một bài trắc nghiệm.\n"
         "/quote để lấy một câu trích dẫn ngẫu nhiên.\n"
+        "/checkin để tạo một bình chọn checkin.\n"
+        "/test để tạo một bình chọn test.\n"
     )
 
     # Define the commands that your bot will support
@@ -484,6 +479,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("help", "Lấy tin nhắn này"),
         BotCommand("quiz", "Chơi game trắc nghiệm"),
         BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
+        BotCommand("checkin", "Tạo một bình chọn checkin"),
+        BotCommand("test", "Tạo một bình chọn test"),
     ]
     await context.bot.set_my_commands(commands)
 
@@ -500,6 +497,7 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     """Display a help message"""
     await update.message.reply_text(
         f'Id {chat_id} user_name = {user_name}')
+
 
 async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.effective_chat.id
@@ -520,11 +518,12 @@ async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         # for member_id in member_ids:
         #     member = bot.get_chat_member(chat_id, member_id)
         #     update.message.reply_text(f'{member.user.first_name} {member.user.last_name} ({member.user.username})')
-            # add any other info you want to retrieve for each member
+        # add any other info you want to retrieve for each member
 
     except TelegramError as e:
         # logger.error(f"Error getting member info: {e}")
         await update.message.reply_text("Error getting member info")
+
 
 def main() -> None:
     """Run bot."""
@@ -541,30 +540,15 @@ def main() -> None:
     application.add_handler(CommandHandler("checkbill", checkbill_handler))
     application.add_handler(CommandHandler("paid", paid_handler))
     application.add_handler(CommandHandler("delete", delete_poll_handler))
-    application.add_handler(CommandHandler("dice", game_handler))
+    application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("checkin", checkin_handler))
     application.add_handler(CommandHandler("test", test_handler))
     application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("quiz", quiz_handler))
     application.add_handler(CommandHandler("quote", quote_handler))
-
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
- # Define the commands that your bot will support
-    commands = [
-        BotCommand("start", "Bắt đầu bot"),
-        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
-        BotCommand("close", "Đóng bình chọn"),
-        BotCommand("info", "Lấy thông tin của bình chọn"),
-        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
-        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
-        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
-        BotCommand("delete", "Xóa bình chọn"),
-        BotCommand("dice", "Chơi game xúc xắc"),
-        BotCommand("help", "Lấy tin nhắn này"),
-        BotCommand("test", "Test Bot"),
-    ]
-    application.bot.set_my_commands(commands)
+
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
 
