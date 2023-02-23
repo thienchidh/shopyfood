@@ -149,7 +149,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 async def send_random_quote(context, update):
-    await update.message.reply_text(quote_storate.get_random_quote())
+    await update.effective_message.reply_text(quote_storate.get_random_quote())
     pass
 
 
@@ -321,24 +321,21 @@ async def dice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    limit = int(update.effective_message.text.split(' ')[-1])
-    limit = max(1, min(limit, 10))
-    for i in range(0, limit):
-        options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        randint = random.randint(0, len(options) - 1)
-        await update.effective_message.reply_poll(
-            question="Đoán số từ 1 đến 10",
-            options=options,
-            is_anonymous=False,
-            type=Poll.QUIZ,
-            correct_option_id=randint,
-            explanation="Đáp án đúng là {}".format(options[randint]),
-        )
+    options = ["1", "2", "3", "4"]
+    randint = random.randint(0, len(options) - 1)
+    await update.effective_message.reply_poll(
+        question="Đoán số từ 1 đến 4",
+        options=options,
+        is_anonymous=False,
+        type=Poll.QUIZ,
+        correct_option_id=randint,
+        explanation="Đáp án đúng là {}".format(options[randint]),
+    )
 
 
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await send_random_quote(update, context)
+    await send_random_quote(context, update)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -352,7 +349,7 @@ async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     logger.info(update.effective_user.full_name)
     # await update.effective_message.reply_text(f"repo : {json.dumps(repo)}")
     await update.effective_message.reply_text(f"update.effective_user.full_name : {update.effective_user.full_name}")
-     
+
     pass
 
 
@@ -381,7 +378,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         return
 
     poll_owner_id = f'{message.chat.id}'
-    message_id = f'{message.message_id}'   
+    message_id = f'{message.message_id}'
 
     logger.info("Info poll " + poll_owner_id + " " + message_id)
     poll_data = get_poll_data_by_message_id(context, message_id)
@@ -429,11 +426,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
                     pass
 
-
-
-   
-    
-
     # list of column headers
     subtotal_str = '{:,.0f}'.format(subtotal_int) + "\u0111"
 
@@ -455,7 +447,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # print(string)
 
     table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
-    
+
     # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
 
 
