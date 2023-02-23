@@ -150,9 +150,6 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def send_random_quote(context, update):
     await update.message.reply_text(quote_storate.get_random_quote())
-    # await context.bot.sendDice(update.effective_chat.id, emoji='🎲')
-    # send random a quote
-    # TODO
     pass
 
 
@@ -315,9 +312,17 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
     await delete_polls(context, list_poll_ids, poll_owner_id)
 
 
-async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+# dice_handler
+async def dice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     limit = int(update.effective_message.text.split(' ')[1])
-    limit = max(1, min(limit, 100))
+    limit = max(1, min(limit, 10))
+    for i in range(0, limit):
+        await update.effective_message.reply_dice()
+
+
+async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    limit = int(update.effective_message.text.split(' ')[-1])
+    limit = max(1, min(limit, 10))
     for i in range(0, limit):
         options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         randint = random.randint(0, len(options) - 1)
@@ -329,6 +334,11 @@ async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
             correct_option_id=randint,
             explanation="Đáp án đúng là {}".format(options[randint]),
         )
+
+
+# quote_handler
+async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await send_random_quote(update, context)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -463,6 +473,9 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/paid để đánh dấu hóa đơn đã thanh toán.\n"
         "/delete để xóa bình chọn.\n"
         "/help để lấy tin nhắn này.\n"
+        "/dice để tạo một số ngẫu nhiên.\n"
+        "/quiz để tạo một bài trắc nghiệm.\n"
+        "/quote để lấy một câu trích dẫn ngẫu nhiên.\n"
     )
 
     # Define the commands that your bot will support
@@ -477,6 +490,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("delete", "Xóa bình chọn"),
         BotCommand("dice", "Chơi game xúc xắc"),
         BotCommand("help", "Lấy tin nhắn này"),
+        BotCommand("quiz", "Chơi game trắc nghiệm"),
+        BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
     ]
     await context.bot.set_my_commands(commands)
 
@@ -537,6 +552,10 @@ def main() -> None:
     application.add_handler(CommandHandler("dice", game_handler))
     application.add_handler(CommandHandler("checkin", checkin_handler))
     application.add_handler(CommandHandler("test", test_handler))
+    application.add_handler(CommandHandler("dice", dice_handler))
+    application.add_handler(CommandHandler("quiz", quiz_handler))
+    application.add_handler(CommandHandler("quote", quote_handler))
+
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
  # Define the commands that your bot will support
