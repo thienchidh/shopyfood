@@ -20,6 +20,7 @@ from telegram.ext import (
 import crawl_grabfood
 import crawl_shopeefood
 import quote_storate
+import modules.logic_handlers as logic_handlers
 from repository import KeyValRepository
 
 # Enable logging
@@ -344,18 +345,25 @@ def main() -> None:
 
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(bot_token).build()
-    application.add_handler(CommandHandler("start", help_handler))
-    application.add_handler(CommandHandler("poll", poll))
-    application.add_handler(CommandHandler("close", close_poll_handler))
-    application.add_handler(CommandHandler("info", info_poll_handler))
-    application.add_handler(CommandHandler("help", help_handler))
-    application.add_handler(CommandHandler("bill", bill_handler))
-    application.add_handler(CommandHandler("checkbill", checkbill_handler))
-    application.add_handler(CommandHandler("paid", paid_handler))
-    application.add_handler(CommandHandler("delete", delete_poll_handler))
-    application.add_handler(CommandHandler("dice", game_handler))
-    application.add_handler(MessageHandler(filters.POLL, receive_poll))
-    application.add_handler(PollAnswerHandler(receive_poll_answer))
+    # application.add_handler(CommandHandler("start", help_handler))
+    # application.add_handler(CommandHandler("poll", poll))
+    # application.add_handler(CommandHandler("close", close_poll_handler))
+    # application.add_handler(CommandHandler("info", info_poll_handler))
+    # application.add_handler(CommandHandler("help", help_handler))
+    # application.add_handler(CommandHandler("bill", bill_handler))
+    # application.add_handler(CommandHandler("checkbill", checkbill_handler))
+    # application.add_handler(CommandHandler("paid", paid_handler))
+    # application.add_handler(CommandHandler("delete", delete_poll_handler))
+    # application.add_handler(CommandHandler("dice", game_handler))
+    # application.add_handler(MessageHandler(filters.POLL, receive_poll))
+    # application.add_handler(PollAnswerHandler(receive_poll_answer))
+
+    application.add_handler(CommandHandler("chui", logic_handlers.handle_chui))
+    application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
+    application.add_handler(CommandHandler("info_roll", logic_handlers.handle_info_game))
+    application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
+    # application.add_handler(MessageHandler(filters.Sticker.ALL, logic_handlers.handle_sticker))
+    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
