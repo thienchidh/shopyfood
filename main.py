@@ -249,12 +249,7 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
         parse_mode=ParseMode.HTML
     )
 
-    # Get results of the poll
-    msg = "Kết quả poll:\n"
-    for option in message.poll.options:
-        if option.voter_count > 0:
-            msg += f"{option.text}: {option.voter_count}\n"
-    await message.reply_text(msg)
+    await checkbill_handler(update, context)
 
 
 async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
