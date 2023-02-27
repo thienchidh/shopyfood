@@ -185,6 +185,8 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     effective_user = update.effective_user
     effective_user_id = f'{effective_user.id}'
     answers[effective_user_id] = selected_options
+    chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
+    chat_id_names[effective_user_id] = f'@{effective_user.username}'
     repo.save()
     if answer_string == "":
         await context.bot.send_message(
@@ -330,17 +332,8 @@ async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    print("Khai code 2")
-    repo = get_repo_bot(context);
-    # parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
-    # poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
-
-    # logger.info(f"parent_poll_ids: {parent_poll_ids}")
-    # logger.info(f"poll_group_ids: {poll_group_ids}")
-    logger.info(update.effective_user.full_name)
-    # await update.effective_message.reply_text(f"repo : {json.dumps(repo)}")
-    await update.effective_message.reply_text(f"update.effective_user.full_name : {update.effective_user.full_name}")
-
+    await update.effective_message.reply_text(f"Xin chào {update.effective_user.mention_html()}",
+                                              parse_mode=ParseMode.HTML)
     pass
 
 
@@ -349,13 +342,7 @@ def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
     all_poll_data = repo.get("poll_data", dict())
     for poll_id in all_poll_data:
         poll_data = all_poll_data[poll_id]
-        # logger.info(f'value {poll_data.get("message_id", None)}')
-        # logger.info(f'value of message_id {message_id}')
-        # logger.info(f'type of poll_data message id {type(poll_data.get("message_id", None))}')
-        # logger.info(f'type of message_id {type(message_id)}')
-        # logger.info(f'type of ep kieu id {type(str(poll_data.get("message_id", None)))}')
-        if ("message_id" in poll_data and str(poll_data["message_id"]) == message_id):
-            # logger.info(f"foundedget_poll_data_by_message_id {poll_data} message_id {message_id}")
+        if "message_id" in poll_data and str(poll_data["message_id"]) == message_id:
             return poll_data
     return {}
 
@@ -389,15 +376,17 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     list_poll_ids = poll_group_ids.get(parent_id)
     # tong hop data tung poll
 
+    chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
+
     logger.info(f"list_poll_ids {list_poll_ids}")
     index = 0
     subtotal_int = 0
     for message_id in list_poll_ids:
         poll_data = get_poll_data_by_message_id(context, message_id)
         logger.info(f"poll_data {poll_data}")
-        if ("answers" in poll_data):
+        if "answers" in poll_data:
             for key in poll_data["answers"]:
-                if ("questions" in poll_data):
+                if "questions" in poll_data:
                     list_answer_of_this_user = poll_data["answers"].get(key)
                     logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
                     for i in list_answer_of_this_user:
@@ -409,9 +398,10 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             price_str = part2 = match.group(2)  # price
                             price_int = int(price_str.replace(",", ""))
                             part3 = match.group(4)
-                            row = [index, f"{key}", part1, part2 + part3]
+                            name = chat_id_names.get(key, key)
+                            row = [index, f"{name}", part1, part2 + part3]
                             table_data.append(row)
-                            subtotal_int += price_int;
+                            subtotal_int += price_int
 
                     pass
 
