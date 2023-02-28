@@ -528,7 +528,7 @@ def main() -> None:
     application.add_handler(CommandHandler("checkbill", checkbill_handler))
     application.add_handler(CommandHandler("paid", paid_handler))
     application.add_handler(CommandHandler("delete", delete_poll_handler))
-    application.add_handler(CommandHandler("dice", game_handler))
+    application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("checkin", checkin_handler))
     application.add_handler(CommandHandler("test", test_handler))
     application.add_handler(CommandHandler("dice", dice_handler))
