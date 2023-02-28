@@ -1,0 +1,338 @@
+[
+    {
+        "question": "",
+        "answers": [],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh l\u1edbn nh\u1ea5t th\u1ebf gi\u1edbi.",
+            " n\u01b0\u1edbc \u0111\u1ea7u ti\u00ean ph\u00f3ng th\u00e0nh c\u00f4ng v\u1ec7 tinh nh\u00e2n t\u1ea1o.",
+            " m\u1ed9t trong ba trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh l\u1edbn c\u1ee7a th\u1ebf gi\u1edbi.",
+            " trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh th\u1ee9 hai th\u1ebf gi\u1edbi."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh l\u1edbn nh\u1ea5t th\u1ebf gi\u1edbi."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " S\u1ea3n l\u01b0\u1ee3ng c\u00f4ng nghi\u1ec7p chi\u1ebfm g\u1ea7n 40% t\u1ed5ng s\u1ea3n l\u01b0\u1ee3ng c\u00f4ng nghi\u1ec7p th\u1ebf gi\u1edbi.",
+            " Kinh t\u1ebf M\u0129 chi\u1ebfm g\u1ea7n 40% t\u1ed5ng s\u1ea3n ph\u1ea9m kinh t\u1ebf th\u1ebf gi\u1edbi.",
+            "nh, Ph\u00e1p, T\u00e2y \u0110\u1ee9c, Nh\u1eadt, Italia c\u1ed9ng l\u1ea1i."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 1,
+        "explanation": "Gi\u1ea3i th\u00edch: Sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 l\u00e0 trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh l\u1edbn nh\u1ea5t th\u1ebf gi\u1edbi. Bi\u1ec3u hi\u1ec7n bao tr\u00f9m \u0111\u00f3 l\u00e0 kinh t\u1ebf M\u0129 chi\u1ebfm g\u1ea7n 40% t\u1ed5ng s\u1ea3n ph\u1ea9m kinh t\u1ebf th\u1ebf gi\u1edbi."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            "\u00e1c t\u1eadp \u0111o\u00e0n t\u01b0 b\u1ea3n l\u0169ng \u0111o\u1ea1n c\u00f3 s\u1ee9c s\u1ea3n xu\u1ea5t, c\u1ea1nh tranh l\u1edbn.",
+            " Vai tr\u00f2 c\u1ee7a Nh\u00e0 n\u01b0\u1edbc trong vi\u1ec7c ho\u1ea1ch \u0111\u1ecbnh ch\u00ednh s\u00e1ch v\u00e0 \u0111i\u1ec1u ti\u1ebft n\u1ec1n kinh t\u1ebf. ",
+            "h\u00ednh s\u00e1ch m\u1edbi c\u1ee7a T\u1ed5ng th\u1ed1ng Rud\u01a1ven \u0111\u00e3 ph\u00e1t huy t\u00e1c d\u1ee5ng tr\u00ean th\u1ef1c t\u1ebf. ",
+            " \u00c1p d\u1ee5ng nh\u1eefng th\u00e0nh t\u1ef1u khoa h\u1ecdc - k\u0129 thu\u1eadt v\u00e0o trong s\u1ea3n xu\u1ea5t. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 2,
+        "explanation": "Gi\u1ea3i th\u00edch: Ch\u00ednh s\u00e1ch m\u1edbi c\u1ee7a T\u1ed5ng th\u1ed1ng Rud\u01a1ven \u0111\u01b0\u1ee3c ti\u1ebfn h\u00e0nh n\u0103m 1932, t\u1ee9c l\u00e0 tr\u01b0\u1edbc khi Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai di\u1ec5n ra. Ch\u00ednh s\u00e1ch n\u00e0y nh\u1eb1m m\u1ee5c ti\u00eau \u0111\u01b0a n\u01b0\u1edbc M\u0129 tho\u00e1t kh\u1ecfi kh\u1ee7ng ho\u1ea3ng kinh t\u1ebf 1929 - 1933."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " s\u1ea3n l\u01b0\u1ee3ng c\u00f4ng nghi\u1ec7p M\u0129 chi\u1ebfm 40% s\u1ea3n l\u01b0\u1ee3ng c\u00f4ng nghi\u1ec7p to\u00e0n th\u1ebf gi\u1edbi. ",
+            " c\u00f4ng nghi\u1ec7p t\u0103ng 27% so v\u1edbi tr\u01b0\u1edbc chi\u1ebfn tranh. ",
+            " kinh t\u1ebf M\u0129 chi\u1ebfm 25% t\u1ed5ng s\u1ea3n ph\u1ea9m kinh t\u1ebf th\u1ebf gi\u1edbi. ",
+            "\u1ea3n, T\u00e2y \u0110\u1ee9c v\u00e0 Italia c\u1ed9ng l\u1ea1i."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 3,
+        "explanation": "Gi\u1ea3i th\u00edch: M\u1ed9t th\u00e0nh t\u1ef1u l\u1edbn c\u1ee7a kinh t\u1ebf M\u0129 trong nh\u1eefng n\u0103m 1945 \u2013 1973 ch\u1ee9ng t\u1ecf M\u0129 \u0111\u00e3 r\u1ea5t th\u00e0nh c\u00f4ng khi ti\u1ebfn h\u00e0nh cu\u1ed9c \"c\u00e1ch m\u1ea1ng xanh\" trong n\u00f4ng nghi\u1ec7p l\u00e0 s\u1ea3n l\u01b0\u1ee3ng n\u00f4ng nghi\u1ec7p b\u1eb1ng hai l\u1ea7n Anh, Ph\u00e1p, Nh\u1eadt B\u1ea3n, T\u00e2y \u0110\u1ee9c v\u00e0 Italia c\u1ed9ng l\u1ea1i."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " M\u0129 l\u00e0 n\u01b0\u1edbc ti\u00ean phong trong vi\u1ec7c ch\u1ebf t\u1ea1o c\u00f4ng c\u1ee5 s\u1ea3n xu\u1ea5t m\u1edbi.",
+            " M\u0129 l\u00e0 n\u01b0\u1edbc ti\u00ean phong trong vi\u1ec7c t\u00ecm ra nh\u1eefng v\u1eadt li\u1ec7u m\u1edbi.",
+            " M\u0129 l\u00e0 n\u01b0\u1edbc kh\u1edfi \u0111\u1ea7u cu\u1ed9c c\u00e1ch m\u1ea1ng xanh trong n\u00f4ng nghi\u1ec7p.",
+            " M\u0129 l\u00e0 n\u01b0\u1edbc \u0111\u1ea7u ti\u00ean ph\u00f3ng th\u00e0nh c\u00f4ng v\u1ec7 tinh nh\u00e2n t\u1ea1o."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 3,
+        "explanation": "Gi\u1ea3i th\u00edch: N\u01b0\u1edbc \u0111\u1ea7u ti\u00ean ph\u00f3ng th\u00e0nh c\u00f4ng v\u1ec7 tinh nh\u00e2n t\u1ea1o l\u00e0 Li\u00ean X\u00f4, kh\u00f4ng ph\u1ea3i M\u0129."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            "ixenhao, Kenn\u01a1\u0111i, Gi\u00f4nx\u01a1n, N\u00edchx\u01a1n. ",
+            "ixenhao, Kenn\u01a1\u0111i, Gi\u00f4nx\u01a1n, N\u00edchx\u01a1n. ",
+            " Truman, Rig\u00e2n, Gi\u00f4nx\u01a1n, N\u00edchx\u01a1n, Pho. ",
+            "i\u0111en. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: T\u00ean c\u00e1c v\u1ecb t\u1ed5ng th\u1ed1ng M\u0129 t\u1eeb n\u0103m 1945 \u0111\u1ebfn \u0111\u1ea7u nh\u1eefng n\u0103m 70 c\u1ee7a th\u1ebf k\u1ec9 XX l\u00e0 Truman, Aixenhao, Kenn\u01a1\u0111i, Gi\u00f4nx\u01a1n, N\u00edchx\u01a1n."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " x\u00e1c l\u1eadp vai tr\u00f2 l\u00e3nh \u0111\u1ea1o c\u1ee7a M\u0129 \u1edf ch\u00e2u M\u0129.",
+            "\u01b0\u01a1ng.",
+            " x\u00e1c l\u1eadp vai tr\u00f2 l\u00e3nh \u0111\u1ea1o c\u1ee7a M\u0129 tr\u00ean to\u00e0n c\u1ea7u.",
+            " x\u00e1c l\u1eadp vai tr\u00f2 l\u00e3nh \u0111\u1ea1o c\u1ee7a M\u0129 \u1edf ch\u00e2u \u00c2u."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 2,
+        "explanation": "Gi\u1ea3i th\u00edch: Sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tri\u1ec3n khai chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u v\u1edbi tham v\u1ecdng b\u00e1 ch\u1ee7 th\u1ebf gi\u1edbi, x\u00e1c l\u1eadp vai tr\u00f2 l\u00e3nh \u0111\u1ea1o c\u1ee7a M\u0129 tr\u00ean to\u00e0n c\u1ea7u."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " Ng\u0103n ch\u1eb7n, \u0111\u1ea9y l\u00f9i, ti\u1ebfn t\u1edbi ti\u00eau di\u1ec7t ho\u00e0n to\u00e0n ch\u1ee7 ngh\u0129a ph\u00e1t x\u00edt. ",
+            " Kh\u1ed1ng ch\u1ebf, chi ph\u1ed1i c\u00e1c n\u01b0\u1edbc T\u01b0 b\u1ea3n ch\u1ee7 ngh\u0129a kh\u00e1c. ",
+            " Ra s\u1ee9c truy qu\u00e9t, ti\u00eau di\u1ec7t ch\u1ee7 ngh\u0129a kh\u1ee7ng b\u1ed1. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 1,
+        "explanation": "Gi\u1ea3i th\u00edch: Sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tri\u1ec3n khai chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u v\u1edbi ba m\u1ee5c ti\u00eau: Ng\u0103n ch\u1eb7n, \u0111\u1ea9y l\u00f9i v\u00e0 ti\u1ebfn t\u1edbi x\u00f3a b\u1ecf ch\u1ee7 ngh\u0129a x\u00e3 h\u1ed9i; \u0111\u00e0n \u00e1p phong tr\u00e0o c\u00e1ch m\u1ea1ng th\u1ebf gi\u1edbi; kh\u1ed1ng ch\u1ebf, chi ph\u1ed1i c\u00e1c n\u01b0\u1edbc t\u01b0 b\u1ea3n \u0111\u1ed3ng minh."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " T\u1ea1o \u00e1p l\u1ef1c qu\u00e2n s\u1ef1, bu\u1ed9c c\u00e1c n\u01b0\u1edbc t\u01b0 b\u1ea3n sau chi\u1ebfn tranh ph\u1ea3i ph\u1ee5c t\u00f9ng M\u0129. ",
+            "nh, Ph\u00e1p chi\u1ebfn \u0111\u1ea5u b\u1ea3o v\u1ec7 h\u1ec7 th\u1ed1ng thu\u1ed9c \u0111\u1ecba c\u0169 tr\u00ean th\u1ebf gi\u1edbi. ",
+            " H\u1ee3p t\u00e1c kinh t\u1ebf v\u1edbi c\u00e1c n\u01b0\u1edbc t\u01b0 b\u1ea3n \u0111\u1ed3ng minh.",
+            "hi\u1ebfn tranh l\u1ea1nh v\u1edbi Li\u00ean X\u00f4."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: \u0110\u1ec3 th\u1ef1c hi\u1ec7n Chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u trong nh\u1eefng n\u0103m 1945 \u2013 1973, M\u0129 \u0111\u00e3 ph\u00e1t \u0111\u1ed9ng cu\u1ed9c Chi\u1ebfn tranh l\u1ea1nh v\u1edbi Li\u00ean X\u00f4."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " \u00e1p d\u1ee5ng th\u00e0nh t\u1ef1u khoa h\u1ecdc \u2013 k\u0129 thu\u1eadt v\u00e0o trong s\u1ea3n xu\u1ea5t.",
+            " chi ph\u00ed cho qu\u1ed1c ph\u00f2ng th\u1ea5p n\u00ean c\u00f3 \u0111i\u1ec1u ki\u1ec7n ph\u00e1t tri\u1ec3n kinh t\u1ebf.",
+            " h\u1ee3p t\u00e1c c\u00f3 hi\u1ec7u qu\u1ea3 trong khu\u00f4n kh\u1ed5 t\u1ed5 ch\u1ee9c khu v\u1ef1c.",
+            " h\u1ee3p t\u00e1c c\u00f3 hi\u1ec7u qu\u1ea3 trong c\u00e1c t\u1ed5 ch\u1ee9c qu\u00e2n s\u1ef1 v\u1edbi \u0111\u1ed3ng minh."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: M\u1ed9t trong nh\u1eefng nguy\u00ean nh\u00e2n khi\u1ebfn kinh t\u1ebf M\u0129 ph\u00e1t tri\u1ec3n nhanh ch\u00f3ng sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 \u00e1p d\u1ee5ng th\u00e0nh t\u1ef1u khoa h\u1ecdc \u2013 k\u0129 thu\u1eadt v\u00e0o trong s\u1ea3n xu\u1ea5t."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            "h\u00ednh s\u00e1ch v\u00e0 bi\u1ec7n ph\u00e1p \u0111i\u1ec1u ti\u1ebft c\u1ee7a nh\u00e0 n\u01b0\u1edbc.",
+            " H\u1ee3p t\u00e1c to\u00e0n di\u1ec7n v\u1edbi c\u00e1c n\u01b0\u1edbc \u0111\u1ed3ng minh.",
+            "\u00e1c t\u1eadp \u0111o\u00e0n t\u01b0 b\u1ea3n c\u00f3 s\u1ee9c c\u1ea1nh tranh cao.",
+            " L\u00e3nh th\u1ed5 r\u1ed9ng l\u1edbn, t\u00e0i nguy\u00ean thi\u00ean nhi\u00ean d\u1ed3i d\u00e0o."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 1,
+        "explanation": "Gi\u1ea3i th\u00edch: H\u1ee3p t\u00e1c to\u00e0n di\u1ec7n v\u1edbi c\u00e1c n\u01b0\u1edbc \u0111\u1ed3ng minh kh\u00f4ng ph\u1ea3i l\u00e0 nguy\u00ean nh\u00e2n d\u1eabn \u0111\u1ebfn s\u1ef1 ph\u00e1t tri\u1ec3n kinh t\u1ebf M\u0129 sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai"
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " kinh t\u1ebf kh\u00e1 \u1ed5n \u0111\u1ecbnh, t\u1ed1c \u0111\u1ed9 t\u0103ng tr\u01b0\u1edfng cao.",
+            " l\u00e2m v\u00e0o kh\u1ee7ng ho\u1ea3ng, suy tho\u00e1i k\u00e9o d\u00e0i.",
+            "\u1ea3n.",
+            " th\u1ea5t b\u1ea1i trong cu\u1ed9c ch\u1ea1y \u0111ua v\u1edbi Nh\u1eadt."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: \u0110\u1eb7c \u0111i\u1ec3m n\u1ed5i b\u1eadt c\u1ee7a kinh t\u1ebf M\u0129 trong th\u1eadp ni\u00ean 70 c\u1ee7a th\u1ebf k\u1ec9 XX l\u00e0 l\u00e2m v\u00e0o kh\u1ee7ng ho\u1ea3ng, suy tho\u00e1i k\u00e9o d\u00e0i."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " Truman\t ",
+            " Nichx\u01a1n "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: N\u0103m 1947, T\u1ed5ng th\u1ed1ng Truman \u0111\u00e3 ph\u00e1t \u0111\u1ed9ng cu\u1ed9c Chi\u1ebfn tranh l\u1ea1nh v\u1edbi Li\u00ean X\u00f4."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " cu\u1ed9c ch\u1ea1y \u0111ua v\u0169 trang gi\u1eefa hai n\u01b0\u1edbc \u0111ang \u0111\u01b0a nh\u00e2n lo\u1ea1i \u0111\u1ee9ng tr\u01b0\u1edbc th\u1ea3m h\u1ecda chi\u1ebfn tranh h\u1ea1t nh\u00e2n. ",
+            " phong tr\u00e0o \u0111\u1ea5u tranh gi\u00e0nh \u0111\u1ed9c l\u1eadp \u1edf c\u00e1c n\u01b0\u1edbc gi\u00e0nh \u0111\u01b0\u1ee3c th\u1eafng l\u1ee3i l\u1edbn, \u00e2m m\u01b0u c\u1ee7a M\u0129 trong chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u \u0111\u00e3 th\u1ea5t b\u1ea1i. ",
+            " Li\u00ean X\u00f4 v\u00e0 M\u1ef9 c\u1ea7n \u1ed5n \u0111\u1ecbnh \u0111\u1ec3 c\u1ee7ng c\u1ed1 v\u1ecb th\u1ebf c\u1ee7a m\u00ecnh. ",
+            " ch\u1ee7 ngh\u0129a x\u00e3 h\u1ed9i \u0111\u00e3 t\u1eebng b\u01b0\u1edbc s\u1ee5p \u0111\u1ed5 \u1edf \u0110\u00f4ng \u00c2u. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: M\u1ed9t trong nh\u1eefng nguy\u00ean nh\u00e2n khi\u1ebfn X\u00f4 - M\u0129 tuy\u00ean b\u1ed1 ch\u1ea5m d\u1ee9t Chi\u1ebfn tranh l\u1ea1nh l\u00e0 Li\u00ean X\u00f4 v\u00e0 M\u1ef9 c\u1ea7n \u1ed5n \u0111\u1ecbnh \u0111\u1ec3 c\u1ee7ng c\u1ed1 v\u1ecb th\u1ebf c\u1ee7a m\u00ecnh."
+    },
+    {
+        "question": " Kho\u1ea3ng 20 n\u0103m sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 tr\u1edf th\u00e0nh",
+        "answers": [
+            " ti\u1ebfp t\u1ee5c suy gi\u1ea3m so v\u1edbi th\u1eadp ni\u00ean 70. ",
+            " \u0111\u00e3 \u0111\u01b0\u1ee3c ph\u1ee5c h\u1ed3i v\u00e0 ph\u00e1t tri\u1ec3n v\u1edbi t\u1ed1c \u0111\u1ed9 cao h\u01a1n bao gi\u1edd h\u1ebft. ",
+            " d\u00f9 v\u1eabn c\u00f3 nh\u1eefng \u0111\u1ee3t suy tho\u00e1i ng\u1eafn nh\u01b0ng v\u1eabn chi\u1ebfm g\u1ea7n 40% t\u1ed5ng s\u1ea3n ph\u1ea9m kinh t\u1ebf to\u00e0n c\u1ea7u.",
+            " \u0111\u00e3 ph\u1ee5c h\u1ed3i v\u00e0 ph\u00e1t tri\u1ec3n tr\u1edf l\u1ea1i, nh\u01b0ng t\u1ec9 tr\u1ecdng trong n\u1ec1n kinh t\u1ebf th\u1ebf gi\u1edbi \u0111\u00e3 gi\u1ea3m s\u00fat nhi\u1ec1u."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 3,
+        "explanation": "Gi\u1ea3i th\u00edch: T\u00ecnh h\u00ecnh kinh t\u1ebf M\u0129 trong th\u1eadp ni\u00ean 80 c\u1ee7a th\u1ebf k\u1ec9 XX l\u00e0 \u0111\u00e3 ph\u1ee5c h\u1ed3i v\u00e0 ph\u00e1t tri\u1ec3n tr\u1edf l\u1ea1i, nh\u01b0ng t\u1ec9 tr\u1ecdng trong n\u1ec1n kinh t\u1ebf th\u1ebf gi\u1edbi \u0111\u00e3 gi\u1ea3m s\u00fat nhi\u1ec1u. "
+    },
+    {
+        "question": " Trong th\u1eadp ni\u00ean 90 c\u1ee7a th\u1ebf k\u1ec9 XX, kinh t\u1ebf M\u0129",
+        "answers": [
+            " ph\u00e1t tri\u1ec3n nhanh ch\u00f3ng.",
+            " l\u00e2m v\u00e0o t\u00ecnh tr\u1ea1ng kh\u1ee7ng ho\u1ea3ng tr\u1ea7m tr\u1ecdng.",
+            " tr\u1ea3i qua m\u1ed9t s\u1ed1 \u0111\u1ee3t suy tho\u00e1i ng\u1eafn.",
+            " ph\u00e1t tri\u1ec3n \u201cth\u1ea7n k\u00ec\u201d."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 2,
+        "explanation": "Gi\u1ea3i th\u00edch: Trong th\u1eadp ni\u00ean 90 c\u1ee7a th\u1ebf k\u1ec9 XX, kinh t\u1ebf M\u0129 tuy c\u00f3 tr\u1ea3i qua m\u1ed9t s\u1ed1 \u0111\u1ee3t suy tho\u00e1i ng\u1eafn, nh\u01b0ng v\u1eabn \u0111\u1ee9ng \u0111\u1ea7u th\u1ebf gi\u1edbi."
+    },
+    {
+        "question": " Trong th\u1eadp ni\u00ean 90 c\u1ee7a th\u1ebf k\u1ec9 XX, kinh t\u1ebf M\u0129",
+        "answers": [
+            "nh, Ph\u00e1p \u1ee7ng h\u1ed9 M\u0129 thi\u1ebft l\u1eadp tr\u1eadt t\u1ef1 \u201c\u0111\u01a1n c\u1ef1c\u201d.",
+            " M\u0129 l\u00e0 n\u01b0\u1edbc \u0111\u1ee9ng \u0111\u1ea7u th\u1ebf gi\u1edbi v\u1ec1 kinh t\u1ebf, qu\u00e2n s\u1ef1, khoa h\u1ecdc - k\u0129 thu\u1eadt. ",
+            " Li\u00ean X\u00f4 s\u1ee5p \u0111\u1ed5, M\u0129 kh\u00f4ng c\u00f2n \u0111\u1ed1i th\u1ee7 l\u1edbn tr\u00ean tr\u01b0\u1eddng qu\u1ed1c t\u1ebf.",
+            " H\u1ea7u h\u1ebft c\u00e1c n\u01b0\u1edbc mong mu\u1ed1n d\u1ef1a v\u00e0o M\u0129 \u0111\u1ec3 ph\u00e1t tri\u1ec3n kinh t\u1ebf."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Ti\u1ec1m l\u1ef1c kinh t\u1ebf, qu\u00e2n s\u1ef1, khoa h\u1ecdc - k\u0129 thu\u1eadt v\u01b0\u1ee3t tr\u1ed9i c\u1ee7a M\u0129 ch\u00ednh l\u00e0 c\u01a1 s\u1edf \u0111\u1ec3 M\u0129 \u0111\u01b0a ra tham v\u1ecdng v\u1ecdng thi\u1ebft l\u1eadp tr\u1eadt t\u1ef1 th\u1ebf gi\u1edbi \u201c\u0111\u01a1n c\u1ef1c\u201d trong th\u1eddi k\u00ec h\u1eadu Chi\u1ebfn tranh l\u1ea1nh. Tuy nhi\u00ean, M\u0129 kh\u00f4ng th\u1ef1c hi\u1ec7n \u0111\u01b0\u1ee3c tham v\u1ecdng n\u00e0y do s\u1ef1 v\u01b0\u01a1n l\u00ean c\u1ee7a Nh\u1eadt B\u1ea3n, T\u00e2y \u00c2u, Trung Qu\u1ed1c, Li\u00ean bang Nga,\u2026"
+    },
+    {
+        "question": " Trong th\u1eadp ni\u00ean 90 c\u1ee7a th\u1ebf k\u1ec9 XX, kinh t\u1ebf M\u0129",
+        "answers": [
+            "ush\t ",
+            " Pho "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Trong th\u1eadp k\u1ec9 90 c\u1ee7a th\u1ebf k\u1ec9 XX, ch\u00ednh quy\u1ec1n T\u1ed5ng th\u1ed1ng B. Clinton th\u1ef1c hi\u1ec7n chi\u1ebfn l\u01b0\u1ee3c \"Cam k\u1ebft v\u00e0 m\u1edf r\u1ed9ng\" nh\u1eb1m t\u0103ng c\u01b0\u1eddng \u1ea3nh h\u01b0\u1edfng c\u1ee7a M\u0129 \u0111\u1ebfn t\u1ea5t c\u1ea3 c\u00e1c khu v\u1ef1c tr\u00ean th\u1ebf gi\u1edbi."
+    },
+    {
+        "question": " Chi\u00eau b\u00e0i m\u00e0 M\u0129 s\u1eed d\u1ee5ng \u0111\u1ec3 can thi\u1ec7p v\u00e0o c\u00f4ng vi\u1ec7c n\u1ed9i b\u1ed9 c\u1ee7a n\u01b0\u1edbc kh\u00e1c \u0111\u01b0\u1ee3c \u0111\u1ec1 ra trong chi\u1ebfn l\u01b0\u1ee3c \"Cam k\u1ebft v\u00e0 m\u1edf r\u1ed9ng\" l\u00e0 g\u00ec ? ",
+        "answers": [
+            " \u1ee6ng h\u1ed9 \u0111\u1ed9c l\u1eadp d\u00e2n t\u1ed9c. ",
+            " Th\u00fac \u0111\u1ea9y d\u00e2n ch\u1ee7. ",
+            "h\u1ed1ng ch\u1ee7 ngh\u0129a kh\u1ee7ng b\u1ed1. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Chi\u00eau b\u00e0i m\u00e0 M\u0129 s\u1eed d\u1ee5ng \u0111\u1ec3 can thi\u1ec7p v\u00e0o c\u00f4ng vi\u1ec7c n\u1ed9i b\u1ed9 c\u1ee7a n\u01b0\u1edbc kh\u00e1c \u0111\u01b0\u1ee3c \u0111\u1ec1 ra trong chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u \"Cam k\u1ebft v\u00e0 m\u1edf r\u1ed9ng\" l\u00e0 kh\u1ea9u hi\u1ec7u \u201cTh\u00fac \u0111\u1ea9y d\u00e2n ch\u1ee7\u201d."
+    },
+    {
+        "question": " Chi\u00eau b\u00e0i m\u00e0 M\u0129 s\u1eed d\u1ee5ng \u0111\u1ec3 can thi\u1ec7p v\u00e0o c\u00f4ng vi\u1ec7c n\u1ed9i b\u1ed9 c\u1ee7a n\u01b0\u1edbc kh\u00e1c \u0111\u01b0\u1ee3c \u0111\u1ec1 ra trong chi\u1ebfn l\u01b0\u1ee3c \"Cam k\u1ebft v\u00e0 m\u1edf r\u1ed9ng\" l\u00e0 g\u00ec ? ",
+        "answers": [
+            " n\u01b0\u1edbc M\u0129 c\u0169ng r\u1ea5t d\u1ec5 b\u1ecb t\u1ed5n th\u01b0\u01a1ng.",
+            "hi\u1ebfn tranh l\u1ea1nh ch\u01b0a ho\u00e0n to\u00e0n ch\u1ea5m d\u1ee9t.",
+            " \u1ea3nh h\u01b0\u1edfng ti\u00eau c\u1ef1c c\u1ee7a xu th\u1ebf to\u00e0n c\u1ea7u h\u00f3a.",
+            " s\u1ef1 suy y\u1ebfu c\u1ee7a l\u1ef1c l\u01b0\u1ee3ng qu\u00e2n s\u1ef1 M\u0129."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Cu\u1ed9c kh\u1ee7ng b\u1ed1 ng\u00e0y 11/9/2001 \u1edf n\u01b0\u1edbc M\u0129 cho th\u1ea5y n\u01b0\u1edbc M\u0129 c\u0169ng r\u1ea5t d\u1ec5 b\u1ecb t\u1ed5n th\u01b0\u01a1ng v\u00e0 ch\u1ee7 ngh\u0129a kh\u1ee7ng b\u1ed1 s\u1ebd l\u00e0 m\u1ed9t trong nh\u1eefng nh\u00e2n t\u1ed1 d\u1eabn \u0111\u1ebfn s\u1ef1 thay \u0111\u1ed5i trong ch\u00ednh s\u00e1ch \u0111\u1ed1i n\u1ed9i v\u00e0 \u0111\u1ed1i ngo\u1ea1i c\u1ee7a n\u01b0\u1edbc M\u0129 khi b\u01b0\u1edbc v\u00e0o th\u1ebf k\u1ec9 XXI."
+    },
+    {
+        "question": " Chi\u00eau b\u00e0i m\u00e0 M\u0129 s\u1eed d\u1ee5ng \u0111\u1ec3 can thi\u1ec7p v\u00e0o c\u00f4ng vi\u1ec7c n\u1ed9i b\u1ed9 c\u1ee7a n\u01b0\u1edbc kh\u00e1c \u0111\u01b0\u1ee3c \u0111\u1ec1 ra trong chi\u1ebfn l\u01b0\u1ee3c \"Cam k\u1ebft v\u00e0 m\u1edf r\u1ed9ng\" l\u00e0 g\u00ec ? ",
+        "answers": [
+            " T\u00e2y \u00c2u.",
+            "\u1ea3n.",
+            " Li\u00ean X\u00f4.",
+            " M\u0129."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 3,
+        "explanation": "Gi\u1ea3i th\u00edch: Trong kho\u1ea3ng hai th\u1eadp ni\u00ean \u0111\u1ea7u sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai, M\u0129 l\u00e0 trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh l\u1edbn nh\u1ea5t th\u1ebf gi\u1edbi."
+    },
+    {
+        "question": " Nguy\u00ean nh\u00e2n c\u01a1 b\u1ea3n nh\u1ea5t khi\u1ebfn kinh t\u1ebf c\u1ee7a M\u0129 ph\u00e1t tri\u1ec3n m\u1ea1nh m\u1ebd sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0",
+        "answers": [
+            " \u00e1p d\u1ee5ng th\u00e0nh t\u1ef1u khoa h\u1ecdc - k\u0129 thu\u1eadt v\u00e0o trong s\u1ea3n xu\u1ea5t.",
+            " l\u00e3nh th\u1ed5 r\u1ed9ng l\u1edbn, t\u00e0i nguy\u00ean thi\u00ean nhi\u00ean phong ph\u00fa.",
+            " tr\u00ecnh \u0111\u1ed9 t\u1eadp trung s\u1ea3n xu\u1ea5t v\u00e0 t\u1eadp trung t\u01b0 b\u1ea3n cao.",
+            " thu \u0111\u01b0\u1ee3c nhi\u1ec1u l\u1ee3i nhu\u1eadn trong chi\u1ebfn tranh."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Nguy\u00ean nh\u00e2n c\u01a1 b\u1ea3n nh\u1ea5t khi\u1ebfn kinh t\u1ebf c\u1ee7a M\u0129 ph\u00e1t tri\u1ec3n m\u1ea1nh m\u1ebd sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 \u00e1p d\u1ee5ng th\u00e0nh t\u1ef1u khoa h\u1ecdc - k\u0129 thu\u1eadt v\u00e0o trong s\u1ea3n xu\u1ea5t."
+    },
+    {
+        "question": "\u0110\u1eb7c \u0111i\u1ec3m n\u1ed5i b\u1eadt nh\u1ea5t c\u1ee7a kinh t\u1ebf M\u0129 sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 g\u00ec?",
+        "answers": [
+            " V\u1ecb tr\u00ed kinh t\u1ebf c\u1ee7a M\u0129 ng\u00e0y c\u00e0ng gi\u1ea3m s\u00fat tr\u00ean to\u00e0n th\u1ebf gi\u1edbi. ",
+            "\u1ea3n c\u1ea1nh tranh quy\u1ebft li\u1ec7t. ",
+            " Kinh t\u1ebf ph\u00e1t tri\u1ec3n nhanh nh\u01b0ng kh\u00f4ng \u1ed5n \u0111\u1ecbnh.",
+            " S\u1ef1 ch\u00eanh l\u1ec7ch gi\u00e0u ngh\u00e8o ng\u00e0y c\u00e0ng l\u1edbn. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 2,
+        "explanation": "Gi\u1ea3i th\u00edch: \u0110\u1eb7c \u0111i\u1ec3m n\u1ed5i b\u1eadt nh\u1ea5t c\u1ee7a kinh t\u1ebf M\u0129 sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 kinh t\u1ebf ph\u00e1t tri\u1ec3n nhanh nh\u01b0ng kh\u00f4ng \u1ed5n \u0111\u1ecbnh, ph\u00e1t tri\u1ec3n th\u01b0\u1eddng xen k\u1ebd v\u1edbi nh\u1eefng \u0111\u1ee3t suy tho\u00e1i, kh\u1ee7ng ho\u1ea3ng."
+    },
+    {
+        "question": "\u0110\u1eb7c \u0111i\u1ec3m n\u1ed5i b\u1eadt nh\u1ea5t c\u1ee7a kinh t\u1ebf M\u0129 sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 g\u00ec?",
+        "answers": [
+            "hi\u1ebfn tranh l\u1ea1nh v\u1edbi Li\u00ean X\u00f4.",
+            " Ng\u0103n ch\u1eb7n, \u0111\u1ea9y l\u00f9i v\u00e0 ti\u1ebfn t\u1edbi x\u00f3a b\u1ecf ch\u1ee7 ngh\u0129a x\u00e3 h\u1ed9i.",
+            " \u0110\u00e0n \u00e1p phong tr\u00e0o gi\u1ea3i ph\u00f3ng d\u00e2n t\u1ed9c tr\u00ean th\u1ebf gi\u1edbi.",
+            " Kh\u1ed1ng ch\u1ebf, chi ph\u1ed1i c\u00e1c n\u01b0\u1edbc t\u01b0 b\u1ea3n \u0111\u1ed3ng minh."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 0,
+        "explanation": "Gi\u1ea3i th\u00edch: Ph\u00e1t \u0111\u1ed9ng Chi\u1ebfn tranh l\u1ea1nh v\u1edbi Li\u00ean X\u00f4 kh\u00f4ng ph\u1ea3i l\u00e0 m\u1ee5c ti\u00eau m\u00e0 l\u00e0 bi\u1ec7n ph\u00e1p M\u0129 th\u1ef1c hi\u1ec7n khi tri\u1ec3n khai chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u. Bi\u1ec7n ph\u00e1p n\u00e0y nh\u1eb1m th\u1ef1c hi\u1ec7n m\u1ee5c ti\u00eau ng\u0103n ch\u1eb7n, \u0111\u1ea9y l\u00f9i v\u00e0 ti\u1ebfn t\u1edbi x\u00f3a b\u1ecf ch\u1ee7 ngh\u0129a x\u00e3 h\u1ed9i."
+    },
+    {
+        "question": "\u0110\u1eb7c \u0111i\u1ec3m n\u1ed5i b\u1eadt nh\u1ea5t c\u1ee7a kinh t\u1ebf M\u0129 sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 g\u00ec?",
+        "answers": [
+            " th\u1eafng l\u1ee3i c\u1ee7a c\u00e1ch m\u1ea1ng Trung Qu\u1ed1c n\u0103m 1949. ",
+            "u - ba n\u0103m 1959. ",
+            " th\u1eafng l\u1ee3i c\u1ee7a c\u00e1ch m\u1ea1ng H\u1ed3i gi\u00e1o I - ran n\u0103m 1979. ",
+            " th\u1eafng l\u1ee3i c\u1ee7a c\u00e1ch m\u1ea1ng Vi\u1ec7t Nam n\u0103m 1975. "
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 3,
+        "explanation": "Gi\u1ea3i th\u00edch: Th\u1ea5t b\u1ea1i n\u1eb7ng n\u1ec1 nh\u1ea5t c\u1ee7a M\u0129 trong qu\u00e1 tr\u00ecnh th\u1ef1c hi\u1ec7n chi\u1ebfn l\u01b0\u1ee3c to\u00e0n c\u1ea7u l\u00e0 th\u1eafng l\u1ee3i c\u1ee7a c\u00e1ch m\u1ea1ng Vi\u1ec7t Nam n\u0103m 1975. "
+    },
+    {
+        "question": " M\u0129 tr\u1edf th\u00e0nh trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh duy nh\u1ea5t tr\u00ean th\u1ebf gi\u1edbi trong th\u1eddi gian n\u00e0o? ",
+        "answers": [
+            " T\u1eeb n\u0103m 1945 \u0111\u1ebfn n\u0103m 1975.",
+            " T\u1eeb n\u0103m 1918 \u0111\u1ebfn n\u0103m 1945.",
+            " T\u1eeb n\u0103m 1950 \u0111\u1ebfn n\u0103m 1980.",
+            " T\u1eeb n\u0103m 1945 \u0111\u1ebfn n\u0103m 1960."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 3,
+        "explanation": "Gi\u1ea3i th\u00edch: M\u0129 tr\u1edf th\u00e0nh trung t\u00e2m kinh t\u1ebf - t\u00e0i ch\u00ednh duy nh\u1ea5t tr\u00ean th\u1ebf gi\u1edbi t\u1eeb n\u0103m 1945 \u0111\u1ebfn nh\u1eefng n\u0103m 60 c\u1ee7a th\u1ebf k\u1ec9 XX."
+    },
+    {
+        "question": " Nguy\u00ean nh\u00e2n c\u01a1 b\u1ea3n nh\u1ea5t th\u00fac \u0111\u1ea9y n\u1ec1n kinh t\u1ebf M\u0129 ph\u00e1t tri\u1ec3n nhanh ch\u00f3ng sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0",
+        "answers": [
+            " s\u1ef1 qu\u1ea3n l\u00ed c\u00f3 hi\u1ec7u qu\u1ea3 c\u1ee7a Nh\u00e0 n\u01b0\u1edbc.",
+            " t\u00e0i nguy\u00ean thi\u00ean nhi\u00ean phong ph\u00fa, l\u00e3nh th\u1ed5 r\u1ed9ng l\u1edbn.",
+            " \u00e1p d\u1ee5ng th\u00e0nh t\u1ef1u c\u00e1ch m\u1ea1ng khoa h\u1ecdc - k\u0129 thu\u1eadt.",
+            " t\u1eadp trung s\u1ea3n xu\u1ea5t v\u00e0 t\u01b0 b\u1ea3n cao."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 2,
+        "explanation": "Gi\u1ea3i th\u00edch: Nguy\u00ean nh\u00e2n c\u01a1 b\u1ea3n nh\u1ea5t th\u00fac \u0111\u1ea9y n\u1ec1n kinh t\u1ebf M\u0129 ph\u00e1t tri\u1ec3n nhanh ch\u00f3ng sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0 \u00e1p d\u1ee5ng th\u00e0nh t\u1ef1u c\u00e1ch m\u1ea1ng khoa h\u1ecdc - k\u0129 thu\u1eadt. Nh\u1eefng th\u00e0nh t\u1ef1u n\u00e0y \u0111\u00e3 gi\u00fap M\u0129 n\u00e2ng cao n\u0103ng su\u1ea5t, h\u1ea1 gi\u00e1 th\u00e0nh s\u1ea3n ph\u1ea9m, t\u1ea1o ra s\u1ee9c c\u1ea1nh tranh cao."
+    },
+    {
+        "question": " Nguy\u00ean nh\u00e2n c\u01a1 b\u1ea3n nh\u1ea5t th\u00fac \u0111\u1ea9y n\u1ec1n kinh t\u1ebf M\u0129 ph\u00e1t tri\u1ec3n nhanh ch\u00f3ng sau Chi\u1ebfn tranh th\u1ebf gi\u1edbi th\u1ee9 hai l\u00e0",
+        "answers": [
+            " Nh\u1eefng n\u0103m 60 c\u1ee7a th\u1ebf k\u1ec9 XX.",
+            " Nh\u1eefng n\u0103m 70 c\u1ee7a th\u1ebf k\u1ec9 XX.",
+            " Nh\u1eefng n\u0103m 80 c\u1ee7a th\u1ebf k\u1ec9 XX.",
+            " Nh\u1eefng n\u0103m 90 c\u1ee7a th\u1ebf k\u1ec9 XX."
+        ],
+        "incorrect_answers": [],
+        "correct_answer": 1,
+        "explanation": "Gi\u1ea3i th\u00edch: Cu\u1ed9c kh\u1ee7ng ho\u1ea3ng n\u0103ng l\u01b0\u1ee3ng n\u0103m 1973 \u0111\u00e3 khi\u1ebfn cho kinh t\u1ebf M\u0129 r\u01a1i v\u00e0o kh\u1ee7ng ho\u1ea3ng. C\u00f9ng v\u1edbi s\u1ef1 v\u01b0\u01a1n l\u00ean c\u1ee7a Nh\u1eadt B\u1ea3n v\u00e0 T\u00e2y \u00c2u, M\u0129 kh\u00f4ng c\u00f2n chi\u1ebfm \u01b0u th\u1ebf tuy\u1ec7t \u0111\u1ed1i trong n\u1ec1n kinh t\u1ebf th\u1ebf gi\u1edbi"
+    }
+]

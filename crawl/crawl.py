@@ -28,57 +28,64 @@ def extract(text, name_file):
     answers = []
     question = ""
     right_answers = []
-    explain = ""
+    explanation = ""
     data = []
     incorrect_answers = []
-    correct_answers = []
+    correct_answer = 0
+
+    mapABCD = { "a" : 0, "b": 1, "c": 2, "d": 3}
     
     for match in matches:
         i+=1
         val_string = match[0]
         if (re.match(regexQuestion, val_string)):
-            json_object = {"question":f'{question}', "incorrect_answers": incorrect_answers, "correct_answers" : correct_answers, "explain" : explain}
+            json_object = {"question":f'{question}', "answers": answers, "incorrect_answers": incorrect_answers, "correct_answer" : correct_answer, "explanation" : explanation}
             answers = []
-            right_answers = []
-            explain = ""
+            correct_answer = 0
+            explanation = ""
             data.append(json_object)
-            question = val_string
+            filter_regex = r'(.*Câu \d.*\.<\/b>)(.*)(<\/p>)'
+            filter_match = re.match(filter_regex, val_string)
+            if (filter_match is not None):
+                filter_val_string = filter_match.group(2)
+                question = filter_val_string
+            pass
+            
             pass
         else: 
             pass    
 
-        if (re.match(regexAnswer0, val_string)):
-            answers.append(val_string)
-            pass
-        else: 
-            pass
-
-        if (re.match(regexAnswer1, val_string)):
-            answers.append(val_string)
-            pass
-        else: 
-            pass
-
-        if (re.match(regexAnswer2, val_string)):
-            answers.append(val_string)
-            pass
-        else: 
-            pass
-
-        if (re.match(regexAnswer3, val_string)):
-            answers.append(val_string)
+        if re.match(regexAnswer0, val_string) or re.match(regexAnswer1, val_string) or re.match(regexAnswer2, val_string) or re.match(regexAnswer3, val_string):
+            filter_regex = r'(<p>).*([ABCD][.]{0,1})(.*)<\/p>'
+            filter_match = re.match(filter_regex, val_string)
+            if (filter_match is not None):
+                filter_val_string = filter_match.group(3)
+                answers.append(filter_val_string)
             pass
         else: 
             pass
 
         if (re.match(regexRightAnswer, val_string)):
-            right_answers.append(val_string)
+            filter_regex = r'(<p>.*Đáp án:.*<b>)(.*[ABCDabcd])(<\/b>.*<\/p>)'
+            filter_match = re.match(filter_regex, val_string)
+            if (filter_match is not None):
+                filter_val_string = filter_match.group(2)
+                filter_val_string = filter_val_string.strip().lower().replace(" ","")
+                print(f'Câu {i} :  {filter_val_string}')
+                correct_answer = (mapABCD.get(filter_val_string))
+                pass
+            
             pass
         else: 
             pass
 
         if (re.match(regexExplaination, val_string)):
-            explain = val_string
+            filter_regex = r'(<p>)(.*)(.*<\/p>)'
+            filter_match = re.match(filter_regex, val_string)
+            if (filter_match is not None):
+                filter_val_string = filter_match.group(2)
+                explanation = filter_val_string
+                pass
             pass
         else: 
             pass
@@ -106,7 +113,7 @@ def main() -> None:
     html = response.text
 
     # print(html)
-    extract(html, "output1.json")
+    extract(html, "quiz_history_12.json")
     return
     # Open the file and read its contents
     with open('data', 'r') as file:
@@ -130,4 +137,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # pattern_dict = {
+    #     "capital_letter_pattern": r"^[A-Z]",
+    #     "2" : r"Câu \d{1,2}\.\s*</b>\s*(.*?)<\/p>"
+    # }
+    # with open("patterns.json", "w") as f:
+    #     json.dump(pattern_dict, f)
+    #     pass
     main()
