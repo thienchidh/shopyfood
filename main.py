@@ -470,6 +470,10 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
         BotCommand("checkin", "Tạo một bình chọn checkin"),
         BotCommand("test", "Tạo một bình chọn test"),
+        BotCommand("chui", "Chửi ChíTT"),
+        BotCommand("start_roll", "Bắt đầu roll"),
+        BotCommand("info_roll", "Xem thông tin roll"),
+        BotCommand("finish_roll", "Kết thúc roll")
     ]
     await context.bot.set_my_commands(commands)
 
