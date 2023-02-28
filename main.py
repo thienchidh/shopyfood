@@ -23,6 +23,7 @@ from telegram.ext import (
 import crawl_grabfood
 import crawl_shopeefood
 import quote_storate
+import quiz_loader
 from repository import KeyValRepository
 
 # Enable logging
@@ -314,10 +315,12 @@ async def dice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    options = ["1", "2", "3", "4"]
-    randint = random.randint(0, len(options) - 1)
+    question = await quiz_loader.get_quiz_api()
+    print("Question is", question)
+    options = question['answers']
+    randint = question['correct']
     await update.effective_message.reply_poll(
-        question="Đoán số từ 1 đến 4",
+        question=question['question'],
         options=options,
         is_anonymous=False,
         type=Poll.QUIZ,

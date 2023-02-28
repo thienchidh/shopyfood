@@ -1,0 +1,153 @@
+[
+    {
+      "question": "What is the largest planet in the solar system?",
+      "answers": ["Mars", "Jupiter", "Venus", "Saturn"],
+      "correct_answer": 1
+    },
+    {
+      "question": "What is the capital of Australia?",
+      "answers": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+      "correct_answer": 2
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "answers": ["Brain", "Liver", "Skin", "Heart"],
+      "correct_answer": 2
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answers": ["Monaco", "Vatican City", "San Marino", "Liechtenstein"],
+      "correct_answer": 1
+    },
+    {
+      "question": "What is the most populous country in the world?",
+      "answers": ["India", "United States", "China", "Brazil"],
+      "correct_answer": 2
+    },
+    {
+      "question": "What is the capital of Brazil?",
+      "answers": ["Rio de Janeiro", "Brasília", "São Paulo", "Belo Horizonte"],
+      "correct_answer": 1
+    },
+    {
+      "question": "Who was the first man to walk on the moon?",
+      "answers": ["Neil Armstrong", "Buzz Aldrin", "Michael Collins", "Alan Shepard"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the currency of Japan?",
+      "answers": ["Yen", "Won", "Euro", "Dollar"],
+      "correct_answer": 0
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "answers": ["Mars", "Venus", "Jupiter", "Saturn"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the largest ocean in the world?",
+      "answers": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "correct_answer": 3
+    },
+    {
+      "question": "What is the national animal of Australia?",
+      "answers": ["Kangaroo", "Koala", "Emu", "Tasmanian devil"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the largest animal in the world?",
+      "answers": ["Elephant", "Giraffe", "Whale", "Hippopotamus"],
+      "correct_answer": 2
+    },
+    {
+      "question": "What is the highest mountain in the world?",
+      "answers": ["Kilimanjaro", "Mount Everest", "Mount Fuji", "Mount Rushmore"],
+      "correct_answer": 1
+    },
+    {
+      "question": "What is the most widely spoken language in the world?",
+      "answers": ["Mandarin", "English", "Spanish", "Hindi"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the largest continent in the world?",
+      "answers": ["Asia", "Africa", "Europe", "North America"],
+      "correct_answer": 0
+    },
+    {
+        "question": "Which of these countries is not located in Europe?",
+        "answers": ["Brazil", "Spain", "France", "Greece"],
+        "correct_answer": 0
+      },
+      {
+        "question": "What is the capital of Canada?",
+        "answers": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+        "correct_answer": 3
+      },
+      {
+        "question": "Who invented the telephone?",
+        "answers": ["Thomas Edison", "Alexander Graham Bell", "Benjamin Franklin", "Nikola Tesla"],
+        "correct_answer": 1
+      },
+      {
+        "question": "What is the name of the river that flows through Egypt?",
+        "answers": ["Nile", "Amazon", "Mississippi", "Yellow"],
+        "correct_answer": 0
+      },
+      {
+        "question": "Which of the following is not a primary color?",
+        "answers": ["Red", "Blue", "Green", "Yellow"],
+        "correct_answer": 3
+      },
+      {
+        "question": "What is the largest planet in our solar system?",
+        "answers": ["Jupiter", "Earth", "Venus", "Mars"],
+        "correct_answer": 0
+      },
+      {
+        "question": "What is the capital of Spain?",
+        "answers": ["Barcelona", "Madrid", "Valencia", "Seville"],
+        "correct_answer": 1
+      },
+      {
+        "question": "What is the name of the first man to walk on the moon?",
+        "answers": ["Neil Armstrong", "Buzz Aldrin", "Michael Collins", "Alan Shepard"],
+        "correct_answer": 0
+      },
+      {
+        "question": "Who painted the famous Mona Lisa portrait?",
+        "answers": ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Leonardo da Vinci"],
+        "correct_answer": 3
+      },
+      {
+        "question": "What is the capital of Russia?",
+        "answers": ["Moscow", "Saint Petersburg", "Novosibirsk", "Yekaterinburg"],
+        "correct_answer": 0
+      },
+      {
+        "question": "What is the highest mountain in the world?",
+        "answers": ["Mount Kilimanjaro", "Mount Everest", "Mount Denali", "Mount Fuji"],
+        "correct_answer": 1
+      },
+      {
+        "question": "What is the smallest planet in our solar system?",
+        "answers": ["Mars", "Venus", "Mercury", "Earth"],
+        "correct_answer": 2
+      },
+      {
+        "question": "What is the capital of Italy?",
+        "answers": ["Rome", "Florence", "Milan", "Naples"],
+        "correct_answer": 0
+      },
+      {
+        "question": "Who is the author of the Harry Potter book series?",
+        "answers": ["J.K. Rowling", "George R.R. Martin", "Stephen King", "Suzanne Collins"],
+        "correct_answer": 0
+      },
+      {
+        "question": "What is the largest continent in the world?",
+        "answers": ["North America", "Europe", "Asia", "Africa"],
+        "correct_answer": 2
+      }
+]
+  
