@@ -123,4 +123,7 @@ def process(full_url):
                 'price': dish['price']['text'],
             })
 
+    # unique items
+    items = list({v['name']: v for v in items}.values())
+
     return "[Now] " + title, items

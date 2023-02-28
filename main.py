@@ -1,25 +1,29 @@
 import asyncio
 import json
 import logging
+import random
+import re
 
 import yaml
+from tabulate import tabulate
 from telegram import (
     ReplyKeyboardRemove,
-    Update,
+    Update, BotCommand, Poll,
 )
 from telegram.constants import ParseMode
+from telegram.error import TelegramError
 from telegram.ext import (
     Application,
     CommandHandler,
     ContextTypes,
     MessageHandler,
     PollAnswerHandler,
-    filters,
-)
+    filters, )
 
 import crawl_grabfood
 import crawl_shopeefood
 import quote_storate
+import quiz_loader
 import modules.logic_handlers as logic_handlers
 from repository import KeyValRepository
 
@@ -143,10 +147,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 async def send_random_quote(context, update):
-    await update.message.reply_text(quote_storate.get_random_quote())
-    # await context.bot.sendDice(update.effective_chat.id, emoji='🎲')
-    # send random a quote
-    # TODO
+    await update.effective_message.reply_text(quote_storate.get_random_quote())
     pass
 
 
@@ -171,6 +172,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     repo = get_repo_bot(context)
     all_poll_data = repo.get('poll_data', dict())
     answer = update.poll_answer
+    logger.info(f"receive_poll_answer answers {update.poll_answer}")
     answered_poll = all_poll_data.get(answer.poll_id)
     questions = answered_poll["questions"]
     answers = answered_poll["answers"]
@@ -185,6 +187,8 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     effective_user = update.effective_user
     effective_user_id = f'{effective_user.id}'
     answers[effective_user_id] = selected_options
+    chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
+    chat_id_names[effective_user_id] = f'@{effective_user.username}'
     repo.save()
     if answer_string == "":
         await context.bot.send_message(
@@ -249,12 +253,7 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
         parse_mode=ParseMode.HTML
     )
 
-    # Get results of the poll
-    msg = "Kết quả poll:\n"
-    for option in message.poll.options:
-        if option.voter_count > 0:
-            msg += f"{option.text}: {option.voter_count}\n"
-    await message.reply_text(msg)
+    await checkbill_handler(update, context)
 
 
 async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -308,25 +307,137 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
     await delete_polls(context, list_poll_ids, poll_owner_id)
 
 
-async def game_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+# dice_handler
+async def dice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     limit = int(update.effective_message.text.split(' ')[1])
     limit = max(1, min(limit, 10))
     for i in range(0, limit):
-        await context.bot.sendDice(update.effective_chat.id)
+        await update.effective_message.reply_dice()
+
+
+async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    question = await quiz_loader.get_quiz_api()
+    print("Question is", question)
+    options = question['answers']
+    randint = question['correct']
+    await update.effective_message.reply_poll(
+        question=question['question'],
+        options=options,
+        is_anonymous=False,
+        type=Poll.QUIZ,
+        correct_option_id=randint,
+        explanation="Đáp án đúng là {}".format(options[randint]),
+    )
+
+
+# quote_handler
+async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await send_random_quote(context, update)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    print("Khai code")
+    await update.effective_message.reply_text(f"Xin chào {update.effective_user.mention_html()}",
+                                              parse_mode=ParseMode.HTML)
     pass
 
 
+def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
+    repo = get_repo_bot(context)
+    all_poll_data = repo.get("poll_data", dict())
+    for poll_id in all_poll_data:
+        poll_data = all_poll_data[poll_id]
+        if "message_id" in poll_data and str(poll_data["message_id"]) == message_id:
+            return poll_data
+    return {}
+
+
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
+    message = update.effective_message.reply_to_message
+    if not message or message.poll is None:
+        logger.info("checkbill_hander Poll not found")
+        return
+
+    poll_owner_id = f'{message.chat.id}'
+    message_id = f'{message.message_id}'
+
+    logger.info("Info poll " + poll_owner_id + " " + message_id)
+    poll_data = get_poll_data_by_message_id(context, message_id)
+    repo = get_repo_bot(context)
+    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
+    poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
+
+    # list of dictionaries representing table rows
+    # list of dictionaries representing table rows
+    headers = ["STT", "Name", "Dish", "Price"]
+    table_data = [
+        headers,
+        # {"STT": 1, "Name": "John", "Dish": "Pizza", "Price": 10.99},
+        # [1, "John", "Pizza", 10.99],
+        # [1, "John", "Pizza", 10.99]
+    ]
+    parent_id = parent_poll_ids.get(message_id)
+    # List all poll that have common parent
+    list_poll_ids = poll_group_ids.get(parent_id)
+    # tong hop data tung poll
+
+    chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
+
+    logger.info(f"list_poll_ids {list_poll_ids}")
+    index = 0
+    subtotal_int = 0
+    for message_id in list_poll_ids:
+        poll_data = get_poll_data_by_message_id(context, message_id)
+        logger.info(f"poll_data {poll_data}")
+        if "answers" in poll_data:
+            for key in poll_data["answers"]:
+                if "questions" in poll_data:
+                    list_answer_of_this_user = poll_data["answers"].get(key)
+                    logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
+                    for i in list_answer_of_this_user:
+                        string_answer = poll_data["questions"][i]
+                        match = re.match(r'^(.*?)(\d{1,3}(,\d{3})*)\s*(.*?)$', string_answer)
+                        if match:
+                            index += 1
+                            part1 = match.group(1)
+                            price_str = part2 = match.group(2)  # price
+                            price_int = int(price_str.replace(",", ""))
+                            part3 = match.group(4)
+                            name = chat_id_names.get(key, key)
+                            row = [index, f"{name}", part1, part2 + part3]
+                            table_data.append(row)
+                            subtotal_int += price_int
+
+                    pass
+
+    # list of column headers
+    subtotal_str = '{:,.0f}'.format(subtotal_int) + "\u0111"
+
+    # calculate the subtotal
+    # subtotal = sum(row["Price"] for row in table_data)
+    subtotal_row = ["-", "-", f"-", "-"]
+    table_data.append(subtotal_row)
+    # add a row for the subtotal
+    subtotal_row = ["", "", f"Subtotal {subtotal_str}", ""]
+    table_data.append(subtotal_row)
+    subtotal_row = ["", "", f"AppFee {100}", ""]
+    table_data.append(subtotal_row)
+    subtotal_row = ["", "", f"Discount1 {100}", ""]
+    table_data.append(subtotal_row)
+    subtotal_row = ["", "", f"Discount2 {100}", ""]
+    table_data.append(subtotal_row)
+    # print the table using the tabulate library
+    # string = tabulate(table_data, headers="firstrow", showindex=True)
+    # print(string)
+
+    table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
+
+    # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
+
+    await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
     pass
 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Display a help message"""
     await update.message.reply_text(
         "/poll url để tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood\n"
         "/close để đóng bình chọn.\n"
@@ -336,7 +447,71 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/paid để đánh dấu hóa đơn đã thanh toán.\n"
         "/delete để xóa bình chọn.\n"
         "/help để lấy tin nhắn này.\n"
+        "/dice để tạo một số ngẫu nhiên.\n"
+        "/quiz để tạo một bài trắc nghiệm.\n"
+        "/quote để lấy một câu trích dẫn ngẫu nhiên.\n"
+        "/checkin để tạo một bình chọn checkin.\n"
+        "/test để tạo một bình chọn test.\n"
     )
+
+    # Define the commands that your bot will support
+    commands = [
+        BotCommand("start", "Bắt đầu bot"),
+        BotCommand("poll", "Tạo một bình chọn, các trang hỗ trợ là: shopeefood, grabfood"),
+        BotCommand("close", "Đóng bình chọn"),
+        BotCommand("info", "Lấy thông tin của bình chọn"),
+        BotCommand("bill", "Tạo một hóa đơn cho bình chọn"),
+        BotCommand("checkbill", "Kiểm tra hóa đơn của bình chọn"),
+        BotCommand("paid", "Đánh dấu hóa đơn đã thanh toán"),
+        BotCommand("delete", "Xóa bình chọn"),
+        BotCommand("dice", "Chơi game xúc xắc"),
+        BotCommand("help", "Lấy tin nhắn này"),
+        BotCommand("quiz", "Chơi game trắc nghiệm"),
+        BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
+        BotCommand("checkin", "Tạo một bình chọn checkin"),
+        BotCommand("test", "Tạo một bình chọn test"),
+    ]
+    await context.bot.set_my_commands(commands)
+
+
+async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    chat_id = update.effective_chat.id
+    full_name = update.effective_user.full_name
+    user_name = update.effective_message.from_user.username
+    repo_user = get_repo_user(chat_id, context)
+    list_user_name = repo_user.get("user_name", [])
+    list_user_name.append(user_name)
+    repo_user.set("user_name", list_user_name)
+    repo_user.save()
+    """Display a help message"""
+    await update.message.reply_text(
+        f'Id {chat_id} user_name = {user_name}')
+
+
+async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    chat_id = update.effective_chat.id
+    user_id = update.effective_message.id
+    bot = context.bot
+    try:
+        bot_get_me_str = await bot.getMe()
+        await update.message.reply_text(bot_get_me_str)
+        # get all member ids in the group
+        # members = bot.getChatMemberCount(chat_id)
+        # members = await bot.getChatMember(chat_id)
+        # members_0 = members[0]
+        # members_0_str = json.dumps(members_0)
+        # await update.message.reply_text(members_0_str)
+        # member_ids = [member.user.id for member in bot.getChatMember(chat_id)]
+
+        # loop through all members and get their info
+        # for member_id in member_ids:
+        #     member = bot.get_chat_member(chat_id, member_id)
+        #     update.message.reply_text(f'{member.user.first_name} {member.user.last_name} ({member.user.username})')
+        # add any other info you want to retrieve for each member
+
+    except TelegramError as e:
+        # logger.error(f"Error getting member info: {e}")
+        await update.message.reply_text("Error getting member info")
 
 
 def main() -> None:
@@ -354,7 +529,12 @@ def main() -> None:
     application.add_handler(CommandHandler("checkbill", checkbill_handler))
     application.add_handler(CommandHandler("paid", paid_handler))
     application.add_handler(CommandHandler("delete", delete_poll_handler))
-    application.add_handler(CommandHandler("dice", game_handler))
+    application.add_handler(CommandHandler("dice", dice_handler))
+    application.add_handler(CommandHandler("checkin", checkin_handler))
+    application.add_handler(CommandHandler("test", test_handler))
+    application.add_handler(CommandHandler("dice", dice_handler))
+    application.add_handler(CommandHandler("quiz", quiz_handler))
+    application.add_handler(CommandHandler("quote", quote_handler))
     application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
 
