@@ -1,0 +1,32 @@
+{
+    "links": [
+        {
+            "url" : "https://vietjack.com/bai-tap-trac-nghiem-lich-su-12/bai-6-nuoc-mi.jsp",
+            "ruleRegex" : {
+                "regexQuestion": "",
+                "regexAnswers" : [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "regexCorrectAnswer": "",
+                "regexExplanation": ""
+            }
+        },
+        {
+            "url" : "https://vietjack.com/bai-tap-trac-nghiem-lich-su-12/bai-6-nuoc-mi.jsp",
+            "ruleRegex" : {
+                "regexQuestion": "",
+                "regexAnswers" : [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "regexCorrectAnswer": "",
+                "regexExplanation": ""
+            }
+        }
+    ]
+}
