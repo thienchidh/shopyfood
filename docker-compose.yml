@@ -3,3 +3,6 @@ services:
   bot:
     build: .
     restart: on-failure
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
