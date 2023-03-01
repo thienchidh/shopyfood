@@ -1,13 +1,11 @@
 import asyncio
 import json
 import logging
-import random
 import re
 
 import yaml
 from tabulate import tabulate
 from telegram import (
-    ReplyKeyboardRemove,
     Update, BotCommand, Poll,
 )
 from telegram.constants import ParseMode
@@ -22,9 +20,9 @@ from telegram.ext import (
 
 import crawl_grabfood
 import crawl_shopeefood
-import quote_storate
-import quiz_loader
 import modules.logic_handlers as logic_handlers
+import quiz_loader
+import quote_storate
 from repository import KeyValRepository
 
 # Enable logging
@@ -202,21 +200,6 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         answered_poll["chat_id"],
         f"{effective_user.mention_html()} chọn {answer_string}!",
         parse_mode=ParseMode.HTML,
-    )
-
-
-async def receive_poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """On receiving polls, reply to it by a closed poll copying the received poll"""
-    actual_poll = update.effective_message.poll
-    logger.info('receive_poll', actual_poll.id)
-    # Only need to set the question and options, since all other parameters don't matter for
-    # a closed poll
-    await update.effective_message.reply_poll(
-        question=actual_poll.question,
-        options=[o.text for o in actual_poll.options],
-        # with is_closed true, the poll/quiz is immediately closed
-        is_closed=True,
-        reply_markup=ReplyKeyboardRemove(),
     )
 
 
@@ -541,19 +524,21 @@ def main() -> None:
     application.add_handler(CommandHandler("checkin", checkin_handler))
     application.add_handler(CommandHandler("test", test_handler))
     application.add_handler(CommandHandler("dice", dice_handler))
+    application.add_handler(CommandHandler("checkin", checkin_handler))
+    application.add_handler(CommandHandler("test", test_handler))
+    application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("quiz", quiz_handler))
     application.add_handler(CommandHandler("quote", quote_handler))
-    application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
-
-    application.add_handler(CommandHandler("chui", logic_handlers.handle_chui))
+    application.add_handler(CommandHandler("meme", logic_handlers.handle_chui))
     application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
     application.add_handler(CommandHandler("info_roll", logic_handlers.handle_info_game))
     application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
-    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
-
+    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))  
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
+
+    
 
 
 if __name__ == "__main__":
