@@ -119,3 +119,5 @@ dmypy.json
 .pytype/
 cython_debug/
 /crawl
+config/config.yml
+
