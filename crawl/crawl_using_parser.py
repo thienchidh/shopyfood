@@ -49,7 +49,7 @@ def crawl():
 
         i = 0
         for e in response.css("div.box-van-dap"):
-            question = e.css("a::attr(title)").get()
+            question = e.css("a span.underline::text").get()
             if (question is None):
                 continue
             print(f"Cau {i+1}: {question}")
