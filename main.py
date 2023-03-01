@@ -312,6 +312,19 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
 
+async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    question = await quiz_loader.get_quiz_api_2()
+    print("Question is", question)
+    options = question['answers']
+    randint = question['correct']
+    await update.effective_message.reply_poll(
+        question=question['question'],
+        options=options,
+        is_anonymous=False,
+        type=Poll.QUIZ,
+        correct_option_id=randint,
+        explanation="Đáp án đúng là {}".format(options[randint]),
+    )
 
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -454,6 +467,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("dice", "Chơi game xúc xắc"),
         BotCommand("help", "Lấy tin nhắn này"),
         BotCommand("quiz", "Chơi game trắc nghiệm"),
+        BotCommand("quiz2", "Trắc nghiệm lịch sử thế giới"),
         BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
         BotCommand("checkin", "Tạo một bình chọn checkin"),
         BotCommand("test", "Tạo một bình chọn test"),
@@ -528,6 +542,7 @@ def main() -> None:
     application.add_handler(CommandHandler("test", test_handler))
     application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("quiz", quiz_handler))
+    application.add_handler(CommandHandler("quiz2", quiz_handler_2))
     application.add_handler(CommandHandler("quote", quote_handler))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
     application.add_handler(CommandHandler("meme", logic_handlers.handle_chui))

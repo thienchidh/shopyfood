@@ -54,7 +54,7 @@ async def get_quiz_api():
 
 async def get_quiz_api_2():
     file_name = "quiz_history_12.json"
-    file_path = os.path.join("crawl", f"{file_name}")
+    file_path = os.path.join("config", f"{file_name}")
     questions = await load_config_path(f'{file_path}')
     data_question = random.choice(questions)
     return {
