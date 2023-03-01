@@ -1,0 +1,1934 @@
+[
+    {
+        "question": "D\u01b0\u1edbi \u1ea3nh h\u01b0\u1edfng c\u1ee7a v\u0103n h\u00f3a ph\u01b0\u01a1ng T\u00e2y, n\u1ec1n gi\u00e1o d\u1ee5c Nho h\u1ecdc c\u1ee7a Vi\u1ec7t Nam d\u1ea7n t\u00e0n l\u1ee5i v\u00e0 ho\u00e0n to\u00e0n ch\u1ea5m d\u1ee9t v\u00e0o n\u0103m:",
+        "answers": [
+            " A. 1898 ",
+            " B. 1906 ",
+            " C. 1915 ",
+            " D. 1919 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110i\u1ec7u m\u00faa x\u00f2e l\u00e0 \u0111\u1eb7c s\u1ea3n ngh\u1ec7 thu\u1eadt c\u1ee7a v\u00f9ng v\u0103n h\u00f3a n\u00e0o ?",
+        "answers": [
+            " A. V\u00f9ng v\u0103n h\u00f3a T\u00e2y B\u1eafc ",
+            " B. V\u00f9ng v\u0103n h\u00f3a B\u1eafc B\u1ed9 ",
+            " C. V\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc ",
+            " D. V\u00f9ng v\u0103n h\u00f3a Trung B\u1ed9 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "H\u1ec7 th\u1ed1ng \u201cM\u01b0\u01a1ng \u2013 Phai \u2013 L\u00e1i \u2013 L\u1ecbn\u201d l\u00e0 h\u1ec7 th\u1ed1ng t\u01b0\u1edbi ti\u00eau n\u1ed5i ti\u1ebfng c\u1ee7a v\u0103n h\u00f3a n\u00f4ng nghi\u1ec7p thu\u1ed9c v\u00f9ng n\u00e0o?",
+        "answers": [
+            " A. V\u00f9ng v\u0103n h\u00f3a T\u00e2y B\u1eafc ",
+            " B. V\u00f9ng v\u0103n h\u00f3a B\u1eafc B\u1ed9 ",
+            " C. V\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc ",
+            " D. V\u00f9ng v\u0103n h\u00f3a Trung B\u1ed9 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1ee3 t\u00ecnh l\u00e0 sinh ho\u1ea1t v\u0103n h\u00f3a \u0111\u1eb7c th\u00f9 c\u1ee7a v\u00f9ng v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. V\u00f9ng v\u0103n h\u00f3a T\u00e2y B\u1eafc ",
+            " B. V\u00f9ng v\u0103n h\u00f3a B\u1eafc B\u1ed9 ",
+            " C. V\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc ",
+            " D. V\u00f9ng v\u0103n h\u00f3a Trung B\u1ed9 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "S\u1ef1 t\u01b0\u01a1ng \u0111\u1ed3ng gi\u1eefa v\u0103n h\u00f3a Vi\u1ec7t Nam v\u00e0 v\u0103n h\u00f3a c\u00e1c d\u00e2n t\u1ed9c \u0110\u00f4ng Nam \u00c1 \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh t\u1eeb:",
+        "answers": [
+            " A. L\u1edbp v\u0103n h\u00f3a b\u1ea3n \u0111\u1ecba v\u1edbi n\u1ec1n c\u1ee7a v\u0103n h\u00f3a Nam \u00c1 v\u00e0 \u0110\u00f4ng Nam \u00c1 ",
+            " B. L\u1edbp v\u0103n h\u00f3a giao l\u01b0u v\u1edbi Trung Hoa v\u00e0 khu v\u1ef1c ",
+            " C. L\u1edbp v\u0103n h\u00f3a giao l\u01b0u v\u1edbi ph\u01b0\u01a1ng T\u00e2y ",
+            " D. S\u1ef1 m\u1edf c\u1eeda giao l\u01b0u v\u1edbi c\u00e1c n\u1ec1n v\u0103n h\u00f3a tr\u00ean to\u00e0n th\u1ebf gi\u1edbi. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Mai t\u00e1ng b\u1eb1ng chum g\u1ed1m l\u00e0 ph\u01b0\u01a1ng th\u1ee9c mai t\u00e1ng \u0111\u1eb7c th\u00f9 c\u1ee7a c\u01b0 d\u00e2n thu\u1ed9c n\u1ec1n v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. V\u0103n h\u00f3a \u0110\u00f4ng S\u01a1n ",
+            " B. V\u0103n h\u00f3a Sa Hu\u1ef3nh ",
+            " C. V\u0103n h\u00f3a \u00d3c Eo ",
+            " D. V\u0103n h\u00f3a \u0110\u1ed3ng Nai "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ki\u1ec3u nh\u00e0 \u1edf ph\u1ed5 bi\u1ebfn c\u1ee7a c\u01b0 d\u00e2n v\u0103n h\u00f3a \u0110\u00f4ng S\u01a1n l\u00e0:",
+        "answers": [
+            " A. Nh\u00e0 thuy\u1ec1n ",
+            " B. Nh\u00e0 \u0111\u1ea5t b\u1eb1ng ",
+            " C. Nh\u00e0 b\u00e8 ",
+            " D. Nh\u00e0 s\u00e0n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1ebf ph\u1ea9m \u0111\u1eb7c th\u00f9 c\u1ee7a v\u0103n h\u00f3a \u0110\u1ed3ng Nai l\u00e0:",
+        "answers": [
+            " A. Khuy\u00ean tai hai \u0111\u1ea7u th\u00fa ",
+            " B. M\u1ed9 chum g\u1ed1m ",
+            " C. Trang s\u1ee9c b\u1eb1ng v\u00e0ng ",
+            " D. \u0110\u00e0n \u0111\u00e1 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "N\u1ec1n v\u0103n h\u1ecdc ch\u1eef vi\u1ebft c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t ch\u00ednh th\u1ee9c xu\u1ea5t hi\u1ec7n v\u00e0o th\u1eddi k\u1ef3 n\u00e0o?",
+        "answers": [
+            " A. Th\u1eddi B\u1eafc thu\u1ed9c ",
+            " B. Th\u1eddi L\u00fd \u2013 Tr\u1ea7n ",
+            " C. Th\u1eddi Minh thu\u1ed9c ",
+            " D. Th\u1eddi H\u1eadu L\u00ea "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c \u0111\u1ecbnh l\u1ec7 khuy\u1ebfn kh\u00edch ng\u01b0\u1eddi \u0111i h\u1ecdc nh\u01b0 l\u1ec5 x\u01b0\u1edbng danh, l\u1ec5 vinh quy b\u00e1i t\u1ed5, l\u1ec5 kh\u1eafc t\u00ean l\u00ean bia ti\u1ebfn s\u0129... \u0111\u01b0\u1ee3c tri\u1ec1u \u0111\u00ecnh ban h\u00e0nh v\u00e0o th\u1eddi k\u1ef3 n\u00e0o?",
+        "answers": [
+            " A. Th\u1eddi B\u1eafc thu\u1ed9c ",
+            " B. Th\u1eddi L\u00fd \u2013 Tr\u1ea7n ",
+            " C. Th\u1eddi H\u1eadu L\u00ea ",
+            " D. Th\u1eddi nh\u00e0 Nguy\u1ec5n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Theo quan ni\u1ec7m c\u1ee7a \u0111\u1ed3ng b\u00e0o Gi\u1ebb (Tri\u00eang) \u1edf T\u00e2y Nguy\u00ean, c\u1ed3ng chi\u00eang l\u00e0 bi\u1ec3u t\u01b0\u1ee3ng cho:",
+        "answers": [
+            " A. Th\u1ea7n S\u1ea5m \u2013 t\u00ednh Nam ",
+            " B. M\u1eb7t tr\u1eddi \u2013 t\u00ednh Nam ",
+            " C. M\u1eb7t tr\u0103ng \u2013 t\u00ednh N\u1eef ",
+            " D. \u0110\u1ea5t \u2013 t\u00ednh N\u1eef "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Kinh th\u00e0nh Th\u0103ng Long \u0111\u01b0\u1ee3c chia th\u00e0nh 36 ph\u1ed1 ph\u01b0\u1eddng v\u00e0o th\u1eddi k\u1ef3 n\u00e0o?",
+        "answers": [
+            " A. Th\u1eddi L\u00fd \u2013 Tr\u1ea7n ",
+            " B. Th\u1eddi Minh thu\u1ed9c ",
+            " C. Th\u1eddi H\u1eadu L\u00ea ",
+            " D. Th\u1eddi nh\u00e0 Nguy\u1ec5n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "C\u1ea5u tr\u00fac c\u1ee7a h\u1ec7 th\u1ed1ng v\u0103n ho\u00e1 g\u1ed3m:",
+        "answers": [
+            " A. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c, V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c \u0111\u1eddi s\u1ed1ng t\u1eadp th\u1ec3, V\u0103n h\u00f3a t\u1eadn d\u1ee5ng m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean, V\u0103n h\u00f3a t\u1eadn d\u1ee5ng m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i ",
+            " B. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c, V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c c\u1ed9ng \u0111\u1ed3ng, V\u0103n h\u00f3a t\u1eadn d\u1ee5ng m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean, V\u0103n h\u00f3a t\u1eadn d\u1ee5ng m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i ",
+            " C. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c, V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c c\u1ed9ng \u0111\u1ed3ng, V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean, V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i ",
+            " D. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c, V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c c\u1ed9ng \u0111\u1ed3ng, V\u0103n h\u00f3a \u0111\u1ed1i ph\u00f3 v\u1edbi m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean, V\u0103n h\u00f3a \u0111\u1ed1i ph\u00f3 v\u1edbi m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1ee9c n\u0103ng \u0111i\u1ec1u ch\u1ec9nh x\u00e3 h\u1ed9i t\u01b0\u01a1ng \u1ee9ng v\u1edbi \u0111\u1eb7c tr\u01b0ng n\u00e0o c\u1ee7a v\u0103n h\u00f3a ?",
+        "answers": [
+            " A. T\u00ednh l\u1ecbch s\u1eed ",
+            " B. T\u00ednh gi\u00e1 tr\u1ecb ",
+            " C. T\u00ednh nh\u00e2n sinh ",
+            " D. T\u00ednh h\u1ec7 th\u1ed1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1eb7c tr\u01b0ng n\u00e0o cho ph\u00e9p ph\u00e2n bi\u1ec7t v\u0103n h\u00f3a nh\u01b0 m\u1ed9t hi\u1ec7n t\u01b0\u1ee3ng x\u00e3 h\u1ed9i do con ng\u01b0\u1eddi t\u1ea1o ra v\u1edbi c\u00e1c gi\u00e1 tr\u1ecb t\u1ef1 nhi\u00ean do thi\u00ean nhi\u00ean t\u1ea1o ra?",
+        "answers": [
+            " A. T\u00ednh l\u1ecbch s\u1eed ",
+            " B. T\u00ednh gi\u00e1 tr\u1ecb ",
+            " C. T\u00ednh nh\u00e2n sinh ",
+            " D. T\u00ednh h\u1ec7 th\u1ed1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "N\u00f3i v\u0103n h\u00f3a \u201cl\u00e0 m\u1ed9t th\u1ee9 gien x\u00e3 h\u1ed9i di truy\u1ec1n ph\u1ea9m ch\u1ea5t con ng\u01b0\u1eddi l\u1ea1i cho c\u00e1c th\u1ebf h\u1ec7 mai sau\u201d l\u00e0 mu\u1ed1n nh\u1ea5n m\u1ea1nh \u0111\u1ebfn ch\u1ee9c n\u0103ng n\u00e0o c\u1ee7a v\u0103n h\u00f3a ?",
+        "answers": [
+            " A. Ch\u1ee9c n\u0103ng t\u1ed5 ch\u1ee9c ",
+            " B. Ch\u1ee9c n\u0103ng \u0111i\u1ec1u ch\u1ec9nh x\u00e3 h\u1ed9i ",
+            " C. Ch\u1ee9c n\u0103ng giao ti\u1ebfp ",
+            " D. Ch\u1ee9c n\u0103ng gi\u00e1o d\u1ee5c "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1ee9c n\u0103ng n\u00e0o c\u1ee7a v\u0103n h\u00f3a gi\u00fap x\u00e3 h\u1ed9i \u0111\u1ecbnh h\u01b0\u1edbng c\u00e1c chu\u1ea9n m\u1ef1c v\u00e0 l\u00e0m \u0111\u1ed9ng l\u1ef1c cho s\u1ef1 ph\u00e1t tri\u1ec3n?",
+        "answers": [
+            " A. Ch\u1ee9c n\u0103ng t\u1ed5 ch\u1ee9c ",
+            " B. Ch\u1ee9c n\u0103ng \u0111i\u1ec1u ch\u1ec9nh x\u00e3 h\u1ed9i ",
+            " C. Ch\u1ee9c n\u0103ng giao ti\u1ebfp ",
+            " D. Ch\u1ee9c n\u0103ng gi\u00e1o d\u1ee5c "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh l\u00e0 kh\u00e1i ni\u1ec7m:",
+        "answers": [
+            " A. Thi\u00ean v\u1ec1 gi\u00e1 tr\u1ecb tinh th\u1ea7n v\u00e0 ch\u1ec9 tr\u00ecnh \u0111\u1ed9 ph\u00e1t tri\u1ec3n ",
+            " B. Thi\u00ean v\u1ec1 gi\u00e1 tr\u1ecb tinh th\u1ea7n v\u00e0 c\u00f3 b\u1ec1 d\u00e0y l\u1ecbch s\u1eed ",
+            " C. Thi\u00ean v\u1ec1 gi\u00e1 tr\u1ecb v\u1eadt ch\u1ea5t v\u00e0 c\u00f3 b\u1ec1 d\u00e0y l\u1ecbch s\u1eed ",
+            " D. Thi\u00ean v\u1ec1 gi\u00e1 tr\u1ecb v\u1eadt ch\u1ea5t-k\u1ef9 thu\u1eadt v\u00e0 ch\u1ec9 tr\u00ecnh \u0111\u1ed9 ph\u00e1t tri\u1ec3n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Y\u1ebfu t\u1ed1 n\u00e0o sau \u0111\u00e2y mang t\u00ednh qu\u1ed1c t\u1ebf ?",
+        "answers": [
+            " A. V\u0103n h\u00f3a ",
+            " B. V\u0103n hi\u1ebfn ",
+            " C. V\u0103n minh ",
+            " D. V\u0103n v\u1eadt "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "X\u00e9t v\u1ec1 t\u00ednh gi\u00e1 tr\u1ecb , s\u1ef1 kh\u00e1c nhau gi\u1eefa v\u0103n h\u00f3a v\u00e0 v\u0103n minh l\u00e0:",
+        "answers": [
+            " A. V\u0103n h\u00f3a g\u1eafn v\u1edbi ph\u01b0\u01a1ng \u0110\u00f4ng n\u00f4ng nghi\u1ec7p, v\u0103n minh g\u1eafn v\u1edbi ph\u01b0\u01a1ng T\u00e2y \u0111\u00f4 th\u1ecb. ",
+            " B. V\u0103n minh ch\u1ec9 tr\u00ecnh \u0111\u1ed9 ph\u00e1t tri\u1ec3n c\u00f2n v\u0103n h\u00f3a c\u00f3 b\u1ec1 d\u00e0y l\u1ecbch s\u1eed. ",
+            " C. V\u0103n minh thi\u00ean v\u1ec1 v\u1eadt ch\u1ea5t-k\u1ef9 thu\u1eadt c\u00f2n v\u0103n h\u00f3a thi\u00ean v\u1ec1 v\u1eadt ch\u1ea5t l\u1eabn tinh th\u1ea7n. ",
+            " D. V\u0103n h\u00f3a mang t\u00ednh d\u00e2n t\u1ed9c, v\u0103n minh mang t\u00ednh qu\u1ed1c t\u1ebf "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c y\u1ebfu t\u1ed1 v\u0103n h\u00f3a truy\u1ec1n th\u1ed1ng l\u00e2u \u0111\u1eddi v\u00e0 t\u1ed1t \u0111\u1eb9p c\u1ee7a d\u00e2n t\u1ed9c, thi\u00ean v\u1ec1 gi\u00e1 tr\u1ecb tinh th\u1ea7n g\u1ecdi l\u00e0:",
+        "answers": [
+            " A. V\u0103n h\u00f3a ",
+            " B. V\u0103n v\u1eadt ",
+            " C. V\u0103n minh ",
+            " D. V\u0103n hi\u1ebfn "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00edn ng\u01b0\u1ee1ng, phong t\u1ee5c... l\u00e0 nh\u1eefng y\u1ebfu t\u1ed1 thu\u1ed9c th\u00e0nh t\u1ed1 v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c ",
+            " B. V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c c\u1ed9ng \u0111\u1ed3ng ",
+            " C. V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean ",
+            " D. V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n h\u00f3a giao ti\u1ebfp l\u00e0 y\u1ebfu t\u1ed1 thu\u1ed9c th\u00e0nh t\u1ed1 v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c ",
+            " B. V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c c\u1ed9ng \u0111\u1ed3ng ",
+            " C. V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean ",
+            " D. V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Theo GS.Tr\u1ea7n Ng\u1ecdc Th\u00eam, \u0103n, m\u1eb7c, \u1edf, \u0111i l\u1ea1i l\u00e0 nh\u1eefng y\u1ebfu t\u1ed1 thu\u1ed9c th\u00e0nh t\u1ed1 v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. V\u0103n h\u00f3a nh\u1eadn th\u1ee9c ",
+            " B. V\u0103n h\u00f3a t\u1ed5 ch\u1ee9c c\u1ed9ng \u0111\u1ed3ng ",
+            " C. V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean ",
+            " D. V\u0103n h\u00f3a \u1ee9ng x\u1eed v\u1edbi m\u00f4i tr\u01b0\u1eddng x\u00e3 h\u1ed9i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "V\u00f9ng n\u00f4ng nghi\u1ec7p \u0110\u00f4ng Nam \u00c1 \u0111\u01b0\u1ee3c nhi\u1ec1u h\u1ecdc gi\u1ea3 ph\u01b0\u01a1ng T\u00e2y g\u1ecdi l\u00e0:",
+        "answers": [
+            " A. X\u1ee9 s\u1edf m\u1eabu h\u1ec7. ",
+            " B. X\u1ee9 s\u1edf ph\u1ee5 h\u1ec7. ",
+            " C. C\u1ea3 hai \u00fd tr\u00ean \u0111\u1ec1u \u0111\u00fang. ",
+            " D. C\u1ea3 hai \u00fd tr\u00ean \u0111\u1ec1u sai. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "S\u1ef1 \u0111a d\u1ea1ng c\u1ee7a m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean v\u00e0 s\u1ef1 \u0111a d\u1ea1ng c\u1ee7a c\u00e1c t\u1ed9c ng\u01b0\u1eddi trong th\u00e0nh ph\u1ea7n d\u00e2n t\u1ed9c \u0111\u00e3 t\u1ea1o n\u00ean \u0111\u1eb7c \u0111i\u1ec3m g\u00ec c\u1ee7a v\u0103n h\u00f3a Vi\u1ec7t Nam?",
+        "answers": [
+            " A. M\u1ed7i v\u00f9ng v\u0103n h\u00f3a c\u00f3 m\u1ed9t b\u1ea3n s\u1eafc ri\u00eang, c\u00f3 t\u00ednh th\u1ed1ng nh\u1ea5t trong s\u1ef1 \u0111a d\u1ea1ng. ",
+            " B. B\u1ea3n s\u1eafc chung c\u1ee7a v\u0103n h\u00f3a ",
+            " C. S\u1ef1 t\u01b0\u01a1ng \u0111\u1ed3ng gi\u1eefa c\u00e1c v\u00f9ng v\u0103n h\u00f3a ",
+            " D. S\u1ef1 kh\u00e1c bi\u1ec7t gi\u1eefa c\u00e1c v\u00f9ng v\u0103n h\u00f3a "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Trong l\u1ed1i nh\u1eadn th\u1ee9c, t\u01b0 duy, lo\u1ea1i h\u00ecnh v\u0103n ho\u00e1 g\u1ed1c n\u00f4ng nghi\u1ec7p c\u00f3 \u0111\u1eb7c \u0111i\u1ec3m:",
+        "answers": [
+            " A. T\u01b0 duy thi\u00ean v\u1ec1 ph\u00e2n t\u00edch v\u00e0 tr\u1ecdng y\u1ebfu t\u1ed1; c\u00e1ch nh\u00ecn thi\u00ean v\u1ec1 ch\u1ee7 quan, c\u1ea3m t\u00ednh v\u00e0 kinh nghi\u1ec7m ",
+            " B. T\u01b0 duy thi\u00ean v\u1ec1 t\u1ed5ng h\u1ee3p v\u00e0 bi\u1ec7n ch\u1ee9ng; c\u00e1ch nh\u00ecn thi\u00ean v\u1ec1 ch\u1ee7 quan, c\u1ea3m t\u00ednh v\u00e0 kinh nghi\u1ec7m ",
+            " C. T\u01b0 duy thi\u00ean v\u1ec1 t\u1ed5ng h\u1ee3p v\u00e0 tr\u1ecdng y\u1ebfu t\u1ed1; c\u00e1ch nh\u00ecn thi\u00ean v\u1ec1 ch\u1ee7 quan, l\u00fd t\u00ednh v\u00e0 kinh nghi\u1ec7m ",
+            " D. T\u01b0 duy thi\u00ean v\u1ec1 t\u1ed5ng h\u1ee3p v\u00e0 bi\u1ec7n ch\u1ee9ng; c\u00e1ch nh\u00ecn thi\u00ean v\u1ec1 kh\u00e1ch quan, c\u1ea3m t\u00ednh v\u00e0 th\u1ef1c nghi\u1ec7m "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong s\u1ef1 giao l\u01b0u r\u1ed9ng r\u00e3i v\u1edbi c\u00e1c n\u1ec1n v\u0103n h\u00f3a \u0110\u00f4ng T\u00e2y, v\u0103n h\u00f3a Vi\u1ec7t Nam ch\u1ecbu \u1ea3nh h\u01b0\u1edfng s\u00e2u \u0111\u1eadm c\u1ee7a n\u1ec1n v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. Trung Hoa ",
+            " B. \u1ea4n \u0110\u1ed9 ",
+            " C. Ph\u00e1p ",
+            " D. M\u1ef9 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1eb7c \u0111i\u1ec3m n\u00e0o sau \u0111\u00e2y kh\u00f4ng ph\u1ea3i l\u00e0 \u0111\u1eb7c tr\u01b0ng c\u1ee7a lo\u1ea1i h\u00ecnh v\u0103n h\u00f3a g\u1ed1c n\u00f4ng nghi\u1ec7p?",
+        "answers": [
+            " A. Con ng\u01b0\u1eddi lu\u00f4n c\u00f3 tham v\u1ecdng chinh ph\u1ee5c t\u1ef1 nhi\u00ean. ",
+            " B. Con ng\u01b0\u1eddi \u01b0a s\u1ed1ng theo nguy\u00ean t\u1eafc tr\u1ecdng t\u00ecnh. ",
+            " C. L\u1ed1i s\u1ed1ng linh ho\u1ea1t, lu\u00f4n bi\u1ebfn b\u00e1o cho th\u00edch h\u1ee3p v\u1edbi ho\u00e0n c\u1ea3nh ",
+            " D. Con ng\u01b0\u1eddi c\u00f3 \u00fd th\u1ee9c t\u00f4n tr\u1ecdng v\u00e0 \u01b0\u1edbc v\u1ecdng s\u1ed1ng h\u00f2a h\u1ee3p v\u1edbi t\u1ef1 nhi\u00ean "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1ed1i \u1ee9ng x\u1eed n\u0103ng \u0111\u1ed9ng v\u00e0 linh ho\u1ea1t gi\u00fap ng\u01b0\u1eddi Vi\u1ec7t th\u00edch nghi cao v\u1edbi m\u1ecdi t\u00ecnh hu\u1ed1ng, nh\u01b0ng \u0111\u1ed3ng th\u1eddi c\u0169ng mang l\u1ea1i th\u00f3i x\u1ea5u l\u00e0:",
+        "answers": [
+            " A. Th\u00f3i \u0111\u1ed1 k\u1ef5 c\u00e0o b\u1eb1ng ",
+            " B. Th\u00f3i d\u1ef1a d\u1eabm, \u1ef7 l\u1ea1i ",
+            " C. Th\u00f3i t\u00f9y ti\u1ec7n ",
+            " D. Th\u00f3i b\u00e8 ph\u00e1i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u00f3m c\u01b0 d\u00e2n B\u00e1ch Vi\u1ec7t l\u00e0 kh\u1ed1i t\u1ed9c ng\u01b0\u1eddi thu\u1ed9c nh\u00f3m:",
+        "answers": [
+            " A. Austroasiatic ",
+            " B. Australoid ",
+            " C. Austron\u00e9sien ",
+            " D. Mongoloid "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1ee7ng ng\u01b0\u1eddi n\u00e0o l\u00e0 c\u01b0 d\u00e2n \u0110\u00f4ng Nam \u00c1 c\u1ed5?",
+        "answers": [
+            " A. Indon\u00e9sien ",
+            " B. Austroasiatic ",
+            " C. Austron\u00e9sien ",
+            " D. Australoid "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi Vi\u1ec7t (Kinh) t\u00e1ch ra t\u1eeb kh\u1ed1i Vi\u1ec7t-M\u01b0\u1eddng chung v\u00e0o kho\u1ea3ng th\u1eddi gian:",
+        "answers": [
+            " A. 2000 n\u0103m tr\u01b0\u1edbc C\u00f4ng nguy\u00ean ",
+            " B. 1000 n\u0103m tr\u01b0\u1edbc C\u00f4ng nguy\u00ean ",
+            " C. \u0110\u1ea7u th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c (th\u1ebf k\u1ef7 I-II) ",
+            " D. Cu\u1ed1i th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c (th\u1ebf k\u1ef7 VII-VIII) "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1eb7c tr\u01b0ng v\u0103n h\u00f3a c\u1ee7a v\u00f9ng v\u0103n h\u00f3a T\u00e2y B\u1eafc l\u00e0:",
+        "answers": [
+            " A. Ngh\u1ec7 thu\u1eadt trang tr\u00ed tinh t\u1ebf tr\u00ean trang ph\u1ee5c, ch\u0103n m\u00e0n... ",
+            " B. L\u1ec5 h\u1ed9i l\u1ed3ng t\u1ed3ng. ",
+            " C. V\u0103n h\u00f3a c\u1ed3ng chi\u00eang. ",
+            " D. Nh\u1eefng tr\u01b0\u1eddng ca (khan, k\u2019\u0103mon) n\u1ed5i ti\u1ebfng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1eb7c tr\u01b0ng v\u0103n h\u00f3a c\u1ee7a v\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc l\u00e0:",
+        "answers": [
+            " A. Ngh\u1ec7 thu\u1eadt trang tr\u00ed tinh t\u1ebf tr\u00ean trang ph\u1ee5c, ch\u0103n m\u00e0n... ",
+            " B. L\u1ec5 h\u1ed9i l\u1ed3ng t\u1ed3ng. ",
+            " C. V\u0103n h\u00f3a c\u1ed3ng chi\u00eang. ",
+            " D. Nh\u1eefng tr\u01b0\u1eddng ca (khan, k\u2019\u0103mon) n\u1ed5i ti\u1ebfng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong h\u1ec7 th\u1ed1ng c\u00e1c v\u00f9ng v\u0103n h\u00f3a, v\u00f9ng s\u1edbm c\u00f3 s\u1ef1 ti\u1ebfp c\u1eadn v\u00e0 \u0111i \u0111\u1ea7u trong qu\u00e1 tr\u00ecnh giao l\u01b0u h\u1ed9i nh\u1eadp v\u1edbi v\u0103n h\u00f3a ph\u01b0\u01a1ng T\u00e2y l\u00e0:",
+        "answers": [
+            " A. V\u00f9ng v\u0103n h\u00f3a Trung B\u1ed9 ",
+            " B. V\u00f9ng v\u0103n h\u00f3a B\u1eafc B\u1ed9 ",
+            " C. V\u00f9ng v\u0103n h\u00f3a Nam B\u1ed9 ",
+            " D. V\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "V\u00f9ng v\u0103n h\u00f3a n\u00e0o l\u01b0u gi\u1eef \u0111\u01b0\u1ee3c truy\u1ec1n th\u1ed1ng v\u0103n h\u00f3a b\u1ea3n \u0111\u1ecba \u0111\u1eadm n\u00e9t, g\u1ea7n g\u0169i v\u1edbi v\u0103n h\u00f3a \u0110\u00f4ng S\u01a1n nh\u1ea5t?",
+        "answers": [
+            " A. V\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc ",
+            " B. V\u00f9ng v\u0103n h\u00f3a T\u00e2y B\u1eafc ",
+            " C. V\u00f9ng v\u0103n h\u00f3a B\u1eafc B\u1ed9 ",
+            " D. V\u00f9ng v\u0103n h\u00f3a T\u00e2y Nguy\u00ean "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "V\u00f9ng v\u0103n h\u00f3a n\u00e0o c\u00f3 truy\u1ec1n th\u1ed1ng l\u00e2u \u0111\u1eddi v\u00e0 l\u00e0 c\u00e1i n\u00f4i h\u00ecnh th\u00e0nh v\u0103n h\u00f3a, v\u0103n minh c\u1ee7a d\u00e2n t\u1ed9c Vi\u1ec7t?",
+        "answers": [
+            " A. V\u00f9ng v\u0103n h\u00f3a Trung B\u1ed9 ",
+            " B. V\u00f9ng v\u0103n h\u00f3a B\u1eafc B\u1ed9 ",
+            " C. V\u00f9ng v\u0103n h\u00f3a Nam B\u1ed9 ",
+            " D. V\u00f9ng v\u0103n h\u00f3a Vi\u1ec7t B\u1eafc "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "L\u00e0ng \u0110\u00f4ng S\u01a1n \u2013 chi\u1ebfc n\u00f4i c\u1ee7a n\u1ec1n v\u0103n minh \u0110\u00f4ng S\u01a1n trong l\u1ecbch s\u1eed thu\u1ed9c khu v\u1ef1c v\u0103n h\u00f3a n\u00e0o sau \u0111\u00e2y?",
+        "answers": [
+            " A. T\u00e2y B\u1eafc ",
+            " B. Vi\u1ec7t B\u1eafc ",
+            " C. B\u1eafc B\u1ed9 ",
+            " D. \u0110\u00f4ng B\u1eafc "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "N\u1ec1n v\u0103n h\u00f3a n\u00e0o \u0111\u00f3ng vai tr\u00f2 quy\u1ebft \u0111\u1ecbnh trong vi\u1ec7c x\u00e1c l\u1eadp n\u00ean b\u1ea3n s\u1eafc v\u0103n h\u00f3a Vi\u1ec7t ?",
+        "answers": [
+            " A. V\u0103n h\u00f3a S\u01a1n Vi ",
+            " B. V\u0103n h\u00f3a H\u00f2a B\u00ecnh ",
+            " C. V\u0103n h\u00f3a \u0110\u00f4ng S\u01a1n ",
+            " D. V\u0103n h\u00f3a Sa Hu\u1ef3nh "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Theo GS.Tr\u1ea7n Ng\u1ecdc Th\u00eam, ti\u1ebfn tr\u00ecnh v\u0103n h\u00f3a Vi\u1ec7t Nam c\u00f3 th\u1ec3 chia th\u00e0nh:",
+        "answers": [
+            " A. 3 l\u1edbp - 6 giai \u0111o\u1ea1n v\u0103n h\u00f3a ",
+            " B. 3 l\u1edbp - 3 giai do\u1ea1n v\u0103n h\u00f3a ",
+            " C. 4 l\u1edbp - 6 giai \u0111o\u1ea1n v\u0103n h\u00f3a ",
+            " D. 6 l\u1edbp - 3 giai \u0111o\u1ea1n v\u0103n h\u00f3a "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1eddi k\u1ef3 938-1858 \u1ee9ng v\u1edbi giai \u0111o\u1ea1n n\u00e0o trong ti\u1ebfn tr\u00ecnh l\u1ecbch s\u1eed c\u1ee7a v\u0103n h\u00f3a Vi\u1ec7t Nam?",
+        "answers": [
+            " A. Giai \u0111\u1ecdan v\u0103n ho\u00e1 ti\u1ec1n s\u1eed ",
+            " B. Giai \u0111o\u1ea1n v\u0103n h\u00f3a V\u0103n Lang- \u00c2u L\u1ea1c ",
+            " C. Giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " D. Giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1eddi k\u1ef3 179TCN- 938 \u1ee9ng v\u1edbi giai \u0111o\u1ea1n n\u00e0o trong ti\u1ebfn tr\u00ecnh l\u1ecbch s\u1eed c\u1ee7a v\u0103n h\u00f3a Vi\u1ec7t Nam?",
+        "answers": [
+            " A. Giai \u0111\u1ecdan v\u0103n ho\u00e1 ti\u1ec1n s\u1eed ",
+            " B. Giai \u0111o\u1ea1n v\u0103n h\u00f3a V\u0103n Lang- \u00c2u L\u1ea1c ",
+            " C. Giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " D. Giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00e0nh t\u1ef1u n\u1ed5i b\u1eadt c\u1ee7a giai \u0111o\u1ea1n v\u0103n h\u00f3a V\u0103n Lang \u2013 \u00c2u L\u1ea1c l\u00e0:",
+        "answers": [
+            " A. Ngh\u1ec1 th\u1ee7 c\u00f4ng m\u1ef9 ngh\u1ec7 ",
+            " B. K\u1ef9 thu\u1eadt \u0111\u00fac \u0111\u1ed3ng thau ",
+            " C. Ngh\u1ec1 tr\u1ed3ng d\u00e2u nu\u00f4i t\u1eb1m ",
+            " D. K\u1ef9 thu\u1eadt ch\u1ebf t\u1ea1o \u0111\u1ed3 s\u1eaft "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Tr\u1ed1ng \u0111\u1ed3ng \u0110\u00f4ng S\u01a1n l\u00e0 th\u00e0nh t\u1ef1u c\u1ee7a giai \u0111o\u1ea1n v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. Giai \u0111o\u1ea1n v\u0103n ho\u00e1 ti\u1ec1n s\u1eed ",
+            " B. Giai \u0111o\u1ea1n v\u0103n h\u00f3a V\u0103n Lang - \u00c2u L\u1ea1c ",
+            " C. Giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 ch\u1ed1ng B\u1eafc thu\u1ed9c ",
+            " D. Giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1edbp v\u0103n h\u00f3a b\u1ea3n \u0111\u1ecba l\u00e0 th\u00e0nh t\u1ef1u c\u1ee7a giai \u0111o\u1ea1n v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. Giai \u0111o\u1ea1n v\u0103n ho\u00e1 ti\u1ec1n s\u1eed v\u00e0 giai \u0111o\u1ea1n v\u0103n h\u00f3a V\u0103n Lang - \u00c2u L\u1ea1c ",
+            " B. Giai \u0111o\u1ea1n v\u0103n h\u00f3a V\u0103n Lang- \u00c2u L\u1ea1c v\u00e0 giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " C. Giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c v\u00e0 giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t ",
+            " D. Giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t v\u00e0 giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Nam "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "\u1ede giai \u0111o\u1ea1n v\u0103n h\u00f3a ti\u1ec1n s\u1eed, th\u00e0nh t\u1ef1u l\u1edbn nh\u1ea5t c\u1ee7a c\u01b0 d\u00e2n Nam \u00c1 l\u00e0:",
+        "answers": [
+            " A. H\u00ecnh th\u00e0nh ngh\u1ec1 n\u00f4ng nghi\u1ec7p l\u00faa n\u01b0\u1edbc ",
+            " B. K\u1ef9 thu\u1eadt luy\u1ec7n kim \u0111\u1ed3ng ",
+            " C. K\u1ef9 thu\u1eadt luy\u1ec7n s\u1eaft ",
+            " D. K\u1ef9 thu\u1eadt ch\u1ebf t\u1ea1o \u0111\u1ed3 g\u1ed1m "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c lu\u1ed3ng t\u01b0 t\u01b0\u1edfng d\u00e2n ch\u1ee7 t\u01b0 s\u1ea3n, t\u01b0 t\u01b0\u1edfng Mac- L\u00eanin \u0111\u01b0\u1ee3c truy\u1ec1n v\u00e0o Vi\u1ec7t Nam v\u00e0o giai \u0111o\u1ea1n v\u0103n h\u00f3a n\u00e0o?",
+        "answers": [
+            " A. Giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " B. Giai \u0111o\u1ea1n v\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t ",
+            " C. Giai \u0111o\u1ea1n v\u0103n h\u00f3a th\u1eddi k\u1ef3 Ph\u00e1p thu\u1ed9c ",
+            " D. Giai \u0111o\u1ea1n v\u0103n h\u00f3a hi\u1ec7n \u0111\u1ea1i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1eb7c \u0111i\u1ec3m n\u1ed5i b\u1eadt nh\u1ea5t c\u1ee7a giai \u0111o\u1ea1n v\u0103n h\u00f3a Vi\u1ec7t Nam th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c l\u00e0:",
+        "answers": [
+            " A. \u00dd th\u1ee9c \u0111\u1ed1i kh\u00e1ng b\u1ea5t khu\u1ea5t tr\u01b0\u1edbc s\u1ef1 x\u00e2m l\u0103ng c\u1ee7a phong ki\u1ebfn ph\u01b0\u01a1ng B\u1eafc. ",
+            " B. Ti\u1ebfp bi\u1ebfn v\u0103n h\u00f3a H\u00e1n \u0111\u1ec3 l\u00e0m gi\u00e0u cho v\u0103n h\u00f3a d\u00e2n t\u1ed9c. ",
+            " C. Giao l\u01b0u t\u1ef1 nhi\u00ean v\u1edbi v\u0103n h\u00f3a \u1ea4n \u0110\u1ed9 ",
+            " D. Gi\u1eef g\u00ecn, b\u1ea3o t\u1ed3n b\u1ea3n s\u1eafc v\u0103n h\u00f3a d\u00e2n t\u1ed9c. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1eddi k\u1ef3 v\u0103n h\u00f3a V\u0103n Lang-\u00c2u L\u1ea1c c\u00f3 ba trung t\u00e2m v\u0103n h\u00f3a l\u1edbn l\u00e0:",
+        "answers": [
+            " A. V\u0103n h\u00f3a \u0110\u00f4ng S\u01a1n \u2013 V\u0103n h\u00f3a Sa Hu\u1ef3nh \u2013 V\u0103n h\u00f3a \u00d3c Eo ",
+            " B. V\u0103n h\u00f3a H\u00f2a B\u00ecnh \u2013 V\u0103n h\u00f3a S\u01a1n Vi \u2013 V\u0103n h\u00f3a Ph\u00f9ng Nguy\u00ean ",
+            " C. V\u0103n h\u00f3a \u0110\u00f4ng S\u01a1n \u2013 V\u0103n h\u00f3a Sa Hu\u1ef3nh \u2013 V\u0103n h\u00f3a \u0110\u1ed3ng Nai ",
+            " D. V\u0103n h\u00f3a ch\u00e2u th\u1ed5 B\u1eafc B\u1ed9 \u2013 V\u0103n h\u00f3a Ch\u0103mpa \u2013 V\u0103n h\u00f3a \u00d3c Eo "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ti\u1ebfp thu t\u01b0 t\u01b0\u1edfng v\u0103n h\u00f3a ph\u01b0\u01a1ng T\u00e2y, c\u00e1c nh\u00e0 nho trong phong tr\u00e0o \u0110\u00f4ng Kinh nghi\u00e3 th\u1ee5c \u0111\u00e3 ch\u1ee7 tr\u01b0\u01a1ng t\u1eeb b\u1ecf s\u1ef1 l\u1ea1c h\u1eadu, \u0111\u1ebfn v\u1edbi s\u1ef1 c\u00e1ch t\u00e2n b\u1eb1ng con \u0111\u01b0\u1eddng:",
+        "answers": [
+            " A. D\u00e2n t\u1ed9c h\u00f3a, \u0111\u1ea1i ch\u00fang h\u00f3a v\u00e0 khoa h\u1ecdc h\u00f3a ",
+            " B. Nh\u00e2n v\u0103n, d\u00e2n ch\u1ee7 v\u00e0 ti\u1ebfn b\u1ed9 ",
+            " C. X\u00e2y d\u1ef1ng n\u1ec1n v\u0103n h\u00f3a ti\u00ean ti\u1ebfn, \u0111\u1eadm \u0111\u00e0 b\u1ea3n s\u1eafc d\u00e2n t\u1ed9c ",
+            " D. Ch\u1ea5n h\u01b0ng d\u00e2n kh\u00ed, khai th\u00f4ng d\u00e2n tr\u00ed, m\u1edf r\u1ed9ng d\u00e2n quy\u1ec1n, c\u1ea3i thi\u1ec7n d\u00e2n sinh "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "N\u0103m 1943, \u0110\u1ec1 c\u01b0\u01a1ng v\u0103n h\u00f3a c\u1ee7a \u0110\u1ea3ng C\u1ed9ng s\u1ea3n \u0110\u00f4ng d\u01b0\u01a1ng ra \u0111\u1eddi \u0111\u00e3 v\u1ea1ch ra con \u0111\u01b0\u1eddng ph\u00e1t tri\u1ec3n v\u0103n h\u00f3a d\u00e2n t\u1ed9c theo nguy\u00ean t\u1eafc:",
+        "answers": [
+            " A. D\u00e2n t\u1ed9c h\u00f3a, \u0111\u1ea1i ch\u00fang h\u00f3a v\u00e0 khoa h\u1ecdc h\u00f3a ",
+            " B. Nh\u00e2n v\u0103n, d\u00e2n ch\u1ee7 v\u00e0 ti\u1ebfn b\u1ed9 ",
+            " C. X\u00e2y d\u1ef1ng n\u1ec1n v\u0103n h\u00f3a ti\u00ean ti\u1ebfn, \u0111\u1eadm \u0111\u00e0 b\u1ea3n s\u1eafc d\u00e2n t\u1ed9c ",
+            " D. Ch\u1ea5n h\u01b0ng d\u00e2n kh\u00ed, khai th\u00f4ng d\u00e2n tr\u00ed, m\u1edf r\u1ed9ng d\u00e2n quy\u1ec1n, c\u1ea3i thi\u1ec7n d\u00e2n sinh "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "D\u01b0\u1edbi g\u00f3c \u0111\u1ed9 tri\u1ebft h\u1ecdc, n\u1ed9i dung c\u1ee7a tri\u1ebft l\u00fd \u00e2m d\u01b0\u01a1ng b\u00e0n v\u1ec1:",
+        "answers": [
+            " A. Hai t\u1ed1 ch\u1ea5t c\u01a1 b\u1ea3n t\u1ea1o ra v\u0169 tr\u1ee5 v\u00e0 v\u1ea1n v\u1eadt ",
+            " B. B\u1ea3n ch\u1ea5t chuy\u1ec3n h\u00f3a c\u1ee7a v\u0169 tr\u1ee5 v\u00e0 v\u1ea1n v\u1eadt ",
+            " C. C\u00e1c c\u1eb7p \u0111\u1ed1i l\u1eadp trong v\u0169 tr\u1ee5 ",
+            " D. Quy lu\u1eadt \u00e2m d\u01b0\u01a1ng chuy\u1ec3n h\u00f3a "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "X\u00e9t d\u01b0\u1edbi g\u00f3c \u0111\u1ed9 tri\u1ebft l\u00fd \u00e2m d\u01b0\u01a1ng, lo\u1ea1i h\u00ecnh v\u0103n h\u00f3a g\u1ed1c n\u00f4ng nghi\u1ec7p \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0 :",
+        "answers": [
+            " A. V\u0103n h\u00f3a tr\u1ecdng d\u01b0\u01a1ng ",
+            " B. V\u0103n h\u00f3a tr\u1ecdng \u00e2m ",
+            " C. C\u1ea3 hai \u00fd tr\u00ean \u0111\u1ec1u \u0111\u00fang ",
+            " D. C\u1ea3 hai \u00fd tr\u00ean \u0111\u1ec1u sai "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e2u t\u1ee5c ng\u1eef: \u201cKh\u00f4ng ai gi\u00e0u ba h\u1ecd, kh\u00f4ng ai kh\u00f3 ba \u0111\u1eddi\u201d ph\u1ea3n \u00e1nh quy lu\u1eadt n\u00e0o c\u1ee7a tri\u1ebft l\u00fd \u00e2m - d\u01b0\u01a1ng?",
+        "answers": [
+            " A. Quy lu\u1eadt v\u1ec1 b\u1ea3n ch\u1ea5t c\u00e1c th\u00e0nh t\u1ed1 ",
+            " B. Quy lu\u1eadt v\u1ec1 quan h\u1ec7 gi\u1eefa c\u00e1c th\u00e0nh t\u1ed1 ",
+            " C. Quy lu\u1eadt nh\u00e2n qu\u1ea3 ",
+            " D. Quy lu\u1eadt chuy\u1ec3n h\u00f3a "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00e0nh ng\u1eef: \u201cTrong c\u00e1i r\u1ee7i c\u00f3 c\u00e1i may\u201d ph\u1ea3n \u00e1nh quy lu\u1eadt n\u00e0o c\u1ee7a tri\u1ebft l\u00fd \u00e2m-d\u01b0\u01a1ng?",
+        "answers": [
+            " A. Quy lu\u1eadt v\u1ec1 b\u1ea3n ch\u1ea5t c\u00e1c th\u00e0nh t\u1ed1 ",
+            " B. Quy lu\u1eadt v\u1ec1 quan h\u1ec7 gi\u1eefa c\u00e1c th\u00e0nh t\u1ed1 ",
+            " C. Quy lu\u1eadt nh\u00e2n qu\u1ea3 ",
+            " D. Quy lu\u1eadt chuy\u1ec3n h\u00f3a "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Bi\u1ec3u t\u01b0\u1ee3ng \u00e2m d\u01b0\u01a1ng truy\u1ec1n th\u1ed1ng l\u00e2u \u0111\u1eddi c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t l\u00e0:",
+        "answers": [
+            " A. C\u00f4ng cha ngh\u0129a m\u1eb9 ",
+            " B. Con R\u1ed3ng Ch\u00e1u Ti\u00ean ",
+            " C. Bi\u1ec3u t\u01b0\u1ee3ng vu\u00f4ng tr\u00f2n ",
+            " D. \u00d4ng T\u01a1 b\u00e0 Nguy\u1ec7t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Vi\u1ec7c nh\u1eadn th\u1ee9c r\u00f5 hai quy lu\u1eadt c\u1ee7a tri\u1ebft l\u00fd \u00e2m d\u01b0\u01a1ng \u0111\u00e3 mang l\u1ea1i \u01b0u \u0111i\u1ec3m g\u00ec trong quan ni\u1ec7m s\u1ed1ng c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t?",
+        "answers": [
+            " A. S\u1ed1ng h\u00e0i h\u00f2a v\u1edbi thi\u00ean nhi\u00ean ",
+            " B. Gi\u1eef s\u1ef1 h\u00e0i h\u00f2a \u00e2m d\u01b0\u01a1ng trong c\u01a1 th\u1ec3 ",
+            " C. Gi\u1eef g\u00ecn s\u1ef1 h\u00f2a thu\u1eadn, s\u1ed1ng kh\u00f4ng m\u1ea5t l\u00f2ng ai. ",
+            " D. Tri\u1ebft l\u00fd s\u1ed1ng qu\u00e2n b\u00ecnh "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Trong Ng\u0169 h\u00e0nh, h\u00e0nh n\u00e0o \u0111\u01b0\u1ee3c \u0111\u1eb7t v\u00e0o v\u1ecb tr\u00ed trung t\u00e2m, cai qu\u1ea3n b\u1ed1n ph\u01b0\u01a1ng?",
+        "answers": [
+            " A. H\u00e0nh Th\u1ed5 ",
+            " B. H\u00e0nh M\u1ed9c ",
+            " C. H\u00e0nh Th\u1ee7y ",
+            " D. H\u00e0nh Kim "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Theo H\u00e0 \u0111\u1ed3, h\u00e0nh Ho\u1ea3 trong Ng\u0169 H\u00e0nh \u1ee9ng v\u1edbi:",
+        "answers": [
+            " A. Ph\u01b0\u01a1ng \u0110\u00f4ng ",
+            " B. Ph\u01b0\u01a1ng Nam ",
+            " C. Ph\u01b0\u01a1ng T\u00e2y ",
+            " D. Ph\u01b0\u01a1ng B\u1eafc "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ph\u01b0\u01a1ng T\u00e2y \u1ee9ng v\u1edbi h\u00e0nh n\u00e0o trong Ng\u0169 h\u00e0nh?",
+        "answers": [
+            " A. H\u00e0nh Th\u1ed5 ",
+            " B. H\u00e0nh M\u1ed9c ",
+            " C. H\u00e0nh Th\u1ee7y ",
+            " D. H\u00e0nh Kim "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "H\u00e0nh H\u1ecfa t\u01b0\u01a1ng kh\u1eafc v\u1edbi h\u00e0nh n\u00e0o trong Ng\u0169 h\u00e0nh?",
+        "answers": [
+            " A. H\u00e0nh Th\u1ed5 ",
+            " B. H\u00e0nh M\u1ed9c ",
+            " C. H\u00e0nh Th\u1ee7y ",
+            " D. H\u00e0nh Kim "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "H\u00e0nh Th\u1ee7y t\u01b0\u01a1ng sinh v\u1edbi h\u00e0nh n\u00e0o trong Ng\u0169 h\u00e0nh?",
+        "answers": [
+            " A. H\u00e0nh Th\u1ed5 ",
+            " B. H\u00e0nh M\u1ed9c ",
+            " C. H\u00e0nh Kim ",
+            " D. H\u00e0nh Ho\u1ea3 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "M\u00e0u bi\u1ec3u c\u1ee7a ph\u01b0\u01a1ng \u0110\u00f4ng l\u00e0 m\u00e0u n\u00e0o?",
+        "answers": [
+            " A. \u0110\u1ecf ",
+            " B. Xanh ",
+            " C. \u0110en ",
+            " D. Tr\u1eafng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "M\u00e0u bi\u1ec3u c\u1ee7a ph\u01b0\u01a1ng T\u00e2y l\u00e0 m\u00e0u n\u00e0o?",
+        "answers": [
+            " A. \u0110\u1ecf ",
+            " B. Xanh ",
+            " C. \u0110en ",
+            " D. Tr\u1eafng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1ecbch c\u1ed5 truy\u1ec1n c\u1ee7a Vi\u1ec7t Nam l\u00e0 lo\u1ea1i l\u1ecbch n\u00e0o?",
+        "answers": [
+            " A. L\u1ecbch thu\u1ea7n d\u01b0\u01a1ng ",
+            " B. L\u1ecbch thu\u1ea7n \u00e2m ",
+            " C. L\u1ecbch \u00e2m d\u01b0\u01a1ng ",
+            " D. \u00c2m l\u1ecbch "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1ecbch c\u1ed5 truy\u1ec1n \u00c1 \u0110\u00f4ng trong kho\u1ea3ng bao nhi\u00eau n\u0103m th\u00ec c\u00f3 m\u1ed9t th\u00e1ng nhu\u1eadn?",
+        "answers": [
+            " A. 4 n\u0103m ",
+            " B. g\u1ea7n 4 n\u0103m ",
+            " C. 3 n\u0103m ",
+            " D. g\u1ea7n 3 n\u0103m "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1ecbch c\u1ed5 truy\u1ec1n \u00c1 \u0110\u00f4ng \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng tr\u00ean c\u01a1 s\u1edf:",
+        "answers": [
+            " A. Ph\u1ea3n \u00e1nh chu k\u1ef3 chuy\u1ec3n \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u1eddi ",
+            " B. Ph\u1ea3n \u00e1nh chu k\u1ef3 ho\u1ea1t \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u0103ng ",
+            " C. Ph\u1ea3n \u00e1nh s\u1ef1 bi\u1ebfn \u0111\u1ed9ng th\u1eddi ti\u1ebft c\u00f3 t\u00ednh chu k\u1ef3 c\u1ee7a v\u0169 tr\u1ee5 ",
+            " D. K\u1ebft h\u1ee3p c\u1ea3 chu k\u1ef3 ho\u1ea1t \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u0103ng l\u1eabn m\u1eb7t tr\u1eddi "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Trong l\u1ecbch \u00c1 \u0110\u00f4ng c\u1ed5 truy\u1ec1n, vi\u1ec7c x\u00e1c \u0111\u1ecbnh c\u00e1c th\u00e1ng trong n\u0103m th\u01b0\u1eddng d\u1ef1a theo:",
+        "answers": [
+            " A. Chu k\u1ef3 ho\u1ea1t \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u0103ng ",
+            " B. Chu k\u1ef3 ho\u1ea1t \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u1eddi ",
+            " C. S\u1ef1 bi\u1ebfn \u0111\u1ed9ng th\u1eddi ti\u1ebft c\u1ee7a v\u0169 tr\u1ee5 ",
+            " D. Hi\u1ec7n t\u01b0\u1ee3ng th\u1ee7y tri\u1ec1u "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong l\u1ecbch \u00c1 \u0110\u00f4ng c\u1ed5 truy\u1ec1n, vi\u1ec7c x\u00e1c \u0111\u1ecbnh c\u00e1c ng\u00e0y trong th\u00e1ng th\u01b0\u1eddng d\u1ef1a theo :",
+        "answers": [
+            " A. Chu k\u1ef3 ho\u1ea1t \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u0103ng ",
+            " B. Chu k\u1ef3 ho\u1ea1t \u0111\u1ed9ng c\u1ee7a m\u1eb7t tr\u1eddi ",
+            " C. S\u1ef1 bi\u1ebfn \u0111\u1ed9ng th\u1eddi ti\u1ebft c\u1ee7a v\u0169 tr\u1ee5 ",
+            " D. Hi\u1ec7n t\u01b0\u1ee3ng th\u1ee7y tri\u1ec1u "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Theo h\u1ec7 \u0111\u1ebfm can chi, gi\u1edd kh\u1eafc kh\u1edfi \u0111\u1ea7u c\u1ee7a m\u1ed9t ng\u00e0y, khi d\u01b0\u01a1ng kh\u00ed b\u1eaft \u0111\u1ea7u sinh ra g\u1ecdi l\u00e0 gi\u1edd:",
+        "answers": [
+            " A. T\u00ed ",
+            " B. Th\u00ecn ",
+            " C. Ng\u1ecd ",
+            " D. D\u1ea7n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Vi\u1ec7c \u00e1p d\u1ee5ng c\u00e1c m\u00f4 h\u00ecnh nh\u1eadn th\u1ee9c v\u1ec1 v\u0169 tr\u1ee5 v\u00e0o vi\u1ec7c nh\u1eadn th\u1ee9c v\u1ec1 con ng\u01b0\u1eddi t\u1ef1 nhi\u00ean \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh tr\u00ean c\u01a1 s\u1edf:",
+        "answers": [
+            " A. S\u1ef1 g\u1eafn b\u00f3 m\u1eadt thi\u1ebft gi\u1eefa con ng\u01b0\u1eddi n\u00f4ng nghi\u1ec7p v\u1edbi thi\u00ean nhi\u00ean. ",
+            " B. Quy lu\u1eadt t\u01b0\u01a1ng t\u00e1c gi\u1eefa c\u00e1c h\u00e0nh trong Ng\u0169 h\u00e0nh. ",
+            " C. \u0110o\u00e1n \u0111\u1ecbnh v\u1eadn m\u1ec7nh c\u1ee7a con ng\u01b0\u1eddi trong c\u00e1c m\u1ed1i quan h\u1ec7 x\u00e3 h\u1ed9i. ",
+            " D. Quan ni\u1ec7m \u201cthi\u00ean \u0111\u1ecba v\u1ea1n v\u1eadt nh\u1ea5t th\u1ec3\u201d, coi con ng\u01b0\u1eddi l\u00e0 m\u1ed9t v\u0169 tr\u1ee5 thu nh\u1ecf. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "V\u1edbi c\u01a1 ch\u1ebf Ng\u0169 h\u00e0nh, b\u00ean trong c\u01a1 th\u1ec3 ng\u01b0\u1eddi c\u00f3 Ng\u0169 ph\u1ee7, Ng\u0169 t\u1ea1ng, Ng\u0169 quan, Ng\u0169 ch\u1ea5t\u2026Trong khi \u0111\u00f3, d\u00e2n gian l\u1ea1i th\u01b0\u1eddng n\u00f3i \"l\u1ee5c ph\u1ee7 ng\u0169 t\u1ea1ng\". V\u1eady ph\u1ee7 th\u1ee9 s\u00e1u kh\u00f4ng \u0111\u01b0\u1ee3c n\u00eau trong Ng\u0169 ph\u1ee7 l\u00e0 ph\u1ee7 n\u00e0o?",
+        "answers": [
+            " A. Ti\u1ec3u tr\u00e0ng ",
+            " B. Tam ti\u00eau ",
+            " C. \u0110\u1edfm ",
+            " D. V\u1ecb "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ed1i v\u1edbi Ng\u0169 t\u1ea1ng b\u00ean trong c\u01a1 th\u1ec3 con ng\u01b0\u1eddi, khi kh\u00e1m ch\u1eefa b\u1ec7nh, y h\u1ecdc c\u1ed5 truy\u1ec1n Vi\u1ec7t Nam coi tr\u1ecdng nh\u1ea5t l\u00e0 t\u1ea1ng n\u00e0o?",
+        "answers": [
+            " A. T\u00ec ",
+            " B. Th\u1eadn ",
+            " C. Can ",
+            " D. Ph\u1ebf "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "N\u1ebfu xem 5 ng\u00f3n tay tr\u00ean m\u1ed9t b\u00e0n tay l\u00e0 m\u1ed9t h\u1ec7 th\u1ed1ng Ng\u0169 h\u00e0nh th\u00ec ng\u00f3n c\u00e1i thu\u1ed9c h\u00e0nh n\u00e0o?",
+        "answers": [
+            " A. H\u1ecfa ",
+            " B. M\u1ed9c ",
+            " C. Kim ",
+            " D. Th\u1ed5 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Theo quan ni\u1ec7m truy\u1ec1n th\u1ed1ng, m\u1ed7i c\u00e1 nh\u00e2n trong x\u00e3 h\u1ed9i \u0111\u1ec1u mang \u0111\u1eb7c tr\u01b0ng c\u1ee7a m\u1ed9t h\u00e0nh trong Ng\u0169 h\u00e0nh. Vi\u1ec7c quy h\u00e0nh cho m\u1ed7i ng\u01b0\u1eddi \u0111\u01b0\u1ee3c ti\u1ebfn h\u00e0nh tr\u00ean c\u01a1 s\u1edf:",
+        "answers": [
+            " A. C\u0103n c\u1ee9 v\u00e0o \u0111\u1eb7c \u0111i\u1ec3m t\u00ednh c\u00e1ch c\u1ee7a c\u00e1 nh\u00e2n ",
+            " B. C\u0103n c\u1ee9 v\u00e0o m\u1ed1i quan h\u1ec7 gia \u0111\u00ecnh, b\u1ea1n b\u00e8, h\u00f4n nh\u00e2n... ",
+            " C. C\u0103n c\u1ee9 v\u00e0o th\u1eddi \u0111i\u1ec3m ra \u0111\u1eddi c\u1ee7a c\u00e1 nh\u00e2n \u0111\u01b0\u1ee3c x\u00e1c \u0111\u1ecbnh theo h\u1ec7 can chi ",
+            " D. C\u0103n c\u1ee9 v\u00e0o nho-y- l\u00fd-s\u1ed1 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1ed1n l\u00e0 \u0111\u01a1n v\u1ecb \u0111o d\u00f9ng trong y h\u1ecdc ph\u01b0\u01a1ng \u0110\u00f4ng, \u0111\u01b0\u1ee3c t\u00ednh b\u1eb1ng:",
+        "answers": [
+            " A. \u0110\u1ed1t gi\u1eefa ng\u00f3n tay \u00fat c\u1ee7a ng\u01b0\u1eddi b\u1ec7nh ",
+            " B. \u0110\u1ed1t g\u1ed1c ng\u00f3n tay \u00fat c\u1ee7a ng\u01b0\u1eddi b\u1ec7nh ",
+            " C. \u0110\u1ed1t gi\u1eefa ng\u00f3n tay gi\u1eefa c\u1ee7a ng\u01b0\u1eddi b\u1ec7nh ",
+            " D. \u0110\u1ed1t g\u1ed1c ng\u00f3n tay gi\u1eefa c\u1ee7a ng\u01b0\u1eddi b\u1ec7nh "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.T\u00ednh t\u00f4n ti tr\u1eadt t\u1ef1 ",
+            " B.T\u00ednh gia tr\u01b0\u1edfng ",
+            " C.Th\u00f3i b\u00e8 ph\u00e1i ",
+            " D.Th\u00f3i d\u1ef1a d\u1eabm, \u1ef7 l\u1ea1i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.V\u0103n h\u00f3a th\u1eddi k\u1ef3 ti\u1ec1n s\u1eed ",
+            " B.V\u0103n h\u00f3a V\u0103n Lang \u2013 \u00c2u L\u1ea1c ",
+            " C.V\u0103n h\u00f3a th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " D.V\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng c\u00f3 con ",
+            " B.Ng\u01b0\u1eddi v\u1ee3 \u0111\u00e3 \u0111\u1ec3 tang cha m\u1eb9 ch\u1ed3ng ",
+            " C.Ng\u01b0\u1eddi v\u1ee3 c\u00e3i cha m\u1eb9 ch\u1ed3ng ",
+            " D.Ng\u01b0\u1eddi v\u1ee3 hay ghen tu\u00f4ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng c\u01b0\u1edbi n\u00e0ng h\u1ea7u cho ch\u1ed3ng ",
+            " B.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng nu\u00f4i con ri\u00eang c\u1ee7a ch\u1ed3ng ",
+            " C.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng c\u00f2n n\u01a1i n\u01b0\u01a1ng t\u1ef1a ",
+            " D.Ng\u01b0\u1eddi v\u1ee3 hay ghen tu\u00f4ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.C\u1ed5 Loa ",
+            " B.Phong Ch\u00e2u ",
+            " C.M\u00ea Linh ",
+            " D.V\u1ea1n An "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Th\u1eddi nh\u00e0 \u0110inh ",
+            " B.Th\u1eddi nh\u00e0 L\u00fd ",
+            " C.Th\u1eddi nh\u00e0 H\u1ed3 ",
+            " D.Th\u1eddi nh\u00e0 Nguy\u1ec5n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.L\u00ea V\u0103n H\u01b0u ",
+            " B.Chu V\u0103n An ",
+            " C.L\u00ea V\u0103n Th\u1ecbnh ",
+            " D.Nguy\u1ec5n Hi\u1ec1n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Trong c\u01a1 c\u1ea5u t\u1ed5 ch\u1ee9c x\u00e3 h\u1ed9i Vi\u1ec7t Nam truy\u1ec1n th\u1ed1ng, l\u0129nh v\u1ef1c n\u00e0o \u0111\u00f3ng vai tr\u00f2 quan tr\u1ecdng, chi ph\u1ed1i c\u1ea3 di\u1ec7n m\u1ea1o x\u00e3 h\u1ed9i l\u1eabn t\u00ednh c\u00e1ch con ng\u01b0\u1eddi?",
+        "answers": [
+            " A. T\u1ed5 ch\u1ee9c gia t\u1ed9c ",
+            " B. T\u1ed5 ch\u1ee9c n\u00f4ng th\u00f4n ",
+            " C. T\u1ed5 ch\u1ee9c \u0111\u00f4 th\u1ecb ",
+            " D. T\u1ed5 ch\u1ee9c qu\u1ed1c gia "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Khu v\u1ef1c l\u01b0u gi\u1eef, b\u1ea3o t\u1ed3n \u0111\u01b0\u1ee3c nh\u1eefng gi\u00e1 tr\u1ecb v\u0103n h\u00f3a c\u1ed5 truy\u1ec1n, mang \u0111\u1eadm b\u1ea3n s\u1eafc v\u0103n h\u00f3a Vi\u1ec7t ch\u00ednh l\u00e0:",
+        "answers": [
+            " A. T\u1ed5 ch\u1ee9c gia t\u1ed9c ",
+            " B. T\u1ed5 ch\u1ee9c n\u00f4ng th\u00f4n ",
+            " C. T\u1ed5 ch\u1ee9c \u0111\u00f4 th\u1ecb ",
+            " D. T\u1ed5 ch\u1ee9c qu\u1ed1c gia "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "H\u00ecnh th\u1ee9c t\u1ed5 ch\u1ee9c n\u00f4ng th\u00f4n theo truy\u1ec1n th\u1ed1ng nam gi\u1edbi (ch\u1ec9 c\u00f3 \u0111\u00e0n \u00f4ng tham gia) t\u1ea1o n\u00ean \u0111\u01a1n v\u1ecb g\u1ecdi l\u00e0:",
+        "answers": [
+            " A. Ph\u01b0\u1eddng ",
+            " B. Gi\u00e1p ",
+            " C. H\u1ed9i ",
+            " D. Gia t\u1ed9c "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Nguy\u00ean t\u1eafc t\u1ed5 ch\u1ee9c n\u00f4ng th\u00f4n theo huy\u1ebft th\u1ed1ng l\u00e0 c\u01a1 s\u1edf h\u00ecnh th\u00e0nh n\u00ean nh\u01b0\u1ee3c \u0111i\u1ec3m n\u00e0o trong t\u00ednh c\u00e1ch c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t?",
+        "answers": [
+            " A. Th\u00f3i d\u1ef1a d\u1eabm, \u1ef7 l\u1ea1i ",
+            " B. Th\u00f3i gia tr\u01b0\u1edfng, t\u00f4n ti ",
+            " C. Th\u00f3i c\u00e0o b\u1eb1ng, \u0111\u1ed1 k\u1ecb ",
+            " D. Th\u1ee7 ti\u00eau \u00fd th\u1ee9c v\u1ec1 con ng\u01b0\u1eddi c\u00e1 nh\u00e2n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00e0i s\u1ea3n c\u1ee7a t\u1ed9c h\u1ecd do c\u00e1c th\u1ebf h\u1ec7 tr\u01b0\u1edbc \u0111\u1ec3 l\u1ea1i (th\u01b0\u1eddng l\u00e0 ru\u1ed9ng \u0111\u1ea5t) d\u00f9ng v\u00e0o vi\u1ec7c h\u01b0\u01a1ng kh\u00f3i, gi\u1ed7 ch\u1ea1p, c\u00fang t\u1ebf\u2026 ho\u1eb7c gi\u00fap \u0111\u1ee1 c\u00e1c th\u00e0nh vi\u00ean trong h\u1ecd \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0:",
+        "answers": [
+            " A. C\u00f4ng \u0111i\u1ec1n ",
+            " B. T\u01b0 \u0111i\u1ec1n ",
+            " C. T\u1eeb \u0111\u01b0\u1eddng ",
+            " D. H\u01b0\u01a1ng h\u1ecfa "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Vi\u1ec7c ph\u00e2n bi\u1ec7t d\u00e2n ch\u00ednh c\u01b0 v\u00e0 d\u00e2n ng\u1ee5 c\u01b0 trong t\u1ed5 ch\u1ee9c n\u00f4ng th\u00f4n Vi\u1ec7t Nam c\u1ed5 truy\u1ec1n nh\u1eb1m m\u1ee5c \u0111\u00edch:",
+        "answers": [
+            " A. Bu\u1ed9c ng\u01b0\u1eddi d\u00e2n \u0111\u1eddi \u0111\u1eddi ki\u1ebfp ki\u1ebfp g\u1eafn b\u00f3 v\u1edbi qu\u00ea cha \u0111\u1ea5t t\u1ed5 ",
+            " B. H\u1ea1n ch\u1ebf kh\u00f4ng cho ng\u01b0\u1eddi d\u00e2n b\u1ecf l\u00e0ng \u0111i ra ngo\u00e0i ",
+            " C. H\u1ea1n ch\u1ebf kh\u00f4ng cho ng\u01b0\u1eddi ngo\u00e0i v\u00e0o s\u1ed1ng \u1edf l\u00e0ng ",
+            " D. Duy tr\u00ec s\u1ef1 \u1ed5n \u0111\u1ecbnh c\u1ee7a l\u00e0ng x\u00e3 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Mu\u1ed1n chuy\u1ec3n th\u00e0nh d\u00e2n ch\u00ednh c\u01b0, d\u00e2n ng\u1ee5 c\u01b0 ph\u1ea3i th\u1ecfa m\u00e3n \u0111i\u1ec1u ki\u1ec7n n\u00e0o sau \u0111\u00e2y?",
+        "answers": [
+            " A. \u0110\u00e3 c\u01b0 tr\u00fa l\u00e2u n\u0103m \u1edf l\u00e0ng v\u00e0 ph\u1ea3i c\u00f3 nhi\u1ec1u t\u00e0i s\u1ea3n ",
+            " B. \u0110\u00e3 c\u01b0 tr\u00fa \u1edf l\u00e0ng 3 n\u0103m tr\u1edf l\u00ean v\u00e0 ph\u1ea3i c\u00f3 \u00edt \u0111i\u1ec1n s\u1ea3n ",
+            " C. \u0110\u00e3 k\u1ebft h\u00f4n v\u1edbi ng\u01b0\u1eddi d\u00e2n trong l\u00e0ng v\u00e0 c\u00f3 cu\u1ed9c s\u1ed1ng \u1ed5n \u0111\u1ecbnh ",
+            " D. \u0110\u00e3 tham gia v\u00e0o h\u1ed9i \u0111\u1ed3ng k\u1ef3 m\u1ee5c c\u1ee7a l\u00e0ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "H\u00ecnh \u1ea3nh n\u00e0o l\u00e0 bi\u1ec3u t\u01b0\u1ee3ng truy\u1ec1n th\u1ed1ng c\u1ee7a t\u00ednh t\u1ef1 tr\u1ecb trong l\u00e0ng x\u00e3 Vi\u1ec7t Nam?",
+        "answers": [
+            " A. L\u0169y tre ",
+            " B. S\u00e2n \u0111\u00ecnh ",
+            " C. B\u1ebfn n\u01b0\u1edbc ",
+            " "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "M\u1ed1i quan h\u1ec7 d\u00e2n ch\u1ee7 \u0111\u1eb7c bi\u1ec7t gi\u1eefa nh\u00e0 n\u01b0\u1edbc phong ki\u1ebfn v\u1edbi l\u00e0ng x\u00e3 Vi\u1ec7t Nam \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n qua t\u00ecnh tr\u1ea1ng:",
+        "answers": [
+            " A. Ph\u00e9p vua thua l\u1ec7 l\u00e0ng ",
+            " B. \u0110\u00f3ng c\u1eeda b\u1ea3o nhau khi c\u00f3 sai ph\u1ea1m ",
+            " C. Th\u00e1nh l\u00e0ng n\u00e0o l\u00e0ng n\u1ea5y th\u1edd ",
+            " D. Cha chung kh\u00f4ng ai kh\u00f3c "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eefng t\u1eadp t\u1ee5c, quy t\u1eafc, l\u1ec1 th\u00f3i\u2026 do d\u00e2n l\u00e0ng \u0111\u1eb7t ra, \u0111\u01b0\u1ee3c ghi ch\u00e9p th\u00e0nh v\u0103n b\u1ea3n v\u00e0 c\u00f3 gi\u00e1 tr\u1ecb nh\u01b0 m\u1ed9t b\u1ed9 lu\u1eadt ri\u00eang c\u1ee7a l\u00e0ng, \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0:",
+        "answers": [
+            " A. H\u01b0\u01a1ng h\u1ecfa ",
+            " B. Gia l\u1ec5 ",
+            " C. H\u01b0\u01a1ng \u01b0\u1edbc ",
+            " D. Gia ph\u00e1p "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "N\u00f3i v\u1ec1 l\u00e0ng Nam B\u1ed9, nh\u1eadn x\u00e9t n\u00e0o sau \u0111\u00e2y l\u00e0 kh\u00f4ng \u0111\u00fang?",
+        "answers": [
+            " A. Th\u00f4n \u1ea5p \u1edf Nam B\u1ed9 tr\u1ea3i d\u00e0i d\u1ecdc theo c\u00e1c k\u00eanh r\u1ea1ch, c\u00e1c tr\u1ee5c giao th\u00f4ng thu\u1eadn ti\u1ec7n... ",
+            " B. L\u00e0ng Nam B\u1ed9 kh\u00f4ng c\u00f3 \u0111\u00ecnh l\u00e0ng v\u00e0 t\u00edn ng\u01b0\u1ee1ng th\u1edd Th\u00e0nh Ho\u00e0ng. ",
+            " C. D\u00e2n c\u01b0 c\u1ee7a l\u00e0ng Nam B\u1ed9 th\u01b0\u1eddng bi\u1ebfn \u0111\u1ed9ng b\u1edfi ng\u01b0\u1eddi d\u00e2n hay r\u1eddi l\u00e0ng \u0111i n\u01a1i kh\u00e1c. ",
+            " D. L\u00e0ng Nam B\u1ed9 c\u00f3 t\u00ednh m\u1edf. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e2u \"Kh\u00f4n \u0111\u1ed9c kh\u00f4ng b\u1eb1ng ng\u1ed1c \u0111\u00e0n\" l\u00e0 bi\u1ec3u hi\u1ec7n c\u1ee7a \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong t\u00ednh c\u00e1ch ng\u01b0\u1eddi Vi\u1ec7t?",
+        "answers": [
+            " A. T\u00ednh c\u1ed9ng \u0111\u1ed3ng ",
+            " B. T\u00ednh d\u00e2n ch\u1ee7 ",
+            " C. Th\u00f3i d\u1ef1a d\u1eabm ",
+            " D. Th\u00f3i c\u00e0o b\u1eb1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Truy\u1ec1n th\u1ed1ng hi\u1ebfu h\u1ecdc v\u00e0 tinh th\u1ea7n \u201cT\u00f4n s\u01b0 tr\u1ecdng \u0111\u1ea1o\u201d trong v\u0103n h\u00f3a Vi\u1ec7t Nam c\u00f3 ngu\u1ed3n g\u1ed1c t\u1eeb quan ni\u1ec7m n\u00e0o trong x\u00e3 h\u1ed9i phong ki\u1ebfn?",
+        "answers": [
+            " A. Th\u00e1i \u0111\u1ed9 khinh r\u1ebb ngh\u1ec1 bu\u00f4n ",
+            " B. Vi\u1ec7c coi tr\u1ecdng ch\u1ebf \u0111\u1ed9 khoa c\u1eed ",
+            " C. Quan ni\u1ec7m \u201cNh\u1ea5t s\u0129 nh\u00ec n\u00f4ng\u201d ",
+            " D. Quan ni\u1ec7m \u201cKh\u00f4ng th\u1ea7y \u0111\u1ed1 m\u00e0y l\u00e0m n\u00ean\u201d "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "C\u01a1 c\u1ea5u t\u1ed5 ch\u1ee9c x\u00e3 h\u1ed9i truy\u1ec1n th\u1ed1ng theo m\u00f4 h\u00ecnh nh\u00e0-l\u00e0ng- n\u01b0\u1edbc \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh v\u00e0o giai \u0111o\u1ea1n n\u00e0o?",
+        "answers": [
+            " A. V\u0103n h\u00f3a ti\u1ec1n s\u1eed ",
+            " B. V\u0103n h\u00f3a V\u0103n Lang-\u00c2u L\u1ea1c ",
+            " C. V\u0103n h\u00f3a th\u1eddi B\u1eafc thu\u1ed9c ",
+            " D. V\u0103n h\u00f3a \u0110\u1ea1i Vi\u1ec7t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong x\u00e3 h\u1ed9i Vi\u1ec7t Nam truy\u1ec1n th\u1ed1ng, ngh\u1ec1 n\u00e0o \u0111\u01b0\u1ee3c coi tr\u1ecdng nh\u1ea5t v\u00e0 \u0111\u1ee9ng \u0111\u1ea7u danh m\u1ee5c c\u00e1c ngh\u1ec1 trong x\u00e3 h\u1ed9i?",
+        "answers": [
+            " A. S\u0129 ",
+            " B. N\u00f4ng ",
+            " C. C\u00f4ng ",
+            " D. Th\u01b0\u01a1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "V\u00e0o th\u1eddi H\u1eadu L\u00ea, \u0111\u1ed1i t\u01b0\u1ee3ng n\u00e0o sau \u0111\u00e2y kh\u00f4ng \u0111\u01b0\u1ee3c \u0111i h\u1ecdc, \u0111i thi?",
+        "answers": [
+            " A. Con nh\u00e0 x\u01b0\u1edbng ca ",
+            " B. Con nh\u00e0 ngh\u00e8o ",
+            " C. Con nh\u00e0 bu\u00f4n b\u00e1n ",
+            " D. Con nh\u00e0 t\u00e1 \u0111i\u1ec1n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "B\u1ed9 lu\u1eadt H\u1ed3ng \u0110\u1ee9c \u0111\u00e1nh d\u1ea5u m\u1ed9t b\u01b0\u1edbc ph\u00e1t tri\u1ec3n quan tr\u1ecdng c\u1ee7a l\u1ecbch s\u1eed ph\u00e1p quy\u1ec1n Vi\u1ec7t Nam. B\u1ed9 lu\u1eadt n\u00e0y \u0111\u01b0\u1ee3c ban h\u00e0nh v\u00e0o th\u1eddi k\u1ef3 n\u00e0o?",
+        "answers": [
+            " A. Th\u1eddi nh\u00e0 L\u00fd ",
+            " B. Th\u1eddi nh\u00e0 Tr\u1ea7n ",
+            " C. Th\u1eddi nh\u00e0 H\u1eadu L\u00ea ",
+            " D. Th\u1eddi nh\u00e0 Nguy\u1ec5n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "H\u00ecnh th\u1ee9c l\u00e3nh \u0111\u1ea1o t\u1eadp th\u1ec3 (vua anh-vua em, vua cha-vua con, vua-ch\u00faa\u2026) th\u1ec3 hi\u1ec7n \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong t\u1ed5 ch\u1ee9c qu\u1ed1c gia Vi\u1ec7t Nam?",
+        "answers": [
+            " A. Tinh th\u1ea7n d\u00e2n t\u1ed9c m\u1ea1nh m\u1ebd ",
+            " B. \u00dd th\u1ee9c qu\u1ed1c gia ",
+            " C. Truy\u1ec1n th\u1ed1ng d\u00e2n ch\u1ee7 c\u1ee7a v\u0103n h\u00f3a n\u00f4ng nghi\u1ec7p ",
+            " D. Th\u00e1i \u0111\u1ed9 tr\u1ecdng t\u00ecnh, tr\u1ecdng \u0111\u1ee9c, tr\u1ecdng v\u0103n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Vi\u1ec7c tuy\u1ec3n ch\u1ecdn ng\u01b0\u1eddi t\u00e0i v\u00e0o b\u1ed9 m\u00e1y quan l\u1ea1i b\u1eb1ng h\u00ecnh th\u1ee9c thi c\u1eed th\u1ec3 hi\u1ec7n \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong t\u1ed5 ch\u1ee9c qu\u1ed1c gia Vi\u1ec7t Nam?",
+        "answers": [
+            " A. Tinh th\u1ea7n d\u00e2n t\u1ed9c m\u1ea1nh m\u1ebd ",
+            " B. \u00dd th\u1ee9c qu\u1ed1c gia ",
+            " C. Truy\u1ec1n th\u1ed1ng d\u00e2n ch\u1ee7 c\u1ee7a v\u0103n h\u00f3a n\u00f4ng nghi\u1ec7p ",
+            " D. Th\u00e1i \u0111\u1ed9 tr\u1ecdng t\u00ecnh, tr\u1ecdng \u0111\u1ee9c, tr\u1ecdng v\u0103n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Vi\u1ec7t Nam l\u00e0 m\u1ed9t qu\u1ed1c gia ch\u1eadm ph\u00e1t tri\u1ec3n v\u00ec:",
+        "answers": [
+            " A. N\u1ec1n v\u0103n h\u00f3a n\u00f4ng nghi\u1ec7p l\u1ea1c h\u1eadu, khoa h\u1ecdc k\u1ef9 thu\u1eadt k\u00e9m ph\u00e1t tri\u1ec3n. ",
+            " B. Ch\u00ednh s\u00e1ch \u2018\u2018b\u1ebf quan t\u1ecfa c\u1ea3ng\u2019\u2019 \u0111\u00e3 k\u00ecm h\u00e3m s\u1ee9c v\u01b0\u01a1n l\u00ean c\u1ee7a x\u00e3 h\u1ed9i. ",
+            " C. Kh\u1ea3 n\u0103ng b\u1ea3o t\u1ed3n m\u1ea1nh, t\u1ea1o n\u00ean s\u1ef1 b\u1ea3o th\u1ee7, k\u00ecm gi\u1eef s\u1ee9c v\u01b0\u01a1n l\u00ean c\u1ee7a x\u00e3 h\u1ed9i. ",
+            " D. \u0110\u00f4 th\u1ecb b\u1ecb l\u1ec7 thu\u1ed9c v\u00e0o n\u00f4ng th\u00f4n, kh\u00f4ng ph\u00e1t huy \u0111\u01b0\u1ee3c s\u1ee9c m\u1ea1nh. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "X\u00e9t v\u1ec1 ch\u1ee9c n\u0103ng, \u0111\u00f4 th\u1ecb truy\u1ec1n th\u1ed1ng c\u1ee7a Vi\u1ec7t Nam c\u00f3 \u0111\u1eb7c \u0111i\u1ec3m n\u00e0o n\u1ed5i b\u1eadt?",
+        "answers": [
+            " A. Do nh\u00e0 n\u01b0\u1edbc s\u1ea3n sinh ra ",
+            " B. Do nh\u00e0 n\u01b0\u1edbc qu\u1ea3n l\u00fd v\u00e0 khai th\u00e1c ",
+            " C. Ch\u1ee7 y\u1ebfu th\u1ef1c hi\u1ec7n ch\u1ee9c n\u0103ng h\u00e0nh ch\u00ednh ",
+            " D. H\u00ecnh th\u00e0nh m\u1ed9t c\u00e1ch t\u1ef1 ph\u00e1t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c \u0111\u00f4 th\u1ecb c\u1ed5 c\u1ee7a Vi\u1ec7t Nam \u0111a s\u1ed1 \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh theo h\u01b0\u1edbng:",
+        "answers": [
+            " A. B\u1ed9 ph\u1eadn l\u00e0m kinh t\u1ebf xu\u1ea5t hi\u1ec7n tr\u01b0\u1edbc ",
+            " B. B\u1ed9 ph\u1eadn qu\u1ea3n l\u00fd h\u00e0nh ch\u00ednh c\u00f3 tr\u01b0\u1edbc ",
+            " C. B\u1ed9 ph\u1eadn kinh t\u1ebf-h\u00e0nh ch\u00ednh xu\u1ea5t hi\u1ec7n \u0111\u1ed3ng th\u1eddi ",
+            " D. N\u00f4ng th\u00f4n ph\u00e1t tri\u1ec3n th\u00e0nh \u0111\u00f4 th\u1ecb "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong c\u00e1c \u0111\u00f4 th\u1ecb c\u1ed5 c\u1ee7a Vi\u1ec7t Nam, \u0111\u00f4 th\u1ecb n\u00e0o \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh theo h\u01b0\u1edbng t\u1eeb th\u1ecb \u0111\u1ebfn \u0111\u00f4?",
+        "answers": [
+            " A. Th\u0103ng Long ",
+            " B. Ph\u00fa Xu\u00e2n ",
+            " C. Ph\u1ed1 Hi\u1ebfn ",
+            " D. C\u1ed5 Loa "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "B\u00e0n v\u1ec1 \u0111\u1eb7c \u0111i\u1ec3m c\u1ee7a t\u1ed5 ch\u1ee9c \u0111\u00f4 th\u1ecb Vi\u1ec7t Nam truy\u1ec1n th\u1ed1ng, nh\u1eadn \u0111\u1ecbnh n\u00e0o sau \u0111\u00e2y l\u00e0 kh\u00f4ng \u0111\u00fang?",
+        "answers": [
+            " A. \u0110\u00f4 th\u1ecb do nh\u00e0 n\u01b0\u1edbc sinh ra, ch\u1ee7 y\u1ebfu th\u1ef1c hi\u1ec7n ch\u1ee9c n\u0103ng h\u00e0nh ch\u00e1nh. ",
+            " B. \u0110\u00f4 th\u1ecb ch\u1ecbu \u1ea3nh h\u01b0\u1edfng c\u1ee7a n\u00f4ng th\u00f4n v\u00e0 mang \u0111\u1eb7c t\u00ednh n\u00f4ng th\u00f4n kh\u00e1 \u0111\u1eadm n\u00e9t. ",
+            " C. \u0110\u00f4 th\u1ecb h\u00ecnh th\u00e0nh m\u1ed9t c\u00e1ch t\u1ef1 ph\u00e1t. ",
+            " D. \u0110\u00f4 th\u1ecb lu\u00f4n c\u00f3 nguy c\u01a1 b\u1ecb n\u00f4ng th\u00f4n h\u00f3a. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1ed1i t\u1ed5 ch\u1ee9c bu\u00f4n b\u00e1n qu\u1ea7n t\u1ee5 theo ki\u1ec3u ph\u1ed1 ph\u01b0\u1eddng l\u00e0m th\u01b0\u01a1ng nghi\u1ec7p Vi\u1ec7t Nam c\u00f3 g\u00ec kh\u00e1c bi\u1ec7t so v\u1edbi th\u01b0\u01a1ng nghi\u1ec7p ph\u01b0\u01a1ng T\u00e2y?",
+        "answers": [
+            " A. Th\u01b0\u01a1ng nh\u00e2n c\u1ed1 g\u1eafng chi\u1ebfm gi\u1eef l\u00f2ng tin c\u1ee7a kh\u00e1ch h\u00e0ng. ",
+            " B. Th\u01b0\u01a1ng nh\u00e2n t\u01b0\u01a1ng tr\u1ee3, gi\u00fap \u0111\u1ee1 nhau trong vi\u1ec7c \u0111\u1ecbnh gi\u00e1, gi\u1eef gi\u00e1, vay m\u01b0\u1ee3n h\u00e0ng. ",
+            " C. Th\u01b0\u01a1ng nh\u00e2n li\u00ean k\u1ebft v\u1edbi kh\u00e1ch h\u00e0ng v\u00e0 t\u00ednh to\u00e1n \u0111\u1ec3 ch\u00e8n \u00e9p nhau. ",
+            " D. T\u00ednh c\u1ea1nh tranh cao. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u00f4 th\u1ecb Vi\u1ec7t Nam b\u1eaft \u0111\u1ea7u ph\u00e1t tri\u1ec3n theo m\u00f4 h\u00ecnh \u0111\u00f4 th\u1ecb c\u00f4ng-th\u01b0\u01a1ng nghi\u1ec7p, ch\u00fa tr\u1ecdng v\u00e0o ch\u1ee9c n\u0103ng kinh t\u1ebf t\u1eeb th\u1eddi k\u1ef3 n\u00e0o?",
+        "answers": [
+            " A. Th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " B. Th\u1eddi k\u1ef3 t\u1ef1 ch\u1ee7 ",
+            " C. Th\u1eddi k\u1ef3 Ph\u00e1p thu\u1ed9c ",
+            " D. Th\u1eddi k\u1ef3 hi\u1ec7n \u0111\u1ea1i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c ng\u00e0nh c\u00f4ng nghi\u1ec7p khai th\u00e1c m\u1ecf, ch\u1ebf bi\u1ebfn n\u00f4ng l\u00e2m s\u1ea3n\u2026 xu\u1ea5t hi\u1ec7n \u1edf Vi\u1ec7t Nam v\u00e0o th\u1eddi k\u1ef3 n\u00e0o?",
+        "answers": [
+            " A. Th\u1eddi k\u1ef3 B\u1eafc thu\u1ed9c ",
+            " B. Th\u1eddi k\u1ef3 t\u1ef1 ch\u1ee7 ",
+            " C. Th\u1eddi k\u1ef3 Ph\u00e1p thu\u1ed9c ",
+            " D. Th\u1eddi k\u1ef3 hi\u1ec7n \u0111\u1ea1i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.\u0110\u00f4ng ",
+            " B.T\u00e2y ",
+            " C.Nam ",
+            " D.B\u1eafc "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.\u0110\u00f4ng ",
+            " B.T\u00e2y ",
+            " C.Nam ",
+            " D.B\u1eafc "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.G\u1eb7t l\u00faa m\u1edbi ",
+            " B.\u0110\u1ea7u m\u00f9a c\u1ea5y l\u00faa ",
+            " C.Gi\u1eefa m\u00f9a l\u00faa ",
+            " D.H\u1ebft m\u00f9a c\u1ea5y "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.\u0110\u1ea1o Ph\u1eadt ",
+            " B.\u0110\u1ea1o th\u1edd c\u00fang t\u1ed5 ti\u00ean ",
+            " C.\u0110\u1ea1o H\u00f2a H\u1ea3o ",
+            " D.\u0110\u1ea1o Cao \u0110\u00e0i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u00e0o ng\u00e0y t\u1ebft, m\u00e2m ng\u0169 qu\u1ea3 \u0111\u1ec3 th\u1edd c\u1ee7a ng\u01b0\u1eddi d\u00e2n Nam B\u1ed9 th\u01b0\u1eddng c\u00f3 5 lo\u1ea1i tr\u00e1i: m\u00e3ng c\u1ea7u, sung, d\u1eeba, \u0111u \u0111\u1ee7, xo\u00e0i. \u0110i\u1ec1u n\u00e0y ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong ngh\u1ec7 thu\u1eadt trang tr\u00ed c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t?",
+        "answers": [
+            " A.Th\u1ee7 ph\u00e1p \u01b0\u1edbc l\u1ec7 ",
+            " B.M\u00f4 h\u00ecnh mang \u00fd ngh\u0129a ph\u1ed3n th\u1ef1c ",
+            " C.Th\u1ee7 ph\u00e1p li\u00ean t\u01b0\u1edfng b\u1eb1ng ng\u00f4n t\u1eeb ",
+            " D.Th\u1ee7 ph\u00e1p li\u00ean t\u01b0\u1edfng b\u1eb1ng h\u00ecnh th\u1ee9c "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.T\u00edn ng\u01b0\u1ee1ng ph\u1ed3n th\u1ef1c ",
+            " B.T\u00edn ng\u01b0\u1ee1ng th\u1edd M\u1eabu ",
+            " C.T\u00edn ng\u01b0\u1ee1ng th\u1edd Th\u00e0nh Ho\u00e0ng ",
+            " D.T\u1ee5c th\u1edd T\u1ee9 b\u1ea5t t\u1eed "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.T\u1ebft \u0110oan Ng\u1ecd ",
+            " B.L\u1ec5 Vu Lan ",
+            " C.T\u1ebft Thanh Minh ",
+            " D.T\u1ebft Nguy\u00ean \u0110\u00e1n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.B\u00e0 H\u00e0 Th\u1ecb C\u1ea7u ",
+            " B.\u00d4ng \u0110\u00e0o Duy T\u1eeb ",
+            " C.B\u00e0 Ph\u1ea1m Th\u1ecb Tr\u00e2n ",
+            " D.\u00d4ng T\u00e0o M\u1ea1t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ng\u01b0\u1eddi anh h\u00f9ng, trung d\u0169ng ",
+            " B.K\u1ebb n\u00f3ng n\u1ea3y b\u1ed9p ch\u1ed9p ",
+            " C.K\u1ebb n\u1ecbnh th\u1ea7n, ph\u1ea3n tr\u1eafc ",
+            " D.H\u00e0o ki\u1ec7t n\u01a1i r\u1eebng n\u00fai "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Nh\u00e3 nh\u1ea1c cung \u0111\u00ecnh Hu\u1ebf ",
+            " B.D\u00e2n ca quan h\u1ecd ",
+            " C.Ca tr\u00f9 ",
+            " D.\u0110\u1eddn ca t\u00e0i t\u1eed Nam B\u1ed9 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Bi\u1ec3u tr\u01b0ng cho \u01b0\u1edbc v\u1ecdng th\u00e1i b\u00ecnh ",
+            " B.Bi\u1ec3u tr\u01b0ng cho uy l\u1ef1c ",
+            " C.Bi\u1ec3u tr\u01b0ng cho s\u1ef1 s\u1ed1ng l\u00e2u ",
+            " D.Bi\u1ec3u tr\u01b0ng cho h\u1ea1nh ph\u00fac "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "H\u1ec7 th\u1ed1ng ch\u00f9a T\u1ee9 Ph\u00e1p v\u1ed1n l\u00e0 nh\u1eefng \u0111\u1ec1n mi\u1ebfu d\u00e2n gian th\u1edd c\u00e1c v\u1ecb th\u1ea7n cai qu\u1ea3n c\u00e1c hi\u1ec7n t\u01b0\u1ee3ng t\u1ef1 nhi\u00ean, g\u1ed3m:",
+        "answers": [
+            " A. Th\u1ea7n M\u00e2y \u2013 Th\u1ea7n M\u01b0a \u2013 Th\u1ea7n Gi\u00f3 \u2013 Th\u1ea7n S\u1ea5m. ",
+            " B. Th\u1ea7n M\u00e2y \u2013 Th\u1ea7n M\u01b0a \u2013 Th\u1ea7n S\u1ea5m \u2013 Th\u1ea7n Ch\u1edbp. ",
+            " C. B\u00e0 Tr\u1eddi \u2013 B\u00e0 \u0110\u1ea5t \u2013 B\u00e0 N\u01b0\u1edbc \u2013 B\u00e0 Ch\u00faa X\u1ee9 ",
+            " D. Th\u1ea7n M\u00e2y \u2013 Th\u1ea7n M\u01b0a \u2013 Th\u1ea7n S\u1ea5m \u2013 Th\u1ea7n S\u00e9t. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "T\u1ee5c th\u1edd T\u1ee9 b\u1ea5t t\u1eed l\u00e0 m\u1ed9t gi\u00e1 tr\u1ecb v\u0103n h\u00f3a tinh th\u1ea7n r\u1ea5t \u0111\u1eb9p c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t, th\u1edd b\u1ed1n v\u1ecb:",
+        "answers": [
+            " A. Vua H\u00f9ng, Th\u00e0nh Ho\u00e0ng, Th\u1ed5 C\u00f4ng, Th\u1ed5 \u0110\u1ecba ",
+            " B. Ph\u00e1p V\u00e2n, Ph\u00e1p V\u0169, Ph\u00e1p L\u00f4i, Ph\u00e1p \u0110i\u1ec7n ",
+            " C. T\u1ea3n Vi\u00ean, Th\u00e1nh Gi\u00f3ng, Ch\u1eed \u0110\u1ed3ng T\u1eed , Li\u1ec5u H\u1ea1nh ",
+            " D. M\u1eabu Th\u01b0\u1ee3ng Thi\u00ean, M\u1eabu Th\u01b0\u1ee3ng Ng\u00e0n, M\u1eabu Tho\u1ea3i, M\u1eabu \u0110\u1ecba "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Trong t\u1ee5c th\u1edd T\u1ee9 b\u1ea5t t\u1eed, Ch\u1eed \u0110\u1ed3ng T\u1eed l\u00e0 bi\u1ec3u t\u01b0\u1ee3ng cho \u01b0\u1edbc m\u01a1 g\u00ec c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t?",
+        "answers": [
+            " A. S\u1ee9c m\u1ea1nh \u0111o\u00e0n k\u1ebft \u1ee9ng ph\u00f3 v\u1edbi m\u00f4i tr\u01b0\u1eddng t\u1ef1 nhi\u00ean ",
+            " B. S\u1ee9c m\u1ea1nh \u0111o\u00e0n k\u1ebft ch\u1ed1ng gi\u1eb7c ngo\u1ea1i x\u00e2m ",
+            " C. X\u00e2y d\u1ef1ng cu\u1ed9c s\u1ed1ng ph\u1ed3n vinh v\u1ec1 v\u1eadt ch\u1ea5t ",
+            " D. X\u00e2y d\u1ef1ng cu\u1ed9c s\u1ed1ng h\u1ea1nh ph\u00fac v\u1ec1 tinh th\u1ea7n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "H\u00ecnh th\u1ee9c t\u00edn ng\u01b0\u1ee1ng ph\u1ed5 bi\u1ebfn v\u00e0 ti\u00eau bi\u1ec3u nh\u1ea5t c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t (g\u1ea7n nh\u01b0 tr\u1edf th\u00e0nh m\u1ed9t th\u1ee9 t\u00f4n gi\u00e1o) l\u00e0:",
+        "answers": [
+            " A. T\u00edn ng\u01b0\u1ee1ng ph\u1ed3n th\u1ef1c ",
+            " B. T\u00edn ng\u01b0\u1ee1ng th\u1edd M\u1eabu ",
+            " C. T\u00edn ng\u01b0\u1ee1ng th\u1edd c\u00fang t\u1ed5 ti\u00ean ",
+            " D. T\u1ee5c th\u1edd T\u1ee9 b\u1ea5t t\u1eed "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1ebf \u0111\u1ed9 m\u1eabu h\u1ec7 \u0111\u00e3 l\u00e0m \u201cnguy\u00ean l\u00fd M\u1eb9\u201d \u0103n s\u00e2u trong t\u00e2m t\u00ed v\u00e0 t\u00ednh c\u00e1ch c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t, th\u1ec3 hi\u1ec7n \u0111\u1ed9c \u0111\u00e1o trong \u0111\u1eddi s\u1ed1ng t\u00e2m linh qua:",
+        "answers": [
+            " A. T\u00edn ng\u01b0\u1ee1ng ph\u1ed3n th\u1ef1c ",
+            " B. T\u00edn ng\u01b0\u1ee1ng th\u1edd M\u1eabu ",
+            " C. T\u00edn ng\u01b0\u1ee1ng th\u1edd c\u00fang t\u1ed5 ti\u00ean ",
+            " D. T\u1ee5c th\u1edd T\u1ee9 b\u1ea5t t\u1eed "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong m\u1ea3ng t\u00edn ng\u01b0\u1ee1ng s\u00f9ng b\u00e1i gi\u1edbi t\u1ef1 nhi\u00ean c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t, lo\u00e0i th\u1ef1c v\u1eadt n\u00e0o \u0111\u01b0\u1ee3c t\u00f4n s\u00f9ng v\u00e0 \u0111\u01b0\u1ee3c th\u1edd c\u00fang nhi\u1ec1u nh\u1ea5t?",
+        "answers": [
+            " A. C\u00e2y L\u00faa ",
+            " B. C\u00e2y \u0110a ",
+            " C. C\u00e2y D\u00e2u ",
+            " D. Qu\u1ea3 B\u1ea7u "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "V\u1ecb th\u1ea7n quan tr\u1ecdng nh\u1ea5t trong c\u00e1c l\u00e0ng qu\u00ea Vi\u1ec7t Nam, c\u00f3 vai tr\u00f2 cai qu\u1ea3n, che ch\u1edf, \u0111\u1ecbnh \u0111o\u1ea1t ph\u00fac h\u1ecda cho d\u00e2n l\u00e0ng l\u00e0:",
+        "answers": [
+            " A. Th\u00e0nh Ho\u00e0ng ",
+            " B. Th\u1ed5 C\u00f4ng ",
+            " C. Th\u1ed5 \u0110\u1ecba ",
+            " D. Th\u1ea7n T\u00e0i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ed1i t\u01b0\u1ee3ng th\u1edd c\u00fang c\u1ee7a t\u00edn ng\u01b0\u1ee1ng ph\u1ed3n th\u1ef1c l\u00e0:",
+        "answers": [
+            " A. Linga v\u00e0 yoni ",
+            " B. Bi\u1ec3u t\u01b0\u1ee3ng v\u1ec1 sinh th\u1ef1c kh\u00ed ",
+            " C. H\u00e0nh vi giao ph\u1ed1i ",
+            " D. Sinh th\u1ef1c kh\u00ed nam n\u1eef v\u00e0 h\u00e0nh vi giao ph\u1ed1i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "\u00dd ngh\u0129a c\u1ee7a t\u00edn ng\u01b0\u1ee1ng ph\u1ed3n th\u1ef1c l\u00e0:",
+        "answers": [
+            " A. C\u1ea7u mong s\u1ef1 may m\u1eafn, no \u0111\u1ee7 cho c\u1ea3 n\u0103m ",
+            " B. L\u00e0m ma thu\u1eadt \u0111\u1ec3 truy\u1ec1n sinh cho m\u00f9a m\u00e0ng ",
+            " C. C\u1ea7u cho \u0111\u00f4ng con, nhi\u1ec1u ch\u00e1u ",
+            " D. C\u1ea7u mong m\u00f9a m\u00e0ng v\u00e0 con ng\u01b0\u1eddi sinh s\u00f4i n\u1ea3y n\u1edf "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Trong ph\u1ea1m vi gia \u0111\u00ecnh, v\u1ecb th\u1ea7n canh gi\u1eef gia c\u01b0, ch\u1ed1ng l\u1ea1i ma qu\u1ef7 qu\u1ea5y nhi\u1ec5u v\u00e0 mang may m\u1eafn \u0111\u1ebfn cho gia \u0111\u00ecnh l\u00e0:",
+        "answers": [
+            " A. Th\u00e0nh Ho\u00e0ng ",
+            " B. Th\u1ed5 C\u00f4ng ",
+            " C. T\u1ed5 S\u01b0 ",
+            " D. Th\u1ea7n T\u00e0i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "N\u0103m 1572, vua L\u00ea Anh T\u00f4ng ra l\u1ec7nh s\u01b0u t\u1ea7m v\u00e0 so\u1ea1n ra th\u1ea7n t\u00edch c\u1ee7a Th\u00e0nh Ho\u00e0ng c\u00e1c l\u00e0ng \u0111\u1ec3 vua ban s\u1eafc phong th\u1ea7n. C\u00e1c v\u1ecb Th\u00e0nh Ho\u00e0ng \u0111\u01b0\u1ee3c vua ban s\u1eafc phong \u0111\u01b0\u1ee3c g\u1ecdi chung l\u00e0:",
+        "answers": [
+            " A. Th\u01b0\u1ee3ng \u0111\u1eb3ng th\u1ea7n ",
+            " B. Trung \u0111\u1eb3ng th\u1ea7n ",
+            " C. H\u1ea1 \u0111\u1eb3ng th\u1ea7n ",
+            " D. Ph\u00fac th\u1ea7n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00e0 th\u1ea7n l\u00e0 nh\u1eefng ng\u01b0\u1eddi c\u00f3 l\u00fd l\u1ecbch kh\u00f4ng hay ho g\u00ec (tr\u1ebb con, ng\u01b0\u1eddi \u0103n m\u00e0y, ng\u01b0\u1eddi \u0103n tr\u1ed9m, ng\u01b0\u1eddi ch\u1ebft tr\u00f4i\u2026) nh\u01b0ng v\u1eabn \u0111\u01b0\u1ee3c ng\u01b0\u1eddi d\u00e2n th\u1edd l\u00e0m Th\u00e0nh Ho\u00e0ng l\u00e0ng v\u00ec:",
+        "answers": [
+            " A. Th\u1ea7n gi\u00fap cho m\u01b0a thu\u1eadn gi\u00f3 h\u00f2a, m\u00f9a m\u00e0ng t\u01b0\u01a1i t\u1ed1t. ",
+            " B. Th\u1ea7n ch\u1ebft v\u00e0o gi\u1edd thi\u00eang n\u00ean ra oai t\u00e1c qu\u00e1i, khi\u1ebfn d\u00e2n l\u00e0ng n\u1ec3 s\u1ee3. ",
+            " C. Th\u1ea7n b\u1ea3o tr\u1ee3 cho d\u00e2n l\u00e0ng kh\u1ecfi thi\u00ean tai, d\u1ecbch b\u1ec7nh. ",
+            " D. \u0110\u00e2y l\u00e0 m\u1ed9t t\u00edn ng\u01b0\u1ee1ng truy\u1ec1n th\u1ed1ng c\u00f3 t\u1eeb l\u00e2u \u0111\u1eddi. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "D\u00e2n gian c\u00f3 c\u00e2u: \u201cTr\u1ed1ng l\u00e0ng n\u00e0o l\u00e0ng \u1ea5y \u0111\u00e1nh, Th\u00e1nh l\u00e0ng n\u00e0o l\u00e0ng \u1ea5y th\u1edd\u201d. V\u1ecb th\u00e1nh trong c\u00e2u ca dao tr\u00ean l\u00e0 v\u1ecb n\u00e0o?",
+        "answers": [
+            " A. Th\u00e0nh Ho\u00e0ng ",
+            " B. Th\u1ed5 C\u00f4ng ",
+            " C. Th\u1ed5 \u0110\u1ecba ",
+            " D. Th\u1ea7n T\u00e0i "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eefng th\u00f3i quen, nh\u1eefng n\u1ebfp s\u1ed1ng c\u00f3 \u00fd ngh\u0129a t\u1ed1t \u0111\u1eb9p c\u1ee7a m\u1ed9t c\u1ed9ng \u0111\u1ed3ng d\u00e2n t\u1ed9c \u0111\u00e3 \u0103n s\u00e2u v\u00e0o \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i, \u0111\u01b0\u1ee3c \u0111a s\u1ed1 m\u1ecdi ng\u01b0\u1eddi th\u1eeba nh\u1eadn v\u00e0 l\u00e0m theo g\u1ecdi l\u00e0:",
+        "answers": [
+            " A. T\u00edn ng\u01b0\u1ee1ng ",
+            " B. T\u00f4n gi\u00e1o ",
+            " C. Phong t\u1ee5c ",
+            " D. T\u1eadp qu\u00e1n "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Trong t\u1eadp t\u1ee5c h\u00f4n nh\u00e2n c\u1ed5 truy\u1ec1n c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t, khi hai h\u1ecd t\u00ednh chuy\u1ec7n d\u1ef1ng v\u1ee3 g\u1ea3 ch\u1ed3ng cho con c\u00e1i, y\u1ebfu t\u1ed1 n\u00e0o sau \u0111\u00e2y \u0111\u01b0\u1ee3c quan t\u00e2m h\u00e0ng \u0111\u1ea7u?",
+        "answers": [
+            " A. Quy\u1ec1n l\u1ee3i c\u1ee7a l\u00e0ng x\u00e3 ",
+            " B. Quy\u1ec1n l\u1ee3i c\u1ee7a gia t\u1ed9c ",
+            " C. S\u1ef1 ph\u00f9 h\u1ee3p c\u1ee7a \u0111\u00f4i trai g\u00e1i ",
+            " D. S\u1ef1 ph\u00f9 h\u1ee3p gi\u1eefa m\u1eb9 ch\u1ed3ng - n\u00e0ng d\u00e2u "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "T\u1ee5c \u201cgi\u00e3 c\u1ed1i \u0111\u00f3n d\u00e2u\u201d c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t trong nghi l\u1ec5 h\u00f4n nh\u00e2n c\u1ed5 truy\u1ec1n c\u00f3 \u00fd ngh\u0129a:",
+        "answers": [
+            " A. C\u1ea7u ch\u00fac cho \u0111\u00f4i v\u1ee3 ch\u1ed3ng tr\u1ebb \u0111\u01b0\u1ee3c \u0111\u00f4ng con nhi\u1ec1u ch\u00e1u. ",
+            " B. C\u1ea7u ch\u00fac cho l\u1ee9a \u0111\u00f4i h\u1ea1nh ph\u00fac \u0111\u1ebfn \u0111\u1ea7u b\u1ea1c r\u0103ng long. ",
+            " C. C\u1ea7u ch\u00fac cho \u0111\u1ea1i gia \u0111\u00ecnh tr\u00ean thu\u1eadn d\u01b0\u1edbi h\u00f2a. ",
+            " D. Ch\u00fac cho c\u00f4 d\u00e2u \u0111\u1ea3m \u0111ang, th\u00e1o v\u00e1t, l\u00e0m l\u1ee3i cho gia \u0111\u00ecnh nh\u00e0 ch\u1ed3ng. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00ednh ph\u00e1p l\u00fd c\u1ee7a h\u00f4n nh\u00e2n c\u1ed5 truy\u1ec1n \u0111\u01b0\u1ee3c ch\u00ednh quy\u1ec1n l\u00e0ng x\u00e3 c\u00f4ng nh\u1eadn b\u1eb1ng t\u1eadp t\u1ee5c:",
+        "answers": [
+            " A. Th\u00e1ch c\u01b0\u1edbi ",
+            " B. N\u1ed9p ti\u1ec1n cheo ",
+            " C. \u00d4ng mai b\u00e0 m\u1ed1i ",
+            " D. B\u00e1i y\u1ebft gia ti\u00ean "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e2u t\u1ee5c ng\u1eef \u201cL\u1ea5y ch\u1ed3ng kh\u00f3 gi\u1eefa l\u00e0ng h\u01a1n l\u1ea5y ch\u1ed3ng sang thi\u00ean h\u1ea1\u201d ph\u1ea3n \u00e1nh:",
+        "answers": [
+            " A. T\u00e2m l\u00fd coi tr\u1ecdng b\u00e0 con h\u00e0ng x\u00f3m l\u00e1ng gi\u1ec1ng ",
+            " B. T\u00e2m l\u00fd coi tr\u1ecdng s\u1ef1 \u1ed5n \u0111\u1ecbnh l\u00e0ng x\u00e3, khinh r\u1ebb d\u00e2n ng\u1ee5 c\u01b0. ",
+            " C. T\u00e2m l\u00fd tr\u1ecdng t\u00ecnh tr\u1ecdng ngh\u0129a ",
+            " D. T\u00e2m l\u00fd coi khinh ti\u1ec1n t\u00e0i v\u1eadt ch\u1ea5t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "T\u1ee5c l\u1ec7 n\u00e0o sau \u0111\u00e2y \u0111\u01b0\u1ee3c ti\u1ebfn h\u00e0nh trong l\u1ec5 h\u1ee3p c\u1ea9n \u0111\u1ec3 c\u1ea7u ch\u00fac cho hai v\u1ee3 ch\u1ed3ng m\u1edbi c\u01b0\u1edbi lu\u00f4n g\u1eafn b\u00f3 y\u00eau th\u01b0\u01a1ng nhau?",
+        "answers": [
+            " A. T\u1ee5c trao cho nhau n\u1eafm \u0111\u1ea5t v\u00e0 g\u00f3i mu\u1ed1i ",
+            " B. M\u1eb9 ch\u1ed3ng \u00f4m b\u00ecnh v\u00f4i l\u00e1nh sang nh\u00e0 h\u00e0ng x\u00f3m ",
+            " C. T\u1ee5c gi\u00e3 c\u1ed1i \u0111\u00f3n d\u00e2u ",
+            " D. T\u1ee5c u\u1ed1ng r\u01b0\u1ee3u, \u0103n c\u01a1m n\u1ebfp "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Khi ch\u00f4n c\u1ea5t ng\u01b0\u1eddi ch\u1ebft, ng\u01b0\u1eddi ta th\u01b0\u1eddng \u0111\u1eb7t tr\u00ean m\u1ed9 b\u00e1t c\u01a1m, qu\u1ea3 tr\u1ee9ng v\u00e0 \u0111\u00f4i \u0111\u0169a. Nh\u1eefng l\u1ec5 v\u1eadt n\u00e0y c\u00f3 \u00fd ngh\u0129a:",
+        "answers": [
+            " A. C\u1ea7u ch\u00fac cho ng\u01b0\u1eddi ch\u1ebft s\u1edbm \u0111\u1ea7u thai tr\u1edf l\u1ea1i ",
+            " B. Th\u1ec3 hi\u1ec7n l\u00f2ng ti\u1ebfc th\u01b0\u01a1ng c\u1ee7a ng\u01b0\u1eddi s\u1ed1ng v\u1edbi ng\u01b0\u1eddi ch\u1ebft ",
+            " C. Mong ng\u01b0\u1eddi ch\u1ebft \u0111\u01b0\u1ee3c no \u0111\u1ee7 \u1edf th\u1ebf gi\u1edbi b\u00ean kia ",
+            " D. C\u00fang cho c\u00e1c vong h\u1ed3n kh\u00e1c kh\u1ecfi qu\u1ea5y ph\u00e1 ng\u01b0\u1eddi ch\u1ebft "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Trong c\u00e1c nghi th\u1ee9c c\u1ee7a \u0111\u00e1m tang, l\u1ec5 ph\u1ea1n h\u00e0m l\u00e0 l\u1ec5:",
+        "answers": [
+            " A. T\u1eafm r\u1eeda cho ng\u01b0\u1eddi ch\u1ebft ",
+            " B. B\u1ecf ti\u1ec1n v\u00e0 nh\u00fam g\u1ea1o n\u1ebfp v\u00e0o mi\u1ec7ng ng\u01b0\u1eddi ch\u1ebft ",
+            " C. \u0110\u1eb7t t\u00ean th\u1ee5y cho ng\u01b0\u1eddi ch\u1ebft ",
+            " D. Kh\u00e2m li\u1ec7m cho ng\u01b0\u1eddi ch\u1ebft "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong \u0111\u00e1m tang, t\u1ea1i sao ch\u1eaft, ch\u00fat khi \u0111\u1ec3 tang cho c\u1ee5, k\u1ecb l\u1ea1i \u0111\u1ed9i kh\u0103n \u0111\u1ecf, kh\u0103n v\u00e0ng?",
+        "answers": [
+            " A. V\u00ec m\u00e0u \u0111\u1ecf, m\u00e0u v\u00e0ng l\u00e0 nh\u1eefng m\u00e0u t\u1ed1t trong ng\u0169 h\u00e0nh. ",
+            " B. V\u00ec \u0111\u00f3 l\u00e0 m\u1ed9t s\u1ef1 m\u1eebng, l\u00e0 b\u1eb1ng ch\u1ee9ng cho th\u1ea5y c\u00e1c c\u1ee5 s\u1ed1ng l\u00e2u, nhi\u1ec1u con ch\u00e1u. ",
+            " C. V\u00ec \u0111\u00f3 l\u00e0 c\u00e1ch \u0111\u1ec3 ph\u00e2n bi\u1ec7t t\u00f4n ti tr\u1eadt t\u1ef1 trong gia \u0111\u00ecnh ",
+            " D. V\u00ec \u0111\u00f3 l\u00e0 s\u1ea3n ph\u1ea9m c\u1ee7a tri\u1ebft l\u00fd \u00e2m d\u01b0\u01a1ng trong n\u1ec1n v\u0103n h\u00f3a n\u00f4ng nghi\u1ec7p. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u1ec1 lo\u1ea1i s\u1ed1, theo tri\u1ebft l\u00fd \u00e2m d\u01b0\u01a1ng, nh\u1eefng th\u1ee9 li\u00ean quan \u0111\u1ebfn ng\u01b0\u1eddi ch\u1ebft (hoa c\u00fang, l\u1ea1y tr\u01b0\u1edbc quan t\u00e0i\u2026) \u0111\u1ec1u ph\u1ea3i s\u1eed d\u1ee5ng:",
+        "answers": [
+            " A. S\u1ed1 l\u1ebb ",
+            " B. S\u1ed1 ch\u1eb5n ",
+            " C. C\u1ea3 hai \u00fd tr\u00ean \u0111\u1ec1u \u0111\u00fang ",
+            " D. C\u1ea3 hai \u00fd tr\u00ean \u0111\u1ec1u sai "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "N\u00f3i v\u1ec1 l\u1ec5 h\u1ed9i, nh\u1eadn \u0111\u1ecbnh n\u00e0o sau \u0111\u00e2y l\u00e0 kh\u00f4ng \u0111\u00fang?",
+        "answers": [
+            " A. L\u1ec5 h\u1ed9i \u0111\u01b0\u1ee3c ph\u00e2n b\u1ed1 theo th\u1eddi gian trong n\u0103m, xen v\u00e0o c\u00e1c kho\u1ea3ng tr\u1ed1ng trong th\u1eddi v\u1ee5. ",
+            " B. L\u1ec5 h\u1ed9i l\u00e0 m\u1ed9t sinh ho\u1ea1t v\u0103n h\u00f3a, t\u00edn ng\u01b0\u1ee1ng truy\u1ec1n th\u1ed1ng c\u1ee7a c\u1ed9ng \u0111\u1ed3ng. ",
+            " C. C\u00e1c tr\u00f2 ch\u01a1i \u1edf l\u1ec5 h\u1ed9i ph\u1ea3n \u00e1nh nh\u1eefng \u01b0\u1edbc v\u1ecdng thi\u00eang li\u00eang c\u1ee7a con ng\u01b0\u1eddi. ",
+            " D. L\u1ec5 h\u1ed9i bao g\u1ed3m c\u1ea3 ph\u1ea7n l\u1ec5 (nghi l\u1ec5, l\u1ec5 th\u1ee9c c\u00fang t\u1ebf\u2026) v\u00e0 ph\u1ea7n h\u1ed9i (c\u00e1c tr\u00f2 di\u1ec5n, tr\u00f2 ch\u01a1i d\u00e2n gian\u2026). "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "L\u1ec5 h\u1ed9i c\u1ed5 truy\u1ec1n th\u01b0\u1eddng di\u1ec5n ra v\u00e0o nh\u1eefng m\u00f9a n\u00e0o trong n\u0103m?",
+        "answers": [
+            " A. M\u00f9a xu\u00e2n v\u00e0 m\u00f9a h\u1ea1 ",
+            " B. M\u00f9a xu\u00e2n v\u00e0 m\u00f9a thu ",
+            " C. M\u00f9a xu\u00e2n v\u00e0 m\u00f9a \u0111\u00f4ng ",
+            " D. T\u1ea5t c\u1ea3 c\u00e1c m\u00f9a "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A. Th\u00edch th\u0103m vi\u1ebfng, hi\u1ebfu kh\u00e1ch ",
+            " B.\u01afa t\u00ecm hi\u1ec3u, quan s\u00e1t, \u0111\u00e1nh gi\u00e1 \u0111\u1ed1i t\u01b0\u1ee3ng giao ti\u1ebfp ",
+            " C.T\u1ebf nh\u1ecb, \u00fd t\u1ee9 trong giao ti\u1ebfp ",
+            " D.Xem tr\u1ecdng nghi th\u1ee9c giao ti\u1ebfp "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Tr\u1ecdng danh d\u1ef1 ",
+            " B.T\u1ebf nh\u1ecb, \u00fd t\u1ee9 ",
+            " C.Tr\u1ecdng t\u00ecnh c\u1ea3m ",
+            " D.Tr\u1ecdng nghi th\u1ee9c "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.T\u1ebf nh\u1ecb, \u00fd t\u1ee9, tr\u1ecdng s\u1ef1 h\u00f2a thu\u1eadn ",
+            " B.\u0110\u1eafn \u0111o, c\u00e2n nh\u1eafc k\u1ef9 c\u00e0ng khi n\u00f3i ",
+            " C.Thi\u1ebfu t\u00ednh quy\u1ebft \u0111o\u00e1n ",
+            " D.Lu\u00f4n l\u1ea5y t\u00ecnh c\u1ea3m l\u00e0m nguy\u00ean t\u1eafc \u1ee9ng x\u1eed "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Xu h\u01b0\u1edbng \u01b0\u1edbc l\u1ec7 ",
+            " B.Xu h\u01b0\u1edbng tr\u1ecdng s\u1ef1 c\u00e2n \u0111\u1ed1i, h\u00e0i h\u00f2a ",
+            " C.Gi\u00e0u ch\u1ea5t bi\u1ec3u c\u1ea3m ",
+            " D.Khuynh h\u01b0\u1edbng thi\u00ean v\u1ec1 th\u01a1 ca "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Xu h\u01b0\u1edbng \u01b0\u1edbc l\u1ec7 ",
+            " B.Xu h\u01b0\u1edbng tr\u1ecdng s\u1ef1 c\u00e2n \u0111\u1ed1i, h\u00e0i h\u00f2a ",
+            " C.Gi\u00e0u ch\u1ea5t bi\u1ec3u c\u1ea3m ",
+            " D.Khuynh h\u01b0\u1edbng thi\u00ean v\u1ec1 th\u01a1 ca "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.T\u00ednh bi\u1ec3u tr\u01b0ng ",
+            " B.T\u00ednh linh ho\u1ea1t ",
+            " C.Gi\u00e0u ch\u1ea5t bi\u1ec3u c\u1ea3m ",
+            " D.T\u00ednh \u01b0\u1edbc l\u1ec7 "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ch\u00e8o ",
+            " B.Tu\u1ed3ng ",
+            " C.M\u00faa r\u1ed1i ",
+            " D.C\u1ea3i l\u01b0\u01a1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ch\u00e8o ",
+            " B.Tu\u1ed3ng ",
+            " C.M\u00faa r\u1ed1i ",
+            " D.C\u1ea3i l\u01b0\u01a1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ch\u00e8o l\u00e0 lo\u1ea1i h\u00ecnh s\u00e2n kh\u1ea5u t\u1ed5ng h\u1ee3p c\u00f3 t\u00ednh c\u00e1ch chuy\u00ean nghi\u1ec7p. ",
+            " B.Ch\u00e8o ra \u0111\u1eddi kh\u00e1 s\u1edbm v\u00e0 ph\u00e1t tri\u1ec3n m\u1ea1nh \u1edf B\u1eafc B\u1ed9. ",
+            " C.K\u1ecbch b\u1ea3n c\u1ee7a ch\u00e8o th\u01b0\u1eddng l\u1ea5y t\u1eeb th\u1ea7n tho\u1ea1i, c\u1ed5 t\u00edch v\u00e0 truy\u1ec7n n\u00f4m. ",
+            " D.Di\u1ec5n xu\u1ea5t ch\u00e8o c\u00f3 t\u00ednh linh ho\u1ea1t, kh\u00f4ng tu\u00e2n th\u1ee7 nghi\u00eam ng\u1eb7t theo k\u1ecbch b\u1ea3n. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Tu\u1ed3ng l\u00e0 lo\u1ea1i h\u00ecnh s\u00e2n kh\u1ea5u d\u00e2n gian kh\u00f4ng chuy\u00ean nghi\u1ec7p. ",
+            " B.Tu\u1ed3ng ph\u00e1t tri\u1ec3n m\u1ea1nh \u1edf Trung B\u1ed9. ",
+            " C.K\u1ecbch b\u1ea3n c\u1ee7a tu\u1ed3ng th\u01b0\u1eddng l\u1ea5y t\u1eeb truy\u1ec7n c\u1ed5 Trung Qu\u1ed1c. ",
+            " D.Ng\u01b0\u1eddi \u0111\u01b0\u1ee3c t\u00f4n vinh l\u00e0 \u00d4ng t\u1ed5 c\u1ee7a ngh\u1ec7 thu\u1eadt tu\u1ed3ng h\u00e1t tu\u1ed3ng l\u00e0 \u0110\u00e0o Duy T\u1eeb. "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ch\u00e8o ",
+            " B.Tu\u1ed3ng ",
+            " C.M\u00faa r\u1ed1i ",
+            " D.C\u1ea3i l\u01b0\u01a1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.Ch\u00e8o ",
+            " B.Tu\u1ed3ng ",
+            " C.M\u00faa r\u1ed1i ",
+            " D.C\u1ea3i l\u01b0\u01a1ng "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "None",
+        "answers": [
+            " A.T\u00ednh bi\u1ec3u tr\u01b0ng ",
+            " B.T\u00ednh bi\u1ec3u c\u1ea3m ",
+            " C.T\u00ednh t\u1ed5ng h\u1ee3p ",
+            " D.T\u00ednh linh ho\u1ea1t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "S\u00e2n kh\u1ea5u truy\u1ec1n th\u1ed1ng Vi\u1ec7t Nam th\u01b0\u1eddng c\u00f3 s\u1ef1 giao l\u01b0u r\u1ea5t m\u1eadt thi\u1ebft v\u1edbi ng\u01b0\u1eddi xem (s\u00e0n di\u1ec5n l\u00e0 s\u00e2n",
+        "answers": [
+            " A.T\u00ednh bi\u1ec3u tr\u01b0ng ",
+            " B.T\u00ednh bi\u1ec3u c\u1ea3m ",
+            " C.T\u00ednh t\u1ed5ng h\u1ee3p ",
+            " D.T\u00ednh linh ho\u1ea1t "
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    }
+]

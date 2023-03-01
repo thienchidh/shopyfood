@@ -6,14 +6,23 @@ import os
 
 data = []
 
+cacheData = {}
+previousChoice = 0
+
+
+
 async def load_config():
     with open('config/quiz.json') as f:
         data = json.load(f)
         return data
 
 async def load_config_path(path):
+    if path in cacheData:
+        return cacheData[path]
+
     with open(f'{path}') as f:
         data = json.load(f)
+        cacheData[path] = data
         return data
 
 async def get_quiz():
@@ -53,8 +62,23 @@ async def get_quiz_api():
     return stacks.pop(0)
 
 
-async def get_quiz_api_2():
-    file_name = "quiz_history_12.json"
+async def get_file_name_by_choice(choice = -1):
+    if choice == 0:
+        return "quiz_history_12.json"
+        pass
+    elif choice == 1:
+        return "basic_of_vietnamese_culture.json"
+        pass
+    else:
+        return "quiz_history_12.json"
+        pass
+
+async def get_quiz_api_2(choice = -1):
+    global previousChoice
+    if choice == -1:
+        choice = previousChoice
+    file_name = await get_file_name_by_choice(choice)
+    previousChoice = choice
     file_path = os.path.join("config", f"{file_name}")
     questions = await load_config_path(f'{file_path}')
     data_question = random.choice(questions)

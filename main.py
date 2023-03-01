@@ -313,10 +313,36 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     )
 
 async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    question = await quiz_loader.get_quiz_api_2()
-    print("Question is", question)
+    
+    # logger.info(f"quiz_handler_2 update: {update}")
+    # logger.info("Question is", question)
+    # logger.info(f"update.effective_user {update.effective_user}")
+    # logger.info(f"update.effective_message {update.effective_message}")
+    # logger.info(f"update.message {update.message}")
+    # logger.info(f"update.effective_message {update.effective_message}")
+    message_text = update.message.text
+    # logger.info(f'message text: {message_text}')
+    regex_message_text = r"^([^ ]+)\s(\d+)(.*)$"
+    
+    question = None
+    if message_text is not None:
+        match = re.match(regex_message_text, message_text)
+        if match is not None:
+            part1 = match.group(1)
+            part2 = match.group(2)
+            if part2 is not None:
+                paramChoice = int(part2) % 2
+                # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
+                question = await quiz_loader.get_quiz_api_2(paramChoice) 
+    else:
+        pass
+    if question is None:
+        question = await quiz_loader.get_quiz_api_2()
+
     options = question['answers']
     randint = question['correct']
+    logger.info(f"Question: {question}")
+    logger.info(f"answers: {options}")
     await update.effective_message.reply_poll(
         question=question['question'],
         options=options,
@@ -445,6 +471,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/help để lấy tin nhắn này.\n"
         "/dice để tạo một số ngẫu nhiên.\n"
         "/quiz để tạo một bài trắc nghiệm.\n"
+        "/quiz2 để tạo một bài trắc nghiệm ver2 /quiz2 [1,2,3].\n"
         "/quote để lấy một câu trích dẫn ngẫu nhiên.\n"
         "/checkin để tạo một bình chọn checkin.\n"
         "/test để tạo một bình chọn test.\n"
@@ -467,7 +494,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("dice", "Chơi game xúc xắc"),
         BotCommand("help", "Lấy tin nhắn này"),
         BotCommand("quiz", "Chơi game trắc nghiệm"),
-        BotCommand("quiz2", "Trắc nghiệm lịch sử thế giới"),
+        BotCommand("quiz2", "Trắc nghiệm đa lĩnh vực"),
         BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
         BotCommand("checkin", "Tạo một bình chọn checkin"),
         BotCommand("test", "Tạo một bình chọn test"),
