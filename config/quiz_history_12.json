@@ -1,0 +1,1562 @@
+[
+    {
+        "question": "Theo \u0111\u1ecbnh ngh\u0129a v\u1ec1 v\u0103n minh, \u0111i\u1ec3m n\u00e0o sau \u0111\u00e2y c\u1ee7a v\u0103n minh kh\u00e1c bi\u1ec7t so v\u1edbi v\u0103n h\u00f3a?",
+        "answers": [
+            "A. V\u0103n minh ch\u1ec9 gi\u00e1 tr\u1ecb k\u1ef9 thu\u1eadt, gi\u00e1 tr\u1ecb tinh th\u1ea7n",
+            "B. V\u0103n minh ch\u1ec9 gi\u00e1 tr\u1ecb v\u1eadt ch\u1ea5t v\u00e0 tinh th\u1ea7n \u1edf tr\u00ecnh \u0111\u1ed9 cao",
+            "C. V\u0103n minh ch\u1ec9 th\u00e1i \u0111\u1ed9 h\u00e0nh x\u1eed v\u0103n minh l\u1ecbch s\u1ef1",
+            "D. V\u0103n minh ch\u1ec9 s\u1ef1 th\u1ee5 h\u01b0\u1edfng gi\u00e1 tr\u1ecb tinh th\u1ea7n \u1edf tr\u00ecnh \u0111\u1ed9 cao"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eadn \u0111\u1ecbnh n\u00e0o sau \u0111\u00e2y v\u1ec1 v\u0103n minh l\u00e0 \u0111\u00fang:",
+        "answers": [
+            "A. V\u0103n minh c\u00f3 b\u1ec1 d\u00e0y l\u1ecbch s\u1eed t\u1eeb khi con ng\u01b0\u1eddi xu\u1ea5t hi\u1ec7n",
+            "B. V\u0103n minh ch\u1ec9 xu\u1ea5t hi\u1ec7n \u1edf giai \u0111o\u1ea1n ph\u00e1t tri\u1ec3n cao c\u1ee7a v\u0103n h\u00f3a",
+            "C. V\u0103n minh xu\u1ea5t hi\u1ec7n khi x\u00e3 h\u1ed9i c\u00f3 ph\u00e2n h\u00f3a gi\u00e0u ngh\u00e8o",
+            "D. Kh\u00e1i ni\u1ec7m v\u0103n minh v\u00e0 v\u0103n h\u00f3a kh\u00f4ng c\u00f3 s\u1ef1 kh\u00e1c bi\u1ec7t"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "M\u1ee5c \u0111\u00edch x\u00e2y d\u1ef1ng Kim t\u1ef1 th\u00e1p c\u1ee7a ng\u01b0\u1eddi Maya l\u00e0:",
+        "answers": [
+            "A. L\u00e0m l\u0103ng m\u1ed9",
+            "B. L\u00e0m c\u00f4ng tr\u00ecnh qu\u00e2n s\u1ef1",
+            "C. L\u00e0m n\u01a1i \u1edf cho ho\u00e0ng t\u1ed9c",
+            "D. L\u00e0m n\u01a1i ti\u1ebfn h\u00e0nh c\u00e1c nghi l\u1ec5 t\u1ebf th\u1ea7n"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Trong cu\u1ed9c \u0111\u1eddi c\u1ee7a m\u00ecnh, c\u00e1c Pharaon ti\u1ebfn h\u00e0nh x\u00e2y d\u1ef1ng Kim t\u1ef1 th\u00e1p t\u1eeb khi n\u00e0o?",
+        "answers": [
+            "A. Khi h\u1ecd sinh ra",
+            "B. Khi h\u1ecd l\u1eadp gia \u0111\u00ecnh",
+            "C. Khi h\u1ecd l\u00ean ng\u00f4i",
+            "D. Sau khi h\u1ecd ch\u1ebft, ng\u01b0\u1eddi con k\u1ebf v\u1ecb x\u00e2y cho"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "B\u1ed1n trung t\u00e2m v\u0103n minh l\u1edbn c\u1ee7a ph\u01b0\u01a1ng \u0110\u00f4ng c\u1ed5 \u0111\u1ea1i l\u00e0:",
+        "answers": [
+            "A. \u1ea4n \u0110\u1ed9, Trung Qu\u1ed1c, Nh\u1eadt B\u1ea3n, \u0110\u00f4ng Nam \u00c1",
+            "B. Trung Qu\u1ed1c, L\u01b0\u1ee1ng H\u00e0, Nh\u1eadt B\u1ea3n, Ai C\u1eadp",
+            "C. Trung Qu\u1ed1c, L\u01b0\u1ee1ng H\u00e0, \u1ea4n \u0110\u1ed9, Ai C\u1eadp",
+            "D. Nh\u1eadt B\u1ea3n, L\u01b0\u1ee1ng H\u00e0, \u0110\u00f4ng Nam \u00c1, \u1ea4n \u0110\u1ed9"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh L\u01b0\u1ee1ng H\u00e0 n\u1eb1m \u1edf khu v\u1ef1c n\u00e0o sau \u0111\u00e2y?",
+        "answers": [
+            "A. Vi\u1ec5n \u0110\u00f4ng",
+            "B. Trung \u0110\u00f4ng",
+            "C. Nam \u00c1",
+            "D. Trung \u00c1"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh \u1ea2 R\u1eadp xu\u1ea5t hi\u1ec7n t\u1eeb th\u1eddi k\u1ef3:",
+        "answers": [
+            "A. C\u1ed5 \u0111\u1ea1i",
+            "B. Trung \u0111\u1ea1i",
+            "C. C\u1eadn \u0111\u1ea1i",
+            "D. Hi\u1ec7n \u0111\u1ea1i"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1eef vi\u1ebft Ai C\u1eadp c\u1ed5 \u0111\u1ea1i bu\u1ed5i ban \u0111\u1ea7u l\u00e0 d\u1ea1ng ch\u1eef:",
+        "answers": [
+            "A. T\u01b0\u1ee3ng thanh",
+            "B. T\u01b0\u1ee3ng \u00fd",
+            "C. T\u01b0\u1ee3ng h\u00ecnh",
+            "D. H\u00ecnh \u0111inh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Trong s\u1ed1 c\u00e1c nh\u1eadn \u0111\u1ecbnh sau, nh\u1eadn \u0111\u1ecbnh n\u00e0o \u0111\u00fang nh\u1ea5t \u0111\u1ed1i v\u1edbi kh\u00e1i ni\u1ec7m v\u0103n minh?",
+        "answers": [
+            "A. V\u0103n minh l\u00e0 d\u1ea5u hi\u1ec7u \u0111\u1ec3 ph\u00e2n bi\u1ec7t qu\u1ed1c gia n\u00e0y so v\u1edbi qu\u1ed1c gia kh\u00e1c",
+            "B. V\u0103n minh l\u00e0 kh\u00e1i ni\u1ec7m thu\u1ed9c v\u1ec1 ph\u01b0\u01a1ng T\u00e2y",
+            "C. V\u0103n minh l\u00e0 l\u00e1t c\u1eaft \u0111\u1ed3ng \u0111\u1ea1i c\u1ee7a l\u1ecbch s\u1eed",
+            "D. D\u00e2n t\u1ed9c n\u00e0o c\u0169ng c\u00f3 v\u0103n minh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1eddi Trung v\u00e0 T\u00e2n V\u01b0\u01a1ng qu\u1ed1c, v\u0103n h\u1ecdc ng\u01b0\u1eddi Ai C\u1eadp t\u1eadp trung ph\u1ea3n \u00e1nh:",
+        "answers": [
+            "A. \u0110\u1eddi s\u1ed1ng c\u00e1c v\u1ecb th\u1ea7n",
+            "B. \u0110\u1eddi s\u1ed1ng c\u00e1c Pharaon v\u00e0 ho\u00e0ng t\u1ed9c",
+            "C. \u0110\u1eddi s\u1ed1ng t\u00e2m linh, nghi l\u1ec5 th\u1edd c\u00fang",
+            "D. M\u00e2u thu\u1eabn x\u00e3 h\u1ed9i, n\u1ed7i kh\u1ed5 c\u1ee7a ng\u01b0\u1eddi lao \u0111\u1ed9ng"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n h\u1ecdc bu\u1ed5i \u0111\u1ea7u c\u1ee7a ng\u01b0\u1eddi Ai C\u1eadp t\u1eadp trung ca ng\u1ee3i:",
+        "answers": [
+            "A. C\u00e1c chi\u1ebfn binh",
+            "B. C\u00e1c Pharaon",
+            "C. Nh\u1eefng ng\u01b0\u1eddi x\u00e2y d\u1ef1ng kim t\u1ef1 th\u00e1p",
+            "D. C\u00e1c v\u1ecb th\u1ea7n"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eefng V\u01b0\u01a1ng tri\u1ec1u n\u00e0o c\u1ee7a c\u00e1c Pharaon \u0111\u01b0\u1ee3c m\u1ec7nh danh l\u00e0 \u201cth\u1eddi k\u1ef3 Kim t\u1ef1 th\u00e1p\u201d:",
+        "answers": [
+            "A. V\u01b0\u01a1ng tri\u1ec1u III, IV",
+            "B. V\u01b0\u01a1ng tri\u1ec1u II, III",
+            "C. V\u01b0\u01a1ng tri\u1ec1u IV, V",
+            "D. V\u01b0\u01a1ng tri\u1ec1u I,II"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00f4ng tr\u00ecnh n\u00e0o sau \u0111\u00e2y kh\u00f4ng \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng \u0111\u1ec3 t\u1eb7ng v\u1ee3?",
+        "answers": [
+            "A. \u0110\u1ec1n Loro Gionggrang",
+            "B. Cung A Ph\u00f2ng",
+            "C. \u0110\u1ec1n Taj Mahan",
+            "D. V\u01b0\u1eddn treo Babilon"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1eef vi\u1ebft c\u1ee7a ng\u01b0\u1eddi Ai C\u1eadp c\u1ed5 \u0111\u1ea1i c\u00f2n \u0111\u01b0\u1ee3c l\u01b0u l\u1ea1i nhi\u1ec1u nh\u1ea5t trong c\u00e1c v\u0103n b\u1ea3n thu\u1ed9c l\u0129nh v\u1ef1c:",
+        "answers": [
+            "A. X\u00e2y d\u1ef1ng",
+            "B. T\u00f4n gi\u00e1o",
+            "C. Ph\u00e1p lu\u1eadt",
+            "D. H\u00e0nh ch\u00ednh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eadn \u0111\u1ecbnh n\u00e0o sau \u0111\u00e2y \u0111\u00fang nh\u1ea5t \u0111\u1ed1i v\u1edbi kh\u00e1i ni\u1ec7m v\u0103n minh?",
+        "answers": [
+            "A. V\u0103n minh l\u00e0 n\u00e9t ri\u00eang thu\u1ed9c v\u1ec1 m\u1ed9t qu\u1ed1c gia",
+            "B. V\u0103n minh c\u00f3 t\u00ednh si\u00eau d\u00e2n t\u1ed9c",
+            "C. V\u0103n minh l\u00e0 n\u00e9t ri\u00eang thu\u1ed9c v\u1ec1 m\u1ed9t khu v\u1ef1c",
+            "D. V\u0103n minh l\u00e0 n\u00e9t ri\u00eang thu\u1ed9c v\u1ec1 m\u1ed9t giai c\u1ea5p"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "H\u1ec7 th\u1ed1ng s\u1ed1 c\u1ee7a ng\u01b0\u1eddi Maya \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng theo h\u1ec7 s\u1ed1 n\u00e0o?",
+        "answers": [
+            "A. 20",
+            "B. 60",
+            "C. 10",
+            "D. 12"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Kim t\u1ef1 th\u00e1p c\u1ee7a ng\u01b0\u1eddi Maya \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng \u1edf khu v\u1ef1c:",
+        "answers": [
+            "A. Trung M\u1ef9",
+            "B. Bi\u1ec3n Caribe",
+            "C. Nam M\u1ef9",
+            "D. B\u1eafc M\u1ef9"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Kim t\u1ef1 th\u00e1p Ai C\u1eadp \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng nhi\u1ec1u v\u00e0o v\u01b0\u01a1ng tri\u1ec1u:",
+        "answers": [
+            "A. Th\u1ee9 I v\u00e0 II",
+            "B. Th\u1ee9 IV v\u00e0 V",
+            "C. Th\u1ee9 II v\u00e0 III",
+            "D. Th\u1ee9 III v\u00e0 IV"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Qu\u1ed1c gia c\u1ed5 \u0111\u1ea1i n\u00e0o \u0111\u00e3 c\u00f3 c\u00f4ng t\u00ednh l\u1ecbch ch\u00ednh x\u00e1c nh\u01b0 ng\u00e0y nay (m\u1ed9t n\u0103m c\u00f3 365 ng\u00e0y v\u00e0 \u00bc ng\u00e0y):",
+        "answers": [
+            "A. L\u01b0\u1ee1ng H\u00e0",
+            "B. Trung Qu\u1ed1c",
+            "C. Inca",
+            "D. Maya"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Trong s\u1ed1 c\u00e1c qu\u1ed1c gia c\u1ed5 \u0111\u1ea1i sau, qu\u1ed1c gia n\u00e0o c\u00f3 c\u00f4ng ph\u00e1t minh ra ch\u1eef s\u1ed1 kh\u00f4ng?",
+        "answers": [
+            "A. \u1ea4n \u0110\u1ed9",
+            "B. Ai C\u1eadp",
+            "C. L\u01b0\u1ee1ng H\u00e0",
+            "D. La M\u00e3"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u00e2n c\u00f4ng x\u00e2y d\u1ef1ng V\u1ea1n l\u00fd tr\u01b0\u1eddng th\u00e0nh ch\u1ee7 y\u1ebfu l\u00e0:",
+        "answers": [
+            "A. T\u00f9 nh\u00e2n v\u00e0 n\u00f4ng d\u00e2n",
+            "B. T\u00f9 nh\u00e2n v\u00e0 binh l\u00ednh",
+            "C. Binh l\u00ednh v\u00e0 qu\u00e2n ch\u01b0 h\u1ea7u",
+            "D. N\u00f4ng d\u00e2n v\u00e0 binh l\u00ednh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong bu\u1ed5i \u0111\u1ea7u ra \u0111\u1eddi, t\u01b0 t\u01b0\u1edfng c\u1ee7a Ph\u1eadt gi\u00e1o l\u00e0:",
+        "answers": [
+            "A. \u0110a th\u1ea7n gi\u00e1o",
+            "B. V\u00f4 th\u1ea7n",
+            "C. Duy t\u00e2m kh\u00e1ch quan",
+            "D. Duy t\u00e2m ch\u1ee7 quan"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Stupa Sanchi l\u00e0 b\u1ea3o th\u00e1p c\u00f3 ki\u1ebfn tr\u00fac:",
+        "answers": [
+            "A. H\u00ecnh kim t\u1ef1 th\u00e1p",
+            "B. H\u00ecnh b\u00e1t \u00fap",
+            "C. H\u00ecnh th\u00e1p nhi\u1ec1u t\u1ea7ng",
+            "D. H\u00ecnh tr\u1ee5 \u0111\u1ee9ng"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ph\u00f9 \u0111i\u00eau c\u1ee7a c\u00f4ng tr\u00ecnh Borobudua \u1edf Indonesia t\u1ea3 c\u1ea3nh:",
+        "answers": [
+            "A. Chi\u1ebfn tranh gi\u1eefa c\u00e1c ti\u1ec3u qu\u1ed1c",
+            "B. Th\u1ebf gi\u1edbi nh\u00e0 Ph\u1eadt",
+            "C. Truy\u1ec1n thuy\u1ebft \u201ckhu\u1ea5y \u0111\u1ed9ng bi\u1ec3n s\u1eefa\u201d",
+            "D. Trong s\u1eed thi Ramayana"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Phong h\u1ecfa \u0111\u00e0i \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng tr\u00ean V\u1ea1n l\u00fd tr\u01b0\u1eddng th\u00e0nh c\u00f3 ch\u1ee9c n\u0103ng ch\u1ee7 y\u1ebfu l\u00e0:",
+        "answers": [
+            "A. N\u01a1i \u0111\u1ed3n tr\u00fa c\u1ee7a qu\u00e2n \u0111\u1ed9i",
+            "B. Kho v\u0169 kh\u00ed",
+            "C. Kho l\u01b0\u01a1ng th\u1ef1c",
+            "D. \u0110i\u1ec3m ph\u00e1t hi\u1ec7u l\u1ec7nh c\u00f3 k\u1ebb \u0111\u1ecbch"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Stupa l\u00e0 c\u00f4ng tr\u00ecnh Ph\u1eadt gi\u00e1o d\u00f9ng \u0111\u1ec3:",
+        "answers": [
+            "A. Th\u1edd t\u01b0\u1ee3ng \u0111\u1ee9c Ph\u1eadt",
+            "B. L\u00e0m n\u01a1i \u1edf tu h\u00e0nh su\u1ed1t \u0111\u1eddi c\u1ee7a c\u00e1c t\u00edn \u0111\u1ed3",
+            "C. H\u00e0nh l\u1ec5 h\u00e0ng ng\u00e0y c\u1ee7a c\u00e1c t\u00edn \u0111\u1ed3",
+            "D. \u0110\u1eb7t th\u00e1nh t\u00edch c\u1ee7a \u0111\u1ee9c Ph\u1eadt"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Theo quan ni\u1ec7m c\u1ee7a Hindu gi\u00e1o, Liga l\u00e0 bi\u1ec3u t\u01b0\u1ee3ng c\u1ee7a:",
+        "answers": [
+            "A. Th\u1ea7n Siva",
+            "B. Kh\u00f4ng c\u1ee7a th\u1ea7n n\u00e0o",
+            "C. Th\u1ea7n Brahma",
+            "D. Th\u1ea7n Vishnu"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "L\u00ednh th\u00e1p canh c\u1ea3nh gi\u1edbi t\u1ea1i V\u1ea1n l\u00fd tr\u01b0\u1eddng th\u00e0nh th\u1eddi phong ki\u1ebfn c\u00f3 th\u1eddi gian ph\u1ee5c v\u1ee5 l\u00e0:",
+        "answers": [
+            "A. 5 n\u0103m",
+            "B. H\u1ebft th\u1eddi gian ngh\u0129a v\u1ee5",
+            "C. 1 n\u0103m",
+            "D. H\u1ebft \u0111\u1eddi ng\u01b0\u1eddi"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Loro Gionggrang \u1edf Indonesia l\u00e0 c\u00f4ng tr\u00ecnh ki\u1ebfn tr\u00fac:",
+        "answers": [
+            "A. Hindu gi\u00e1o",
+            "B. Ph\u1eadt gi\u00e1o",
+            "C. Thi\u00ean ch\u00faa gi\u00e1o",
+            "D. H\u1ed3i gi\u00e1o"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ebf ch\u1ebf \u0110\u00f4ng La M\u00e3 t\u1ed3n t\u1ea1i trong kho\u1ea3ng th\u1eddi gian n\u00e0o sau \u0111\u00e2y?",
+        "answers": [
+            "A. 330 \u2013 1453",
+            "B. 476 \u2013 1492",
+            "C. 395 \u2013 1453",
+            "D. 476 \u2013 1495"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Trong c\u00e1c tr\u01b0\u1eddng \u0111\u1ea1i h\u1ecdc \u1edf ch\u00e2u \u00c2u th\u1ebf k\u1ef7 XI th\u01b0\u1eddng c\u00f3 b\u1ed1n khoa nh\u01b0ng ng\u01b0\u1eddi h\u1ecdc ph\u1ea3i ho\u00e0n th\u00e0nh ch\u01b0\u01a1ng tr\u00ecnh c\u1ee7a khoa n\u00e0o sau \u0111\u00e2y m\u1edbi ti\u1ebfp t\u1ee5c \u0111\u01b0\u1ee3c h\u1ecdc c\u00e1c khoa kh\u00e1c?",
+        "answers": [
+            "A. Ngh\u1ec7 thu\u1eadt",
+            "B. Th\u1ea7n h\u1ecdc",
+            "C. Lu\u1eadt",
+            "D. Y h\u1ecdc"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Kh\u1ea3i ho\u00e0n m\u00f4n \u0111\u01b0\u1ee3c c\u01b0 d\u00e2n n\u1ec1n v\u0103n minh n\u00e0o d\u1ef1ng n\u00ean?",
+        "answers": [
+            "A. L\u01b0\u1ee1ng H\u00e0",
+            "B. La M\u00e3",
+            "C. Hy L\u1ea1p",
+            "D. Ai C\u1eadp"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ngh\u1ec7 thu\u1eadt ki\u1ebfn tr\u00fac G\u00f4t\u00edch kh\u00e1c ngh\u1ec7 thu\u1eadt R\u00f4man \u1edf ch\u1ed7:",
+        "answers": [
+            "A. L\u00e0 l\u1ed1i ki\u1ebfn tr\u00fac m\u00e1i v\u00f2m b\u00e1n nguy\u1ec7t",
+            "B. L\u00e0 l\u1ed1i ki\u1ebfn tr\u00fac c\u00e1c g\u00e2n cung giao nhau",
+            "C. L\u00e0 l\u1ed1i ki\u1ebfn tr\u00fac nh\u1ecf g\u1ecdn",
+            "D. \u0110\u01b0\u1ee3c coi l\u00e0 ngh\u1ec7 thu\u1eadt ki\u1ebfn tr\u00fac \u0111\u1ed3ng qu\u00ea"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eadn x\u00e9t n\u00e0o sau \u0111\u00e2y kh\u00f4ng \u0111\u00fang v\u1ec1 Phong tr\u00e0o V\u0103n h\u00f3a Ph\u1ee5c h\u01b0ng:",
+        "answers": [
+            "A. Tuy\u00ean truy\u1ec1n l\u1ed1i s\u1ed1ng kh\u1ed5 h\u1ea1nh, h\u1ea1nh ph\u00fac s\u1ebd \u0111\u1ea1t \u0111\u01b0\u1ee3c n\u01a1i Thi\u00ean \u0110\u00e0ng",
+            "B. \u0110\u01b0a v\u0103n h\u00f3a tho\u00e1t kh\u1ecfi t\u00f4n gi\u00e1o, th\u1ea7n h\u1ecdc",
+            "C. Ch\u1ed1ng gi\u00e1o h\u1ed9i, qu\u00fd t\u1ed9c phong ki\u1ebfn v\u1edbi nh\u1eefng t\u01b0 t\u01b0\u1edfng c\u1ee7a n\u00f3",
+            "D. \u0110\u1ec1 cao con ng\u01b0\u1eddi, coi con ng\u01b0\u1eddi l\u00e0 \u201cv\u00e0ng ng\u1ecdc c\u1ee7a v\u0169 tr\u1ee5\u201d"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110i\u1ec1u n\u00e0o sau \u0111\u00e2y kh\u00f4ng \u0111\u00fang khi n\u00f3i v\u1ec1 tr\u01b0\u1eddng \u0111\u1ea1i h\u1ecdc \u1edf ch\u00e2u \u00c2u th\u1ebf k\u1ef7 XI:",
+        "answers": [
+            "A. Kinh ph\u00ed do qu\u1ed1c gia cung c\u1ea5p",
+            "B. Ng\u01b0\u1eddi h\u1ecdc \u0111\u01b0\u1ee3c c\u1ed5 v\u0169 tinh th\u1ea7n ho\u00e0i nghi v\u00e0 ch\u1ea5t v\u1ea5n khi h\u1ecdc",
+            "C. \u0110\u01b0\u1ee3c t\u1ed5 ch\u1ee9c nh\u01b0 nh\u1eefng ph\u01b0\u1eddng h\u1ed9i th\u1ee3 th\u1ee7 c\u00f4ng",
+            "D. Ra \u0111\u1eddi m\u1ed9t c\u00e1ch t\u1ef1 ph\u00e1t"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00f4ng tin n\u00e0o sau \u0111\u00e2y v\u1ec1 Th\u00e1nh \u0111\u01b0\u1eddng Th\u1ea1ch V\u00f2m (Kubbat al-Sakhra) kh\u00f4ng ch\u00ednh x\u00e1c:",
+        "answers": [
+            "A. X\u00e2y d\u1ef1ng \u1edf Mecca",
+            "B. N\u00e9t \u0111\u1eb7c bi\u1ec7t \u1edf ch\u1ed7 \u0111\u00e2y l\u00e0 n\u01a1i che gi\u1eef kh\u1ed1i \u0111\u00e1 \u0111en",
+            "C. T\u00f2a nh\u00e0 c\u00f3 ki\u1ebfn tr\u00fac h\u00ecnh b\u00e1t gi\u00e1c",
+            "D. M\u1ed9t trong b\u1ed1n k\u1ef3 quan H\u1ed3i gi\u00e1o"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "T\u1ea1i sao ch\u00ednh quy\u1ec1n La M\u00e3 l\u1ea1i so\u1ea1n b\u1ed9 lu\u1eadt \u201cM\u01b0\u1eddi hai b\u1ea3ng\u201d?",
+        "answers": [
+            "A. V\u00ec gi\u1edbi qu\u00fd t\u1ed9c y\u00eau c\u1ea7u",
+            "B. V\u00ec gi\u1edbi c\u00f4ng th\u01b0\u01a1ng y\u00eau c\u1ea7u",
+            "C. V\u00ec gi\u1edbi b\u00ecnh d\u00e2n y\u00eau c\u1ea7u",
+            "D. V\u00ec c\u00e1c nh\u00e0 qu\u00e2n s\u1ef1 y\u00eau c\u1ea7u"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Khi ng\u01b0\u1eddi Giecman ti\u00eau di\u1ec7t \u0111\u1ebf ch\u1ebf La M\u00e3, nhi\u1ec1u c\u00f4ng tr\u00ecnh ki\u1ebfn tr\u00fac b\u1ecb x\u00e2m h\u1ea1i nh\u01b0ng \u0111\u1ec1n Pantheon v\u1eabn \u0111\u01b0\u1ee3c b\u1ea3o qu\u1ea3n t\u1ed1t. T\u1ea1i sao?",
+        "answers": [
+            "A. V\u00ec c\u00e1c chi\u1ebfn binh Giecman chi\u1ebfm l\u00e0m n\u01a1i \u0111\u00f3ng qu\u00e2n",
+            "B. V\u00ec n\u00f3 \u0111\u01b0\u1ee3c chuy\u1ec3n th\u00e0nh nh\u00e0 th\u1edd C\u00f4ng gi\u00e1o",
+            "C. V\u00ec c\u00e1c th\u1ee7 l\u0129nh Giecman chi\u1ebfm l\u00e0m n\u01a1i \u0111\u1eb7t sc/huy",
+            "D. V\u00ec n\u00f3 l\u00e0 ph\u1ebf t\u00edch kh\u00f4ng ai ph\u00e1t hi\u1ec7n ra"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110i\u1ec1u n\u00e0o sau \u0111\u00e2y l\u00e0 \u0111i\u1ec3m n\u1ed5i b\u1eadt c\u1ee7a v\u0103n minh La M\u00e3 h\u01a1n c\u1ea3 v\u0103n minh Hy L\u1ea1p:",
+        "answers": [
+            "A. S\u1ea3n sinh ra nhi\u1ec1u nh\u00e0 khoa h\u1ecdc",
+            "B. C\u00f3 nhi\u1ec1u th\u00e0nh t\u1ef1u v\u0103n h\u1ecdc v\u00e0 k\u1ecbch ngh\u1ec7",
+            "C. C\u00f3 nhi\u1ec1u tr\u01b0\u1eddng ph\u00e1i, tr\u00e0o l\u01b0u tri\u1ebft h\u1ecdc v\u00e0 nh\u1eefng tri\u1ebft gia n\u1ed5i ti\u1ebfng",
+            "D. C\u00f3 nhi\u1ec1u c\u00f4ng tr\u00ecnh nh\u00e0 t\u1eafm c\u00f4ng c\u1ed9ng"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ec1n th\u1edd Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i c\u00f3 \u0111\u1eb7c \u0111i\u1ec3m kh\u00e1c bi\u1ec7t so v\u1edbi c\u00e1c c\u00f4ng tr\u00ecnh t\u00f4n gi\u00e1o kh\u00e1c \u1edf ch\u1ed7:",
+        "answers": [
+            "A. Ch\u1ec9 l\u00e0 n\u01a1i \u0111\u1eb7t t\u01b0\u1ee3ng, kh\u00f4ng ph\u1ea3i n\u01a1i h\u00e0nh l\u1ec5 c\u1ee7a c\u00e1c t\u00edn \u0111\u1ed3",
+            "B. Ch\u1ec9 l\u00e0 n\u01a1i lui t\u1edbi c\u1ee7a gi\u1edbi ch\u1ee7 n\u00f4",
+            "C. Ki\u1ebfn tr\u00fac \u0111\u1ed3 s\u1ed9",
+            "D. C\u00e2u a, b l\u00e0 \u0111\u00fang"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00f4ng tr\u00ecnh n\u00e0o \u1edf \u0111\u00f4 th\u1ecb c\u1ed5 Pagan \u0111\u01b0\u1ee3c d\u00e1t v\u00e0ng ho\u00e0n to\u00e0n?",
+        "answers": [
+            "A. Shwezigon Paya",
+            "B. Gawdawpalin Pahto",
+            "C. Sulamani",
+            "D. Thatbyinnyu Pahto"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00f4ng tin n\u00e0o sau \u0111\u00e2y v\u1ec1 \u0111\u1ea5u tr\u01b0\u1eddng Colosseum l\u00e0 kh\u00f4ng ch\u00ednh x\u00e1c:",
+        "answers": [
+            "A. L\u00e0 n\u01a1i di\u1ec5n ra c\u00e1c tr\u1eadn quy\u1ebft \u0111\u1ea5u gi\u1eefa ng\u01b0\u1eddi v\u1edbi th\u00fa d\u1eef",
+            "B. \u0110\u01b0\u1ee3c x\u00e2y d\u1ef1ng tr\u00ean m\u1eb7t b\u1eb1ng h\u00ecnh tr\u00f2n",
+            "C. \u0110\u01b0\u1ee3c x\u00e2y d\u1ef1ng v\u00e0o th\u1ebf k\u1ef7 \u0111\u1ea7u c\u00f4ng nguy\u00ean",
+            "D. N\u01a1i \u0111\u00e2y t\u1eebng \u0111\u01b0\u1ee3c Gi\u00e1o h\u1ed9i C\u00f4ng gi\u00e1o d\u00f9ng l\u00e0m n\u01a1i phong th\u00e1nh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u00e0 t\u1eafm Caracalla \u1edf Roma l\u00e0 c\u00f4ng tr\u00ecnh c\u00f4ng c\u1ed9ng n\u1ed5i ti\u1ebfng b\u1edfi:",
+        "answers": [
+            "A. Ngh\u1ec7 thu\u1eadt ki\u1ebfn tr\u00fac c\u1ee7a c\u00f4ng tr\u00ecnh",
+            "B. Ch\u1ea5t li\u1ec7u l\u00e0m n\u00ean c\u00f4ng tr\u00ecnh",
+            "C. C\u00e1c t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt c\u00f3 trong c\u00f4ng tr\u00ecnh",
+            "D. C\u00f4ng n\u0103ng s\u1eed d\u1ee5ng c\u1ee7a c\u00f4ng tr\u00ecnh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Angkor Wat l\u00e0 c\u00f4ng tr\u00ecnh ki\u1ebfn tr\u00fac:",
+        "answers": [
+            "A. \u0110\u1ec1n th\u1edd th\u1ea7n",
+            "B. Qu\u00e2n s\u1ef1",
+            "C. Cung \u0111i\u1ec7n",
+            "D. L\u0103ng m\u1ed9"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00e1c gi\u1ea3 v\u1edf bi k\u1ecbch \"Promethee b\u1ecb xi\u1ec1ng\" trong v\u0103n h\u1ecdc Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i l\u00e0:",
+        "answers": [
+            "A. Eshchyle",
+            "B. Euripites",
+            "C. Aristopanes",
+            "D. Sophocles"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c qu\u1ed1c gia c\u1ed5 \u0111\u1ea1i ph\u01b0\u01a1ng \u0111\u00f4ng \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh trong kho\u1ea3ng th\u1eddi gian n\u00e0o?",
+        "answers": [
+            "A. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 5-2 TCN",
+            "B. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 5-3 TCN",
+            "C. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 4-2 TCN",
+            "D. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 4-3 TCN"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1eddi c\u1ed5 \u0111\u1ea1i, ng\u01b0\u1eddi Hoa H\u1ea1 g\u1ecdi kh\u1ed1i c\u01b0 d\u00e2n c\u01b0 tr\u00fa \u1edf ph\u00eda \u0110\u00f4ng khu v\u1ef1c m\u00ecnh sinh s\u1ed1ng l\u00e0:",
+        "answers": [
+            "A. Ng\u01b0\u1eddi Nhung",
+            "B. Ng\u01b0\u1eddi \u0110\u1ecbch",
+            "C. Ng\u01b0\u1eddi Man",
+            "D. Ng\u01b0\u1eddi Di"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Ti\u00eau ch\u00ed h\u00e0ng \u0111\u1ea7u x\u00e1c \u0111\u1ecbnh m\u1ed9t n\u1ec1n v\u0103n minh l\u00e0 khi c\u00f3 s\u1ef1 xu\u1ea5t hi\u1ec7n c\u1ee7a:",
+        "answers": [
+            "A. Con ng\u01b0\u1eddi",
+            "B. Ch\u1eef vi\u1ebft",
+            "C. Nh\u00e0 n\u01b0\u1edbc",
+            "D. C\u1ea3 b v\u00e0 c \u0111\u1ec1u \u0111\u00fang"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ph\u1ea7n l\u1edbn bi\u00ean gi\u1edbi ph\u00eda Nam c\u1ee7a Ai C\u1eadp c\u1ed5 \u0111\u1ea1i ti\u1ebfp gi\u00e1p v\u1edbi:",
+        "answers": [
+            "A. \u0110\u1ecba Trung H\u1ea3i",
+            "B. H\u1ed3ng H\u1ea3i",
+            "C. Cao nguy\u00ean Nubi",
+            "D. K\u00eanh \u0111\u00e0o Suez"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u00e0 n\u01b0\u1edbc Athen th\u1ed1ng nh\u1ea5t ch\u1eef vi\u1ebft v\u00e0o th\u1eddi gian n\u00e0o:",
+        "answers": [
+            "A. TK VIII TCN",
+            "B. TK VII TCN",
+            "C. TK III TCN",
+            "D. TK V TCN"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Tr\u1ecb s\u1ed1 Pi = 3,16 l\u00e0 th\u00e0nh t\u1ef1u c\u1ee7a n\u1ec1n v\u0103n minh:",
+        "answers": [
+            "A. V\u0103n minh Trung Hoa",
+            "B. V\u0103n minh L\u01b0\u1ee1ng H\u00e0",
+            "C. V\u0103n minh Ai C\u1eadp",
+            "D. V\u0103n minh \u1ea4n \u0110\u1ed9"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi Ai c\u1eadp c\u1ed5 \u0111\u1ea1i d\u00f9ng h\u00ecnh v\u1ebd con n\u00f2ng n\u1ecdc \u0111\u1ec3 ch\u1ec9 con s\u1ed1:",
+        "answers": [
+            "A. 1000",
+            "B. 10.000",
+            "C. 100.000",
+            "D. 100"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Giai \u0111o\u1ea1n \u0111\u1ec9nh cao c\u1ee7a h\u1ed9i h\u1ecda trong Phong tr\u00e0o v\u0103n h\u00f3a Ph\u1ee5c h\u01b0ng \u1edf T\u00e2y \u00c2u l\u00e0:",
+        "answers": [
+            "A. th\u1ebf k\u1ef7 14",
+            "B. th\u1ec3 k\u1ef7 15",
+            "C. th\u1ec3 k\u1ef7 16",
+            "D. th\u1ebf k\u1ef7 17"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Thu\u1ed9c t\u00ednh c\u01a1 b\u1ea3n c\u1ee7a kh\u00e1i ni\u1ec7m v\u0103n minh l\u00e0:",
+        "answers": [
+            "A. ti\u1ebfn b\u1ed9",
+            "B. gi\u00e1 tr\u1ecb",
+            "C. b\u1ec1n v\u1eefng",
+            "D. hi\u1ec7n \u0111\u1ea1i"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00e0nh Roma \u2013 c\u00e1i n\u00f4i \u0111\u1ea7u ti\u00ean c\u1ee7a V\u0103n minh La M\u00e3 \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh.",
+        "answers": [
+            "A. B\u00ean b\u1edd s\u00f4ng Tibre",
+            "B. Tr\u00ean b\u1edd s\u00f4ng Po",
+            "C. Tr\u00ean \u0111\u1ed3ng b\u1eb1ng Campanium",
+            "D. Tr\u00ean \u0111\u1ed3ng b\u1eb1ng Britium"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Trong l\u1ecbch s\u1eed v\u0103n minh La M\u00e3, ch\u1eef Latin xu\u1ea5t hi\u1ec7n v\u00e0o kho\u1ea3ng:",
+        "answers": [
+            "A. Th\u1ebf k\u1ef7 8 TCN.",
+            "B. Th\u1ebf k\u1ef7 7 TCN.",
+            "C. Th\u1ebf k\u1ef7 6 TCN.",
+            "D. Th\u1ebf k\u1ef7 5 TCN."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00e1c gi\u1ea3 c\u1ee7a t\u00e1c ph\u1ea9m Gia ph\u1ea3 c\u00e1c th\u1ea7n trong n\u1ec1n v\u0103n h\u00f3a Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i l\u00e0 nh\u00e0 th\u01a1.",
+        "answers": [
+            "A. Pindar",
+            "B. Hesiose",
+            "C. Akilocle",
+            "D. Sappho"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1ec3 ch\u1ebf d\u00e2n ch\u1ee7 c\u1ed5 \u0111\u1ea1i ph\u01b0\u01a1ng T\u00e2y \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n tr\u00ean l\u00e3nh th\u1ed5 Hy L\u1ea1p th\u1eddi c\u1ed5 \u0111\u1ea1i, Th\u00e0nh bang Spart n\u1eb1m \u1edf \u0111\u1ed3ng b\u1eb1ng.",
+        "answers": [
+            "A. Laconie",
+            "B. Latium",
+            "C. Attique",
+            "D. Peloponsese"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u01a1 s\u1edf \u0111\u1ec3 vi\u1ebft ti\u1ebfng Sancrit (ch\u1eef Ph\u1ea1n) trong n\u1ec1n v\u0103n minh \u1ea4n \u0110\u1ed9 l\u00e0:",
+        "answers": [
+            "A. Ch\u1eef Pali.",
+            "B. Ch\u1eef Devanagary.",
+            "C. Ch\u1eef Kharothi.",
+            "D. Ch\u1eef Brathmi."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ec1n Panth\u00e9on l\u00e0 ki\u1ec7t t\u00e1c ki\u1ebfn tr\u00fac c\u1ee7a n\u1ec1n v\u0103n minh:",
+        "answers": [
+            "A. La M\u00e3.",
+            "B. Hy L\u1ea1p.",
+            "C. Bizantine.",
+            "D. T\u00e2y Ban Nha."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00e1c ph\u1ea9m Tam qu\u1ed1c di\u1ec5n ngh\u0129a c\u1ee7a La Qu\u00e1n Trung \u2013 b\u1ed9 truy\u1ec7n l\u1ecbch s\u1eed x\u00e3 h\u1ed9i \u0111\u1ea7u ti\u00ean c\u1ee7a Trung Qu\u1ed1c \u0111\u01b0\u1ee3c vi\u1ebft d\u01b0\u1edbi th\u1eddi:",
+        "answers": [
+            "A. Nh\u00e0 H\u00e1n.",
+            "B. Nh\u00e0 \u0110\u01b0\u1eddng.",
+            "C. Nh\u00e0 Minh.",
+            "D. Nh\u00e0 Thanh."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi \u0111\u1ea7u ti\u00ean ph\u00e1t minh ra k\u1ef9 thu\u1eadt l\u00e0m gi\u1ea5y t\u1edd t\u1eeb v\u1ecf c\u00e2y, gi\u1ebb r\u00e1ch, l\u01b0\u1edbi c\u0169\u2026 trong l\u1ecbch s\u1eed v\u0103n minh Trung Qu\u1ed1c l\u00e0:",
+        "answers": [
+            "A. T\u1ea5t Th\u0103ng",
+            "B. Khuy\u1ebft danh",
+            "C. Th\u00e1i Lu\u00e2n",
+            "D. Tr\u01b0\u01a1ng H\u00e0nh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1ebf k\u1ef7 v\u00e0ng trong l\u1ecbch s\u1eed Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i l\u00e0:",
+        "answers": [
+            "A. Th\u1ebf k\u1ef7 7 TCN.",
+            "B. Th\u1ebf k\u1ef7 6 TCN.",
+            "C. Th\u1ebf k\u1ef7 5 TCN.",
+            "D. Th\u1ebf k\u1ef7 4 TCN."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi \u0111\u1eb7t n\u1ec1n m\u00f3ng cho ng\u00e0nh c\u01a1 h\u1ecdc, \u00f4ng l\u00e0 ai?",
+        "answers": [
+            "A. Euratosthene.",
+            "B. Ptoleme.",
+            "C. Archimede.",
+            "D. Pythagore."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Amerigo Vespuci \u2013 ng\u01b0\u1eddi kh\u1eb3ng \u0111\u1ecbnh Ch\u00e2u M\u1ef9 l\u00e0 m\u1ed9t t\u00e2n l\u1ee5c \u0111\u1ecba v\u00e0 t\u00ean \u00f4ng \u0111\u01b0\u1ee3c \u0111\u1eb7t t\u00ean cho Ch\u00e2u M\u1ef9 l\u00e0:",
+        "answers": [
+            "A. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi T\u00e2y Ban Nha",
+            "B. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi B\u1ed3 \u0111\u00e0o Nha",
+            "C. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi \u00dd",
+            "D. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi Anh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "V\u1ecb vua n\u00e0o \u1edf Campuchia \u0111\u00e3 m\u1edf \u0111\u1ea7u cho th\u1eddi k\u1ef3 Angkor?",
+        "answers": [
+            "A. Jayavarman I",
+            "B. Jayavarman II",
+            "C. Jayvarman IV",
+            "D. Jayavarman VII"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ngh\u1ec7 thu\u1eadt ki\u1ebfn tr\u00fac G\u00f4t\u00edch c\u00f3 ngu\u1ed3n g\u1ed1c t\u1eeb qu\u1ed1c gia n\u00e0o:",
+        "answers": [
+            "A. T\u00e2y Ban Nha",
+            "B. Anh",
+            "C. Ph\u00e1p",
+            "D. \u0110\u1ee9c"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "T\u1ee5c th\u1edd Th\u1ea7n - Vua v\u00e0 ki\u1ebfn tr\u00fac \u0111\u1ec1n n\u00fai xu\u1ea5t hi\u1ec7n \u1edf qu\u1ed1c gia n\u00e0o?",
+        "answers": [
+            "A. Th\u00e1i Lan",
+            "B. Campuchia",
+            "C. L\u00e0o",
+            "D. Indonesia"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ec1n Angkor Wat l\u00e0 ng\u00f4i \u0111\u1ec1n th\u1edd v\u1ecb th\u1ea7n n\u00e0o?",
+        "answers": [
+            "A. Brahma",
+            "B. Vishnu",
+            "C. Indra",
+            "D. Shiva"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ai \u0111\u00e3 ph\u00e1t minh ra ch\u1eef Gi\u00e1p c\u1ed1t \u1edf Trung Qu\u1ed1c c\u1ed5 \u0111\u1ea1i?",
+        "answers": [
+            "A. Ho\u00e0ng \u0110\u1ebf",
+            "B. Th\u01b0\u01a1ng Hi\u1ec7t",
+            "C. V\u0169 \u0110inh",
+            "D. L\u00fd T\u01b0"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Theo \u0111\u1ecbnh ngh\u0129a v\u1ec1 v\u0103n minh, \u0111i\u1ec3m n\u00e0o sau \u0111\u00e2y c\u1ee7a v\u0103n minh kh\u00e1c bi\u1ec7t so v\u1edbi v\u0103n h\u00f3a?",
+        "answers": [
+            "A. V\u0103n minh ch\u1ec9 gi\u00e1 tr\u1ecb k\u1ef9 thu\u1eadt, gi\u00e1 tr\u1ecb tinh th\u1ea7n",
+            "B. V\u0103n minh ch\u1ec9 gi\u00e1 tr\u1ecb v\u1eadt ch\u1ea5t v\u00e0 tinh th\u1ea7n \u1edf tr\u00ecnh \u0111\u1ed9 cao",
+            "C. V\u0103n minh ch\u1ec9 th\u00e1i \u0111\u1ed9 h\u00e0nh x\u1eed v\u0103n minh l\u1ecbch s\u1ef1",
+            "D. V\u0103n minh ch\u1ec9 s\u1ef1 th\u1ee5 h\u01b0\u1edfng gi\u00e1 tr\u1ecb tinh th\u1ea7n \u1edf tr\u00ecnh \u0111\u1ed9 cao"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Trong cu\u1ed9c \u0111\u1eddi c\u1ee7a m\u00ecnh, c\u00e1c Pharaoh ti\u1ebfn h\u00e0nh x\u00e2y Kim t\u1ef1 th\u00e1p t\u1eeb khi n\u00e0o?",
+        "answers": [
+            "A. Khi h\u1ecd sinh ra",
+            "B. Khi h\u1ecd l\u1eadp gia \u0111\u00ecnh",
+            "C. Khi h\u1ecd l\u00ean ng\u00f4i",
+            "D. Sau khi h\u1ecd ch\u1ebft, ng\u01b0\u1eddi con k\u1ebf v\u1ecb x\u00e2y cho."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "B\u1ed1n trung t\u00e2m v\u0103n minh l\u1edbn c\u1ee7a ph\u01b0\u01a1ng \u0110\u00f4ng l\u00e0:",
+        "answers": [
+            "A. \u1ea4n \u0110\u1ed9, Trung Qu\u1ed1c, Nh\u1eadt B\u1ea3n, \u0110\u00f4ng Nam \u00c1",
+            "B. Trung Qu\u1ed1c, L\u01b0\u1ee1ng H\u00e0, Nh\u1eadt B\u1ea3n, Ai C\u1eadp",
+            "C. Trung Qu\u1ed1c, L\u01b0\u1ee1ng H\u00e0, \u1ea4n \u0110\u1ed9, Ai C\u1eadp",
+            "D. Nh\u1eadt B\u1ea3n, L\u01b0\u1ee1ng H\u00e0, \u0110\u00f4ng Nam \u00c1, \u1ea4n \u0110\u1ed9"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh L\u01b0\u1ee1ng H\u00e0 n\u1eb1m \u1edf khu v\u1ef1c n\u00e0o d\u01b0\u1edbi \u0111\u00e2y?",
+        "answers": [
+            "A. Vi\u1ec5n \u0110\u00f4ng",
+            "B. Trung \u0110\u00f4ng",
+            "C. Nam \u00c1",
+            "D. Trung \u00c1"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u201cAi C\u1eadp l\u00e0 t\u1eb7ng ph\u1ea9m c\u1ee7a d\u00f2ng s\u00f4ng Nile\u201d l\u00e0 nh\u1eadn \u0111\u1ecbnh c\u1ee7a nh\u00e0 s\u1eed h\u1ecdc n\u00e0o?",
+        "answers": [
+            "A. Ciceron",
+            "B. Strabon",
+            "C. Herodotus",
+            "D. Thucyditus"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1eef vi\u1ebft c\u1ee7a ng\u01b0\u1eddi Ai C\u1eadp c\u1ed5 \u0111\u1ea1i c\u00f2n \u0111\u01b0\u1ee3c l\u01b0u l\u1ea1i nhi\u1ec1u nh\u1ea5t trong c\u00e1c v\u0103n b\u1ea3n thu\u1ed9c l\u0129nh v\u1ef1c:",
+        "answers": [
+            "A. Ph\u00e1p lu\u1eadt",
+            "B. X\u00e2y d\u1ef1ng",
+            "C. T\u00f4n gi\u00e1o",
+            "D. H\u00e0nh ch\u00ednh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u1eefng V\u01b0\u01a1ng tri\u1ec1u n\u00e0o c\u1ee7a c\u00e1c Pharaon \u0111\u01b0\u1ee3c m\u1ec7nh danh l\u00e0 \u201cth\u1eddi k\u1ef3 Kim t\u1ef1 th\u00e1p\u201d.",
+        "answers": [
+            "A. V\u01b0\u01a1ng tri\u1ec1u II, III",
+            "B. V\u01b0\u01a1ng tri\u1ec1u III, IV",
+            "C. V\u01b0\u01a1ng tri\u1ec1u I,II",
+            "D. V\u01b0\u01a1ng tri\u1ec1u IV, V"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi c\u00f3 c\u00f4ng \u0111\u00e2u ti\u00ean gi\u1ea3i m\u00e3 ch\u1eef vi\u1ebft c\u1ee7a ng\u01b0\u1eddi Ai C\u1eadp c\u1ed5 \u0111\u1ea1i l\u00e0 ai? N\u01b0\u1edbc n\u00e0o?",
+        "answers": [
+            "A. Gerapolon, Ai C\u1eadp",
+            "B. Rawlinson, Anh",
+            "C. Champollion, Ph\u00e1p",
+            "D. Nhibur, \u0110an M\u1ea1ch"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "N\u1ec1n v\u0103n minh n\u00e0o sau \u0111\u00e2y s\u1eed d\u1ee5ng v\u0103n t\u1ef1 \u201cth\u1eaft n\u00fat (quipus)\u201d?",
+        "answers": [
+            "A. Aztec",
+            "B. Inca",
+            "C. Maya",
+            "D. T\u1ea5t c\u1ea3 sai."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh Arab xu\u1ea5t hi\u1ec7n v\u00e0o th\u1eddi k\u1ef3:",
+        "answers": [
+            "A. C\u1ed5 \u0111\u1ea1i",
+            "B. Trung \u0111\u1ea1i",
+            "C. C\u1eadn \u0111\u1ea1i",
+            "D. Hi\u1ec7n \u0111\u1ea1i"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ebf ch\u1ebf Byzantium c\u00f2n \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0:",
+        "answers": [
+            "A. \u0110\u1ebf qu\u1ed1c \u0110\u00f4ng La M\u00e3",
+            "B. \u0110\u1ebf qu\u1ed1c La M\u00e3 th\u1ea7n th\u00e1nh",
+            "C. \u0110\u1ebf ch\u1ebf La M\u00e3 ph\u01b0\u01a1ng T\u00e2y",
+            "D. C\u1ea3 3 c\u00e2u \u0111\u1ec1u \u0111\u00fang"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Qu\u1ed1c gia c\u1ed5 \u0111\u1ea1i n\u00e0o \u0111\u00e3 c\u00f3 c\u00f4ng t\u00ednh l\u1ecbch ch\u00ednh x\u00e1c nh\u01b0 ng\u00e0y nay (m\u1ed9t n\u0103m c\u00f3 365 ng\u00e0y v\u00e0 \u00bc ng\u00e0y)",
+        "answers": [
+            "A. L\u01b0\u1ee1ng H\u00e0",
+            "B. Maya",
+            "C. Trung Qu\u1ed1c",
+            "D. Inca"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "B\u1ed9 lu\u1eadt Hammurabi n\u1ed5i ti\u1ebfng l\u00e0 c\u1ee7a qu\u1ed1c gia c\u1ed5 \u0111\u1ea1i n\u00e0o?",
+        "answers": [
+            "A. L\u01b0\u1ee1ng H\u00e0",
+            "B. C\u1ed5 Babilon",
+            "C. Assyria",
+            "D. T\u00e2n Babilon"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Quy m\u00f4 V\u1ea1n L\u00fd tr\u01b0\u1eddng th\u00e0nh \u0111\u01b0\u1ee3c ho\u00e0n th\u00e0nh \u1edf tri\u1ec1u \u0111\u1ea1i n\u00e0o?",
+        "answers": [
+            "A. T\u1ea7n",
+            "B. H\u00e1n",
+            "C. Minh",
+            "D. Thanh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": " L\u00ednh th\u00e1p canh c\u1ea3nh gi\u1edbi t\u1ea1i V\u1ea1n l\u00fd tr\u01b0\u1eddng th\u00e0nh th\u1eddi phong ki\u1ebfn c\u00f3 th\u1eddi gian ph\u1ee5c v\u1ee5 l\u00e0:",
+        "answers": [
+            "A. 1 n\u0103m",
+            "B. H\u1ebft \u0111\u1eddi ng\u01b0\u1eddi",
+            "C. 5 n\u0103m",
+            "D. H\u1ebft th\u1eddi gian ngh\u0129a v\u1ee5"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Tri\u1ec1u \u0111\u1ea1i n\u00e0o \u0111\u00e3 c\u00f3 c\u00f4ng n\u1ed1i c\u00e1c Tr\u01b0\u1eddng th\u00e0nh \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng r\u1eddi r\u1ea1c th\u00e0nh V\u1ea1n l\u00fd tr\u01b0\u1eddng th\u00e0nh li\u1ec1n m\u1ed9t d\u1ea3i:",
+        "answers": [
+            "A. Y\u00ean",
+            "B. T\u1ec1",
+            "C. T\u1ea7n",
+            "D. Thanh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Qu\u1ed1c gia c\u00f4 \u0111\u1ea1i n\u00e0o \u0111\u00e3 ph\u00e1t minh ra h\u1ec7 \u0111\u1ebfm l\u1ee5c th\u1eadp ph\u00e2n (60)?",
+        "answers": [
+            "A. Ai C\u1eadp",
+            "B. L\u01b0\u1ee1ng H\u00e0",
+            "C. Trung Qu\u1ed1c",
+            "D. Kh\u00f4ng qu\u1ed1c gia n\u00e0o"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Lu\u1eadt \u201cM\u01b0\u1eddi hai b\u1ea3ng\u201d c\u1ee7a La M\u00e3 nh\u1eb1m b\u1ea3o v\u1ec7 quy\u1ec1n l\u1ee3i ai?",
+        "answers": [
+            "A. B\u00ecnh d\u00e2n",
+            "B. Ch\u1ee7 n\u00f4, gi\u1edbi qu\u00fd t\u1ed9c",
+            "C. N\u00f4ng d\u00e2n",
+            "D. N\u00f4 l\u1ec7"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi \u0111\u1ea7u ti\u00ean \u0111o \u0111\u01b0\u1ee3c chi\u1ec1u cao c\u1ee7a Kim T\u1ef1 Th\u00e1p Cheops \u0111\u00fang b\u1eb1ng 146,6m (nay c\u00f2n 138,8 m) l\u00e0 ai?",
+        "answers": [
+            "A. Thales",
+            "B. Pythagore",
+            "C. Euclitus",
+            "D. Euratosthene"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Engels g\u1ecdi ....... l\u00e0 cha \u0111\u1ee1 \u0111\u1ea7u c\u1ee7a \u0111\u1ea1o Thi\u00ean Ch\u00faa?",
+        "answers": [
+            "A. Marcus Aurelius",
+            "B. Seneque",
+            "C. Horatius",
+            "D. Cicero"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ea1o lu\u1eadt h\u00e0 kh\u1eafc nh\u1ea5t Hy L\u1ea1p c\u00f3 t\u00ean l\u00e0:",
+        "answers": [
+            "A. Lu\u1eadt Theseus",
+            "B. Lu\u1eadt 12 b\u1ea3ng",
+            "C. Lu\u1eadt Dracon",
+            "D. Lu\u1eadt Salic"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Hai ho\u00e0ng \u0111\u1ebf La M\u00e3 Constantinus v\u00e0 Licinius k\u00fd s\u1eafc l\u1ec7nh Milano ng\u1eebng s\u00e1t h\u1ea1i t\u00edn \u0111\u1ed3 \u0111\u1ea1o Thi\u00ean Ch\u00faa v\u00e0o th\u1eddi gian:",
+        "answers": [
+            "A. 305",
+            "B. 306",
+            "C. 311",
+            "D. 340"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Thu\u1eadt ng\u1eef v\u0103n minh (civilisation) ban \u0111\u1ea7u c\u00f3 ngh\u0129a l\u00e0 g\u00ec?",
+        "answers": [
+            "A. Ph\u00e1t quang r\u1eebng r\u1eadm",
+            "B. Khai h\u00f3a, l\u00e0m tho\u00e1t kh\u1ecfi t\u00ecnh tr\u1ea1ng nguy\u00ean th\u1ee7y",
+            "C. Hai c\u00e2u \u0111\u1ec1u \u0111\u00fang",
+            "D. Hai c\u00e2u \u0111\u1ec1u sai"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "H\u1ea3i \u0111\u0103ng Alexandria \u0111\u01b0\u1ee3c l\u1ea5y theo t\u00ean c\u1ee7a?",
+        "answers": [
+            "A. Th\u1ea7n",
+            "B. Vua",
+            "C. Th\u00e1nh",
+            "D. K\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng c\u00f4ng tr\u00ecnh n\u00e0y"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi d\u00e2n \u1edf n\u1ec1n v\u0103n minh n\u00e0o ph\u00e1t minh ra b\u00ea t\u00f4ng?",
+        "answers": [
+            "A. Ai C\u1eadp",
+            "B. L\u01b0\u1ee1ng H\u00e0",
+            "C. La M\u00e3",
+            "D. Angkor"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Phong, nh\u00e3, t\u1ee5ng c\u00f3 trong t\u00e1c ph\u1ea9m n\u00e0o?",
+        "answers": [
+            "A. Kinh Thi",
+            "B. Kinh D\u1ecbch",
+            "C. Kinh Xu\u00e2n Thu",
+            "D. Kinh Ph\u1eadt"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Ngh\u0129a c\u1ee7a t\u1eeb \"Islam\" (H\u1ed3i gi\u00e1o, Arab) l\u00e0?",
+        "answers": [
+            "A. Nghe theo",
+            "B. Tu\u00e2n theo",
+            "C. L\u00e0m theo",
+            "D. \u0110i theo"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ngu\u1ed3n cung c\u1ea5p ch\u1ee7 y\u00eau c\u1ee7a n\u00f4 l\u1ec7 ph\u01b0\u01a1ng \u0110\u00f4ng l\u00e0?",
+        "answers": [
+            "A. N\u00f4ng d\u00e2n",
+            "B. Th\u01b0\u01a1ng nh\u00e2n",
+            "C. T\u00f9 binh",
+            "D. C\u1ea3 ba \u0111\u1ec1u \u0111\u00fang"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh \u0111\u1ed3ng ngh\u0129a v\u1edbi t\u1eeb?",
+        "answers": [
+            "A. V\u0103n h\u00f3a",
+            "B. V\u0103n hi\u1ebfn",
+            "C. V\u0103n v\u1eadt",
+            "D. Kh\u00f4ng t\u1eeb n\u00e0o"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "To\u00e1n h\u1ecdc Ai C\u1eadp ra \u0111\u1eddi t\u1eeb r\u1ea5t s\u1edbm v\u00e0 ph\u00e1t tri\u1ec3n kh\u00e1 m\u1ea1nh trong th\u1eddi c\u1ed5 \u0111\u1ea1i, theo b\u1ea1n ngu\u1ed3n g\u1ed1c c\u1ee7a n\u00f3 l\u00e0 do \u0111\u00e2u?",
+        "answers": [
+            "A. \u0110o \u0111\u1ea1c ru\u1ed9ng \u0111\u1ea5t n\u00f4ng nghi\u1ec7p",
+            "B. \u0110o \u0111\u1ea1c m\u1ef1c n\u01b0\u1edbc l\u00ean xu\u1ed1ng c\u1ee7a s\u00f4ng Nile",
+            "C. X\u00e2y nh\u00e0 \u1edf",
+            "D. Bu\u00f4n b\u00e1n xung quanh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "V\u0103n minh Crete - Mycence b\u1ecb h\u1ee7y di\u1ec7t v\u00e0o th\u1eddi gian n\u00e0o?",
+        "answers": [
+            "A. TK 15 TCN",
+            "B. TK 14 TCN",
+            "C. TK 13 TCN",
+            "D. TK 12 TCN"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Ch\u1eef vi\u1ebft \u1ea4n \u0110\u1ed9 xu\u1ea5t hi\u1ec7n \u0111\u1ea7u ti\u00ean v\u00e0o th\u1eddi?",
+        "answers": [
+            "A. Mohenjo Daro - Harappa",
+            "B. Maurya",
+            "C. Gupta",
+            "D. H\u1ed3i gi\u00e1o Delhi"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u00e0 y h\u1ecdc n\u1ed5i ti\u1ebfng Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i l\u00e0 ai?",
+        "answers": [
+            "A. Heraclitus",
+            "B. Hippocrates",
+            "C. Ibn Sina",
+            "D. Avicenne"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Ai l\u00e0 ng\u01b0\u1eddi gi\u1ea3i m\u00e3 th\u00e0nh c\u00f4ng ch\u1eef c\u1ed5 Hy L\u1ea1p lo\u1ea1i B (1600 - 1200 n\u0103m tr\u01b0\u1edbc \u0111\u00e2y; lo\u1ea1i A ch\u01b0a gi\u1ea3i \u0111\u01b0\u01a1c) l\u00e0?",
+        "answers": [
+            "A. Ventris",
+            "B. Champollion",
+            "C. Vetruvius",
+            "D. Kuterois"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "\u1ede Trung Qu\u1ed1c c\u1ed5 \u0111\u1ea1i, ng\u01b0\u1eddi d\u00e2n g\u1ecdi \u0110\u1ed3ng h\u1ed3 n\u01b0\u1edbc l\u00e0:",
+        "answers": [
+            "A. L\u00e2u h\u1ed3",
+            "B. L\u1eadu h\u1ed3",
+            "C. Li\u00eau h\u1ed3",
+            "D. C\u1ea3 3 c\u00e2u \u0111\u1ec1u sai"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00f4ng tin n\u00e0o sau \u0111\u00e2y kh\u00f4ng ch\u00ednh x\u00e1c khi n\u00f3i v\u1ec1 t\u01b0 t\u01b0\u1edfng c\u1ee7a Nho gi\u00e1o?",
+        "answers": [
+            "A. Thuy\u1ebft ch\u00ednh danh \u0111\u1ecbnh m\u1ec7nh",
+            "B. Tin tr\u1eddi, ma qu\u1ef7 l\u00e0 c\u00f3 th\u1eadt; coi tr\u1ecdng gi\u00e1o d\u1ee5c",
+            "C. Tam c\u01b0\u01a1ng, ng\u0169 th\u01b0\u1eddng",
+            "D. Y\u00eau th\u01b0\u01a1ng con ng\u01b0\u1eddi"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u01b0 d\u00e2n La M\u00e3 th\u1eddi k\u1ef3 tr\u01b0\u1edbc khi th\u00e0nh l\u1eadp nh\u00e0 n\u01b0\u1edbc La M\u00e3 n\u0103m 753 TCN g\u1ed3m nh\u1eefng c\u01b0 d\u00e2n n\u00e0o?",
+        "answers": [
+            "A. ng\u01b0\u1eddi Ligures, ng\u01b0\u1eddi Etrusque",
+            "B. ng\u01b0\u1eddi Latinh, ng\u01b0\u1eddi La M\u00e3",
+            "C. ng\u01b0\u1eddi Ligures, ng\u01b0\u1eddi La M\u00e3",
+            "D. ng\u01b0\u1eddi Etrusque, ng\u01b0\u1eddi La M\u00e3"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u00e0nh Roma \u2013 c\u00e1i n\u00f4i \u0111\u1ea7u ti\u00ean c\u1ee7a V\u0103n minh La M\u00e3 \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh?",
+        "answers": [
+            "A. B\u00ean b\u1edd s\u00f4ng Tibre",
+            "B. Tr\u00ean b\u1edd s\u00f4ng Po.",
+            "C. Tr\u00ean \u0111\u1ed3ng b\u1eb1ng Campanium.",
+            "D. Tr\u00ean \u0111\u1ed3ng b\u1eb1ng Britium."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Trong l\u1ecbch s\u1eed v\u0103n minh La M\u00e3, ch\u1eef Latin xu\u1ea5t hi\u1ec7n v\u00e0o kho\u1ea3ng?",
+        "answers": [
+            "A. Th\u1ebf k\u1ef7 8 TCN.",
+            "B. Th\u1ebf k\u1ef7 7 TCN.",
+            "C. Th\u1ebf k\u1ef7 6 TCN.",
+            "D. Th\u1ebf k\u1ef7 5 TCN."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1eddi c\u1ed5 \u0111\u1ea1i, ng\u01b0\u1eddi Hy L\u1ea1p v\u00e0 La M\u00e3 \u0111\u00e3 \u0111em c\u00e1c s\u1ea3n ph\u1ea9m th\u1ee7 c\u00f4ng nghi\u1ec7p b\u00e1n \u1edf \u0111\u00e2u?",
+        "answers": [
+            "A. C\u00e1c n\u01b0\u1edbc ph\u01b0\u01a1ng \u0110\u00f4ng.",
+            "B. Kh\u1eafp th\u1ebf gi\u1edbi",
+            "C. Trung Qu\u1ed1c v\u00e0 \u1ea4n \u0111\u1ed9.",
+            "D. Kh\u1eafp m\u1ecdi mi\u1ec1n \u0110\u1ecba Trung H\u1ea3i."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1ec3 ch\u1ebf d\u00e2n ch\u1ee7 c\u1ed5 \u0111\u1ea1i ph\u01b0\u01a1ng T\u00e2y \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n tr\u00ean l\u00e3nh th\u1ed5 Hy L\u1ea1p th\u1eddi c\u1ed5 \u0111\u1ea1i, Th\u00e0nh bang Spart n\u1eb1m \u1edf \u0111\u1ed3ng b\u1eb1ng?",
+        "answers": [
+            "A. Laconie.",
+            "B. Latium.",
+            "C. Attique",
+            "D. Peloponsese."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u01a1 s\u1edf \u0111\u1ec3 vi\u1ebft ti\u1ebfng Sancrit (ch\u1eef Ph\u1ea1n) trong n\u1ec1n v\u0103n minh \u1ea4n \u0110\u1ed9 l\u00e0:",
+        "answers": [
+            "A. Ch\u1eef Pali.",
+            "B. Ch\u1eef Devanagari.",
+            "C. Ch\u1eef Kharothi.",
+            "D. Ch\u1eef Brathmi."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110\u1ec1n Panth\u00e9on l\u00e0 ki\u1ec7t t\u00e1c ki\u1ebfn tr\u00fac c\u1ee7a n\u1ec1n v\u0103n minh?",
+        "answers": [
+            "A. La M\u00e3.",
+            "B. Hy L\u1ea1p",
+            "C. Bizantine.",
+            "D. T\u00e2y Ban Nha."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "T\u00e1c ph\u1ea9m Tam qu\u1ed1c di\u1ec5n ngh\u0129a c\u1ee7a La Qu\u00e1n Trung \u2013 b\u1ed9 truy\u1ec7n l\u1ecbch s\u1eed x\u00e3 h\u1ed9i \u0111\u1ea7u ti\u00ean c\u1ee7a Trung Qu\u1ed1c \u0111\u01b0\u1ee3c vi\u1ebft d\u01b0\u1edbi th\u1eddi?",
+        "answers": [
+            "A. Nh\u00e0 H\u00e1n.",
+            "B. Nh\u00e0 \u0110\u01b0\u1eddng.",
+            "C. Nh\u00e0 Minh.",
+            "D. Nh\u00e0 Thanh."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi \u0111\u1ea7u ti\u00ean ph\u00e1t minh ra k\u1ef9 thu\u1eadt l\u00e0m gi\u1ea5y t\u1edd t\u1eeb v\u1ecf c\u00e2y, gi\u1ebb r\u00e1ch, l\u01b0\u1edbi c\u0169\u2026 Trong l\u1ecbch s\u1eed v\u0103n minh Trung Qu\u1ed1c l\u00e0:",
+        "answers": [
+            "A. T\u1ea5t Th\u0103ng.",
+            "B. Khuy\u1ebft danh.",
+            "C. Th\u00e1i Lu\u00e2n",
+            "D. Tr\u01b0\u01a1ng H\u00e0nh"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c qu\u1ed1c gia Ph\u00e1p, \u0110\u1ee9c, Italia, Anh ch\u00ednh th\u1ee9c \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh trong:",
+        "answers": [
+            "A. Th\u1ebf k\u1ef7 7.",
+            "B. Th\u1ebf k\u1ef7 8.",
+            "C. Th\u1ebf k\u1ef7 9.",
+            "D. Th\u1ebf k\u1ef7 10."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Amerigo Vespucci \u2013 ng\u01b0\u1eddi kh\u1eb3ng \u0111\u1ecbnh Ch\u00e2u M\u1ef9 l\u00e0 m\u1ed9t t\u00e2n l\u1ee5c \u0111\u1ecba v\u00e0 t\u00ean \u00f4ng \u0111\u01b0\u1ee3c \u0111\u1eb7t t\u00ean cho Ch\u00e2u M\u1ef9 l\u00e0:",
+        "answers": [
+            "A. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi T\u00e2y Ban Nha",
+            "B. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi B\u1ed3 \u0111\u00e0o Nha.",
+            "C. Nh\u00e0 hang h\u1ea3i ng\u01b0\u1eddi \u00dd.",
+            "D. Nh\u00e0 h\u00e0ng h\u1ea3i ng\u01b0\u1eddi Anh."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "N\u1ec1n v\u0103n minh A r\u1eadp h\u00ecnh th\u00e0nh trong kho\u1ea3ng th\u1eddi gian n\u1eeda \u0111\u1ea7u c\u1ee7a?",
+        "answers": [
+            "A. Th\u1ebf k\u1ef7 5",
+            "B. Th\u1ebf k\u1ef7 6",
+            "C. Th\u1ebf k\u1ef7 7",
+            "D. Th\u1ebf k\u1ef7 8"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "\u201cV\u0103n h\u00f3a ph\u1ee5c h\u01b0ng\u201d th\u1eddi Caroligien \u2013 \u0111i\u1ec3m s\u00e1ng c\u1ee7a v\u0103n h\u00f3a T\u00e2y \u00c2u trong th\u1eddi k\u1ef3 \u0110\u00eam tr\u01b0\u1eddng Trung c\u1ed5 di\u1ec5n ra trong th\u1eddi gian t\u1eeb kho\u1ea3ng.",
+        "answers": [
+            "A. N\u1eeda cu\u1ed1i th\u1ebf k\u1ef7 6 \u0111\u1ebfn \u0111\u1ea7u th\u1ebf k\u1ef7 7.",
+            "B. N\u1eeda cu\u1ed1i th\u1ebf k\u1ef7 7 \u0111\u1ebfn \u0111\u1ea7u th\u1ebf k\u1ef7 8.",
+            "C. N\u1eeda cu\u1ed1i th\u1ebf k\u1ef7 9 \u0111\u1ebfn \u0111\u1ea7u th\u1ebf k\u1ef7 9.",
+            "D. N\u1eeda cu\u1ed1i th\u1ebf k\u1ef7 9 \u0111\u1ebfn \u0111\u1ea7u th\u1ebf k\u1ef7 10."
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Lu\u1eadt vi\u1ec5n - c\u1eadn l\u00e0 ph\u00e1t minh c\u1ee7a ai?",
+        "answers": [
+            "A. Archimedes",
+            "B. Apollonios",
+            "C. Apollodor",
+            "D. Newton"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    },
+    {
+        "question": "Khi ng\u01b0\u1eddi Giecman ti\u00eau di\u1ec7t \u0111\u1ebf ch\u1ebf La M\u00e3, nhi\u1ec1u c\u00f4ng tr\u00ecnh ki\u1ebfn tr\u00fac b\u1ecb x\u00e2m h\u1ea1i nh\u01b0ng \u0111\u1ec1n Pantheon v\u1eabn \u0111\u01b0\u1ee3c b\u1ea3o qu\u1ea3n t\u1ed1t. T\u1ea1i sao?",
+        "answers": [
+            "A. V\u00ec n\u00f3 l\u00e0 ph\u1ebf t\u00edch kh\u00f4ng ai ph\u00e1t hi\u1ec7n ra",
+            "B. V\u00ec c\u00e1c chi\u1ebfn binh Giecman chi\u1ebfm l\u00e0m n\u01a1i \u0111\u00f3ng qu\u00e2n",
+            "C. V\u00ec c\u00e1c th\u1ee7 l\u0129nh Giecman chi\u1ebfm l\u00e0m n\u01a1i \u0111\u1eb7t s\u1edf ch\u1ec9 huy",
+            "D. V\u00ec n\u00f3 \u0111\u01b0\u1ee3c chuy\u1ec3n th\u00e0nh nh\u00e0 th\u1edd C\u00f4ng gi\u00e1o"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 3,
+        "explanation": ""
+    },
+    {
+        "question": "Ngh\u1ec7 thu\u1eadt ki\u1ebfn tr\u00fac G\u00f4t\u00edch c\u00f3 ngu\u1ed3n g\u1ed1c t\u1eeb qu\u1ed1c gia n\u00e0o?",
+        "answers": [
+            "A. T\u00e2y Ban Nha",
+            "B. Anh",
+            "C. Ph\u00e1p",
+            "D. \u0110\u1ee9c"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "\u0110i\u1ec1u n\u00e0o sau \u0111\u00e2y kh\u00f4ng \u0111\u00fang khi n\u00f3i v\u1ec1 tr\u01b0\u1eddng \u0111\u1ea1i h\u1ecdc \u1edf ch\u00e2u \u00c2u th\u1ebf k\u1ef7 XI?",
+        "answers": [
+            "A. Kinh ph\u00ed do qu\u1ed1c gia cung c\u1ea5p",
+            "B. \u0110\u01b0\u1ee3c t\u1ed5 ch\u1ee9c nh\u01b0 nh\u1eefng ph\u01b0\u1eddng h\u1ed9i th\u1ee3 th\u1ee7 c\u00f4ng",
+            "C. Ng\u01b0\u1eddi h\u1ecdc \u0111\u01b0\u1ee3c c\u1ed5 v\u0169 tinh th\u1ea7n ho\u00e0i nghi v\u00e0 ch\u1ea5t v\u1ea5n khi h\u1ecdc",
+            "D. Ra \u0111\u1eddi m\u1ed9t c\u00e1ch t\u1ef1 ph\u00e1t"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi Ai c\u1eadp c\u1ed5 \u0111\u1ea1i d\u00f9ng h\u00ecnh v\u1ebd con n\u00f2ng n\u1ecdc \u0111\u1ec3 ch\u1ec9 con s\u1ed1?",
+        "answers": [
+            "A. 1000",
+            "B. 10.000",
+            "C. 100.000",
+            "D. 100"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Thu\u1ed9c t\u00ednh c\u01a1 b\u1ea3n c\u1ee7a kh\u00e1i ni\u1ec7m v\u0103n minh l\u00e0?",
+        "answers": [
+            "A. ti\u1ebfn b\u1ed9",
+            "B. gi\u00e1 tr\u1ecb.",
+            "C. b\u1ec1n v\u1eefng",
+            "D. hi\u1ec7n \u0111\u1ea1i"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "C\u00e1c qu\u1ed1c gia c\u1ed5 \u0111\u1ea1i ph\u01b0\u01a1ng \u0111\u00f4ng \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh trong kho\u1ea3ng th\u1eddi gian n\u00e0o?",
+        "answers": [
+            "A. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 5-2 TCN",
+            "B. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 5-3 TCN",
+            "C. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 4-2 TCN",
+            "D. kho\u1ea3ng thi\u00ean ni\u00ean k\u1ef7 4-3 TCN"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 0,
+        "explanation": ""
+    },
+    {
+        "question": "Th\u1ea7n s\u00f4ng Nile - th\u1ea7n b\u1ea3o tr\u1ee3 n\u00f4ng nghi\u1ec7p \u1edf Ai C\u1eadp c\u1ed5 \u0111\u1ea1i - c\u00f3 t\u00ean g\u1ecdi l\u00e0?",
+        "answers": [
+            "A. Seth",
+            "B. Osiris",
+            "C. Horus",
+            "D. Amon - Ra"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Nh\u00e0 n\u01b0\u1edbc chi\u1ebfm h\u1eefu n\u00f4 l\u1ec7 \u0111\u1ea7u ti\u00ean trong l\u1ecbch s\u1eed Trung Qu\u1ed1c?",
+        "answers": [
+            "A. Nh\u00e0 H\u1ea1",
+            "B. Nh\u00e0 Th\u01b0\u01a1ng",
+            "C. Nh\u00e0 Chu",
+            "D. Nh\u00e0 T\u1ea7n"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "N\u01a1i sinh c\u1ee7a Archimedes?",
+        "answers": [
+            "A. Illion",
+            "B. Sparte",
+            "C. Tyre",
+            "D. Syracuse"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 2,
+        "explanation": ""
+    },
+    {
+        "question": "Ng\u01b0\u1eddi \u0111\u1ea7u ti\u00ean t\u00ecm ra thuy\u1ebft \u0110\u1ecba t\u00e2m l\u00e0?",
+        "answers": [
+            "A. Socrates",
+            "B. Platon",
+            "C. Aristotle",
+            "D. Ptolemee"
+        ],
+        "incorrect_answers": "",
+        "correct_answer": 1,
+        "explanation": ""
+    }
+]
