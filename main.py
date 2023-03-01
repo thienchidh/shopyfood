@@ -529,7 +529,6 @@ def main() -> None:
     application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("quiz", quiz_handler))
     application.add_handler(CommandHandler("quote", quote_handler))
-    application.add_handler(MessageHandler(filters.POLL, receive_poll))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
     application.add_handler(CommandHandler("chui", logic_handlers.handle_chui))
     application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
