@@ -452,6 +452,10 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/quote để lấy một câu trích dẫn ngẫu nhiên.\n"
         "/checkin để tạo một bình chọn checkin.\n"
         "/test để tạo một bình chọn test.\n"
+        "/meme để lấy một meme ngẫu nhiên.\n"
+        "/start_roll để bắt đầu roll.\n"
+        "/info_roll để xem thông tin roll.\n"
+        "/finish_roll để kết thúc roll.\n"
     )
 
     # Define the commands that your bot will support
@@ -470,7 +474,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("quote", "Lấy một câu trích dẫn ngẫu nhiên"),
         BotCommand("checkin", "Tạo một bình chọn checkin"),
         BotCommand("test", "Tạo một bình chọn test"),
-        BotCommand("chui", "Chửi ChíTT"),
+        BotCommand("meme", "Lấy một meme ngẫu nhiên"),
         BotCommand("start_roll", "Bắt đầu roll"),
         BotCommand("info_roll", "Xem thông tin roll"),
         BotCommand("finish_roll", "Kết thúc roll")
