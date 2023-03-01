@@ -43,6 +43,7 @@ async def get_quiz_api():
         correct = answers.index(correct_answer)
         question = str(result['question'])
         question = question.replace("&quot;", "\"")
+        question = question.replace("&#039;", "\'")
 
         stacks.append({
             "question" : question,
