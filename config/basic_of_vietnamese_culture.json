@@ -924,7 +924,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "1.Th\u00e0nh ng\u1eef \u201cS\u1ed1ng l\u00e2u l\u00ean l\u00e3o l\u00e0ng\u201d ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong v\u0103n h\u00f3a t\u1ed5 ch\u1ee9c n\u00f4ng th\u00f4n c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t?",
         "answers": [
             " A.T\u00ednh t\u00f4n ti tr\u1eadt t\u1ef1 ",
             " B.T\u00ednh gia tr\u01b0\u1edfng ",
@@ -936,7 +936,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "2.Ch\u1ebf \u0111\u1ed9 th\u1ecb t\u1ed9c ph\u1ee5 quy\u1ec1n xu\u1ea5t hi\u1ec7n trong x\u00e3 h\u1ed9i Vi\u1ec7t Nam v\u00e0o th\u1eddi k\u1ef3 v\u0103n h\u00f3a n\u00e0o?",
         "answers": [
             " A.V\u0103n h\u00f3a th\u1eddi k\u1ef3 ti\u1ec1n s\u1eed ",
             " B.V\u0103n h\u00f3a V\u0103n Lang \u2013 \u00c2u L\u1ea1c ",
@@ -948,7 +948,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "3.Theo \u0111i\u1ec1u \"Tam b\u1ea5t kh\u1ea3 xu\u1ea5t\" trong lu\u1eadt Gia Long, tr\u01b0\u1eddng h\u1ee3p n\u00e0o sau \u0111\u00e2y th\u00ec ng\u01b0\u1eddi \u0111\u00e0n \u00f4ng kh\u00f4ng \u0111\u01b0\u1ee3c ph\u00e9p b\u1ecf v\u1ee3?",
         "answers": [
             " A.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng c\u00f3 con ",
             " B.Ng\u01b0\u1eddi v\u1ee3 \u0111\u00e3 \u0111\u1ec3 tang cha m\u1eb9 ch\u1ed3ng ",
@@ -960,7 +960,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "4. Theo \u0111i\u1ec1u \u201e\u201eTh\u1ea5t xu\u1ea5t\u201f\u201f trong lu\u1eadt Gia Long, tr\u01b0\u1eddng h\u1ee3p n\u00e0o sau \u0111\u00e2y th\u00ec ng\u01b0\u1eddi \u0111\u00e0n \u00f4ng \u0111\u01b0\u1ee3c ph\u00e9p b\u1ecf v\u1ee3?",
         "answers": [
             " A.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng c\u01b0\u1edbi n\u00e0ng h\u1ea7u cho ch\u1ed3ng ",
             " B.Ng\u01b0\u1eddi v\u1ee3 kh\u00f4ng nu\u00f4i con ri\u00eang c\u1ee7a ch\u1ed3ng ",
@@ -972,7 +972,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "5. D\u01b0\u1edbi th\u1eddi c\u00e1c vua H\u00f9ng, kinh \u0111\u00f4 c\u1ee7a nh\u00e0 n\u01b0\u1edbc V\u0103n Lang \u0111\u01b0\u1ee3c \u0111\u1eb7t \u1edf \u0111\u00e2u?",
         "answers": [
             " A.C\u1ed5 Loa ",
             " B.Phong Ch\u00e2u ",
@@ -984,7 +984,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "6.Qu\u1ed1c hi\u1ec7u \u0110\u1ea1i Vi\u1ec7t \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng \u1edf n\u01b0\u1edbc ta v\u00e0o th\u1eddi k\u1ef3 n\u00e0o?",
         "answers": [
             " A.Th\u1eddi nh\u00e0 \u0110inh ",
             " B.Th\u1eddi nh\u00e0 L\u00fd ",
@@ -996,7 +996,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "7.N\u0103m \u1ea4t M\u00e3o (1075), vua L\u00fd Nh\u00e2n T\u00f4ng (1072-1127) cho m\u1edf khoa thi \u0111\u1ea7u ti\u00ean \u0111\u1ec3 tuy\u1ec3n l\u1ef1a nh\u00e2n t\u00e0i. Ng\u01b0\u1eddi \u0111\u1ed7 \u0111\u1ea7u trong k\u1ef3 thi \u0111\u00f3 l\u00e0 nh\u00e0 Nho",
         "answers": [
             " A.L\u00ea V\u0103n H\u01b0u ",
             " B.Chu V\u0103n An ",
@@ -1332,7 +1332,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "1.Theo quan ni\u1ec7m c\u1ee7a ng\u01b0\u1eddi Ch\u00e0m, th\u1ea7n th\u00e1nh th\u01b0\u1eddng ng\u1ef1 tr\u1ecb \u1edf h\u01b0\u1edbng n\u00e0o c\u1ee7a l\u00e0ng?",
         "answers": [
             " A.\u0110\u00f4ng ",
             " B.T\u00e2y ",
@@ -1344,7 +1344,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "2. V\u00f9ng \u0111\u1ea5t ch\u00f4n c\u1ea5t ng\u01b0\u1eddi ch\u1ebft c\u1ee7a ng\u01b0\u1eddi T\u00e2y Nguy\u00ean th\u01b0\u1eddng n\u1eb1m v\u1ec1 h\u01b0\u1edbng n\u00e0o c\u1ee7a l\u00e0ng?",
         "answers": [
             " A.\u0110\u00f4ng ",
             " B.T\u00e2y ",
@@ -1356,7 +1356,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "3.L\u1ec5 H\u1ea1 \u0111i\u1ec1n l\u00e0 l\u1ec5 h\u1ed9i n\u00f4ng nghi\u1ec7p th\u01b0\u1eddng \u0111\u01b0\u1ee3c t\u1ed5 ch\u1ee9c v\u00e0o th\u1eddi \u0111i\u1ec3m",
         "answers": [
             " A.G\u1eb7t l\u00faa m\u1edbi ",
             " B.\u0110\u1ea7u m\u00f9a c\u1ea5y l\u00faa ",
@@ -1368,7 +1368,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "4.Trong t\u00e1c ph\u1ea9m \u201cL\u1ee5c V\u00e2n Ti\u00ean\u201d c\u1ee7a Nguy\u1ec5n \u0110\u00ecnh Chi\u1ec3u c\u00f3 c\u00e2u: \u201cTh\u00e0 \u0111ui m\u00e0 gi\u1eef \u0111\u1ea1o nh\u00e0, C\u00f2n h\u01a1n s\u00e1ng m\u1eaft \u00f4ng cha kh\u00f4ng th\u1edd\u201d. \u0110\u1ea1o nh\u00e0 trong c\u00e2u th\u01a1 tr\u00ean l\u00e0 \u0111\u1ea1o n\u00e0o?",
         "answers": [
             " A.\u0110\u1ea1o Ph\u1eadt ",
             " B.\u0110\u1ea1o th\u1edd c\u00fang t\u1ed5 ti\u00ean ",
@@ -1392,7 +1392,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "6. H\u00e1t ch\u1ea7u v\u0103n, h\u00e1t b\u00f3ng, m\u00faa b\u00f3ng, h\u1ea7u b\u00f3ng, l\u00ean \u0111\u1ed3ng\u2026 l\u00e0 nh\u1eefng nghi th\u1ee9c h\u00e0nh l\u1ec5 c\u1ee7a t\u00edn ng\u01b0\u1ee1ng n\u00e0o?",
         "answers": [
             " A.T\u00edn ng\u01b0\u1ee1ng ph\u1ed3n th\u1ef1c ",
             " B.T\u00edn ng\u01b0\u1ee1ng th\u1edd M\u1eabu ",
@@ -1404,7 +1404,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "7.T\u1eadp t\u1ee5c \u0111i th\u0103m m\u1ed3 m\u1ea3, l\u0103ng t\u1ea9m \u0111\u1ec3 qu\u00e9t d\u1ecdn, s\u1eeda sang, tu b\u1ed5 n\u01a1i an ngh\u1ec9 c\u1ee7a nh\u1eefng ng\u01b0\u1eddi qu\u00e1 c\u1ed1 \u0111\u01b0\u1ee3c ng\u01b0\u1eddi Vi\u1ec7t ti\u1ebfn h\u00e0nh v\u00e0o d\u1ecbp n\u00e0o trong n\u0103m?",
         "answers": [
             " A.T\u1ebft \u0110oan Ng\u1ecd ",
             " B.L\u1ec5 Vu Lan ",
@@ -1416,7 +1416,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "8. Kinh \u0111\u00f4 Hoa L\u01b0 (Ninh B\u00ecnh) l\u00e0 \u0111\u1ea5t t\u1ed5 c\u1ee7a s\u00e2n kh\u1ea5u ch\u00e8o, v\u00e0 ng\u01b0\u1eddi \u0111\u01b0\u1ee3c t\u00f4n vinh T\u1ed5 ngh\u1ec1 h\u00e1t ch\u00e8o l\u00e0:",
         "answers": [
             " A.B\u00e0 H\u00e0 Th\u1ecb C\u1ea7u ",
             " B.\u00d4ng \u0110\u00e0o Duy T\u1eeb ",
@@ -1428,7 +1428,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "9.Trong ngh\u1ec7 thu\u1eadt h\u00f3a trang tr\u00ean s\u00e2n kh\u1ea5u tu\u1ed3ng, nh\u1eefng k\u00e9p h\u00e1t v\u1ebd m\u1eb7t n\u1ea1 m\u00e0u \u0111\u1ecf l\u00e0 h\u00f3a th\u00e2n c\u1ee7a lo\u1ea1i nh\u00e2n v\u1eadt n\u00e0o?",
         "answers": [
             " A.Ng\u01b0\u1eddi anh h\u00f9ng, trung d\u0169ng ",
             " B.K\u1ebb n\u00f3ng n\u1ea3y b\u1ed9p ch\u1ed9p ",
@@ -1440,7 +1440,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "10. Lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt truy\u1ec1n th\u1ed1ng \u0111\u1ea7u ti\u00ean \u1edf Vi\u1ec7t Nam \u0111\u01b0\u1ee3c UNESCO c\u00f4ng nh\u1eadn l\u00e0 Ki\u1ec7t t\u00e1c di s\u1ea3n v\u0103n h\u00f3a phi v\u1eadt th\u1ec3 v\u00e0 truy\u1ec1n kh\u1ea9u c\u1ee7a nh\u00e2n lo\u1ea1i l\u00e0 :",
         "answers": [
             " A.Nh\u00e3 nh\u1ea1c cung \u0111\u00ecnh Hu\u1ebf ",
             " B.D\u00e2n ca quan h\u1ecd ",
@@ -1452,7 +1452,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "11.B\u1ed9 T\u1ee9 linh Long-L\u00e2n-Quy-Ph\u1ee5ng \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng ph\u1ed5 bi\u1ebfn trong h\u1ed9i h\u1ecda, \u0111i\u00eau kh\u1eafc truy\u1ec1n th\u1ed1ng v\u1edbi nhi\u1ec1u \u00fd ngh\u0129a s\u00e2u s\u1eafc. Trong \u0111\u00f3, h\u00ecnh t\u01b0\u1ee3ng con L\u00e2n mang \u00fd ngh\u0129a:",
         "answers": [
             " A.Bi\u1ec3u tr\u01b0ng cho \u01b0\u1edbc v\u1ecdng th\u00e1i b\u00ecnh ",
             " B.Bi\u1ec3u tr\u01b0ng cho uy l\u1ef1c ",
@@ -1764,7 +1764,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "1. Ng\u01b0\u1eddi Vi\u1ec7t Nam \u0111\u1eb7c bi\u1ec7t coi tr\u1ecdng giao ti\u1ebfp v\u00e0 r\u1ea5t th\u00edch giao ti\u1ebfp. \u0110\u1eb7c \u0111i\u1ec3m n\u00e0y th\u1ec3 hi\u1ec7n trong th\u00f3i quen",
         "answers": [
             " A. Th\u00edch th\u0103m vi\u1ebfng, hi\u1ebfu kh\u00e1ch ",
             " B.\u01afa t\u00ecm hi\u1ec3u, quan s\u00e1t, \u0111\u00e1nh gi\u00e1 \u0111\u1ed1i t\u01b0\u1ee3ng giao ti\u1ebfp ",
@@ -1776,7 +1776,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "2. Th\u00f3i quen n\u00f3i chuy\u1ec7n \u201cv\u00f2ng vo tam qu\u1ed1c\u201d, lu\u00f4n \u0111\u1eafn \u0111o c\u00e2n nh\u1eafc k\u1ef9 c\u00e0ng khi n\u00f3i ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong v\u0103n h\u00f3a giao ti\u1ebfp c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t ?",
         "answers": [
             " A.Tr\u1ecdng danh d\u1ef1 ",
             " B.T\u1ebf nh\u1ecb, \u00fd t\u1ee9 ",
@@ -1788,7 +1788,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "3.C\u00e2u ca dao \u201cY\u00eau nhau y\u00eau c\u1ea3 \u0111\u01b0\u1eddng \u0111i, gh\u00e9t nhau gh\u00e9t c\u1ea3 t\u00f4ng ti h\u1ecd h\u00e0ng\u201d ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec trong v\u0103n h\u00f3a giao ti\u1ebfp c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t?",
         "answers": [
             " A.T\u1ebf nh\u1ecb, \u00fd t\u1ee9, tr\u1ecdng s\u1ef1 h\u00f2a thu\u1eadn ",
             " B.\u0110\u1eafn \u0111o, c\u00e2n nh\u1eafc k\u1ef9 c\u00e0ng khi n\u00f3i ",
@@ -1800,7 +1800,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "4.C\u00e2u \u0111\u1ed1i l\u00e0 m\u1ed9t s\u1ea3n ph\u1ea9m v\u0103n ch\u01b0\u01a1ng \u0111\u1eb7c bi\u1ec7t ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m n\u00e0o c\u1ee7a ngh\u1ec7 thu\u1eadt ng\u00f4n t\u1eeb Vi\u1ec7t Nam?",
         "answers": [
             " A.Xu h\u01b0\u1edbng \u01b0\u1edbc l\u1ec7 ",
             " B.Xu h\u01b0\u1edbng tr\u1ecdng s\u1ef1 c\u00e2n \u0111\u1ed1i, h\u00e0i h\u00f2a ",
@@ -1812,7 +1812,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "5.Trong ti\u1ebfng Vi\u1ec7t, l\u1edbp t\u1eeb xanh l\u01a1, xanh ng\u1eaft, \u0111\u1ecf r\u1ef1c, \u0111\u1ecf au, v\u00e0ng ch\u00f3e, v\u00e0ng m\u01a1, tr\u1eafng tinh, tr\u1eafng phau\u2026 g\u00f3p ph\u1ea7n ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec c\u1ee7a ngh\u1ec7 thu\u1eadt ng\u00f4n t\u1eeb Vi\u1ec7t Nam ?",
         "answers": [
             " A.Xu h\u01b0\u1edbng \u01b0\u1edbc l\u1ec7 ",
             " B.Xu h\u01b0\u1edbng tr\u1ecdng s\u1ef1 c\u00e2n \u0111\u1ed1i, h\u00e0i h\u00f2a ",
@@ -1824,7 +1824,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "6.C\u1ea5u tr\u00fac \u201ci\u1ebfc h\u00f3a\u201d trong ng\u1eef ph\u00e1p ti\u1ebfng Vi\u1ec7t (s\u00e1ch si\u1ebfc, b\u00e0n bi\u1ebfc, y\u00eau i\u1ebfc, ch\u1ed3ng chi\u1ebfc\u2026) ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec c\u1ee7a ngh\u1ec7 thu\u1eadt ng\u00f4n t\u1eeb Vi\u1ec7t Nam ?",
         "answers": [
             " A.T\u00ednh bi\u1ec3u tr\u01b0ng ",
             " B.T\u00ednh linh ho\u1ea1t ",
@@ -1836,7 +1836,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "1.Trong c\u00e1c lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt s\u00e2n kh\u1ea5u truy\u1ec1n th\u1ed1ng c\u1ee7a Vi\u1ec7t Nam, lo\u1ea1i h\u00ecnh n\u00e0o ch\u1ecbu \u1ea3nh h\u01b0\u1edfng c\u1ee7a v\u0103n h\u00f3a ph\u01b0\u01a1ng T\u00e2y s\u1edbm nh\u1ea5t?",
         "answers": [
             " A.Ch\u00e8o ",
             " B.Tu\u1ed3ng ",
@@ -1848,7 +1848,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "2.Trong c\u00e1c lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt s\u00e2n kh\u1ea5u truy\u1ec1n th\u1ed1ng c\u1ee7a Vi\u1ec7t Nam, lo\u1ea1i h\u00ecnh n\u00e0o ch\u1ecbu \u1ea3nh h\u01b0\u1edfng c\u1ee7a v\u0103n h\u00f3a Trung Hoa nhi\u1ec1u nh\u1ea5t?",
         "answers": [
             " A.Ch\u00e8o ",
             " B.Tu\u1ed3ng ",
@@ -1860,7 +1860,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "3. N\u00f3i v\u1ec1 ngh\u1ec7 thu\u1eadt ch\u00e8o truy\u1ec1n th\u1ed1ng c\u1ee7a Vi\u1ec7t Nam, nh\u1eadn \u0111\u1ecbnh n\u00e0o sau \u0111\u00e2y l\u00e0 kh\u00f4ng \u0111\u00fang?",
         "answers": [
             " A.Ch\u00e8o l\u00e0 lo\u1ea1i h\u00ecnh s\u00e2n kh\u1ea5u t\u1ed5ng h\u1ee3p c\u00f3 t\u00ednh c\u00e1ch chuy\u00ean nghi\u1ec7p. ",
             " B.Ch\u00e8o ra \u0111\u1eddi kh\u00e1 s\u1edbm v\u00e0 ph\u00e1t tri\u1ec3n m\u1ea1nh \u1edf B\u1eafc B\u1ed9. ",
@@ -1872,7 +1872,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "4.N\u00f3i v\u1ec1 ngh\u1ec7 thu\u1eadt tu\u1ed3ng c\u1ee7a Vi\u1ec7t Nam, nh\u1eadn \u0111\u1ecbnh n\u00e0o sau \u0111\u00e2y l\u00e0 kh\u00f4ng \u0111\u00fang?",
         "answers": [
             " A.Tu\u1ed3ng l\u00e0 lo\u1ea1i h\u00ecnh s\u00e2n kh\u1ea5u d\u00e2n gian kh\u00f4ng chuy\u00ean nghi\u1ec7p. ",
             " B.Tu\u1ed3ng ph\u00e1t tri\u1ec3n m\u1ea1nh \u1edf Trung B\u1ed9. ",
@@ -1884,7 +1884,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "5.Trong c\u00e1c lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt s\u00e2n kh\u1ea5u truy\u1ec1n th\u1ed1ng, lo\u1ea1i h\u00ecnh n\u00e0o ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c x\u00e3 h\u1ed9i m\u1ed9t c\u00e1ch s\u1ed1ng \u0111\u1ed9ng v\u00e0 s\u00e2u s\u1eafc nh\u1ea5t?",
         "answers": [
             " A.Ch\u00e8o ",
             " B.Tu\u1ed3ng ",
@@ -1896,7 +1896,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "6.Lo\u1ea1i h\u00ecnh s\u00e2n kh\u1ea5u d\u00e2n gian \u0111\u1eb7c s\u1eafc g\u1eafn li\u1ec1n v\u1edbi thi\u00ean nhi\u00ean, ph\u1ea3n \u00e1nh qu\u00e1 tr\u00ecnh th\u00edch \u1ee9ng v\u1edbi t\u1ef1 nhi\u00ean c\u1ee7a ng\u01b0\u1eddi Vi\u1ec7t trong \u0111\u1eddi s\u1ed1ng n\u00f4ng nghi\u1ec7p l\u00e0:",
         "answers": [
             " A.Ch\u00e8o ",
             " B.Tu\u1ed3ng ",
@@ -1908,7 +1908,7 @@
         "explanation": ""
     },
     {
-        "question": "None",
+        "question": "7.Th\u1ee7 ph\u00e1p \u01b0\u1edbc l\u1ec7 tr\u00ean s\u00e2n kh\u1ea5u (ch\u1ec9 d\u00f9ng b\u1ed9 ph\u1eadn, chi ti\u1ebft \u0111\u1ec3 g\u1ee3i cho ng\u01b0\u1eddi xem h\u00ecnh dung ra s\u1ef1 th\u1ef1c ngo\u00e0i \u0111\u1eddi) ph\u1ea3n \u00e1nh \u0111\u1eb7c \u0111i\u1ec3m g\u00ec c\u1ee7a ngh\u1ec7 thu\u1eadt thanh s\u1eafc v\u00e0 h\u00ecnh kh\u1ed1i?",
         "answers": [
             " A.T\u00ednh bi\u1ec3u tr\u01b0ng ",
             " B.T\u00ednh bi\u1ec3u c\u1ea3m ",
