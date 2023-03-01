@@ -41,8 +41,11 @@ async def get_quiz_api():
         answers = answers + [correct_answer]
         random.shuffle(answers)
         correct = answers.index(correct_answer)
+        question = str(result['question'])
+        question = question.replace("&quot;", "\"")
+
         stacks.append({
-            "question" : result['question'],
+            "question" : question,
             "answers" : answers,
             "correct": correct
         })
