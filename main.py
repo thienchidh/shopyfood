@@ -1,9 +1,9 @@
 import asyncio
-from cmath import log
 import json
 import logging
+import random
 import re
-from stringprep import map_table_b2
+import time
 
 import yaml
 from tabulate import tabulate
@@ -26,7 +26,6 @@ import modules.logic_handlers as logic_handlers
 import quiz_loader
 import quote_storate
 from repository import KeyValRepository
-import time
 
 # Enable logging
 logging.basicConfig(
@@ -46,16 +45,18 @@ def attempt_process(url):
             return strategy.process(url)
     return None
 
-def get_poll_from_poll_history(context, poll_index = -1):
+
+def get_poll_from_poll_history(context, poll_index=-1):
     repo = get_repo_bot(context)
     poll_history = repo.get("poll_history")
     if poll_history is None:
         return None
-    if (poll_index >=0 and poll_index < len(poll_history)):
+    if (poll_index >= 0 and poll_index < len(poll_history)):
         return poll_history[poll_index]
-    if (poll_index <0 and abs(poll_index) <= len(poll_history)):
-        return poll_history[poll_index]    
+    if (poll_index < 0 and abs(poll_index) <= len(poll_history)):
+        return poll_history[poll_index]
     return None
+
 
 async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
@@ -125,9 +126,9 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         logger.info("Poll created {0} {1} {2}".format(msg_poll_id, poll_owner_id, message.poll.id))
 
         map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
-        map_msg_poll_id_to_message_id.update({f"{msg_poll_id}" : message.poll.id})
+        map_msg_poll_id_to_message_id.update({f"{msg_poll_id}": message.poll.id})
         repo.set("map_msg_poll_id_to_message_id", map_msg_poll_id_to_message_id)
-        
+
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
             message.poll.id: {
@@ -141,11 +142,11 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         context.bot_data.update(payload)
 
     poll_history = repo.get("poll_history", [])
-    poll_json_object = { 
-        "msg_poll_id" : poll_group_ids[0],
-        "create_at" : time.time(),
+    poll_json_object = {
+        "msg_poll_id": poll_group_ids[0],
+        "create_at": time.time(),
         "owner_id": poll_owner_id,
-                        }
+    }
 
     poll_history.append(poll_json_object)
     repo.set("poll_history", poll_history)
@@ -168,12 +169,12 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     repo.save()
 
-    await send_random_quote(context, update)
+    random_fn = random.choice([send_random_quote, quiz_handler, quiz_handler_2])
+    await random_fn(update, context)
 
 
-async def send_random_quote(context, update):
+async def send_random_quote(update, context):
     await update.effective_message.reply_text(quote_storate.get_random_quote())
-    pass
 
 
 def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
@@ -339,8 +340,8 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
 
+
 async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    
     # logger.info(f"quiz_handler_2 update: {update}")
     # logger.info("Question is", question)
     # logger.info(f"update.effective_user {update.effective_user}")
@@ -350,7 +351,7 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     message_text = update.message.text
     # logger.info(f'message text: {message_text}')
     regex_message_text = r"^([^ ]+)\s(\d+)(.*)$"
-    
+
     question = None
     if message_text is not None:
         match = re.match(regex_message_text, message_text)
@@ -360,7 +361,7 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             if part2 is not None:
                 paramChoice = int(part2) % 2
                 # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
-                question = await quiz_loader.get_quiz_api_2(paramChoice) 
+                question = await quiz_loader.get_quiz_api_2(paramChoice)
     else:
         pass
     if question is None:
@@ -379,9 +380,10 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
 
+
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await send_random_quote(context, update)
+    await send_random_quote(update, context)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -421,15 +423,14 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                     # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
                     element_poll_history = get_poll_from_poll_history(context, poll_index)
                 else:
-                    element_poll_history = get_poll_from_poll_history(context, -1)                    
+                    element_poll_history = get_poll_from_poll_history(context, -1)
             else:
-                element_poll_history = get_poll_from_poll_history(context, -1)        
+                element_poll_history = get_poll_from_poll_history(context, -1)
         else:
             logger.info("checkbill_handler can't find suitable poll")
             return
 
-        message = update.message    
-        
+        message = update.message
 
     repo = get_repo_bot(context)
 
@@ -437,7 +438,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         message_id = f'{message.message_id}'
     else:
         # logger.info(f"checkbill_handler element_poll_history {element_poll_history}")
-        msg_poll_id = element_poll_history["msg_poll_id"] 
+        msg_poll_id = element_poll_history["msg_poll_id"]
         message_id = msg_poll_id
         map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
@@ -445,7 +446,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         # message_id = str(map_msg_poll_id_to_message_id.get(str(msg_poll_id), f"{message.message_id}"))
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id[] {map_msg_poll_id_to_message_id[str(msg_poll_id)]}")
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id.get {map_msg_poll_id_to_message_id.get(msg_poll_id)}")
-        
 
     poll_owner_id = f'{message.chat.id}'
 
@@ -545,6 +545,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/start_roll để bắt đầu roll.\n"
         "/info_roll để xem thông tin roll.\n"
         "/finish_roll để kết thúc roll.\n"
+        "Star github: https://github.com/thienchidh/shopyfood\n"
     )
 
     # Define the commands that your bot will support
@@ -642,11 +643,9 @@ def main() -> None:
     application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
     application.add_handler(CommandHandler("info_roll", logic_handlers.handle_info_game))
     application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
-    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))  
+    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
-
-    
 
 
 if __name__ == "__main__":
