@@ -293,7 +293,7 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 # dice_handler
 async def dice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     limit = int(update.effective_message.text.split(' ')[1])
-    limit = max(1, min(limit, 10))
+    limit = max(1, min(limit, 20))
     for i in range(0, limit):
         await update.effective_message.reply_dice()
 
@@ -312,8 +312,8 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
 
+
 async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    
     # logger.info(f"quiz_handler_2 update: {update}")
     # logger.info("Question is", question)
     # logger.info(f"update.effective_user {update.effective_user}")
@@ -323,7 +323,7 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     message_text = update.message.text
     # logger.info(f'message text: {message_text}')
     regex_message_text = r"^([^ ]+)\s(\d+)(.*)$"
-    
+
     question = None
     if message_text is not None:
         match = re.match(regex_message_text, message_text)
@@ -333,7 +333,7 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             if part2 is not None:
                 paramChoice = int(part2) % 2
                 # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
-                question = await quiz_loader.get_quiz_api_2(paramChoice) 
+                question = await quiz_loader.get_quiz_api_2(paramChoice)
     else:
         pass
     if question is None:
@@ -352,9 +352,17 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
 
+
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await send_random_quote(context, update)
+
+
+async def repeat_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await context.bot.send_message(
+        chat_id=update.effective_chat.id,
+        text=update.effective_message.text
+    )
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -571,16 +579,15 @@ def main() -> None:
     application.add_handler(CommandHandler("quiz", quiz_handler))
     application.add_handler(CommandHandler("quiz2", quiz_handler_2))
     application.add_handler(CommandHandler("quote", quote_handler))
+    application.add_handler(CommandHandler("repeat", repeat_handler))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
     application.add_handler(CommandHandler("meme", logic_handlers.handle_chui))
     application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
     application.add_handler(CommandHandler("info_roll", logic_handlers.handle_info_game))
     application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
-    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))  
+    application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
-
-    
 
 
 if __name__ == "__main__":
