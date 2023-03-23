@@ -389,9 +389,18 @@ async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 async def repeat_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     num_repeat = int(update.effective_message.text.split(' ')[1])
     num_repeat = max(1, min(num_repeat, 20))
-    content = update.effective_message.text.split(' ', 2)[2]
+
+    # get message to repeat
+    message = update.effective_message.reply_to_message
+    if message is None:
+        content = update.effective_message.text.split(' ', 2)[2]
+        for i in range(0, num_repeat):
+            await context.bot.send_message(update.effective_chat.id, content)
+        return
+
+    # repeat message
     for i in range(0, num_repeat):
-        await context.bot.send_message(update.effective_chat.id, content)
+        await context.bot.copy_message(update.effective_chat.id, update.effective_chat.id, message.message_id)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
