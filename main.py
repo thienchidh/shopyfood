@@ -387,10 +387,11 @@ async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
 
 async def repeat_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await context.bot.send_message(
-        chat_id=update.effective_chat.id,
-        text=update.effective_message.text
-    )
+    num_repeat = int(update.effective_message.text.split(' ')[1])
+    num_repeat = max(1, min(num_repeat, 20))
+    content = update.effective_message.text.split(' ', 2)[2]
+    for i in range(0, num_repeat):
+        await context.bot.send_message(update.effective_chat.id, content)
 
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -552,6 +553,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/start_roll để bắt đầu roll.\n"
         "/info_roll để xem thông tin roll.\n"
         "/finish_roll để kết thúc roll.\n"
+        "/repeat [n] để lặp lại tin nhắn n lần.\n"
         "Star github: https://github.com/thienchidh/shopyfood\n"
     )
 
@@ -575,7 +577,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("meme", "Lấy một meme ngẫu nhiên"),
         BotCommand("start_roll", "Bắt đầu roll"),
         BotCommand("info_roll", "Xem thông tin roll"),
-        BotCommand("finish_roll", "Kết thúc roll")
+        BotCommand("finish_roll", "Kết thúc roll"),
+        BotCommand("repeat", "Lặp lại tin nhắn n lần"),
     ]
     await context.bot.set_my_commands(commands)
 
