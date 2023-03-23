@@ -1,9 +1,11 @@
 import asyncio
 import json
-import logging
 import random
 import re
 import time
+from logger import logger
+import CONST
+from all_repo_func import get_repo_bot, get_repo_user
 
 import yaml
 from tabulate import tabulate
@@ -26,12 +28,8 @@ import modules.logic_handlers as logic_handlers
 import quiz_loader
 import quote_storate
 from repository import KeyValRepository
+from util import save_data_for_quiz
 
-# Enable logging
-logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
-)
-logger = logging.getLogger(__name__)
 
 strategies = [
     crawl_shopeefood,
@@ -136,6 +134,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 "message_id": message.message_id,
                 "chat_id": update.effective_chat.id,
                 "answers": dict(),  # {user_id: [answer_index]}
+                "poll_type": POLL_TYPE_PICK_DISH
             }
         }
         poll_data.update(payload)
@@ -177,20 +176,7 @@ async def send_random_quote(update, context):
     await update.effective_message.reply_text(quote_storate.get_random_quote())
 
 
-def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
-    repo = context.user_data.get(user_id)
-    if not repo or repo is not KeyValRepository:
-        repo = KeyValRepository(user_id)
-        context.user_data[user_id] = repo
-    return repo
 
-
-def get_repo_bot(context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
-    repo = context.bot_data.get('bot')
-    if not repo or repo is not KeyValRepository:
-        repo = KeyValRepository('bot')
-        context.bot_data['bot'] = repo
-    return repo
 
 
 async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -200,9 +186,46 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     answer = update.poll_answer
     logger.info(f"receive_poll_answer answers {update.poll_answer}")
     answered_poll = all_poll_data.get(answer.poll_id)
+
+    selected_options = answer.option_ids
+    effective_user = update.effective_user
+    effective_user_id = f'{effective_user.id}'
+
+    if answered_poll is None:
+        logger.info("Khong get duoc poll id")
+        return
+    poll_type = answered_poll["poll_type"]
+    if poll_type is not None:
+        if (poll_type == CONST.POLL_TYPE_QUIZ_1):
+            logger.info("day la poll type quiz 1")
+            return
+            pass
+        elif (poll_type == CONST.POLL_TYPE_QUIZ_2):
+            logger.info("day la poll type quiz 2")
+            logger.info(f"poll_id: {answer.poll_id}")
+            user_answers = answered_poll["user_answers"]
+            correct_options_id = int(answered_poll["correct_options_id"])
+            one_selected_option = int(selected_options[0]) 
+            payload = {
+                effective_user_id: {
+                    "timestamp": time.time(),
+                    "answers": one_selected_option,
+                    "answer_correct": (one_selected_option == correct_options_id)
+                }                    
+            }
+            user_answers.update(payload)
+            repo.save()
+            return
+            pass    
+        elif (poll_type == CONST.POLL_TYPE_PICK_DISH):
+            logger.info("day la poll type chon mon")
+            pass    
+        else:
+            logger.info("khong thuoc cac loai tren")    
+            pass
     questions = answered_poll["questions"]
     answers = answered_poll["answers"]
-    selected_options = answer.option_ids
+  
     answer_string = ""
     for question_id in selected_options:
         if question_id != selected_options[-1]:
@@ -210,8 +233,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         else:
             answer_string += questions[question_id]
 
-    effective_user = update.effective_user
-    effective_user_id = f'{effective_user.id}'
+   
     answers[effective_user_id] = selected_options
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
     chat_id_names[effective_user_id] = f'@{effective_user.username}'
@@ -331,7 +353,7 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     print("Question is", question)
     options = question['answers']
     randint = question['correct']
-    await update.effective_message.reply_poll(
+    message = await update.effective_message.reply_poll(
         question=question['question'],
         options=options,
         is_anonymous=False,
@@ -339,6 +361,8 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         correct_option_id=randint,
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
+    save_data_for_quiz(update, context, message, question)
+
 
 
 async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -371,7 +395,7 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     randint = question['correct']
     logger.info(f"Question: {question}")
     logger.info(f"answers: {options}")
-    await update.effective_message.reply_poll(
+    message = await update.effective_message.reply_poll(
         question=question['question'],
         options=options,
         is_anonymous=False,
@@ -379,7 +403,8 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         correct_option_id=randint,
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
-
+    save_data_for_quiz(update, context, message, question)
+    
 
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
