@@ -1,7 +1,9 @@
 import asyncio
 import json
 import logging
+import random
 import re
+import time
 
 import yaml
 from tabulate import tabulate
@@ -41,6 +43,18 @@ def attempt_process(url):
     for strategy in strategies:
         if strategy.is_support_url(url):
             return strategy.process(url)
+    return None
+
+
+def get_poll_from_poll_history(context, poll_index=-1):
+    repo = get_repo_bot(context)
+    poll_history = repo.get("poll_history")
+    if poll_history is None:
+        return None
+    if (poll_index >= 0 and poll_index < len(poll_history)):
+        return poll_history[poll_index]
+    if (poll_index < 0 and abs(poll_index) <= len(poll_history)):
+        return poll_history[poll_index]
     return None
 
 
@@ -111,6 +125,10 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         parent_poll_ids[msg_poll_id] = parent_poll_id
         logger.info("Poll created {0} {1} {2}".format(msg_poll_id, poll_owner_id, message.poll.id))
 
+        map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
+        map_msg_poll_id_to_message_id.update({f"{msg_poll_id}": message.poll.id})
+        repo.set("map_msg_poll_id_to_message_id", map_msg_poll_id_to_message_id)
+
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
             message.poll.id: {
@@ -122,6 +140,16 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         }
         poll_data.update(payload)
         context.bot_data.update(payload)
+
+    poll_history = repo.get("poll_history", [])
+    poll_json_object = {
+        "msg_poll_id": poll_group_ids[0],
+        "create_at": time.time(),
+        "owner_id": poll_owner_id,
+    }
+
+    poll_history.append(poll_json_object)
+    repo.set("poll_history", poll_history)
 
     all_parent_poll_ids = repo.compute_if_absent('parent_poll_ids', lambda k: dict())
     map = all_parent_poll_ids.get(poll_owner_id, dict())
@@ -141,12 +169,12 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     repo.save()
 
-    await send_random_quote(context, update)
+    random_fn = random.choice([send_random_quote, quiz_handler, quiz_handler_2])
+    await random_fn(update, context)
 
 
-async def send_random_quote(context, update):
+async def send_random_quote(update, context):
     await update.effective_message.reply_text(quote_storate.get_random_quote())
-    pass
 
 
 def get_repo_user(user_id, context: ContextTypes.DEFAULT_TYPE) -> KeyValRepository:
@@ -355,7 +383,7 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await send_random_quote(context, update)
+    await send_random_quote(update, context)
 
 
 async def repeat_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -383,16 +411,53 @@ def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
 
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message.reply_to_message
+    # logger.info(f"checkbill_hander update.effective_message {update.effective_message}")
+    # logger.info(f"checkbill_hander update.message {update.message}")
+    element_poll_history = None
     if not message or message.poll is None:
-        logger.info("checkbill_hander Poll not found")
-        return
+        # logger.info("checkbill_hander Poll not found")
+        # logger.info(f"checkbill_handler {message}") #-> expect None
+        # logger.info(f"checkbill_handler {update.message.text}")  #-> expect text
+        message_text = update.message.text
+        regex_message_text = r"^([^ ]+)\s([\+\-]{0,1}\d+)(.*)$"
+        if message_text is not None:
+            match = re.match(regex_message_text, message_text)
+            if match is not None:
+                part1 = match.group(1)
+                part2 = match.group(2)
+                if part2 is not None:
+                    poll_index = int(part2)
+                    # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
+                    element_poll_history = get_poll_from_poll_history(context, poll_index)
+                else:
+                    element_poll_history = get_poll_from_poll_history(context, -1)
+            else:
+                element_poll_history = get_poll_from_poll_history(context, -1)
+        else:
+            logger.info("checkbill_handler can't find suitable poll")
+            return
+
+        message = update.message
+
+    repo = get_repo_bot(context)
+
+    if element_poll_history is None:
+        message_id = f'{message.message_id}'
+    else:
+        # logger.info(f"checkbill_handler element_poll_history {element_poll_history}")
+        msg_poll_id = element_poll_history["msg_poll_id"]
+        message_id = msg_poll_id
+        map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
+        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
+        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
+        # message_id = str(map_msg_poll_id_to_message_id.get(str(msg_poll_id), f"{message.message_id}"))
+        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id[] {map_msg_poll_id_to_message_id[str(msg_poll_id)]}")
+        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id.get {map_msg_poll_id_to_message_id.get(msg_poll_id)}")
 
     poll_owner_id = f'{message.chat.id}'
-    message_id = f'{message.message_id}'
 
     logger.info("Info poll " + poll_owner_id + " " + message_id)
     poll_data = get_poll_data_by_message_id(context, message_id)
-    repo = get_repo_bot(context)
     parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
     poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
 
@@ -407,7 +472,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     ]
     parent_id = parent_poll_ids.get(message_id)
     # List all poll that have common parent
-    list_poll_ids = poll_group_ids.get(parent_id)
+    list_poll_ids = poll_group_ids.get(parent_id, dict())
     # tong hop data tung poll
 
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
@@ -487,6 +552,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/start_roll để bắt đầu roll.\n"
         "/info_roll để xem thông tin roll.\n"
         "/finish_roll để kết thúc roll.\n"
+        "Star github: https://github.com/thienchidh/shopyfood\n"
     )
 
     # Define the commands that your bot will support
