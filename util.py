@@ -1,9 +1,11 @@
+from datetime import datetime, timedelta
 import random
 import string
 from logger import logger
 import CONST
-from all_repo_func import get_repo_user, get_repo_bot
-
+import hashlib
+import time
+from all_get_repo_func import *
 
 def get_url_with_no_params(url):
     return url.split('?')[0]
@@ -52,7 +54,10 @@ def generate_random_id(length=8):
 
     return random_id 
 
-def save_data_for_quiz(update, context, message, question):
+
+
+    
+def save_data_for_quiz(update, context, message, question, poll_type):
     msg_poll_id = f'{message.message_id}'
     logger.info(f'msg_poll_id : {msg_poll_id}')
     logger.info(f'message.poll.id : {message.poll.id}')
@@ -60,17 +65,45 @@ def save_data_for_quiz(update, context, message, question):
     poll_data = dict()
     payload =  {
         message.poll.id: {
+            "timestamp": time.time(),
             "chat_id": update.effective_chat.id,   
             "message_id": message.message_id,
             "user_answers": {},
-            "poll_type": CONST.POLL_TYPE_QUIZ_2,
+            "poll_type": poll_type,
             "question": question["question"],
             "options": question["answers"],
             "correct_options_id": question["correct"]      
             }
     }
-    
+    variable_question = question["question"]
+    string_md5_question = hashlib.md5(variable_question.encode()).hexdigest()
+    all_quiz_info_in_one = repo.compute_if_absent("all_quiz_info_in_one", lambda k: dict())
+    payload_quiz_info = {
+                string_md5_question: {
+                    "timeline_create": [
+                        {
+                            "poll_id": message.poll.id,
+                            "user_answer_correct": [],
+                            "user_answer_wrong": []
+                        }
+                    ]
+                }
+            }
+    all_quiz_info_in_one.update(payload_quiz_info)       
     poll_data.update(payload)
-    all_poll_data = repo.compute_if_absent("poll_data", dict())
+    all_poll_data = repo.compute_if_absent("poll_data", lambda k: dict())
     all_poll_data.update(poll_data)
     repo.save()
+
+def get_datetime_at_midnight():
+    date_now = datetime.now()
+    datetime_midnight = datetime(date_now.year, date_now.month, date_now.day, 0, 0)
+    return datetime_midnight.strftime("%Y-%b-%d") 
+
+def get_datetime_at_midnight_and_add_days(days):
+    date_now = datetime.now()
+    datetime_midnight = datetime(date_now.year, date_now.month, date_now.day, 0, 0)
+    datetime_cal = datetime_midnight + timedelta(days=days)
+    return datetime_cal.strftime("%Y-%b-%d")
+     
+
