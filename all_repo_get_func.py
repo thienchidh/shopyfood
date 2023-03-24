@@ -13,19 +13,29 @@ def repo_get_all_user_info_at_day_index(repo, day_index):
     return day_info_user_info.get("user_info", dict())
     
 
-def repo_get_specifict_user_info_at_day_index(repo, user_id, day_index):
+def repo_get_specific_user_info_at_day_index(repo, user_id, day_index):
     all_user_info_at_day_index = repo_get_all_user_info_at_day_index(repo, day_index)
     return all_user_info_at_day_index.get(user_id, dict())
     
-    
+def repo_get_all_choose_poll_of_specific_user_at_day_index(repo, user_id, day_index):
+    specifict_user_at_day_index = repo_get_specific_user_info_at_day_index(repo, user_id, day_index)
+    return specifict_user_at_day_index.get("choose_poll", [])    
+
+def repo_get_user_chat_id_name_by_user_id(repo, user_id):
+    chat_id_names = repo.get("chat_id_names", dict())
+    return chat_id_names.get(user_id, dict())
 
 
 def repo_get_poll_data_by_poll_id(repo, poll_id):
     all_poll_data = repo.get("poll_data", dict())
     return all_poll_data.get(poll_id, dict())
     
+    
 
-
+def repo_get_specific_user_answers_by_poll_id(repo, poll_id, user_id):
+    poll_by_poll_id = repo_get_poll_data_by_poll_id(repo, poll_id)
+    all_user_answers_at_poll = poll_by_poll_id.get("user_answers", dict())
+    return all_user_answers_at_poll.get(user_id, dict())    
 
 def repo_get_repo_bot_day_info_at_specific_date(repo, datetime_midnight):
     # repo = get_repo_bot(context)

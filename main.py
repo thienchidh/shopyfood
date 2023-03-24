@@ -32,6 +32,7 @@ from util import get_datetime_at_midnight, save_data_for_quiz
 import hashlib
 from all_get_repo_func import *
 from all_repo_get_func import *
+from datetime import datetime
 strategies = [
     crawl_shopeefood,
     crawl_grabfood,
@@ -234,9 +235,8 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             choose_poll = specifict_user_info.get("choose_poll", [])
             choose_poll.append(answer.poll_id)
             user_info[effective_user_id]["choose_poll"] = choose_poll   
-
-            
-            repo.save()
+            save_data_user_name(repo, effective_user_id, effective_user)
+            # repo.save()
             return
             pass    
         elif (poll_type == CONST.POLL_TYPE_PICK_DISH):
@@ -257,9 +257,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
 
    
     answers[effective_user_id] = selected_options
-    chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
-    chat_id_names[effective_user_id] = f'@{effective_user.username}'
-    repo.save()
+    save_data_user_name(repo, effective_user_id, effective_user)
     if answer_string == "":
         await context.bot.send_message(
             answered_poll["chat_id"],
@@ -434,7 +432,12 @@ async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
 async def rank_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     repo = get_repo_bot(context)
-    rank_handlers.stat_at_day_index(repo)
+    table_data = rank_handlers.stat_at_day_index(repo)
+    table_str = "----------" + datetime.now().strftime("%Y-%b-%d") +  "----------" + "\n"
+    table_str += tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
+    await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
+    pass
+
 
 async def repeat_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     num_repeat = int(update.effective_message.text.split(' ')[1])

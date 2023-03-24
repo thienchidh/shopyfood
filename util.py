@@ -55,7 +55,11 @@ def generate_random_id(length=8):
     return random_id 
 
 
-
+def save_data_user_name(repo, effective_user_id, effective_user):
+    chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
+    chat_id_names[effective_user_id] = f'@{effective_user.username}'
+    repo.save()
+    pass
     
 def save_data_for_quiz(update, context, message, question, poll_type):
     msg_poll_id = f'{message.message_id}'
