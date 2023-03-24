@@ -75,12 +75,12 @@ def set_players(chat_id: str, players):
     data['players'] = players
 
 def sort_players(a : str):
-    base_score = math.pow(6, 10)
+    base_score = math.pow(7, 10)
     scores = list(a)
     total_score = 0
     for score in scores:
         total_score += base_score * int(score)
-        base_score /= 6
+        base_score /= 7
         if base_score == 1:
             return total_score
     return total_score
