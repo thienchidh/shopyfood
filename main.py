@@ -365,7 +365,7 @@ async def delete_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 # dice_handler
 async def dice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     limit = int(update.effective_message.text.split(' ')[1])
-    limit = max(1, min(limit, 10))
+    limit = max(1, min(limit, 20))
     for i in range(0, limit):
         await update.effective_message.reply_dice()
 
@@ -435,6 +435,23 @@ async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 async def rank_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     repo = get_repo_bot(context)
     rank_handlers.stat_at_day_index(repo)
+
+async def repeat_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    num_repeat = int(update.effective_message.text.split(' ')[1])
+    num_repeat = max(1, min(num_repeat, 20))
+
+    # get message to repeat
+    message = update.effective_message.reply_to_message
+    if message is None:
+        content = update.effective_message.text.split(' ', 2)[2]
+        for i in range(0, num_repeat):
+            await context.bot.send_message(update.effective_chat.id, content)
+        return
+
+    # repeat message
+    for i in range(0, num_repeat):
+        await context.bot.copy_message(update.effective_chat.id, update.effective_chat.id, message.message_id)
+
 
 async def bill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.effective_message.reply_text(f"Xin chào {update.effective_user.mention_html()}",
@@ -595,6 +612,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/start_roll để bắt đầu roll.\n"
         "/info_roll để xem thông tin roll.\n"
         "/finish_roll để kết thúc roll.\n"
+        "/repeat [n] để lặp lại tin nhắn n lần.\n"
         "/rank để xem thống kê.\n"
         "Star github: https://github.com/thienchidh/shopyfood\n"
     )
@@ -620,7 +638,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("start_roll", "Bắt đầu roll"),
         BotCommand("info_roll", "Xem thông tin roll"),
         BotCommand("finish_roll", "Kết thúc roll"),
-        BotCommand("rank", "Để xem thống kê")
+        BotCommand("repeat", "Lặp lại tin nhắn n lần"),
+        BotCommand("rank", "Để xem thống kê"),
     ]
     await context.bot.set_my_commands(commands)
 
@@ -690,6 +709,7 @@ def main() -> None:
     application.add_handler(CommandHandler("quiz", quiz_handler))
     application.add_handler(CommandHandler("quiz2", quiz_handler_2))
     application.add_handler(CommandHandler("quote", quote_handler))
+    application.add_handler(CommandHandler("repeat", repeat_handler))
     application.add_handler(PollAnswerHandler(receive_poll_answer))
     application.add_handler(CommandHandler("meme", logic_handlers.handle_chui))
     application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
