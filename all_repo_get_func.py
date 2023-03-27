@@ -30,11 +30,13 @@ def repo_get_poll_data_by_poll_id(repo, poll_id):
     all_poll_data = repo.get("poll_data", dict())
     return all_poll_data.get(poll_id, dict())
     
-    
-
-def repo_get_specific_user_answers_by_poll_id(repo, poll_id, user_id):
+def repo_get_all_user_answers_by_poll_id(repo, poll_id):
     poll_by_poll_id = repo_get_poll_data_by_poll_id(repo, poll_id)
     all_user_answers_at_poll = poll_by_poll_id.get("user_answers", dict())
+    return all_user_answers_at_poll
+
+def repo_get_specific_user_answers_by_poll_id(repo, poll_id, user_id):
+    all_user_answers_at_poll = repo_get_all_user_answers_by_poll_id(repo, poll_id)
     return all_user_answers_at_poll.get(user_id, dict())    
 
 def repo_get_repo_bot_day_info_at_specific_date(repo, datetime_midnight):
