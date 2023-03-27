@@ -22,7 +22,7 @@ def calculate_point(repo, user_id, poll_id):
         return 0 
     
 
-    bonus_point_fast_answer = filtered_elements[0]["point"]
+    bonus_point_fast_answer = filtered_elements[0]["point"] if filtered_elements[0]["answer_correct"] == True else 0
     answer_right = 1 if filtered_elements[0]["answer_correct"] == True else 0
     answer_wrong = 1 if filtered_elements[0]["answer_correct"] == False else 0
 
