@@ -33,6 +33,7 @@ import hashlib
 from all_get_repo_func import *
 from all_repo_get_func import *
 from datetime import datetime
+
 strategies = [
     crawl_shopeefood,
     crawl_grabfood,
@@ -51,9 +52,9 @@ def get_poll_from_poll_history(context, poll_index=-1):
     poll_history = repo.get("poll_history")
     if poll_history is None:
         return None
-    if (poll_index >= 0 and poll_index < len(poll_history)):
+    if poll_index >= 0 and poll_index < len(poll_history):
         return poll_history[poll_index]
-    if (poll_index < 0 and abs(poll_index) <= len(poll_history)):
+    if poll_index < 0 and abs(poll_index) <= len(poll_history):
         return poll_history[poll_index]
     return None
 
@@ -178,9 +179,6 @@ async def send_random_quote(update, context):
     await update.effective_message.reply_text(quote_storate.get_random_quote())
 
 
-
-
-
 async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Summarize a users poll vote"""
     repo = get_repo_bot(context)
@@ -198,16 +196,16 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         return
     poll_type = answered_poll["poll_type"]
     if poll_type is not None:
-        if (poll_type == CONST.POLL_TYPE_QUIZ_1):
+        if poll_type == CONST.POLL_TYPE_QUIZ_1:
             logger.info("day la poll type quiz 1")
             return
             pass
-        elif (poll_type == CONST.POLL_TYPE_QUIZ_2):
+        elif poll_type == CONST.POLL_TYPE_QUIZ_2:
             logger.info("day la poll type quiz 2")
             logger.info(f"poll_id: {answer.poll_id}")
             user_answers = answered_poll["user_answers"]
             correct_options_id = int(answered_poll["correct_options_id"])
-            one_selected_option = int(selected_options[0]) 
+            one_selected_option = int(selected_options[0])
             # variable_question = answered_poll["question"]
             # string_md5_question = hashlib.md5(variable_question).hexdigest()
             payload = {
@@ -215,39 +213,39 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
                     "timestamp": time.time(),
                     "answers": one_selected_option,
                     "answer_correct": (one_selected_option == correct_options_id)
-                }                    
+                }
             }
             user_answers.update(payload)
-          
+
             datetime_midnight = get_datetime_at_midnight()
             logger.info(f"datetime_midnight : {datetime_midnight}")
             day_info_at_specific_date = repo_get_repo_bot_day_info_at_specific_date(repo, datetime_midnight)
-            user_info = day_info_at_specific_date.get("user_info", dict()) 
-            if (effective_user_id not in user_info):
+            user_info = day_info_at_specific_date.get("user_info", dict())
+            if effective_user_id not in user_info:
                 payload_user_info = {
                     effective_user_id: {
                         "choose_poll": []
-                    }                        
+                    }
                 }
-                user_info.update(payload_user_info)       
-            
+                user_info.update(payload_user_info)
+
             specifict_user_info = user_info.get(effective_user_id, dict())
             choose_poll = specifict_user_info.get("choose_poll", [])
             choose_poll.append(answer.poll_id)
-            user_info[effective_user_id]["choose_poll"] = choose_poll   
+            user_info[effective_user_id]["choose_poll"] = choose_poll
             save_data_user_name(repo, effective_user_id, effective_user)
             # repo.save()
             return
-            pass    
-        elif (poll_type == CONST.POLL_TYPE_PICK_DISH):
+            pass
+        elif poll_type == CONST.POLL_TYPE_PICK_DISH:
             logger.info("day la poll type chon mon")
-            pass    
+            pass
         else:
-            logger.info("khong thuoc cac loai tren")    
+            logger.info("khong thuoc cac loai tren")
             pass
     questions = answered_poll["questions"]
     answers = answered_poll["answers"]
-  
+
     answer_string = ""
     for question_id in selected_options:
         if question_id != selected_options[-1]:
@@ -255,7 +253,6 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         else:
             answer_string += questions[question_id]
 
-   
     answers[effective_user_id] = selected_options
     save_data_user_name(repo, effective_user_id, effective_user)
     if answer_string == "":
@@ -384,7 +381,6 @@ async def quiz_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     save_data_for_quiz(update, context, message, question, CONST.POLL_TYPE_QUIZ_1)
 
 
-
 async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # logger.info(f"quiz_handler_2 update: {update}")
     # logger.info("Question is", question)
@@ -424,16 +420,17 @@ async def quiz_handler_2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         explanation="Đáp án đúng là {}".format(options[randint]),
     )
     save_data_for_quiz(update, context, message, question, CONST.POLL_TYPE_QUIZ_2)
-    
+
 
 # quote_handler
 async def quote_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await send_random_quote(update, context)
 
+
 async def rank_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     repo = get_repo_bot(context)
     table_data = rank_handlers.stat_at_day_index(repo)
-    table_str = "----------" + datetime.now().strftime("%Y-%b-%d") +  "----------" + "\n"
+    table_str = "----------" + datetime.now().strftime("%Y-%b-%d") + "----------" + "\n"
     table_str += tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
     await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
     pass
