@@ -109,5 +109,13 @@ def get_datetime_at_midnight_and_add_days(days):
     datetime_midnight = datetime(date_now.year, date_now.month, date_now.day, 0, 0)
     datetime_cal = datetime_midnight + timedelta(days=days)
     return datetime_cal.strftime("%Y-%b-%d")
+
+def remove_non_digits(input_string):
+    """
+    Removes any non-digit characters from the input string and returns the resulting string
+    """
+    output_string = ''.join(filter(str.isdigit, input_string))
+    return output_string
+
      
 
