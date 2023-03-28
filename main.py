@@ -553,15 +553,15 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                     logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
                     for i in list_answer_of_this_user:
                         string_answer = poll_data["questions"][i]
-                        match = re.match(r'^(.*?)(\d{1,3}(,\d{3})*)\s*(.*?)$', string_answer)
+                        match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
                         if match:
                             index += 1
-                            part1 = match.group(1)
-                            price_str = part2 = match.group(2)  # price
-                            price_int = int(price_str.replace(",", ""))
-                            part3 = match.group(4)
+                            part1_dish = match.group(1)
+                            price_str = match.group(2)  # price
+                            price_int = int(remove_non_digits(price_str))
+                            price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
                             name = chat_id_names.get(key, key)
-                            row = [index, f"{name}", part1, part2 + part3]
+                            row = [index, f"{name}", part1_dish, price_str_format]
                             table_data.append(row)
                             subtotal_int += price_int
 
