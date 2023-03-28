@@ -60,8 +60,12 @@ def process(url):
 
         item = {
             'name': util.safe_get(value, ['name']),
-            'price': util.safe_get(value, ['offers', 'price'])
+            'price': util.safe_get(value, ['offers', 'price']),
+            'price_value': util.safe_get(value, ['offers', 'price'], '').replace('.', '').strip(),
         }
         items.append(item)
+
+    # unique items
+    items = list({v['name']: v for v in items}.values())
 
     return "[Grab] " + title, items
