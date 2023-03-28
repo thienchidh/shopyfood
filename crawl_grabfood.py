@@ -6,19 +6,18 @@ from bs4 import BeautifulSoup
 import util
 
 headers = {
-    'authority': 'food.grab.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'vi',
+    'accept': 'application/json, text/plain, */*',
+    'accept-language': 'vi,en;q=0.9,und;q=0.8,mt;q=0.7',
     'dnt': '1',
-    'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
+    'origin': 'https://food.grab.com',
+    'referer': 'https://food.grab.com/',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
 }
 
 
@@ -55,7 +54,8 @@ def process(url):
     values = util.get_values_by_key(json_data, '@type', lambda v: v == 'MenuItem')
 
     for value in values:
-        if not value['available']:
+        available = util.safe_get(value, ['available'])
+        if available == 0 or available == False:
             continue
 
         item = {
