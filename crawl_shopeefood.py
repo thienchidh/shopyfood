@@ -121,6 +121,7 @@ def process(full_url):
             items.append({
                 'name': dish['name'],
                 'price': dish['price']['text'],
+                'price_value': dish['price']['value'],
             })
 
     # unique items
