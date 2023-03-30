@@ -196,11 +196,11 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         return
     poll_type = answered_poll["poll_type"]
     if poll_type is not None:
-        if poll_type == CONST.POLL_TYPE_QUIZ_1:
+        if poll_type == CONST.POLL_TYPE_QUIZ_1 or poll_type == CONST.POLL_TYPE_QUIZ_2:
             logger.info("day la poll type quiz 1")
-            return
-            pass
-        elif poll_type == CONST.POLL_TYPE_QUIZ_2:
+            # return
+            # pass
+        # elif poll_type == CONST.POLL_TYPE_QUIZ_2:
             logger.info("day la poll type quiz 2")
             logger.info(f"poll_id: {answer.poll_id}")
             user_answers = answered_poll["user_answers"]
