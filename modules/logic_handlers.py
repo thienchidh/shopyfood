@@ -133,8 +133,8 @@ async def handle_roll(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not is_rolling(update.message.chat_id):
         return
 
-    # not allow foward message
-    if update.message.forward_from:
+    if update.message.forward_from or update.message.forward_from_chat or update.message.forward_from_message_id:
+        await update.message.reply_text("Không được forward tin nhắn")
         return
 
     dice_value = update.message.dice.value
