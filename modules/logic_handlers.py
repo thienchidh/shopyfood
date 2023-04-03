@@ -134,7 +134,6 @@ async def handle_roll(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     if update.message.forward_from or update.message.forward_from_chat or update.message.forward_from_message_id or update.message.forward_signature or update.message.forward_sender_name or update.message.forward_date:
-        await update.message.reply_text("Không được forward tin nhắn")
         return
 
     dice_value = update.message.dice.value
