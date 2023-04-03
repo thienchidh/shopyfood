@@ -153,6 +153,9 @@ async def handle_roll(update: Update, context: ContextTypes.DEFAULT_TYPE):
             'value': str(dice_value)
         })
 
-    await asyncio.sleep(3)
+    asyncio.create_task(send_dice_result(sender_full_name, dice_value, update))
+
+
+async def send_dice_result(sender_username, dice_value, update):
+    await asyncio.sleep(2.5)
     await update.message.reply_text("%s vừa roll ra %s điểm" % (sender_username, dice_value))
-    pass
