@@ -33,9 +33,10 @@ async def get_quiz():
         'answers': data_question['answers'],
         'correct': data_question['correct_answer']
     }
-    
+
+
 stacks = []
-url = "https://opentdb.com/api.php?amount=10&type=multiple"
+url = "https://opentdb.com/api.php?amount=10&category=18"
 
 async def get_quiz_api():
     if len(stacks) > 0:
