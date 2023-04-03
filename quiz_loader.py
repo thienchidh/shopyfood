@@ -3,18 +3,17 @@ import random
 import requests
 import os
 
-
 data = []
 
 cacheData = {}
 previousChoice = 0
 
 
-
 async def load_config():
     with open('config/quiz.json') as f:
         data = json.load(f)
         return data
+
 
 async def load_config_path(path):
     if path in cacheData:
@@ -24,6 +23,7 @@ async def load_config_path(path):
         data = json.load(f)
         cacheData[path] = data
         return data
+
 
 async def get_quiz():
     questions = await load_config()
@@ -37,6 +37,7 @@ async def get_quiz():
 
 stacks = []
 url = "https://opentdb.com/api.php?amount=10&category=18"
+
 
 async def get_quiz_api():
     if len(stacks) > 0:
@@ -56,14 +57,14 @@ async def get_quiz_api():
         question = question.replace("&#039;", "\'")
 
         stacks.append({
-            "question" : question,
-            "answers" : answers,
+            "question": question,
+            "answers": answers,
             "correct": correct
         })
     return stacks.pop(0)
 
 
-async def get_file_name_by_choice(choice = -1):
+async def get_file_name_by_choice(choice=-1):
     if choice == 0:
         return "quiz_history_12.json"
         pass
@@ -74,7 +75,8 @@ async def get_file_name_by_choice(choice = -1):
         return "quiz_history_12.json"
         pass
 
-async def get_quiz_api_2(choice = -1):
+
+async def get_quiz_api_2(choice=-1):
     global previousChoice
     if choice == -1:
         choice = previousChoice

@@ -1,28 +1,22 @@
-from telegram import (
-    ReplyKeyboardRemove,
-    Update,
-)
-
-from telegram.constants import ParseMode
-from telegram.ext import (
-    Application,
-    CommandHandler,
-    ContextTypes,
-    MessageHandler,
-    PollAnswerHandler,
-    filters,
-)
-import json
-import random
 import asyncio
 import math
+import random
+
+from telegram import (
+    Update,
+)
+from telegram.ext import (
+    ContextTypes,
+)
+
 from . import bot_session
 
 sticker_con_cho_nay = "CAACAgUAAxkBAAMcY_R9Pq2TX2nr5HJhnOsOtvL54loAAmIFAAILoWlUcUfqZlXc0AwuBA"
 
 sticker_set_emgaimua = "emgaimua"
 
-async def handle_chui(update : Update, context : ContextTypes.DEFAULT_TYPE):
+
+async def handle_chui(update: Update, context: ContextTypes.DEFAULT_TYPE):
     sticker_set_name = sticker_set_emgaimua
     sticker_set = await context.bot.get_sticker_set(sticker_set_name)
     stickers = [sticker.file_id for sticker in sticker_set.stickers]
@@ -33,8 +27,7 @@ async def handle_chui(update : Update, context : ContextTypes.DEFAULT_TYPE):
     # await context.bot.send_sticker(sticker=sticker_con_cho_nay, chat_id=update.message.chat_id)
 
 
-
-async def handle_sticker(update : Update, context: ContextTypes.DEFAULT_TYPE):
+async def handle_sticker(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print('handle_sticker')
     sticker = update.message.sticker
     if sticker:
@@ -46,9 +39,11 @@ async def handle_sticker(update : Update, context: ContextTypes.DEFAULT_TYPE):
 
     # await update.effective_message.reply_sticker(update.message.sticker)
 
+
 cache = {}
 cache['players'] = []
 cache['is_rolling'] = False
+
 
 def is_rolling(chat_id):
     data = bot_session.get_data(chat_id=chat_id)
@@ -56,11 +51,13 @@ def is_rolling(chat_id):
         return False
     return data['is_rolling']
 
-def set_rolling(chat_id: str, b : bool):
+
+def set_rolling(chat_id: str, b: bool):
     data = bot_session.get_data(chat_id=chat_id)
     if data is None:
         return
     data['is_rolling'] = b
+
 
 def get_players(chat_id):
     data = bot_session.get_data(chat_id=chat_id)
@@ -68,13 +65,15 @@ def get_players(chat_id):
         return []
     return data['players']
 
+
 def set_players(chat_id: str, players):
     data = bot_session.get_data(chat_id=chat_id)
     if data is None:
         return
     data['players'] = players
 
-def sort_players(a : str):
+
+def sort_players(a: str):
     base_score = math.pow(7, 10)
     scores = list(a)
     total_score = 0
@@ -84,6 +83,7 @@ def sort_players(a : str):
         if base_score == 1:
             return total_score
     return total_score
+
 
 def convert_ranking_to_str(data) -> str:
     text = ""
@@ -97,23 +97,26 @@ def convert_ranking_to_str(data) -> str:
         counter += 1
     return text
 
+
 async def handle_start_game(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if is_rolling(update.message.chat_id):
         await update.message.reply_text("Đang roll rồi, chờ end ván này đã rồi start tiếp")
         return
     bot_session.create_data(update.message.chat_id, {
-        'players' : [],
-        'is_rolling' : False
+        'players': [],
+        'is_rolling': False
     })
     set_rolling(update.message.chat_id, True)
     await update.message.reply_text("Bắt đầu roll")
     pass
+
 
 async def handle_info_game(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not is_rolling(update.message.chat_id):
         return
     text = convert_ranking_to_str(get_players(update.message.chat_id))
     await update.message.reply_text(text)
+
 
 async def handle_finish_game(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not is_rolling(update.message.chat_id):
@@ -124,9 +127,14 @@ async def handle_finish_game(update: Update, context: ContextTypes.DEFAULT_TYPE)
     await update.message.reply_text(text)
     bot_session.clear_data(update.message.chat_id)
 
-async def handle_roll(update : Update, context : ContextTypes.DEFAULT_TYPE):
+
+async def handle_roll(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print("Roll in chat_id", update.message.chat_id)
     if not is_rolling(update.message.chat_id):
+        return
+
+    # not allow foward message
+    if update.message.forward_from:
         return
 
     dice_value = update.message.dice.value
@@ -134,17 +142,16 @@ async def handle_roll(update : Update, context : ContextTypes.DEFAULT_TYPE):
     sender_username = update.effective_user.name
     chat_id = update.message.chat_id
 
-
     players = get_players(chat_id=chat_id)
-    old_players = list(filter(lambda x : x['name'] == sender_username, players))
+    old_players = list(filter(lambda x: x['name'] == sender_username, players))
     if len(old_players) > 0:
         player = old_players[0]
         await update.message.reply_text('%s lại roll nữa' % sender_username)
         player['value'] += str(dice_value)
     else:
         players.append({
-            'name' : sender_username,
-            'value' : str(dice_value)
+            'name': sender_username,
+            'value': str(dice_value)
         })
 
     await asyncio.sleep(3)
