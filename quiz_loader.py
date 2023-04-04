@@ -36,7 +36,7 @@ async def get_quiz():
 
 
 stacks = []
-url = "https://opentdb.com/api.php?amount=10&category=18"
+url = "https://opentdb.com/api.php?amount=10&category=19"
 
 
 async def get_quiz_api():
