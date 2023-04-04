@@ -9,7 +9,7 @@ def calculate_point(repo, user_id, poll_id):
     bonus_point_fast_answer = 0
 
     sort_array = sorted(array_user_id, key=lambda x: x["timestamp"])
-    indexed_sort_array = [ {"index": i, "point": max(0, 4 - i), **obj} for i, obj in enumerate(sort_array)]
+    indexed_sort_array = [ {"index": i, "point": max(0, 0), **obj} for i, obj in enumerate(sort_array)]
     logger.info(f"user_id: {user_id}")
     logger.info(f"indexed_sort_array: {indexed_sort_array}")
     logger.info(f"poll_id: {poll_id}")
