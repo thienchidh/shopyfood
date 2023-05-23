@@ -14,10 +14,11 @@ from . import bot_session
 sticker_con_cho_nay = "CAACAgUAAxkBAAMcY_R9Pq2TX2nr5HJhnOsOtvL54loAAmIFAAILoWlUcUfqZlXc0AwuBA"
 
 sticker_set_emgaimua = "emgaimua"
+sticker_set_sui_yi = "sui_yi"
 
 
 async def handle_chui(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    sticker_set_name = sticker_set_emgaimua
+    sticker_set_name = random.choice([sticker_set_emgaimua, sticker_set_sui_yi, sticker_con_cho_nay])
     sticker_set = await context.bot.get_sticker_set(sticker_set_name)
     stickers = [sticker.file_id for sticker in sticker_set.stickers]
 
