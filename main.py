@@ -320,6 +320,7 @@ async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
 async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message.reply_to_message
+    logger.info("khai code")
     if message is None or message.poll is None:
         await update.message.reply_text(f'{update.effective_user.mention_html()} Trả cho poll nào thế?',
                                         parse_mode=ParseMode.HTML)
