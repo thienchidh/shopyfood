@@ -20,11 +20,13 @@ from telegram.ext import (
     MessageHandler,
     PollAnswerHandler,
     filters, )
+import tracemalloc  # Import the tracemalloc module
 
 import crawl_grabfood
 import crawl_shopeefood
 import modules.logic_handlers as logic_handlers
 import modules.rank_handlers as rank_handlers
+from  modules.remind_paid_handler import remind_paid_handler
 import quiz_loader
 import quote_storate
 from repository import KeyValRepository
@@ -33,11 +35,31 @@ import hashlib
 from all_get_repo_func import *
 from all_repo_get_func import *
 from datetime import datetime
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import CallbackContext, Updater, CommandHandler, InlineQueryHandler, CallbackQueryHandler
+from authority_util import check_authority
 
 strategies = [
     crawl_shopeefood,
     crawl_grabfood,
 ]
+
+
+
+# Define commands
+@check_authority(CONST.AUTHORITY_ADMIN)
+async def admin_only_command(update: Update, context: CallbackContext):
+    await update.message.reply_text('This command can only be accessed by administrators.')
+
+
+@check_authority(CONST.AUTHORITY_MODERATOR)
+async def moderator_only_command(update: Update, context: CallbackContext):
+    await update.message.reply_text('This command can only be accessed by moderators and administrators.')
+
+
+@check_authority(CONST.AUTHORITY_USER)
+async def public_command(update: Update, context: CallbackContext):
+    await update.message.reply_text('This command can be accessed by all users.')
 
 
 def attempt_process(url):
@@ -320,10 +342,16 @@ async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
 async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message.reply_to_message
-    logger.info("khai code")
+    logger.info("khai code update")
     if message is None or message.poll is None:
-        await update.message.reply_text(f'{update.effective_user.mention_html()} Trả cho poll nào thế?',
-                                        parse_mode=ParseMode.HTML)
+        keyboard = [
+            [InlineKeyboardButton("Yes", callback_data='button1')],
+            [InlineKeyboardButton("No", callback_data='button2')]
+        ]
+        # await update.message.reply_text(f'{update.effective_user.mention_html()} Trả cho poll nào thế?',
+                                        # parse_mode=ParseMode.HTML)
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await update.message.reply_text('Host check paid bạn ơi ', reply_markup=reply_markup)
         return
 
 
@@ -524,7 +552,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
     # list of dictionaries representing table rows
     # list of dictionaries representing table rows
-    headers = ["STT", "Name", "Dish", "Price"]
+    headers = ["STT", "Name", "Dish", "Price", "Paid"]
     table_data = [
         headers,
         # {"STT": 1, "Name": "John", "Dish": "Pizza", "Price": 10.99},
@@ -559,7 +587,8 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             price_int = int(remove_non_digits(price_str))
                             price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
                             name = chat_id_names.get(key, key)
-                            row = [index, f"{name}", part1_dish, price_str_format]
+                            is_paid = "Paid"
+                            row = [index, f"{name}", part1_dish, price_str_format, is_paid]
                             table_data.append(row)
                             subtotal_int += price_int
 
@@ -585,11 +614,12 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # string = tabulate(table_data, headers="firstrow", showindex=True)
     # print(string)
 
+    date_at_midnight = get_datetime_at_midnight()
     table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
 
     # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
 
-    await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
+    await update.effective_message.reply_text(text=f"<pre>{date_at_midnight}\n{table_str}</pre>", parse_mode=ParseMode.HTML)
     pass
 
 
@@ -685,10 +715,31 @@ async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         await update.message.reply_text("Error getting member info")
 
 
+
+# Define a callback query handler function
+async def button_click(update: Update, context: CallbackContext):
+    """Handle button click events."""
+    query = update.callback_query
+    query.answer()
+
+    # Perform actions based on the button clicked
+    if query.data == 'button1':
+        logger.info("Button 1 clicked")
+        await query.edit_message_text(text='Button 1 clicked!')
+    elif query.data == 'button2':
+        logger.info("Button 2 clicked")
+        await query.edit_message_text(text='Button 2 clicked!')
+    elif query.data == 'button3':
+        logger.info("Button 3 clicked!")
+        await query.edit_message_text(text='Button 3 clicked!')
+    
+
 def main() -> None:
     """Run bot."""
     bot_token = yaml.load(open('./config/config.yml'), Loader=yaml.FullLoader)['telegram']['token']
 
+    tracemalloc.start()
+    
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(bot_token).build()
     application.add_handler(CommandHandler("start", help_handler))
@@ -718,6 +769,12 @@ def main() -> None:
     application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
     application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
     application.add_handler(CommandHandler("rank", rank_handler))
+    application.add_handler(CallbackQueryHandler(button_click))
+    application.add_handler(CommandHandler('admin', admin_only_command))
+    application.add_handler(CommandHandler('moderator', moderator_only_command))
+    application.add_handler(CommandHandler('public', public_command))
+    application.add_handler(CommandHandler('remind_paid', remind_paid_handler))
+
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
 

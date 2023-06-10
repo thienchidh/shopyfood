@@ -117,5 +117,9 @@ def remove_non_digits(input_string):
     output_string = ''.join(filter(str.isdigit, input_string))
     return output_string
 
+
+def is_admin(user_id):
+    is_admin_local = (user_id == 123) or (user_id == CONST.THANHHV3_USER_ID)
+    return is_admin_local
      
 
