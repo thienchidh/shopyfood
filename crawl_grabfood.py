@@ -22,7 +22,6 @@ headers = {
 
 
 def extract_json_data(scripts):
-    print('scripts.length', len(scripts))
     for script in scripts:
         print('script.text', script.text)
         json_load = json.loads(script.text)
@@ -68,4 +67,10 @@ def process(url):
     # unique items
     items = list({v['name']: v for v in items}.values())
 
-    return "[Grab] " + title, items
+    return "[Grab] " + title, items, None
+
+
+if __name__ == '__main__':
+    url = 'https://food.grab.com/vn/vi/restaurant/ch%C3%A8-53-ph%E1%BA%A1m-h%E1%BB%93ng-th%C3%A1i-delivery/VNGFVN000008hv'
+    result = process(url)
+    print(result)
