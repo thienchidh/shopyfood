@@ -87,6 +87,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     title = obj[0]
     items = obj[1]
+    alert_msg = obj[2]
 
     # Split items into 10 items per poll
     limit_items_per_poll = 10
@@ -191,6 +192,9 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     random_fn = random.choice([send_random_quote, quiz_handler, quiz_handler_2])
     await random_fn(update, context)
+
+    if alert_msg is not None:
+        await update.message.reply_text(alert_msg)
 
 
 async def send_random_quote(update, context):

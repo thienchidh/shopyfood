@@ -100,11 +100,7 @@ def process(full_url):
         return None
 
     response = get_content_response(get_api_detail(str(delivery_id)))
-    print('response', json.dumps(response))
     alert_msg = safe_get(response, ['delivery_detail', 'delivery', 'delivery_alert', 'message', 'message'])
-    if alert_msg is not None:
-        return alert_msg
-
     title = safe_get(response, ['delivery_detail', 'name'])
 
     dishes = get_content_response(get_api_delivery_dishes(str(delivery_id)))
@@ -116,8 +112,6 @@ def process(full_url):
             if not dish['is_available']:
                 continue
 
-            print(json.dumps(dish))
-
             items.append({
                 'name': dish['name'],
                 'price': dish['price']['text'],
@@ -127,4 +121,4 @@ def process(full_url):
     # unique items
     items = list({v['name']: v for v in items}.values())
 
-    return "[Now] " + title, items
+    return "[Now] " + title, items, alert_msg
