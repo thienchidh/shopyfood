@@ -651,7 +651,7 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     list_user_name.insert(0, user_name)
     repo_user.set("user_name", list_user_name)
     description = ""
-    user_id = chat_id
+    user_id = update.message.from_user.id  
     
     message = update.effective_message.reply_to_message
     if not message or message.poll is None:
