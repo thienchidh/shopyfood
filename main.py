@@ -20,19 +20,27 @@ from telegram.ext import (
     MessageHandler,
     PollAnswerHandler,
     filters, )
+import tracemalloc  # Import the tracemalloc module
 
 import crawl_grabfood
 import crawl_shopeefood
 import modules.logic_handlers as logic_handlers
 import modules.rank_handlers as rank_handlers
+from  modules.remind_paid_handler import remind_paid_handler
+from modules.paid_poll_handlers import paid_poll_handler
+from modules.paid_handler import paid_handler, button_click
 import quiz_loader
 import quote_storate
 from repository import KeyValRepository
-from util import get_datetime_at_midnight, save_data_for_quiz
+from util import *
 import hashlib
 from all_get_repo_func import *
 from all_repo_get_func import *
 from datetime import datetime
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import CallbackContext, Updater, CommandHandler, InlineQueryHandler, CallbackQueryHandler
+from authority_util import check_authority
+
 
 strategies = [
     crawl_shopeefood,
@@ -40,22 +48,27 @@ strategies = [
 ]
 
 
+
+# Define commands
+@check_authority(CONST.AUTHORITY_ADMIN)
+async def admin_only_command(update: Update, context: CallbackContext):
+    await update.message.reply_text('This command can only be accessed by administrators.')
+
+
+@check_authority(CONST.AUTHORITY_MODERATOR)
+async def moderator_only_command(update: Update, context: CallbackContext):
+    await update.message.reply_text('This command can only be accessed by moderators and administrators.')
+
+
+@check_authority(CONST.AUTHORITY_USER)
+async def public_command(update: Update, context: CallbackContext):
+    await update.message.reply_text('This command can be accessed by all users.')
+
+
 def attempt_process(url):
     for strategy in strategies:
         if strategy.is_support_url(url):
             return strategy.process(url)
-    return None
-
-
-def get_poll_from_poll_history(context, poll_index=-1):
-    repo = get_repo_bot(context)
-    poll_history = repo.get("poll_history")
-    if poll_history is None:
-        return None
-    if poll_index >= 0 and poll_index < len(poll_history):
-        return poll_history[poll_index]
-    if poll_index < 0 and abs(poll_index) <= len(poll_history):
-        return poll_history[poll_index]
     return None
 
 
@@ -95,6 +108,8 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     poll_group_ids = []
     poll_data = dict()
     poll_ids = []
+    host_poll_id = update.message.from_user.id  
+    time_created = time.time()
 
     # Create poll for each item
     current_page = 0
@@ -134,11 +149,14 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
             message.poll.id: {
+                "time_created": time_created,
                 "questions": questions,
                 "message_id": message.message_id,
                 "chat_id": update.effective_chat.id,
                 "answers": dict(),  # {user_id: [answer_index]}
-                "poll_type": CONST.POLL_TYPE_PICK_DISH
+                "poll_type": CONST.POLL_TYPE_PICK_DISH,
+                "paid_state": dict(),
+                "host_poll_id": host_poll_id
             }
         }
         poll_data.update(payload)
@@ -249,6 +267,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             pass
     questions = answered_poll["questions"]
     answers = answered_poll["answers"]
+    paid_state = repo_get_all_user_paid_state_by_poll_id(repo, answer.poll_id)
 
     answer_string = ""
     for question_id in selected_options:
@@ -258,6 +277,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             answer_string += questions[question_id]
 
     answers[effective_user_id] = selected_options
+    paid_state[effective_user_id] = -1
     save_data_user_name(repo, effective_user_id, effective_user)
     if answer_string == "":
         await context.bot.send_message(
@@ -320,14 +340,6 @@ async def info_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         if option.voter_count > 0:
             msg += f"{option.text}: {option.voter_count}\n"
     await message.reply_text(msg)
-
-
-async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    message = update.effective_message.reply_to_message
-    if message is None or message.poll is None:
-        await update.message.reply_text(f'{update.effective_user.mention_html()} Trả cho poll nào thế?',
-                                        parse_mode=ParseMode.HTML)
-        return
 
 
 #     TODO: Add bill handler
@@ -474,69 +486,29 @@ def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
 
 
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    message = update.effective_message.reply_to_message
-    # logger.info(f"checkbill_hander update.effective_message {update.effective_message}")
-    # logger.info(f"checkbill_hander update.message {update.message}")
-    element_poll_history = None
-    if not message or message.poll is None:
-        # logger.info("checkbill_hander Poll not found")
-        # logger.info(f"checkbill_handler {message}") #-> expect None
-        # logger.info(f"checkbill_handler {update.message.text}")  #-> expect text
-        message_text = update.message.text
-        regex_message_text = r"^([^ ]+)\s([\+\-]{0,1}\d+)(.*)$"
-        if message_text is not None:
-            match = re.match(regex_message_text, message_text)
-            if match is not None:
-                part1 = match.group(1)
-                part2 = match.group(2)
-                if part2 is not None:
-                    poll_index = int(part2)
-                    # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
-                    element_poll_history = get_poll_from_poll_history(context, poll_index)
-                else:
-                    element_poll_history = get_poll_from_poll_history(context, -1)
-            else:
-                element_poll_history = get_poll_from_poll_history(context, -1)
-        else:
-            logger.info("checkbill_handler can't find suitable poll")
-            return
-
-        message = update.message
-
     repo = get_repo_bot(context)
-
-    if element_poll_history is None:
-        message_id = f'{message.message_id}'
-    else:
-        # logger.info(f"checkbill_handler element_poll_history {element_poll_history}")
-        msg_poll_id = element_poll_history["msg_poll_id"]
-        message_id = msg_poll_id
-        map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
-        # message_id = str(map_msg_poll_id_to_message_id.get(str(msg_poll_id), f"{message.message_id}"))
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id[] {map_msg_poll_id_to_message_id[str(msg_poll_id)]}")
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id.get {map_msg_poll_id_to_message_id.get(msg_poll_id)}")
-
-    poll_owner_id = f'{message.chat.id}'
-
+    val_return = get_poll_owner_id_message_id(update, context)
+    if (val_return is None):
+        return
+    poll_owner_id = val_return["poll_owner_id"]
+    message_id = val_return["message_id"]
+    
     logger.info("Info poll " + poll_owner_id + " " + message_id)
     poll_data = get_poll_data_by_message_id(context, message_id)
-    parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
-    poll_group_ids = repo.get('poll_group_ids', dict()).get(poll_owner_id, dict())
+    
 
     # list of dictionaries representing table rows
     # list of dictionaries representing table rows
-    headers = ["STT", "Name", "Dish", "Price"]
+    headers = ["STT", "Name", "Dish", "Price", "Paid"]
     table_data = [
         headers,
         # {"STT": 1, "Name": "John", "Dish": "Pizza", "Price": 10.99},
         # [1, "John", "Pizza", 10.99],
         # [1, "John", "Pizza", 10.99]
     ]
-    parent_id = parent_poll_ids.get(message_id)
+    parent_id = repo_get_parent_poll_ids_from_specific_chat_id_by_message_id(repo, poll_owner_id, message_id)
     # List all poll that have common parent
-    list_poll_ids = poll_group_ids.get(parent_id, dict())
+    list_poll_ids = repo_get_list_child_poll_ids_from_specific_chat_id_by_parent_id(repo, poll_owner_id, parent_id)
     # tong hop data tung poll
 
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
@@ -544,14 +516,23 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     logger.info(f"list_poll_ids {list_poll_ids}")
     index = 0
     subtotal_int = 0
+    poll_id_selected = None
     for message_id in list_poll_ids:
         poll_data = get_poll_data_by_message_id(context, message_id)
         logger.info(f"poll_data {poll_data}")
+        if poll_id_selected is None:
+            poll_id_selected = repo_get_poll_id_by_message_id(repo, message_id)
+            
         if "answers" in poll_data:
             for key in poll_data["answers"]:
                 if "questions" in poll_data:
                     list_answer_of_this_user = poll_data["answers"].get(key)
                     logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
+                    paid_state = 0
+                    if poll_data.get("paid_state") is not None:
+                        if (poll_data.get("paid_state").get(key) is not None):
+                            paid_state = int(poll_data.get("paid_state").get(key))
+                            
                     for i in list_answer_of_this_user:
                         string_answer = poll_data["questions"][i]
                         match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
@@ -562,12 +543,18 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             price_int = int(remove_non_digits(price_str))
                             price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
                             name = chat_id_names.get(key, key)
-                            row = [index, f"{name}", part1_dish, price_str_format]
+                            if (paid_state > 0):
+                                is_paid = "PAID"
+                            else:
+                                is_paid = "No_PAID"    
+                            
+                            row = [index, f"{name}", part1_dish, price_str_format, is_paid]
                             table_data.append(row)
                             subtotal_int += price_int
 
                     pass
-
+          
+                    
     # list of column headers
     subtotal_str = '{:,.0f}'.format(subtotal_int) + "\u0111"
 
@@ -588,11 +575,18 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # string = tabulate(table_data, headers="firstrow", showindex=True)
     # print(string)
 
+    time_created = repo_get_time_created_by_poll_id(repo, poll_id_selected)
+    host_poll_id = repo_get_host_poll_id_by_poll_id(repo, poll_id_selected)
+   
+    date_at_midnight_at_time_created = get_datetime_at_midnight_at_timestamp(time_created)
     table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
-
+    host_user_name = repo_get_user_name_by_user_id(context, host_poll_id)
+    phone = repo_get_phone_by_user_id(context, host_poll_id)
+    description = repo_get_description_by_user_id(context, host_poll_id)
+    
     # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
-
-    await update.effective_message.reply_text(text=f"<pre>{table_str}</pre>", parse_mode=ParseMode.HTML)
+    str_header = f"{date_at_midnight_at_time_created}\nHost: {host_user_name} - {description}"
+    await update.effective_message.reply_text(text=f"<pre>{str_header}\n{table_str}</pre>", parse_mode=ParseMode.HTML)
     pass
 
 
@@ -654,12 +648,33 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     user_name = update.effective_message.from_user.username
     repo_user = get_repo_user(chat_id, context)
     list_user_name = repo_user.get("user_name", [])
-    list_user_name.append(user_name)
+    list_user_name.insert(0, user_name)
     repo_user.set("user_name", list_user_name)
+    description = ""
+    user_id = chat_id
+    
+    message = update.effective_message.reply_to_message
+    if not message or message.poll is None:
+        message_text = update.message.text
+        regex_message_text = r"(/[\w]+)\s(.*)"
+        if message_text is not None:
+            match = re.match(regex_message_text, message_text)
+            if match is not None:
+                part1 = match.group(1)
+                part2 = match.group(2)
+                if part1 is not None and part2 is not None:
+                    description = part2
+                    list_description = repo_user.get("description", [])
+                    list_description.insert(0, description)
+                    repo_user.set("description", list_description)
+            else:
+                description = repo_get_description_by_user_id(context, user_id)          
+                
+            
     repo_user.save()
     """Display a help message"""
     await update.message.reply_text(
-        f'Id {chat_id} user_name = {user_name}')
+        f'Id {chat_id} user_name = {user_name} - description= {description}')
 
 
 async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -692,6 +707,8 @@ def main() -> None:
     """Run bot."""
     bot_token = yaml.load(open('./config/config.yml'), Loader=yaml.FullLoader)['telegram']['token']
 
+    tracemalloc.start()
+    
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(bot_token).build()
     application.add_handler(CommandHandler("start", help_handler))
@@ -721,6 +738,13 @@ def main() -> None:
     application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
     application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
     application.add_handler(CommandHandler("rank", rank_handler))
+    application.add_handler(CallbackQueryHandler(button_click))
+    application.add_handler(CommandHandler('admin', admin_only_command))
+    application.add_handler(CommandHandler('moderator', moderator_only_command))
+    application.add_handler(CommandHandler('public', public_command))
+    application.add_handler(CommandHandler('remind_paid', remind_paid_handler))
+    application.add_handler(CommandHandler("paid_poll", paid_poll_handler))
+
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
 
