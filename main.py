@@ -1,52 +1,34 @@
 import asyncio
 import json
-import random
-import re
-import time
-from logger import logger
-import CONST
+import tracemalloc  # Import the tracemalloc module
+from datetime import datetime
 
 import yaml
 from tabulate import tabulate
 from telegram import (
-    Update, BotCommand, Poll,
+    BotCommand, Poll,
 )
-from telegram.constants import ParseMode
-from telegram.error import TelegramError
-from telegram.ext import (
-    Application,
-    CommandHandler,
-    ContextTypes,
-    MessageHandler,
-    PollAnswerHandler,
-    filters, )
-import tracemalloc  # Import the tracemalloc module
+from telegram import Update
+from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 
 import crawl_grabfood
 import crawl_shopeefood
 import modules.logic_handlers as logic_handlers
 import modules.rank_handlers as rank_handlers
-from  modules.remind_paid_handler import remind_paid_handler
-from modules.paid_poll_handlers import paid_poll_handler
-from modules.paid_handler import paid_handler, button_click
 import quiz_loader
 import quote_storate
-from repository import KeyValRepository
-from util import *
-import hashlib
 from all_get_repo_func import *
 from all_repo_get_func import *
-from datetime import datetime
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
-from telegram.ext import CallbackContext, Updater, CommandHandler, InlineQueryHandler, CallbackQueryHandler
 from authority_util import check_authority
-
+from modules.paid_handler import paid_handler, button_click
+from modules.paid_poll_handlers import paid_poll_handler
+from modules.remind_paid_handler import remind_paid_handler
+from util import *
 
 strategies = [
     crawl_shopeefood,
     crawl_grabfood,
 ]
-
 
 
 # Define commands
@@ -108,7 +90,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     poll_group_ids = []
     poll_data = dict()
     poll_ids = []
-    host_poll_id = update.message.from_user.id  
+    host_poll_id = update.message.from_user.id
     time_created = time.time()
 
     # Create poll for each item
@@ -222,7 +204,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             logger.info("day la poll type quiz 1")
             # return
             # pass
-        # elif poll_type == CONST.POLL_TYPE_QUIZ_2:
+            # elif poll_type == CONST.POLL_TYPE_QUIZ_2:
             logger.info("day la poll type quiz 2")
             logger.info(f"poll_id: {answer.poll_id}")
             user_answers = answered_poll["user_answers"]
@@ -488,24 +470,19 @@ def get_poll_data_by_message_id(context: ContextTypes.DEFAULT_TYPE, message_id):
 async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     repo = get_repo_bot(context)
     val_return = get_poll_owner_id_message_id(update, context)
-    if (val_return is None):
+    if val_return is None:
         return
     poll_owner_id = val_return["poll_owner_id"]
     message_id = val_return["message_id"]
-    
+
     logger.info("Info poll " + poll_owner_id + " " + message_id)
     poll_data = get_poll_data_by_message_id(context, message_id)
-    
 
     # list of dictionaries representing table rows
     # list of dictionaries representing table rows
-    headers = ["STT", "Name", "Dish", "Price", "Paid"]
     table_data = [
-        headers,
-        # {"STT": 1, "Name": "John", "Dish": "Pizza", "Price": 10.99},
-        # [1, "John", "Pizza", 10.99],
-        # [1, "John", "Pizza", 10.99]
     ]
+
     parent_id = repo_get_parent_poll_ids_from_specific_chat_id_by_message_id(repo, poll_owner_id, message_id)
     # List all poll that have common parent
     list_poll_ids = repo_get_list_child_poll_ids_from_specific_chat_id_by_parent_id(repo, poll_owner_id, parent_id)
@@ -522,7 +499,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         logger.info(f"poll_data {poll_data}")
         if poll_id_selected is None:
             poll_id_selected = repo_get_poll_id_by_message_id(repo, message_id)
-            
+
         if "answers" in poll_data:
             for key in poll_data["answers"]:
                 if "questions" in poll_data:
@@ -530,9 +507,9 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                     logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
                     paid_state = 0
                     if poll_data.get("paid_state") is not None:
-                        if (poll_data.get("paid_state").get(key) is not None):
+                        if poll_data.get("paid_state").get(key) is not None:
                             paid_state = int(poll_data.get("paid_state").get(key))
-                            
+
                     for i in list_answer_of_this_user:
                         string_answer = poll_data["questions"][i]
                         match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
@@ -543,20 +520,25 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             price_int = int(remove_non_digits(price_str))
                             price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
                             name = chat_id_names.get(key, key)
-                            if (paid_state > 0):
+                            if paid_state > 0:
                                 is_paid = "PAID"
                             else:
-                                is_paid = "No_PAID"    
-                            
+                                is_paid = "No_PAID"
+
                             row = [index, f"{name}", part1_dish, price_str_format, is_paid]
                             table_data.append(row)
                             subtotal_int += price_int
 
                     pass
-          
-                    
+    # sort table by name and then price
+    table_data = sorted(table_data, key=lambda row: (row[1], row[3]))
+
+    headers = ["STT", "Name", "Dish", "Price", "Paid"]
+    # add first row as a header
+    table_data.insert(0, headers)
+
     # list of column headers
-    subtotal_str = '{:,.0f}'.format(subtotal_int) + "\u0111"
+    subtotal_str = "{0}đ".format('{:,.0f}'.format(subtotal_int))
 
     # calculate the subtotal
     # subtotal = sum(row["Price"] for row in table_data)
@@ -577,13 +559,13 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
     time_created = repo_get_time_created_by_poll_id(repo, poll_id_selected)
     host_poll_id = repo_get_host_poll_id_by_poll_id(repo, poll_id_selected)
-   
+
     date_at_midnight_at_time_created = get_datetime_at_midnight_at_timestamp(time_created)
     table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
     host_user_name = repo_get_user_name_by_user_id(context, host_poll_id)
     phone = repo_get_phone_by_user_id(context, host_poll_id)
     description = repo_get_description_by_user_id(context, host_poll_id)
-    
+
     # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
     str_header = f"{date_at_midnight_at_time_created}\nHost: {host_user_name} - {description}"
     await update.effective_message.reply_text(text=f"<pre>{str_header}\n{table_str}</pre>", parse_mode=ParseMode.HTML)
@@ -651,8 +633,8 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     list_user_name.insert(0, user_name)
     repo_user.set("user_name", list_user_name)
     description = ""
-    user_id = update.message.from_user.id  
-    
+    user_id = update.message.from_user.id
+
     message = update.effective_message.reply_to_message
     if not message or message.poll is None:
         message_text = update.message.text
@@ -668,9 +650,8 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                     list_description.insert(0, description)
                     repo_user.set("description", list_description)
             else:
-                description = repo_get_description_by_user_id(context, user_id)          
-                
-            
+                description = repo_get_description_by_user_id(context, user_id)
+
     repo_user.save()
     """Display a help message"""
     await update.message.reply_text(
@@ -708,7 +689,7 @@ def main() -> None:
     bot_token = yaml.load(open('./config/config.yml'), Loader=yaml.FullLoader)['telegram']['token']
 
     tracemalloc.start()
-    
+
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(bot_token).build()
     application.add_handler(CommandHandler("start", help_handler))
