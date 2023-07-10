@@ -527,8 +527,8 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             table_data.append(row)
                             subtotal_int += price_int
 
-    # sort table by name ascending
-    table_data = sorted(table_data, key=lambda row: row[1])
+    # sort table by dish name
+    table_data = sorted(table_data, key=lambda x: x[2])
 
     # recalculate the index
     index = 0
