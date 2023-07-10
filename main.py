@@ -491,7 +491,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
 
     logger.info(f"list_poll_ids {list_poll_ids}")
-    index = 0
     subtotal_int = 0
     poll_id_selected = None
     for message_id in list_poll_ids:
@@ -514,7 +513,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                         string_answer = poll_data["questions"][i]
                         match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
                         if match:
-                            index += 1
                             part1_dish = match.group(1)
                             price_str = match.group(2)  # price
                             price_int = int(remove_non_digits(price_str))
@@ -525,13 +523,18 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             else:
                                 is_paid = "No_PAID"
 
-                            row = [index, f"{name}", part1_dish, price_str_format, is_paid]
+                            row = [0, f"{name}", part1_dish, price_str_format, is_paid]
                             table_data.append(row)
                             subtotal_int += price_int
 
-                    pass
-    # sort table by name and then price
-    table_data = sorted(table_data, key=lambda row: (row[1], row[3]))
+    # sort table by name ascending
+    table_data = sorted(table_data, key=lambda row: row[1])
+
+    # recalculate the index
+    index = 0
+    for row in table_data:
+        index += 1
+        row[0] = index
 
     headers = ["STT", "Name", "Dish", "Price", "Paid"]
     # add first row as a header
