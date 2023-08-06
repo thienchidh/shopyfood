@@ -17,7 +17,7 @@ class PollData:
         time_created = time.time()
         answers = dict()
         message_id = -1
-        paid_state = -1
+        paid_state = dict()
         previous_poll_id = -1
         next_poll_id = -1
         
@@ -161,6 +161,8 @@ class PollDataManager:
         
         self.map = self.repo_poll_manager.compute_if_absent('map_by_chat_id', lambda k: dict())    
         self.map_by_chat_id = self.repo_poll_manager.compute_if_absent('map_by_chat_id', lambda k: dict()).get(f'{self.chat_id}', dict())    
+        self.map_history_poll_by_chat_id_key = self.repo_poll_manager.compute_if_absent('map_history_poll_by_chat_id', lambda k: dict())  
+        self.map_history_poll_by_chat_id_value = self.repo_poll_manager.compute_if_absent('map_history_poll_by_chat_id', lambda k: dict()).get(f'{self.chat_id}', [])    
         
     def get_poll_data_by_poll_id(self, poll_id) -> PollData:
         # logger.info(f"get_poll_data_by_poll_id {poll_id} {self.map_by_chat_id}")
@@ -199,20 +201,29 @@ class PollDataManager:
                 list_result.append(poll_data.get_poll_id())
         return list_result                
     
+    def get_poll_id_by_index(self, chat_id: int, poll_index: int):
+        poll_history = self.map_history_poll_by_chat_id_key[str(chat_id)]
+        if poll_history is None:
+            return None
+        if poll_index >= 0 and poll_index < len(poll_history):
+            return poll_history[poll_index]
+        if poll_index < 0 and abs(poll_index) <= len(poll_history):
+            return poll_history[poll_index]
+        return None
+        
+    
     def push_poll_data_by_chat_id(self, chat_id: int, poll_data: PollData):
         
-        # logger.info(f"push_poll_data_by_chat_id map_by_chat_id {self.map_by_chat_id}")
-        # map = self.map_by_chat_id.get(chat_id, dict())
-
+        # logger.info(f"push_poll_data_by_chat_id {chat_id} {poll_data}")
         map_object = dict()
         json_object = json.loads(json.dumps(poll_data.to_dict()))
-        
-        # logger.info(f"push_poll_data_by_chat_id map update {json_object}")
-        # map_object[poll_data.poll_id] = json_object
-        # self.repo_poll_manager.set("map_by_chat_id", map_by_chat_id)
-        # self.repo_poll_manager.set("map_by_chat_id", map)
+                
         self.map_by_chat_id[poll_data.poll_id] = json_object
         self.map[self.chat_id] = self.map_by_chat_id
+        
+    def push_poll_id_by_chat_id(self, chat_id: int, poll_data: PollData):    
+        self.map_history_poll_by_chat_id_value.append(poll_data.poll_id)
+        self.map_history_poll_by_chat_id_key[chat_id] = self.map_history_poll_by_chat_id_value
         
     def update_poll_data_by_chat_id(self, chat_id: int, poll_data: PollData):
         # map_object = self.repo_poll_manager.get(chat_id, dict())  
@@ -235,6 +246,7 @@ class PollDataManager:
         # self.repo_poll_manager.set("map_by_chat_id", {self.chat_id: self.map_by_chat_id})
         # logger.info(f"poll_model save {self.map}")
         self.repo_poll_manager.set("map_by_chat_id", self.map)
+        self.repo_poll_manager.set("map_history_poll_by_chat_id", self.map_history_poll_by_chat_id_key)
         self.repo_poll_manager.save()
 
 

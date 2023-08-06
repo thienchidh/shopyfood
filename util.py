@@ -8,6 +8,7 @@ import hashlib
 import time
 from all_get_repo_func import *
 from all_repo_get_func import *
+from model.poll_model import get_poll_model
 
 def get_url_with_no_params(url):
     return url.split('?')[0]
@@ -129,6 +130,9 @@ def get_poll_owner_id_message_id(update, context):
     message = update.effective_message.reply_to_message
     # logger.info(f"checkbill_hander update.effective_message {update.effective_message}")
     # logger.info(f"checkbill_hander update.message {update.message}")
+    
+    poll_data_manager = get_poll_model(update, context, -1, -1, -1)
+    
     element_poll_history = None
     if not message or message.poll is None:
         # logger.info("checkbill_hander Poll not found")
@@ -137,6 +141,7 @@ def get_poll_owner_id_message_id(update, context):
         message_text = update.message.text
         regex_message_text = r"^([^ ]+)\s([\+\-]{0,1}\d+)(.*)$"
         if message_text is not None:
+            chat_id = update.effective_chat.id
             match = re.match(regex_message_text, message_text)
             if match is not None:
                 part1 = match.group(1)
@@ -144,11 +149,19 @@ def get_poll_owner_id_message_id(update, context):
                 if part2 is not None:
                     poll_index = int(part2)
                     # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
-                    element_poll_history = repo_get_poll_from_poll_history(repo, poll_index)
+                    poll_id = poll_data_manager.get_poll_id_by_index(chat_id, poll_index)
+                    element_poll_history = poll_data_manager.get_poll_data_by_poll_id(poll_id)
+                    # element_poll_history = repo_get_poll_from_poll_history(repo, poll_index)
                 else:
-                    element_poll_history = repo_get_poll_from_poll_history(repo, -1)
+                    # element_poll_history = repo_get_poll_from_poll_history(repo, -1)
+                    poll_id = poll_data_manager.get_poll_id_by_index(chat_id, -1)
+                    logger.info(f"get_poll_owner_id_message_id poll_id chat_id 1 {poll_id} {chat_id}")
+                    element_poll_history = poll_data_manager.get_poll_data_by_poll_id(poll_id)
             else:
-                element_poll_history = repo_get_poll_from_poll_history(repo, -1)
+                # element_poll_history = repo_get_poll_from_poll_history(repo, -1)
+                poll_id = poll_data_manager.get_poll_id_by_index(chat_id, -1)
+                logger.info(f"get_poll_owner_id_message_id poll_id chat_id 2 {poll_id} {chat_id}")
+                element_poll_history = poll_data_manager.get_poll_data_by_poll_id(poll_id)
         else:
             logger.info("checkbill_handler can't find suitable poll")
             return
@@ -159,9 +172,9 @@ def get_poll_owner_id_message_id(update, context):
         message_id = f'{message.message_id}'
     else:
         # logger.info(f"checkbill_handler element_poll_history {element_poll_history}")
-        msg_poll_id = element_poll_history["msg_poll_id"]
-        message_id = msg_poll_id
-        map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
+        message_id = element_poll_history.get_message_id()
+        # message_id = msg_poll_id
+        # map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
         # message_id = str(map_msg_poll_id_to_message_id.get(str(msg_poll_id), f"{message.message_id}"))
@@ -170,4 +183,4 @@ def get_poll_owner_id_message_id(update, context):
 
     poll_owner_id = f'{update.effective_user.id}'
     
-    return {"poll_owner_id": poll_owner_id, "message_id": message_id}
+    return {"poll_owner_id": poll_owner_id, "message_id": str(message_id)}

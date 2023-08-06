@@ -178,6 +178,8 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         context.bot_data.update(payload)
         
         poll_data_manager.push_poll_data_by_chat_id(chat_id, poll_contain_data)
+        if current_page == 1:
+            poll_data_manager.push_poll_id_by_chat_id(chat_id, poll_contain_data)
 
     poll_history = repo.get("poll_history", [])
     poll_json_object = {
