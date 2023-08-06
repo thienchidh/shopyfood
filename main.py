@@ -24,7 +24,8 @@ from modules.paid_handler import paid_handler, button_click
 from modules.paid_poll_handlers import paid_poll_handler
 from modules.remind_paid_handler import remind_paid_handler
 from util import *
-from model.user import *
+from model.user_model import *
+from model.poll_model import *
 
 strategies = [
     crawl_shopeefood,
@@ -75,13 +76,13 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Split items into 10 items per poll
     limit_items_per_poll = 10
     items_split = [items[i:i + limit_items_per_poll] for i in range(0, len(items), limit_items_per_poll)]
-    logger.info(json.dumps(items_split))
+    # logger.info(json.dumps(items_split))
 
     # Ensure last poll has at least 2 items and at most 10 items
     if len(items_split[-1]) < 2:
         items_split[-1].append(items_split[-2].pop())
 
-    logger.info(json.dumps(items_split))
+    # logger.info(json.dumps(items_split))
 
     repo = get_repo_bot(context)
     poll_owner_id = f'{update.effective_chat.id}'
@@ -93,9 +94,17 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     poll_ids = []
     host_poll_id = update.message.from_user.id
     time_created = time.time()
-
-    # Create poll for each item
+    
+       # Create poll for each item
     current_page = 0
+    previous_poll_id = -1
+    next_poll_id = -1
+    
+    previous_poll = None
+    poll_id = -1
+    
+    poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id)
+    
     for items in items_split:
         current_page += 1
         questions = [item['name'] + ' ' + item['price'] for item in items[:limit_items_per_poll]]
@@ -128,22 +137,44 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
         map_msg_poll_id_to_message_id.update({f"{msg_poll_id}": message.poll.id})
         repo.set("map_msg_poll_id_to_message_id", map_msg_poll_id_to_message_id)
-
+        
+        message_id = message.message_id
+        poll_type = CONST.POLL_TYPE_PICK_DISH
+        poll_id = message.poll.id
+        chat_id = update.effective_chat.id
+        
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
-            message.poll.id: {
+            poll_id : {
                 "time_created": time_created,
                 "questions": questions,
-                "message_id": message.message_id,
-                "chat_id": update.effective_chat.id,
+                "message_id": message_id,
+                "chat_id": chat_id,
                 "answers": dict(),  # {user_id: [answer_index]}
-                "poll_type": CONST.POLL_TYPE_PICK_DISH,
+                "poll_type": poll_type,
                 "paid_state": dict(),
                 "host_poll_id": host_poll_id
             }
         }
+        
+        poll_contain_data = PollData()
+       
+        poll_contain_data.set_message_id(message_id)
+        poll_contain_data.set_poll_type(poll_type)
+        poll_contain_data.set_questions(questions)
+        poll_contain_data.set_poll_id(poll_id)
+        
+        if (previous_poll is not None):
+            poll_contain_data.set_previous_poll_id(previous_poll.get_poll_id())
+            previous_poll.set_next_poll_id(poll_id)
+            poll_data_manager.update_poll_data_by_chat_id(chat_id, previous_poll)
+                    
+        previous_poll = poll_contain_data
+        
         poll_data.update(payload)
         context.bot_data.update(payload)
+        
+        poll_data_manager.push_poll_data_by_chat_id(chat_id, poll_contain_data)
 
     poll_history = repo.get("poll_history", [])
     poll_json_object = {
@@ -172,6 +203,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     all_poll_data[poll_owner_id] = map
 
     repo.save()
+    poll_data_manager.save()
 
     random_fn = random.choice([send_random_quote, quiz_handler, quiz_handler_2])
     await random_fn(update, context)
@@ -637,6 +669,7 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     user.add_user_name(user_name)
     description = ""
     
+    
     message = update.effective_message
     logger.info(f"message checkin handler: {message}")
     if not message or message.poll is None:
@@ -662,6 +695,7 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     exp = user.exp
     host_count = 0
     strText = f"ChatId: {chat_id}\n" 
+    strText += f"user_name: {user_name}\n"
     strText += f"user_id: {user_id}\n"
     strText += f"level: {level}\n"
     strText += f"exp: {exp}\n" 
