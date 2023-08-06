@@ -102,8 +102,9 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     
     previous_poll = None
     poll_id = -1
+    chat_id = update.effective_chat.id
     
-    poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id)
+    poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
     
     for items in items_split:
         current_page += 1
@@ -163,6 +164,8 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         poll_contain_data.set_poll_type(poll_type)
         poll_contain_data.set_questions(questions)
         poll_contain_data.set_poll_id(poll_id)
+        poll_contain_data.set_chat_id(chat_id)
+        poll_contain_data.set_host_poll_id(host_poll_id)
         
         if (previous_poll is not None):
             poll_contain_data.set_previous_poll_id(previous_poll.get_poll_id())
@@ -221,12 +224,20 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     repo = get_repo_bot(context)
     all_poll_data = repo.get('poll_data', dict())
     answer = update.poll_answer
-    logger.info(f"receive_poll_answer answers {update.poll_answer}")
+    # logger.info(f"receive_poll_answer answers {update.poll_answer}")
+    poll_id = answer.poll_id
     answered_poll = all_poll_data.get(answer.poll_id)
 
     selected_options = answer.option_ids
     effective_user = update.effective_user
     effective_user_id = f'{effective_user.id}'
+    host_poll_id = -1
+    chat_id = -1
+    
+    poll = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
+    poll_data_container = poll.get_poll_data_by_poll_id(poll_id)
+    # logger.info(f"poll_data_container {poll_data_container}");
+    
 
     if answered_poll is None:
         logger.info("Khong get duoc poll id")
@@ -255,7 +266,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             user_answers.update(payload)
 
             datetime_midnight = get_datetime_at_midnight()
-            logger.info(f"datetime_midnight : {datetime_midnight}")
+            # logger.info(f"datetime_midnight : {datetime_midnight}")
             day_info_at_specific_date = repo_get_repo_bot_day_info_at_specific_date(repo, datetime_midnight)
             user_info = day_info_at_specific_date.get("user_info", dict())
             if effective_user_id not in user_info:
@@ -293,7 +304,9 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
 
     answers[effective_user_id] = selected_options
     paid_state[effective_user_id] = -1
+    poll_data_container.set_answers_by_user_id(effective_user_id, selected_options)
     save_data_user_name(repo, effective_user_id, effective_user)
+    poll.save()
     if answer_string == "":
         await context.bot.send_message(
             answered_poll["chat_id"],
@@ -326,7 +339,7 @@ async def close_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
     poll_owner_id = f'{message.chat.id}'
     poll_id = f'{message.message_id}'
 
-    logger.info("Info poll " + poll_owner_id + " " + poll_id)
+    logger.info("close poll poll " + poll_owner_id + " " + poll_id)
 
     repo = get_repo_bot(context)
     parent_poll_ids = repo.get('parent_poll_ids', dict()).get(poll_owner_id, dict())
@@ -505,60 +518,64 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     val_return = get_poll_owner_id_message_id(update, context)
     if val_return is None:
         return
+        
     poll_owner_id = val_return["poll_owner_id"]
     message_id = val_return["message_id"]
 
-    logger.info("Info poll " + poll_owner_id + " " + message_id)
-    poll_data = get_poll_data_by_message_id(context, message_id)
+    logger.info("checkbill_handler Info poll " + poll_owner_id + " " + message_id)
+    # poll_data = get_poll_data_by_message_id(context, message_id)
 
     # list of dictionaries representing table rows
     # list of dictionaries representing table rows
     table_data = [
     ]
+    
+    poll_data_manager = get_poll_model(update, context, -1, -1, -1)
 
     parent_id = repo_get_parent_poll_ids_from_specific_chat_id_by_message_id(repo, poll_owner_id, message_id)
     # List all poll that have common parent
-    list_poll_ids = repo_get_list_child_poll_ids_from_specific_chat_id_by_parent_id(repo, poll_owner_id, parent_id)
+    # list_poll_ids = repo_get_list_child_poll_ids_from_specific_chat_id_by_parent_id(repo, poll_owner_id, parent_id)
     # tong hop data tung poll
 
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
+    list_poll_ids = poll_data_manager.get_list_poll_id_follow_message_id(message_id)
 
     logger.info(f"list_poll_ids {list_poll_ids}")
     subtotal_int = 0
-    poll_id_selected = None
-    for message_id in list_poll_ids:
-        poll_data = get_poll_data_by_message_id(context, message_id)
+    poll_data = None
+    
+    for poll_id in list_poll_ids:
+        # poll_data = get_poll_data_by_message_id(context, message_id)
+        poll_data = poll_data_manager.get_poll_data_by_poll_id(poll_id)
         logger.info(f"poll_data {poll_data}")
-        if poll_id_selected is None:
-            poll_id_selected = repo_get_poll_id_by_message_id(repo, message_id)
 
-        if "answers" in poll_data:
-            for key in poll_data["answers"]:
-                if "questions" in poll_data:
-                    list_answer_of_this_user = poll_data["answers"].get(key)
-                    logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
-                    paid_state = 0
-                    if poll_data.get("paid_state") is not None:
-                        if poll_data.get("paid_state").get(key) is not None:
-                            paid_state = int(poll_data.get("paid_state").get(key))
+        if poll_data is not None:
+            for key in poll_data.get_answers():
+                list_answer_of_this_user = poll_data.get_answers()[key]
+                logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
+                paid_state = 0
+                if key in poll_data.get_paid_state():
+                    if poll_data.get_paid_state()[key] is not None:
+                        paid_state = int(poll_data.get_paid_state()[key])
 
-                    for i in list_answer_of_this_user:
-                        string_answer = poll_data["questions"][i]
-                        match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
-                        if match:
-                            part1_dish = match.group(1)
-                            price_str = match.group(2)  # price
-                            price_int = int(remove_non_digits(price_str))
-                            price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
-                            name = chat_id_names.get(key, key)
-                            if paid_state > 0:
-                                is_paid = "PAID"
-                            else:
-                                is_paid = "No_PAID"
+                for i in list_answer_of_this_user:
+                    string_answer = poll_data.get_questions()[i]
+                    match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
+                    if match:
+                        part1_dish = match.group(1)
+                        price_str = match.group(2)  # price
+                        price_int = int(remove_non_digits(price_str))
+                        price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
+                        name = chat_id_names.get(key, key)
+                        if paid_state > 0:
+                            is_paid = "PAID"
+                        else:
+                            is_paid = "No_PAID"
 
-                            row = [0, f"{name}", part1_dish, price_str_format, is_paid]
-                            table_data.append(row)
-                            subtotal_int += price_int
+                        row = [0, f"{name}", part1_dish, price_str_format, is_paid]
+                        table_data.append(row)
+                        subtotal_int += price_int
+                    
 
     # sort table by dish name
     table_data = sorted(table_data, key=lambda x: x[2])
@@ -593,8 +610,8 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # string = tabulate(table_data, headers="firstrow", showindex=True)
     # print(string)
 
-    time_created = repo_get_time_created_by_poll_id(repo, poll_id_selected)
-    host_poll_id = repo_get_host_poll_id_by_poll_id(repo, poll_id_selected)
+    time_created = -1 if poll_data is None else poll_data.get_time_created()
+    host_poll_id = -1 if poll_data is None else poll_data.get_host_poll_id()
 
     date_at_midnight_at_time_created = get_datetime_at_midnight_at_timestamp(time_created)
     table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
