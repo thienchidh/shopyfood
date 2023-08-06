@@ -168,6 +168,6 @@ def get_poll_owner_id_message_id(update, context):
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id[] {map_msg_poll_id_to_message_id[str(msg_poll_id)]}")
         # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id.get {map_msg_poll_id_to_message_id.get(msg_poll_id)}")
 
-    poll_owner_id = f'{message.chat.id}'
+    poll_owner_id = f'{update.effective_user.id}'
     
     return {"poll_owner_id": poll_owner_id, "message_id": message_id}

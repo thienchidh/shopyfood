@@ -39,7 +39,7 @@ async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     if (val_return is None):
         return
     
-    user_paid_id = update.message.from_user.id
+    user_paid_id = update.effective_user.id
     poll_owner_id = val_return["poll_owner_id"]
     message_id = val_return["message_id"]
     repo = get_repo_bot(context)

@@ -24,6 +24,7 @@ from modules.paid_handler import paid_handler, button_click
 from modules.paid_poll_handlers import paid_poll_handler
 from modules.remind_paid_handler import remind_paid_handler
 from util import *
+from model.user import *
 
 strategies = [
     crawl_shopeefood,
@@ -630,35 +631,42 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.effective_chat.id
     full_name = update.effective_user.full_name
-    user_name = update.effective_message.from_user.username
-    repo_user = get_repo_user(chat_id, context)
-    list_user_name = repo_user.get("user_name", [])
-    list_user_name.insert(0, user_name)
-    repo_user.set("user_name", list_user_name)
-    description = ""
     user_id = update.message.from_user.id
-
-    message = update.effective_message.reply_to_message
+    user_name = update.effective_message.from_user.username
+    user = get_user_model(update, context, user_id)
+    user.add_user_name(user_name)
+    description = ""
+    
+    message = update.effective_message
+    logger.info(f"message checkin handler: {message}")
     if not message or message.poll is None:
         message_text = update.message.text
-        regex_message_text = r"(/[\w]+)\s(.*)"
+        logger.info(f"update.message.text: {message_text}")
+        regex_message_text = r'(/[@\w]+)\s(.*)'
         if message_text is not None:
             match = re.match(regex_message_text, message_text)
+            logger.info(f"match {match}")
             if match is not None:
                 part1 = match.group(1)
                 part2 = match.group(2)
                 if part1 is not None and part2 is not None:
                     description = part2
-                    list_description = repo_user.get("description", [])
-                    list_description.insert(0, description)
-                    repo_user.set("description", list_description)
+                    user.add_description(description)
             else:
-                description = repo_get_description_by_user_id(context, user_id)
-
-    repo_user.save()
+                description = user.get_description()    
+   
+    user.save()
+    
     """Display a help message"""
-    await update.message.reply_text(
-        f'Id {chat_id} user_name = {user_name} - description= {description}')
+    level = user.level
+    exp = user.exp
+    host_count = 0
+    strText = f"ChatId: {chat_id}\n" 
+    strText += f"user_id: {user_id}\n"
+    strText += f"level: {level}\n"
+    strText += f"exp: {exp}\n" 
+    strText += f"Host times: {host_count}\n"
+    await update.message.reply_text(strText)
 
 
 async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -707,10 +715,6 @@ def main() -> None:
     application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("checkin", checkin_handler))
     application.add_handler(CommandHandler("test", test_handler))
-    application.add_handler(CommandHandler("dice", dice_handler))
-    application.add_handler(CommandHandler("checkin", checkin_handler))
-    application.add_handler(CommandHandler("test", test_handler))
-    application.add_handler(CommandHandler("dice", dice_handler))
     application.add_handler(CommandHandler("quiz", quiz_handler))
     application.add_handler(CommandHandler("quiz2", quiz_handler_2))
     application.add_handler(CommandHandler("quote", quote_handler))
