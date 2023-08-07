@@ -199,7 +199,7 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         if parent_poll_id is None:
             parent_poll_id = msg_poll_id
         parent_poll_ids[msg_poll_id] = parent_poll_id
-        logger.info("Poll created {0} {1} {2}".format(msg_poll_id, poll_owner_id, message.poll.id))
+        logger.info("Paid handler poll created {0} {1} {2}".format(msg_poll_id, poll_owner_id, message.poll.id))
 
         map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
         map_msg_poll_id_to_message_id.update({f"{msg_poll_id}": message.poll.id})
