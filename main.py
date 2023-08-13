@@ -180,6 +180,9 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         poll_data_manager.push_poll_data_by_chat_id(chat_id, poll_contain_data)
         if current_page == 1:
             poll_data_manager.push_poll_id_by_chat_id(chat_id, poll_contain_data)
+            user_host_poll = get_user_model(update, context, host_poll_id)
+            user_host_poll.add_host_history(int(poll_id))
+            user_host_poll.save()
 
     poll_history = repo.get("poll_history", [])
     poll_json_object = {
@@ -234,12 +237,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     effective_user_id = f'{effective_user.id}'
     host_poll_id = -1
     chat_id = -1
-    
-    poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
-    chat_id = poll_data_manager.get_poll_data_by_poll_id(poll_id).get_chat_id()
-    poll_data_manager.set_chat_id(chat_id)
-    poll_data_container = poll_data_manager.get_poll_data_by_poll_id(poll_id)
-    logger.info(f"receive_poll_answer chat_id {chat_id} poll_id {poll_id}");
+
     
 
     if answered_poll is None:
@@ -290,6 +288,11 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             pass
         elif poll_type == CONST.POLL_TYPE_PICK_DISH:
             logger.info("day la poll type chon mon")
+            poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
+            chat_id = poll_data_manager.get_poll_data_by_poll_id(poll_id).get_chat_id()
+            poll_data_manager.set_chat_id(chat_id)
+            poll_data_container = poll_data_manager.get_poll_data_by_poll_id(poll_id)
+            logger.info(f"receive_poll_answer chat_id {chat_id} poll_id {poll_id}");
             pass
         else:
             logger.info("khong thuoc cac loai tren")
@@ -712,13 +715,14 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     """Display a help message"""
     level = user.level
     exp = user.exp
-    host_count = 0
+    host_count = user.get_host_times()
     strText = f"ChatId: {chat_id}\n" 
     strText += f"user_name: {user_name}\n"
     strText += f"user_id: {user_id}\n"
     strText += f"level: {level}\n"
     strText += f"exp: {exp}\n" 
     strText += f"Host times: {host_count}\n"
+    strText += f"Description: {description}\n"
     await update.message.reply_text(strText)
 
 

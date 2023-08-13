@@ -24,6 +24,7 @@ class User:
         self.level = repo_user.get("level", 0)
         self.exp = repo_user.get("exp", 0)
         self.description = repo_user.get("description", [])
+        self.host_history = repo_user.get("host_history", [])
       
     def to_dict(self):
         return {
@@ -33,7 +34,8 @@ class User:
             "user_id": self.user_id,
             "level": self.level,
             "exp": self.exp,
-            "description:": self.description
+            "description:": self.description,
+            "host_history:": self.host_history
         }
          
     def add_user_name(self, user_name: str):
@@ -44,7 +46,13 @@ class User:
     def add_description(self, description: str):
         while (len(self.description) > CONST.LEN):
             self.description.pop()
-        self.description.insert(0, description)                   
+        self.description.insert(0, description)   
+        
+    def add_host_history(self, poll_id: int):
+        self.host_history.append(poll_id)
+        
+    def get_host_times(self):
+        return len(self.host_history)        
         
     def get_user_name(self):
         if (len(self.user_name) > 0):
@@ -74,6 +82,7 @@ class User:
         self.repo_user.set("level", self.level)
         self.repo_user.set("exp", self.exp)
         self.repo_user.set("description", self.description)
+        self.repo_user.set("host_history", self.host_history)
         self.repo_user.save()
 
 
