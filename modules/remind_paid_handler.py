@@ -44,6 +44,10 @@ async def remind_paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 
     list_poll_ids = poll_data_manager.get_list_poll_id_follow_message_id(message_id)
     
+    if (list_poll_ids is None or len(list_poll_ids) <= 0):
+        strLocal = "Remind paidl hơi xa rồi đó không có data!"
+        await update.effective_message.reply_text(text=f"{strLocal}", parse_mode=ParseMode.HTML)
+        return
     
     logger.info(f"paid handler list_poll_ids : {list_poll_ids}")
         
