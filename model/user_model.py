@@ -46,11 +46,15 @@ class User:
             self.description.pop()
         self.description.insert(0, description)                   
         
+    def get_user_name(self):
+        if (len(self.user_name) > 0):
+            return self.user_name[-1]
+        return "NoFoundUserName"
+        
     def get_description(self):
-        my_list = self.description
-        element_to_find = 0
-        default_value = "NotFoundDescription"
-        result = my_list[my_list.index(element_to_find)] if element_to_find in my_list else default_value
+        if (len(self.description) > 0):
+            return self.description[-1]
+        return "NoFoundDescription"
         
     def get_level(self):
         return self.level
