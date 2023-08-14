@@ -32,10 +32,7 @@ from util import *
 
 async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message.reply_to_message
-    # logger.info("khai code update")
-    # logger.info(f"paid_handler message : {message}")
-    # logger.info(f"paid_handler update : {update}")
-    # logger.info(f"paid_handler update.message.from_user.id {update.message.from_user.id}")
+    
     val_return = get_poll_owner_id_message_id(update, context)
     if (val_return is None):
         return
@@ -55,19 +52,15 @@ async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     logger.info(f"paid handler message_id : {message_id}")
     logger.info(f"paid handler host_poll_id : {host_poll_id}")
     logger.info(f"paid handler user_name : {host_user_name}")
-    
-    parent_id = repo_get_parent_poll_ids_from_specific_chat_id_by_message_id(repo, poll_owner_id, message_id)
-    # List all poll that have common parent
+
+
     list_poll_ids = poll_data_manager.get_list_poll_id_follow_message_id(message_id)
-    # tong hop data tung poll
     
     # logger.info(f"paid handler parent_id : {parent_id}")
     logger.info(f"paid handler list_poll_ids : {list_poll_ids}")
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
     # logger.info(f"paid handler chat_id_names : {chat_id_names}")
     
-    # list of dictionaries representing table rows
-    # list of dictionaries representing table rows
     headers = ["STT", "Name", "Dish", "Price", "Paid"]
     table_data = [
         headers,
@@ -92,37 +85,10 @@ async def paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
             for key in poll_data.get_answers():
                 list_answer_of_this_user = poll_data.get_answers()[key]
                 logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
-                
-                # repo_set_paid_state_by_user_id_poll_id(repo, user_paid_id, poll_id)
-                # all_user_paid_state_by_poll_id = repo_get_all_user_paid_state_by_poll_id(repo, poll_id)
-                # logger.info(f"all_user_paid_state_by_poll_id {all_user_paid_state_by_poll_id}")
-                poll_data.set_paid_state_by_user_id(user_paid_id, 1)
-                repo.save()
-                continue
-                paid_state = 0
-                if poll_data.get("paid_state") is not None:
-                    if (poll_data.get("paid_state").get(key) is not None):
-                        paid_state = int(poll_data.get("paid_state").get(key))
-                        
-                for i in list_answer_of_this_user:
-                    string_answer = poll_data["questions"][i]
-                    match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
-                    if match:
-                        index += 1
-                        part1_dish = match.group(1)
-                        price_str = match.group(2)  # price
-                        price_int = int(remove_non_digits(price_str))
-                        price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
-                        name = chat_id_names.get(key, key)
-                        if (paid_state > 0):
-                            is_paid = "PAID"
-                        else:
-                            is_paid = "No_PAID"    
-                        
-                        row = [index, f"{name}", part1_dish, price_str_format, is_paid]
-                        table_data.append(row)
-                        subtotal_int += price_int
-                pass
+                if (str(key) == str(user_paid_id)):
+                    poll_data.set_paid_state_by_user_id(user_paid_id, 1)
+                    repo.save()
+                    continue
           
 
     poll_data_manager.save()                    

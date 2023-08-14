@@ -128,9 +128,6 @@ def remove_non_digits(input_string):
 def get_poll_owner_id_message_id(update, context):
     repo = get_repo_bot(context)
     message = update.effective_message.reply_to_message
-    # logger.info(f"checkbill_hander update.effective_message {update.effective_message}")
-    # logger.info(f"checkbill_hander update.message {update.message}")
-    
     poll_data_manager = get_poll_model(update, context, -1, -1, -1)
     
     element_poll_history = None
@@ -148,17 +145,14 @@ def get_poll_owner_id_message_id(update, context):
                 part2 = match.group(2)
                 if part2 is not None:
                     poll_index = int(part2)
-                    # logger.info(f'message text: {message_text} {part1} {part2} {paramChoice}')
                     poll_id = poll_data_manager.get_poll_id_by_index(chat_id, poll_index)
                     element_poll_history = poll_data_manager.get_poll_data_by_poll_id(poll_id)
-                    # element_poll_history = repo_get_poll_from_poll_history(repo, poll_index)
                 else:
                     # element_poll_history = repo_get_poll_from_poll_history(repo, -1)
                     poll_id = poll_data_manager.get_poll_id_by_index(chat_id, -1)
                     logger.info(f"get_poll_owner_id_message_id poll_id chat_id 1 {poll_id} {chat_id}")
                     element_poll_history = poll_data_manager.get_poll_data_by_poll_id(poll_id)
             else:
-                # element_poll_history = repo_get_poll_from_poll_history(repo, -1)
                 poll_id = poll_data_manager.get_poll_id_by_index(chat_id, -1)
                 logger.info(f"get_poll_owner_id_message_id poll_id chat_id 2 {poll_id} {chat_id}")
                 element_poll_history = poll_data_manager.get_poll_data_by_poll_id(poll_id)
@@ -171,15 +165,8 @@ def get_poll_owner_id_message_id(update, context):
     if element_poll_history is None:
         message_id = f'{message.message_id}'
     else:
-        # logger.info(f"checkbill_handler element_poll_history {element_poll_history}")
         message_id = element_poll_history.get_message_id()
-        # message_id = msg_poll_id
-        # map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id {map_msg_poll_id_to_message_id}")
-        # message_id = str(map_msg_poll_id_to_message_id.get(str(msg_poll_id), f"{message.message_id}"))
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id[] {map_msg_poll_id_to_message_id[str(msg_poll_id)]}")
-        # logger.info(f"checkbill_handler map_msg_poll_id_to_message_id.get {map_msg_poll_id_to_message_id.get(msg_poll_id)}")
+      
 
     poll_owner_id = f'{update.effective_user.id}'
     

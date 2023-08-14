@@ -180,6 +180,9 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         poll_data_manager.push_poll_data_by_chat_id(chat_id, poll_contain_data)
         if current_page == 1:
             poll_data_manager.push_poll_id_by_chat_id(chat_id, poll_contain_data)
+            user_host_poll = get_user_model(update, context, host_poll_id)
+            user_host_poll.add_host_history(int(poll_id))
+            user_host_poll.save()
 
     poll_history = repo.get("poll_history", [])
     poll_json_object = {
@@ -226,7 +229,6 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     repo = get_repo_bot(context)
     all_poll_data = repo.get('poll_data', dict())
     answer = update.poll_answer
-    # logger.info(f"receive_poll_answer answers {update.poll_answer}")
     poll_id = answer.poll_id
     answered_poll = all_poll_data.get(answer.poll_id)
 
@@ -235,10 +237,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     effective_user_id = f'{effective_user.id}'
     host_poll_id = -1
     chat_id = -1
-    
-    poll = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
-    poll_data_container = poll.get_poll_data_by_poll_id(poll_id)
-    # logger.info(f"poll_data_container {poll_data_container}");
+
     
 
     if answered_poll is None:
@@ -289,6 +288,11 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
             pass
         elif poll_type == CONST.POLL_TYPE_PICK_DISH:
             logger.info("day la poll type chon mon")
+            poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
+            chat_id = poll_data_manager.get_poll_data_by_poll_id(poll_id).get_chat_id()
+            poll_data_manager.set_chat_id(chat_id)
+            poll_data_container = poll_data_manager.get_poll_data_by_poll_id(poll_id)
+            logger.info(f"receive_poll_answer chat_id {chat_id} poll_id {poll_id}");
             pass
         else:
             logger.info("khong thuoc cac loai tren")
@@ -308,7 +312,7 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     paid_state[effective_user_id] = -1
     poll_data_container.set_answers_by_user_id(effective_user_id, selected_options)
     save_data_user_name(repo, effective_user_id, effective_user)
-    poll.save()
+    poll_data_manager.save()
     if answer_string == "":
         await context.bot.send_message(
             answered_poll["chat_id"],
@@ -534,31 +538,30 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     
     poll_data_manager = get_poll_model(update, context, -1, -1, -1)
 
-    parent_id = repo_get_parent_poll_ids_from_specific_chat_id_by_message_id(repo, poll_owner_id, message_id)
-    # List all poll that have common parent
-    # list_poll_ids = repo_get_list_child_poll_ids_from_specific_chat_id_by_parent_id(repo, poll_owner_id, parent_id)
-    # tong hop data tung poll
 
     chat_id_names = repo.compute_if_absent('chat_id_names', lambda k: dict())
     list_poll_ids = poll_data_manager.get_list_poll_id_follow_message_id(message_id)
 
     logger.info(f"list_poll_ids {list_poll_ids}")
+    if (list_poll_ids is None or len(list_poll_ids) <= 0):
+        strLocal = "Check bill hơi xa rồi đó không có data!"
+        await update.effective_message.reply_text(text=f"{strLocal}", parse_mode=ParseMode.HTML)
+        return
+        
     subtotal_int = 0
     poll_data = None
     
     for poll_id in list_poll_ids:
-        # poll_data = get_poll_data_by_message_id(context, message_id)
         poll_data = poll_data_manager.get_poll_data_by_poll_id(poll_id)
-        logger.info(f"poll_data {poll_data}")
-
         if poll_data is not None:
-            for key in poll_data.get_answers():
-                list_answer_of_this_user = poll_data.get_answers()[key]
-                logger.info(f"list_answer_of_this_user {list_answer_of_this_user}")
+            for key_answer in poll_data.get_answers():
+                list_answer_of_this_user = poll_data.get_answers()[key_answer]
+                logger.info(f"checkbill_handler key_answer {key_answer}")
+                logger.info(f"checkbill_handler list_answer_of_this_user {list_answer_of_this_user}")
                 paid_state = 0
-                if key in poll_data.get_paid_state():
-                    if poll_data.get_paid_state()[key] is not None:
-                        paid_state = int(poll_data.get_paid_state()[key])
+                if key_answer in poll_data.get_paid_state():
+                    if poll_data.get_paid_state()[key_answer] is not None:
+                        paid_state = int(poll_data.get_paid_state()[key_answer])
 
                 for i in list_answer_of_this_user:
                     string_answer = poll_data.get_questions()[i]
@@ -568,7 +571,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                         price_str = match.group(2)  # price
                         price_int = int(remove_non_digits(price_str))
                         price_str_format = '{:,.0f}'.format(price_int) + "\u0111"
-                        name = chat_id_names.get(key, key)
+                        name = chat_id_names.get(key_answer, key_answer)
                         if paid_state > 0:
                             is_paid = "PAID"
                         else:
@@ -712,13 +715,14 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     """Display a help message"""
     level = user.level
     exp = user.exp
-    host_count = 0
+    host_count = user.get_host_times()
     strText = f"ChatId: {chat_id}\n" 
     strText += f"user_name: {user_name}\n"
     strText += f"user_id: {user_id}\n"
     strText += f"level: {level}\n"
     strText += f"exp: {exp}\n" 
     strText += f"Host times: {host_count}\n"
+    strText += f"Description: {description}\n"
     await update.message.reply_text(strText)
 
 
@@ -783,7 +787,7 @@ def main() -> None:
     application.add_handler(CommandHandler('admin', admin_only_command))
     application.add_handler(CommandHandler('moderator', moderator_only_command))
     application.add_handler(CommandHandler('public', public_command))
-    application.add_handler(CommandHandler('remind_paid', remind_paid_handler))
+    application.add_handler(CommandHandler('remind', remind_paid_handler))
     application.add_handler(CommandHandler("paid_poll", paid_poll_handler))
 
     # Run the bot until the user presses Ctrl-C
