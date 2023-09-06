@@ -63,6 +63,11 @@ class User:
         if (len(self.description) > 0):
             return self.description[-1]
         return "NoFoundDescription"
+    
+    def get_latest_description(self):
+        if (len(self.description) > 0):
+            return self.description[0]
+        return "NoFoundDescription"
         
     def get_level(self):
         return self.level
