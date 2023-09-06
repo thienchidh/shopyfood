@@ -81,7 +81,7 @@ async def remind_paid_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
     time_created = -1 if poll_data is None else poll_data.get_time_created()
     host_poll_id = -1 if poll_data is None else poll_data.get_host_poll_id()
     host_user_name = get_user_model(update, context, host_poll_id).get_user_name()
-    description = get_user_model(update, context, host_poll_id).get_description()
+    description = get_user_model(update, context, host_poll_id).get_latest_description()
    
     date_at_midnight_at_time_created = get_datetime_at_midnight_at_timestamp(time_created)
     phone = repo_get_phone_by_user_id(context, host_poll_id)
