@@ -13,6 +13,7 @@ from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 
 import crawl_grabfood
 import crawl_shopeefood
+import custom_poll
 import modules.logic_handlers as logic_handlers
 import modules.rank_handlers as rank_handlers
 import quiz_loader
@@ -23,6 +24,7 @@ from authority_util import check_authority
 from modules.paid_handler import paid_handler, button_click
 from modules.paid_poll_handlers import paid_poll_handler
 from modules.remind_paid_handler import remind_paid_handler
+from modules.dice_roll_handler import dice_roll_handler
 from util import *
 from model.user_model import *
 from model.poll_model import *
@@ -30,6 +32,7 @@ from model.poll_model import *
 strategies = [
     crawl_shopeefood,
     crawl_grabfood,
+    custom_poll,
 ]
 
 
@@ -60,6 +63,7 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
     url = text.split(' ')[1]
     obj = attempt_process(url)
+    logger.info("url: " + url)
     # check obj is string
     if isinstance(obj, str):
         await update.message.reply_text(obj)
@@ -678,6 +682,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("finish_roll", "Kết thúc roll"),
         BotCommand("repeat", "Lặp lại tin nhắn n lần"),
         BotCommand("rank", "Để xem thống kê"),
+        BotCommand("dice2", "Dice 2"),
     ]
     await context.bot.set_my_commands(commands)
 
@@ -789,6 +794,7 @@ def main() -> None:
     application.add_handler(CommandHandler('public', public_command))
     application.add_handler(CommandHandler('remind', remind_paid_handler))
     application.add_handler(CommandHandler("paid_poll", paid_poll_handler))
+    application.add_handler(CommandHandler("dice2", dice_roll_handler))
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
