@@ -46,25 +46,25 @@ def process(url):
     items = []
 
     item = {
-            'name': "Bún thịt nướng basic",
-            'price': "30,000đ",
-            'price_value': 30,
+            'name': "Bún thịt nướng options 35k",
+            'price': "35,000đ",
+            'price_value': 35,
         }
-    items.append(item)
+    # items.append(item)
     
     item = {
-            'name': "Bún thịt nướng standard",
+            'name': "Bún thịt nướng 35k",
             'price': "35,000đ",
             'price_value': 35,
         }
     items.append(item)
     
     item = {
-            'name': "Bún thịt nướng ultra",
-            'price': "40,000đ",
-            'price_value': 40,
+            'name': "Bún thịt nướng 35k",
+            'price': "35,000đ",
+            'price_value': 35,
         }
-    items.append(item)
+    # items.append(item)
     
     # unique items
     items = list({v['name']: v for v in items}.values())
