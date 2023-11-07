@@ -46,11 +46,11 @@ def process(url):
     items = []
 
     item = {
-            'name': "Bún thịt nướng options 35k",
+            'name': "Bún thịt nướng 35k",
             'price': "35,000đ",
             'price_value': 35,
         }
-    # items.append(item)
+    items.append(item)
     
     item = {
             'name': "Bún thịt nướng 35k",
@@ -64,7 +64,7 @@ def process(url):
             'price': "35,000đ",
             'price_value': 35,
         }
-    # items.append(item)
+    items.append(item)
     
     # unique items
     items = list({v['name']: v for v in items}.values())
