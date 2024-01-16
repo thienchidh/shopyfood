@@ -14,6 +14,7 @@ from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 import crawl_grabfood
 import crawl_shopeefood
 import custom_poll
+import duongtt2_custom_poll
 import modules.logic_handlers as logic_handlers
 import modules.rank_handlers as rank_handlers
 import quiz_loader
@@ -33,6 +34,7 @@ strategies = [
     crawl_shopeefood,
     crawl_grabfood,
     custom_poll,
+    duongtt2_custom_poll
 ]
 
 
