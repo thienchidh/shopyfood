@@ -656,6 +656,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/start_roll để bắt đầu roll.\n"
         "/info_roll để xem thông tin roll.\n"
         "/finish_roll để kết thúc roll.\n"
+        "/donate để ủng hộ dev\n"
         "/repeat [n] để lặp lại tin nhắn n lần.\n"
         "/rank để xem thống kê.\n"
         "Star github: https://github.com/thienchidh/shopyfood\n"
@@ -682,6 +683,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("start_roll", "Bắt đầu roll"),
         BotCommand("info_roll", "Xem thông tin roll"),
         BotCommand("finish_roll", "Kết thúc roll"),
+        BotCommand("donate", "Ủng hộ dev")
         BotCommand("repeat", "Lặp lại tin nhắn n lần"),
         BotCommand("rank", "Để xem thống kê"),
         BotCommand("dice2", "Dice 2"),
@@ -758,6 +760,10 @@ async def test_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         # logger.error(f"Error getting member info: {e}")
         await update.message.reply_text("Error getting member info")
 
+async def handle_donate(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.effective_message.reply_photo(open('./config/donate.jpg', 'rb'))
+    pass
+
 
 def main() -> None:
     """Run bot."""
@@ -788,6 +794,7 @@ def main() -> None:
     application.add_handler(CommandHandler("start_roll", logic_handlers.handle_start_game))
     application.add_handler(CommandHandler("info_roll", logic_handlers.handle_info_game))
     application.add_handler(CommandHandler("finish_roll", logic_handlers.handle_finish_game))
+    application.add_handler(CommandHandler("donate", handle_donate)) 
     application.add_handler(MessageHandler(filters.Dice.DICE, logic_handlers.handle_roll))
     application.add_handler(CommandHandler("rank", rank_handler))
     application.add_handler(CallbackQueryHandler(button_click))
