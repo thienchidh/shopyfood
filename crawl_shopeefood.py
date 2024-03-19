@@ -5,26 +5,22 @@ import requests
 from util import get_url_with_no_params, safe_get
 
 headers = {
-    'authority': 'gappapi.deliverynow.vn',
     'accept': 'application/json, text/plain, */*',
-    'accept-language': 'vi,en;q=0.9,und;q=0.8,mt;q=0.7',
-    'dnt': '1',
-    'origin': 'https://shopeefood.vn',
-    'referer': 'https://shopeefood.vn/',
-    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+    'accept-language': 'vi,en;q=0.9,und;q=0.8,mt;q=0.7,zh-CN;q=0.6,zh;q=0.5',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"macOS"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
     'x-foody-access-token': '',
     'x-foody-api-version': '1',
     'x-foody-app-type': '1004',
     'x-foody-client-id': '',
     'x-foody-client-language': 'vi',
     'x-foody-client-type': '1',
-    'x-foody-client-version': '3.0.0'
+    'x-foody-client-version': '3.0.0',
+    'x-sap-ri': ''
 }
 
 
@@ -38,7 +34,7 @@ def get_api_delivery(from_url):
     if response.status_code == 200:
         return response.json()
     else:
-        print("Request failed with status code: ", response.status_code)
+        print("Request failed with status code: ", response.status_code, response.text)
     return None
 
 
@@ -122,3 +118,8 @@ def process(full_url):
     items = list({v['name']: v for v in items}.values())
 
     return "[Now] " + title, items, alert_msg
+
+# if __name__ == '__main__':
+#     response = process("https://shopeefood.vn/da-nang/tiem-an-vua-vit-quay-pham-cu-luong")
+#     #https://gappapi.deliverynow.vn/api/delivery/get_from_url?url=da-nang/
+#     print(response)
