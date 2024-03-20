@@ -608,12 +608,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # add a row for the subtotal
     subtotal_row = ["", "", f"Subtotal {subtotal_str}", ""]
     table_data.append(subtotal_row)
-    subtotal_row = ["", "", f"AppFee {100}", ""]
-    table_data.append(subtotal_row)
-    subtotal_row = ["", "", f"Discount1 {100}", ""]
-    table_data.append(subtotal_row)
-    subtotal_row = ["", "", f"Discount2 {100}", ""]
-    table_data.append(subtotal_row)
     # print the table using the tabulate library
     # string = tabulate(table_data, headers="firstrow", showindex=True)
     # print(string)

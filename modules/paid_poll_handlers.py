@@ -34,10 +34,10 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         return
     poll_owner_id = val_return["poll_owner_id"]
     message_id = val_return["message_id"]
-    
+
     logger.info("Info poll " + poll_owner_id + " " + message_id)
     poll_data = get_poll_data_by_message_id(context, message_id)
-    
+
 
     # list of dictionaries representing table rows
     # list of dictionaries representing table rows
@@ -64,7 +64,7 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         logger.info(f"poll_data {poll_data}")
         if poll_id_selected is None:
             poll_id_selected = repo_get_poll_id_by_message_id(repo, message_id)
-            
+
         if "answers" in poll_data:
             for key in poll_data["answers"]:
                 if "questions" in poll_data:
@@ -74,7 +74,7 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                     if poll_data.get("paid_state") is not None:
                         if (poll_data.get("paid_state").get(key) is not None):
                             paid_state = int(poll_data.get("paid_state").get(key))
-                            
+
                     for i in list_answer_of_this_user:
                         string_answer = poll_data["questions"][i]
                         match = re.match(r'^(.*)\s(\d{1,3}([,.]\d{3})*).*$', string_answer)
@@ -88,16 +88,16 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                             if (paid_state > 0):
                                 is_paid = "PAID"
                             else:
-                                is_paid = "No_PAID"    
-                            
+                                is_paid = "No_PAID"
+
                             row = [index, f"{name}", part1_dish, price_str_format, is_paid]
                             table_data.append(row)
                             subtotal_int += price_int
 
                     pass
-          
-    # tao poll: 
-    # user name -> mon da pick 
+
+    # tao poll:
+    # user name -> mon da pick
     # list of column headers
     subtotal_str = '{:,.0f}'.format(subtotal_int) + "\u0111"
 
@@ -108,25 +108,19 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # add a row for the subtotal
     subtotal_row = ["", "", f"Subtotal {subtotal_str}", ""]
     table_data.append(subtotal_row)
-    subtotal_row = ["", "", f"AppFee {100}", ""]
-    table_data.append(subtotal_row)
-    subtotal_row = ["", "", f"Discount1 {100}", ""]
-    table_data.append(subtotal_row)
-    subtotal_row = ["", "", f"Discount2 {100}", ""]
-    table_data.append(subtotal_row)
     # print the table using the tabulate library
     # string = tabulate(table_data, headers="firstrow", showindex=True)
     # print(string)
 
     time_created = repo_get_time_created_by_poll_id(repo, poll_id_selected)
     host_poll_id = repo_get_host_poll_id_by_poll_id(repo, poll_id_selected)
-   
+
     date_at_midnight_at_time_created = get_datetime_at_midnight_at_timestamp(time_created)
     table_str = tabulate(table_data, headers="firstrow", tablefmt='orgtbl', showindex=False)
     host_user_name = repo_get_user_name_by_user_id(context, host_poll_id)
     phone = repo_get_phone_by_user_id(context, host_poll_id)
     description = repo_get_description_by_user_id(context, host_poll_id)
-    
+
     # await update.effective_message.reply_document(open('./config/mp4.mp4', 'rb'))
     str_header = f"{date_at_midnight_at_time_created}\nHost: {host_user_name} - {description}"
     await update.effective_message.reply_text(text=f"<pre>{str_header}\n{table_str}</pre>", parse_mode=ParseMode.HTML)
@@ -134,7 +128,7 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
     text = update.message.text
     url = text.split(' ')[1]
-    
+
     obj = attempt_process(url)
     # check obj is string
     if isinstance(obj, str):
@@ -167,7 +161,7 @@ async def paid_poll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     poll_group_ids = []
     poll_data = dict()
     poll_ids = []
-    host_poll_id = update.message.from_user.id  
+    host_poll_id = update.message.from_user.id
     time_created = time.time()
 
     # Create poll for each item
