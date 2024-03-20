@@ -100,18 +100,18 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     poll_ids = []
     host_poll_id = update.message.from_user.id
     time_created = time.time()
-    
+
        # Create poll for each item
     current_page = 0
     previous_poll_id = -1
     next_poll_id = -1
-    
+
     previous_poll = None
     poll_id = -1
     chat_id = update.effective_chat.id
-    
+
     poll_data_manager = get_poll_model(update, context, poll_id, host_poll_id, chat_id)
-    
+
     for items in items_split:
         current_page += 1
         questions = [item['name'] + ' ' + item['price'] for item in items[:limit_items_per_poll]]
@@ -144,12 +144,12 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         map_msg_poll_id_to_message_id = repo.get("map_msg_poll_id_to_message_id", dict())
         map_msg_poll_id_to_message_id.update({f"{msg_poll_id}": message.poll.id})
         repo.set("map_msg_poll_id_to_message_id", map_msg_poll_id_to_message_id)
-        
+
         message_id = message.message_id
         poll_type = CONST.POLL_TYPE_PICK_DISH
         poll_id = message.poll.id
         chat_id = update.effective_chat.id
-        
+
         # Save some info about the poll the bot_data for later use in receive_poll_answer
         payload = {
             poll_id : {
@@ -163,26 +163,26 @@ async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 "host_poll_id": host_poll_id
             }
         }
-        
+
         poll_contain_data = PollData()
-       
+
         poll_contain_data.set_message_id(message_id)
         poll_contain_data.set_poll_type(poll_type)
         poll_contain_data.set_questions(questions)
         poll_contain_data.set_poll_id(poll_id)
         poll_contain_data.set_chat_id(chat_id)
         poll_contain_data.set_host_poll_id(host_poll_id)
-        
+
         if (previous_poll is not None):
             poll_contain_data.set_previous_poll_id(previous_poll.get_poll_id())
             previous_poll.set_next_poll_id(poll_id)
             poll_data_manager.update_poll_data_by_chat_id(chat_id, previous_poll)
-                    
+
         previous_poll = poll_contain_data
-        
+
         poll_data.update(payload)
         context.bot_data.update(payload)
-        
+
         poll_data_manager.push_poll_data_by_chat_id(chat_id, poll_contain_data)
         if current_page == 1:
             poll_data_manager.push_poll_id_by_chat_id(chat_id, poll_contain_data)
@@ -243,8 +243,6 @@ async def receive_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
     effective_user_id = f'{effective_user.id}'
     host_poll_id = -1
     chat_id = -1
-
-    
 
     if answered_poll is None:
         logger.info("Khong get duoc poll id")
@@ -530,7 +528,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     val_return = get_poll_owner_id_message_id(update, context)
     if val_return is None:
         return
-        
+
     poll_owner_id = val_return["poll_owner_id"]
     message_id = val_return["message_id"]
 
@@ -541,7 +539,7 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     # list of dictionaries representing table rows
     table_data = [
     ]
-    
+
     poll_data_manager = get_poll_model(update, context, -1, -1, -1)
 
 
@@ -553,10 +551,10 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         strLocal = "Check bill hơi xa rồi đó không có data!"
         await update.effective_message.reply_text(text=f"{strLocal}", parse_mode=ParseMode.HTML)
         return
-        
+
     subtotal_int = 0
     poll_data = None
-    
+
     for poll_id in list_poll_ids:
         poll_data = poll_data_manager.get_poll_data_by_poll_id(poll_id)
         if poll_data is not None:
@@ -586,7 +584,6 @@ async def checkbill_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) 
                         row = [0, f"{name}", part1_dish, price_str_format, is_paid]
                         table_data.append(row)
                         subtotal_int += price_int
-                    
 
     # sort table by dish name
     table_data = sorted(table_data, key=lambda x: x[2])
@@ -697,8 +694,7 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     user = get_user_model(update, context, user_id)
     user.add_user_name(user_name)
     description = ""
-    
-    
+
     message = update.effective_message
     logger.info(f"message checkin handler: {message}")
     if not message or message.poll is None:
@@ -715,19 +711,15 @@ async def checkin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                     description = part2
                     user.add_description(description)
             else:
-                description = user.get_description()    
-   
+                description = user.get_description()
+
     user.save()
-    
+
     """Display a help message"""
-    level = user.level
-    exp = user.exp
     host_count = user.get_host_times()
-    strText = f"ChatId: {chat_id}\n" 
+    strText = f"ChatId: {chat_id}\n"
     strText += f"user_name: {user_name}\n"
     strText += f"user_id: {user_id}\n"
-    strText += f"level: {level}\n"
-    strText += f"exp: {exp}\n" 
     strText += f"Host times: {host_count}\n"
     strText += f"Description: {description}\n"
     await update.message.reply_text(strText)
