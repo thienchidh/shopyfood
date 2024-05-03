@@ -61,7 +61,14 @@ def attempt_process(url):
     return None
 
 async def random_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    ele = update.effective_message.text.split(' ')[1:]
+    split_chars = [' ', ',', ';', ':', '|', '/', '\\', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '`', '~', '[', ']', '{', '}', '<', '>', '?', '.', ',']
+    for char in split_chars:
+        ele = update.effective_message.text.split(char)[1:]
+        if len(ele) > 1:
+            break
+
+    ele = [x.strip() for x in ele]
+
     if len(ele) == 0:
         ele = ['Phở', 'Cơm', 'Bún', 'Mì', 'Hủ tiếu', 'Bò kho', 'Cháo lòng', 'Bánh canh', 'Bánh mì', 'Bánh xèo', 'Bánh cuốn', 'Bánh bột lọc', 'Bánh bèo', 'Bánh flan', 'Bánh bao', 'Bánh giò', 'Bánh khọt', 'Bánh tráng', 'Bánh tráng trộn', 'Bánh tráng nướng', 'Bánh tráng cuốn', 'Bánh tráng mè', 'Bánh tráng dừa', 'Chim cút']
     await update.effective_message.reply_text(random.choice(ele))
