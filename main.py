@@ -60,6 +60,11 @@ def attempt_process(url):
             return strategy.process(url)
     return None
 
+async def random_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    ele = update.effective_message.text.split(' ')[1:]
+    if len(ele) == 0:
+        ele = ['Phở', 'Cơm', 'Bún', 'Mì', 'Hủ tiếu', 'Bò kho', 'Cháo lòng', 'Bánh canh', 'Bánh mì', 'Bánh xèo', 'Bánh cuốn', 'Bánh bột lọc', 'Bánh bèo', 'Bánh flan', 'Bánh bao', 'Bánh giò', 'Bánh khọt', 'Bánh tráng', 'Bánh tráng trộn', 'Bánh tráng nướng', 'Bánh tráng cuốn', 'Bánh tráng mè', 'Bánh tráng dừa', 'Chim cút']
+    await update.effective_message.reply_text(random.choice(ele))
 
 async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
@@ -649,6 +654,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "/finish_roll để kết thúc roll.\n"
         "/repeat [n] để lặp lại tin nhắn n lần.\n"
         "/rank để xem thống kê.\n"
+        "/remind để nhắc nhở thanh toán.\n"
+        "/random ele để chọn ngẫu nhiên 1 phần tử trong list ele.\n"
         "Star github: https://github.com/thienchidh/shopyfood\n"
     )
 
@@ -676,6 +683,8 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("repeat", "Lặp lại tin nhắn n lần"),
         BotCommand("rank", "Để xem thống kê"),
         BotCommand("dice2", "Dice 2"),
+        BotCommand("remind", "Nhắc nhở thanh toán"),
+        BotCommand("random", "Chọn ngẫu nhiên 1 phần tử trong list ele"),
     ]
     await context.bot.set_my_commands(commands)
 
@@ -783,6 +792,7 @@ def main() -> None:
     application.add_handler(CommandHandler('remind', remind_paid_handler))
     application.add_handler(CommandHandler("paid_poll", paid_poll_handler))
     application.add_handler(CommandHandler("dice2", dice_roll_handler))
+    application.add_handler(CommandHandler("random", random_handler))
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
