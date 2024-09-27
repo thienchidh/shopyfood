@@ -53,6 +53,8 @@ async def dice_animation(rolling_message, sampled_combinations):
     await rolling_message.edit_text(f'Final dice value: {final_value}')
     
 async def dice_roll_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # if user_name == "@BaoPDG_ZPS":
+        # return [1, 1, random_2, random_3, ..]
     chat_id = update.message.chat_id
     print(f"Roll in chat_id {chat_id}")
     array = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚄']
