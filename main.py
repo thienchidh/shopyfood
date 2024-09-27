@@ -15,6 +15,7 @@ import crawl_grabfood
 import crawl_shopeefood
 import custom_poll
 import duongtt2_custom_poll
+import banh_mi_thit_xiu_custom_poll
 import modules.logic_handlers as logic_handlers
 import modules.rank_handlers as rank_handlers
 import quiz_loader
@@ -26,6 +27,8 @@ from modules.paid_handler import paid_handler, button_click
 from modules.paid_poll_handlers import paid_poll_handler
 from modules.remind_paid_handler import remind_paid_handler
 from modules.dice_roll_handler import dice_roll_handler
+from modules.top_link_handler import top_link_handler
+from modules.spend_handler import spend_handler
 from util import *
 from model.user_model import *
 from model.poll_model import *
@@ -34,7 +37,8 @@ strategies = [
     crawl_shopeefood,
     crawl_grabfood,
     custom_poll,
-    duongtt2_custom_poll
+    duongtt2_custom_poll,
+    banh_mi_thit_xiu_custom_poll
 ]
 
 
@@ -72,6 +76,7 @@ async def random_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if len(ele) == 0:
         ele = ['Phở', 'Cơm', 'Bún', 'Mì', 'Hủ tiếu', 'Bò kho', 'Cháo lòng', 'Bánh canh', 'Bánh mì', 'Bánh xèo', 'Bánh cuốn', 'Bánh bột lọc', 'Bánh bèo', 'Bánh flan', 'Bánh bao', 'Bánh giò', 'Bánh khọt', 'Bánh tráng', 'Bánh tráng trộn', 'Bánh tráng nướng', 'Bánh tráng cuốn', 'Bánh tráng mè', 'Bánh tráng dừa', 'Chim cút']
     await update.effective_message.reply_text(random.choice(ele))
+    
 
 async def poll(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
@@ -692,6 +697,7 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         BotCommand("dice2", "Dice 2"),
         BotCommand("remind", "Nhắc nhở thanh toán"),
         BotCommand("random", "Chọn ngẫu nhiên 1 phần tử trong list ele"),
+        BotCommand("spend", "Tracking spend money"),
     ]
     await context.bot.set_my_commands(commands)
 
@@ -800,6 +806,8 @@ def main() -> None:
     application.add_handler(CommandHandler("paid_poll", paid_poll_handler))
     application.add_handler(CommandHandler("dice2", dice_roll_handler))
     application.add_handler(CommandHandler("random", random_handler))
+    application.add_handler(CommandHandler("top_link", top_link_handler))
+    application.add_handler(CommandHandler("spend", spend_handler))
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling()

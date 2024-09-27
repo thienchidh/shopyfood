@@ -121,3 +121,7 @@ cython_debug/
 /crawl
 /config/config.yml
 
+.idea
+data
+spend_log.txt
+test.py
